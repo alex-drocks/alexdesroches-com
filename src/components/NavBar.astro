@@ -1,5 +1,5 @@
 <header>
-  <nav class="nav">
+  <nav>
     <a href="/">Alexandre Desroches</a>
     <a href="/a-propos">À propos</a>
     <a href="/programmation">Programmation</a>
@@ -8,9 +8,15 @@
 </header>
 
 <style>
-  .nav {
+  header {
+    padding: 2em;
+    width: 100%;
+  }
+
+  header nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    column-gap: 1em;
   }
 </style>

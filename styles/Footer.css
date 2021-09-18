@@ -1,0 +1,16 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  border-top: 1px solid var(--extremely-light-gray);
+  padding: var(--main-padding);
+  background: var(--background);
+}
+
+footer .copyright {
+  font-size: 0.875rem;
+  color: #656565;
+  margin: 0;
+}

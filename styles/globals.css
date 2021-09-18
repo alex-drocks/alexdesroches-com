@@ -1,9 +1,35 @@
+:root {
+  --background: #fff;
+  --main-text-color: #000;
+  --secondary-text-color: var(--light-gray);
+  --light-gray: #656565;
+  --lighter-gray: #a0a0a0;
+  --very-light-gray: #e5e5e5;
+  --extremely-light-gray: #f0f0f0;
+  --almost-white: #fbfbfb;
+  --main-box-shadow: 0 1px 10px rgba(0, 8, 28, .75);
+  --max-page-content-width: 1100px;
+  --main-padding: .5rem 1rem;
+  --button-radius: .25rem;
+
+  --blue: #0d6efd;
+
+  --user-font-scale: 1rem -16px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
+}
+
 html,
 body {
+  color: var(--main-text-color);;
+  user-select: none;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {
@@ -11,6 +37,17 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+#__next {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  padding: 4rem 2rem;
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+}
+
+.page-container {
+  padding: var(--main-padding);
 }

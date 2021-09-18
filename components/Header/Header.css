@@ -1,0 +1,228 @@
+header {
+  z-index: 2;
+
+  display: grid;
+  grid-template-areas: "branding admin-select-user-account nav";
+  grid-template-columns: minmax(300px, .1fr) 1fr minmax(550px, .1fr);
+
+  width: 100%;
+  min-height: var(--header-height);
+  border-bottom: 1px solid #efefef;
+  padding: 0 .5em;
+  font-size: 0.85em;
+  user-select: none;
+  background: var(--background);
+}
+
+header img {
+  width: 32px;
+  height: 32px;
+}
+
+header .branding {
+  grid-area: branding;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  letter-spacing: -1px;
+  margin-right: 2em;
+}
+
+header .branding--logo {
+  margin-right: 5px;
+  margin-bottom: 4px;
+  width: 42px;
+  height: 42px;
+}
+
+header .branding--text-container {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+header .branding--enterprise-name {
+  color: #747474;
+  line-height: 16px;
+}
+
+header .branding--app-name {
+  font-weight: 700;
+  color: #494949;
+}
+
+header .branding--enterprise-name:hover {
+  text-decoration: underline;
+}
+
+header .branding--app-name:hover {
+  text-decoration: underline;
+}
+
+header .admin-select-user-account {
+  grid-area: admin-select-user-account;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: .5em 0;
+}
+
+header .admin-select-user-account label {
+  margin: 0 1em 0 0;
+}
+
+header .admin-select-user-account select {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+header nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 2em;
+}
+
+header nav .nav-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header nav button {
+  padding: .75em .5em;
+}
+
+header nav button pre {
+  padding: 0;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+header #header--save-button {
+  margin: 0 1em 0 0;
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+header #header--save-button:hover {
+  background: var(--extremely-light-gray);
+}
+
+header #header--save-button svg {
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  margin-left: .2em;
+}
+
+@media screen and (min-height: 765px) and (min-width: 830px) {
+  .page-container {
+    padding-top: var(--header-height);
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+
+}
+
+@media screen and (max-width: 1430px) {
+  header {
+    grid-template-columns: minmax(300px, .1fr) 1fr minmax(370px, .1fr);
+  }
+
+  header button pre {
+    display: none;
+  }
+
+  header nav button svg {
+    margin: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  header .branding {
+    order: 1;
+  }
+
+  header .admin-select-user-account {
+    order: 2;
+    flex-direction: column;
+  }
+
+  header nav {
+    order: 3;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  header {
+    display: flex;
+  }
+
+  header nav {
+    margin: .25em 0 .5em 0;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header nav {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  header {
+    margin: 0;
+    padding: 2px;
+  }
+
+  header .branding {
+    width: 100%;
+  }
+
+  header .admin-select-user-account {
+    order: 2;
+    width: 100%;
+    margin: .75em 0;
+  }
+
+  header nav {
+    margin: .25em 0 .75em .25em;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  header nav {
+    margin-top: 1em;
+    margin-bottom: .5em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header nav .nav-buttons {
+    margin-right: 1em;
+    margin-top: 1em;
+  }
+}

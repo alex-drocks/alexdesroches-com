@@ -1,0 +1,9 @@
+/.next/
+/_iconsToOptimize/
+/_imagesToOptimize/
+/_originalRawImage/
+/data/
+/node_modules/
+/public/
+/out/
+*.css

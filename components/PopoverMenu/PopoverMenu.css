@@ -1,0 +1,50 @@
+.pop-over-menu {
+  position: fixed;
+  top: 2.5em;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  background-color: var(--background);
+  box-shadow: var(--main-box-shadow);
+  padding: 1.5em 1.25em;
+  font-size: 1.3em;
+  min-width: 265px;
+  max-width: 95vw;
+  margin-right: 2.5vw;
+  z-index: 3;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .65);
+  /*backdrop-filter: blur(2px);*/
+  z-index: 2;
+}
+
+.pop-over-menu--close-button {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  width: 2em;
+  height: 2em;
+  padding: .65em;
+  text-align: center;
+  margin: 0;
+  border: none;
+  background-color: var(--extremely-light-gray);
+  border-radius: 50%;
+  font-weight: 500;
+}
+
+.pop-over-menu--close-button:hover,
+.pop-over-menu--close-button:focus {
+  background-color: var(--very-light-gray);
+  font-weight: 600;
+}

@@ -5,27 +5,41 @@ import Tippy from '@tippyjs/react';
 
 
 export default function Header() {
-  return (
-    <header>
-      <NavBar/>
-      <ToggleThemeColorsButton/>
-    </header>
+  const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
+  return (<>
+      <header>
+        <nav>
+          <div className="left-branding">
+            <Link href="/"><a>Alexandre Desroches</a></Link>
+          </div>
+          <ul className="page-links do-not-display-on-mobile">
+            <li><Link href="/a-propos"><a>À propos</a></Link></li>
+            <li><Link href="/programmation"><a>Programmation</a></Link></li>
+            <li><Link href="/musique"><a>Musique</a></Link></li>
+          </ul>
+        </nav>
+        <ToggleThemeColorsButton/>
+        <ToggleMobileMenuButton isMobileMenuOpened={isMobileMenuOpened} setIsMobileMenuOpened={setIsMobileMenuOpened}/>
+      </header>
+      <MobileMenu isMobileMenuOpened={isMobileMenuOpened}/>
+    </>
   );
 }
 
 
-function NavBar() {
+function MobileMenu({isMobileMenuOpened}) {
+  if (!isMobileMenuOpened)
+    return null;
+
   return (
-    <nav>
-      <div className="left-branding">
-        <Link href="/"><a>Alexandre Desroches</a></Link>
-      </div>
-      <ul className="right-links">
+    <div className="mobile-menu do-not-display-on-desktop">
+      <ul className="page-links">
+        <li><Link href="/"><a>Page principale</a></Link></li>
         <li><Link href="/a-propos"><a>À propos</a></Link></li>
         <li><Link href="/programmation"><a>Programmation</a></Link></li>
         <li><Link href="/musique"><a>Musique</a></Link></li>
       </ul>
-    </nav>
+    </div>
   );
 }
 
@@ -64,6 +78,34 @@ function ToggleThemeColorsButton() {
           )
         }
       </Tippy>
+    </button>
+  );
+}
+
+
+function ToggleMobileMenuButton({isMobileMenuOpened, setIsMobileMenuOpened}) {
+
+  const toggleIsOpen = () => {
+    setIsMobileMenuOpened(prevState => !prevState);
+  };
+
+  return (
+    <button
+      className="toggle-mobile-menu-button"
+      aria-label="Toggle Mobile Menu Button"
+      type="button"
+      onClick={toggleIsOpen}
+    >
+      {isMobileMenuOpened ? (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="m24 20.188-8.315-8.209 8.2-8.282L20.188 0l-8.212 8.318L3.666.115 0 3.781l8.321 8.24-8.206 8.313L3.781 24l8.237-8.318 8.285 8.203z"/>
+        </svg>
+      ) : (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M24 6H0V2h24v4zm0 4H0v4h24v-4zm0 8H0v4h24v-4z"/>
+        </svg>
+      )}
     </button>
   );
 }

@@ -10,7 +10,7 @@ header {
   border-bottom: 1px solid var(--extremely-light-gray);
 }
 
-header .toggle-dark-mode-button {
+header button {
   width: 2.1rem;
   height: 2.1rem;
   padding: 0;
@@ -22,11 +22,15 @@ header .toggle-dark-mode-button {
   cursor: pointer;
 }
 
-header .toggle-dark-mode-button svg {
+header button svg {
   height: 100%;
   padding: .4rem;
   fill: var(--main-foreground-color);
   stroke: var(--main-foreground-color);
+}
+
+header .toggle-mobile-menu-button {
+  display: none;
 }
 
 header nav {
@@ -46,7 +50,7 @@ header nav .left-branding {
   margin-right: 2em;
 }
 
-header nav .right-links {
+header nav .page-links {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -68,12 +72,30 @@ header nav a:hover {
   background-color: var(--blue);
 }
 
+@media screen and (min-width: 701px) {
+  .do-not-display-on-desktop {
+    display: none !important;
+  }
+}
+
+
 @media screen and (max-width: 700px) {
-  header nav .right-links {
-    display: none;
+  .do-not-display-on-mobile {
+    display: none !important;
   }
 
-  header .toggle-dark-mode-button {
+  .mobile-menu .page-links {
+    text-align: center;
+    line-height: 3;
+    list-style: none;
+  }
+
+  header .toggle-mobile-menu-button {
+    display: block;
+  }
+
+  header button {
     margin-bottom: .5rem;
+    margin-top: .5rem;
   }
 }

@@ -16,17 +16,17 @@ header .toggle-dark-mode-button {
   padding: 0;
   margin-left: 2rem;
   margin-right: 1rem;
-  border: 1px solid var(--very-light-gray);
+  border: 1px solid var(--lighter-gray);
   border-radius: var(--button-radius);
-  background-color: var(--main-text-color);
+  background-color: transparent;
   cursor: pointer;
 }
 
 header .toggle-dark-mode-button svg {
   height: 100%;
   padding: .4rem;
-  fill: var(--main-background-color);
-  stroke: var(--main-background-color);
+  fill: var(--main-foreground-color);
+  stroke: var(--main-foreground-color);
 }
 
 header nav {

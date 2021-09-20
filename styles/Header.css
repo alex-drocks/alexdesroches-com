@@ -1,14 +1,20 @@
-header {
+.header-container {
   position: sticky;
   top: 0;
   z-index: 10;
+  background-color: var(--main-background-color);
+  width: 100%;
+  margin-top: var(--page-padding);
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+  max-width: 1300px;
+}
+
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  background-color: var(--main-background-color);
   border-bottom: 1px solid var(--extremely-light-gray);
-  padding: var(--page-padding) var(--page-padding) 0 var(--page-padding);
 }
 
 header button {
@@ -49,6 +55,7 @@ header nav .left-branding {
   flex-wrap: wrap;
   letter-spacing: -1px;
   margin-right: 2em;
+  font-variant: petite-caps;
 }
 
 header nav .page-links {
@@ -64,7 +71,7 @@ header nav .page-links {
 
 header nav a {
   color: var(--secondary-text-color);
-  padding: var(--main-padding);
+  padding: var(--elements-padding);
   border-radius: var(--button-radius);
   display: block;
   width: inherit;
@@ -88,7 +95,6 @@ header nav a:hover {
   }
 
   .mobile-menu {
-    width: 90%;
     border-bottom: 1px solid var(--very-light-gray);
   }
 

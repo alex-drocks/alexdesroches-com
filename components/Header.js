@@ -6,7 +6,8 @@ import Tippy from '@tippyjs/react';
 
 export default function Header() {
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
-  return (<>
+  return (
+    <div className="header-container">
       <header>
         <nav>
           <div className="left-branding">
@@ -20,7 +21,7 @@ export default function Header() {
         <ToggleMobileMenuButton isMobileMenuOpened={isMobileMenuOpened} setIsMobileMenuOpened={setIsMobileMenuOpened}/>
       </header>
       <MobileMenu isMobileMenuOpened={isMobileMenuOpened}/>
-    </>
+    </div>
   );
 }
 

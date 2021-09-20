@@ -1,13 +1,46 @@
 header {
-  display: grid;
-  grid-template-areas: "branding center nav";
-  grid-template-columns: 1fr 1fr 1fr;
-  background: var(--background);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--main-background-color);
   border-bottom: 1px solid var(--extremely-light-gray);
 }
 
-header .branding {
-  grid-area: branding;
+header button {
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  border: 1px solid var(--lighter-gray);
+  border-radius: var(--button-radius);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+header button svg {
+  height: 100%;
+  padding: .4rem;
+  fill: var(--main-foreground-color);
+  stroke: var(--main-foreground-color);
+}
+
+header .toggle-mobile-menu-button {
+  display: none;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+header nav .left-branding {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -17,32 +50,52 @@ header .branding {
   margin-right: 2em;
 }
 
-header .center {
-  grid-area: center;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: .5em 0;
-}
-
-header nav {
-  grid-area: nav;
+header nav .page-links {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   margin-left: 2em;
   column-gap: 1rem;
+  list-style: none;
+  white-space: nowrap;
 }
 
-header a {
+header nav a {
   color: var(--secondary-text-color);
   padding: var(--main-padding);
   border-radius: var(--button-radius);
 }
 
-header a:hover {
+header nav a:hover {
   color: white;
   background-color: var(--blue);
+}
+
+@media screen and (min-width: 701px) {
+  .do-not-display-on-desktop {
+    display: none !important;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .do-not-display-on-mobile {
+    display: none !important;
+  }
+
+  .mobile-menu .page-links {
+    text-align: center;
+    line-height: 3;
+    list-style: none;
+  }
+
+  header .toggle-mobile-menu-button {
+    display: block;
+  }
+
+  header button {
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+  }
 }

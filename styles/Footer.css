@@ -6,11 +6,11 @@ footer {
   width: 100%;
   border-top: 1px solid var(--extremely-light-gray);
   padding: var(--main-padding);
-  background: var(--background);
+  background: var(--main-background-color);
 }
 
 footer .copyright {
   font-size: 0.875rem;
-  color: #656565;
+  color: var(--secondary-text-color);
   margin: 0;
 }

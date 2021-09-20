@@ -9,16 +9,16 @@ export default function Musique() {
     >
       <div className="readable-width-container">
         <h1>Musique & sonorisation</h1>
-        <p>
+        <h2>
           La musique est comme l'expression inachevée des pensées inexprimables les plus profondes.
           Le son est le courant d'air que produisent ces notes dans l'univers de qui le perçoit.
           En d'autres mots, la musique et la sonorisation sont fascinantes.
-        </p>
+        </h2>
         <p>
           Depuis plus de {new Date().getFullYear() - 2005} ans, je suis passionné par la composition musicale ainsi que
           par le mixage de musique. Durant cette période, j'ai eu le privilège de créer des chansons originales,
           d'enregister et de mixer des projets pour d'autres artistes; Sans minimiser l'importance des oeuvres
-          incroyablement bonnes que j'ai pu apprécier et qui m'ont influencée.
+          incroyablement bonnes que j'ai pu apprécier et qui m'ont influencé.
         </p>
         <div>
           <h2>Mes Compositions</h2>

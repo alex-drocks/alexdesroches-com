@@ -4,13 +4,20 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  border-top: 1px solid var(--extremely-light-gray);
-  padding: var(--main-padding);
+  /*border-top: 1px solid var(--extremely-light-gray);*/
+  /*padding: var(--main-padding);*/
+  padding: 0;
+  margin: 0;
   background: var(--main-background-color);
+}
+
+footer .content {
+  padding: 0 var(--page-padding);
 }
 
 footer .copyright {
   font-size: 0.875rem;
   color: var(--secondary-text-color);
   margin: 0;
+  padding: var(--main-padding);
 }

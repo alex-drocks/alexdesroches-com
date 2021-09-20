@@ -8,6 +8,7 @@ header {
   width: 100%;
   background-color: var(--main-background-color);
   border-bottom: 1px solid var(--extremely-light-gray);
+  padding: var(--page-padding) var(--page-padding) 0 var(--page-padding);
 }
 
 header button {

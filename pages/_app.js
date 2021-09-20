@@ -7,7 +7,7 @@ import 'tippy.js/dist/tippy.css';
 
 function MyApp({Component, pageProps}) {
   return (
-    <ThemeProvider defaultTheme="system" attribute="class" disableTransitionOnChange>
+    <ThemeProvider defaultTheme="light" attribute="class" disableTransitionOnChange>
       <Component {...pageProps} />
     </ThemeProvider>
   );

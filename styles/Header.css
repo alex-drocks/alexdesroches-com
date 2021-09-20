@@ -84,10 +84,16 @@ header nav a:hover {
     display: none !important;
   }
 
+  .mobile-menu {
+    width: 90%;
+    border-bottom: 1px solid var(--very-light-gray);
+  }
+
   .mobile-menu .page-links {
-    text-align: center;
     line-height: 3;
     list-style: none;
+    font-weight: 600;
+    text-decoration: underline;
   }
 
   header .toggle-mobile-menu-button {

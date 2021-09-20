@@ -58,13 +58,15 @@ header nav .page-links {
   margin-left: 2em;
   column-gap: 1rem;
   list-style: none;
-  white-space: nowrap;
+  text-align: center;
 }
 
 header nav a {
   color: var(--secondary-text-color);
   padding: var(--main-padding);
   border-radius: var(--button-radius);
+  display: block;
+  width: inherit;
 }
 
 header nav a:hover {
@@ -72,22 +74,28 @@ header nav a:hover {
   background-color: var(--blue);
 }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 756px) {
   .do-not-display-on-desktop {
     display: none !important;
   }
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 755px) {
   .do-not-display-on-mobile {
     display: none !important;
   }
 
+  .mobile-menu {
+    width: 90%;
+    border-bottom: 1px solid var(--very-light-gray);
+  }
+
   .mobile-menu .page-links {
-    text-align: center;
     line-height: 3;
     list-style: none;
+    font-weight: 600;
+    text-decoration: underline;
   }
 
   header .toggle-mobile-menu-button {

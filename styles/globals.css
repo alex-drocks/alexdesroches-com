@@ -62,7 +62,35 @@ html.dark {
   padding: var(--main-padding);
 }
 
+.readable-width-container {
+  max-width: 680px;
+  padding: 2rem 0;
+  user-select: text;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: Consolas, sans-serif;
+  font-size: 1.875rem;
+  margin: 3rem 0 1rem 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+  #__next {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #__next {
+    padding: .25rem;
+  }
 }

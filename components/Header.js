@@ -13,9 +13,7 @@ export default function Header() {
             <Link href="/"><a>Alexandre Desroches</a></Link>
           </div>
           <ul className="page-links do-not-display-on-mobile">
-            <li><Link href="/a-propos"><a>À propos</a></Link></li>
-            <li><Link href="/programmation"><a>Programmation</a></Link></li>
-            <li><Link href="/musique"><a>Musique</a></Link></li>
+            <MainNavLinks/>
           </ul>
         </nav>
         <ToggleThemeColorsButton/>
@@ -32,15 +30,22 @@ function MobileMenu({isMobileMenuOpened}) {
     return null;
 
   return (
-    <div className="mobile-menu do-not-display-on-desktop">
+    <nav className="mobile-menu do-not-display-on-desktop">
       <ul className="page-links">
         <li><Link href="/"><a>Page principale</a></Link></li>
-        <li><Link href="/a-propos"><a>À propos</a></Link></li>
-        <li><Link href="/programmation"><a>Programmation</a></Link></li>
-        <li><Link href="/musique"><a>Musique</a></Link></li>
+        <MainNavLinks/>
       </ul>
-    </div>
+    </nav>
   );
+}
+
+
+function MainNavLinks() {
+  return (<>
+    <li><Link href="/a-propos"><a>À propos</a></Link></li>
+    <li><Link href="/programmation"><a>Programmation & Développement&nbsp;web</a></Link></li>
+    <li><Link href="/musique"><a>Musique & Sonorisation</a></Link></li>
+  </>);
 }
 
 

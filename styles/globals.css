@@ -1,7 +1,18 @@
 :root {
-  --background: #fff;
-  --main-text-color: #000;
-  --secondary-text-color: var(--light-gray);
+  --main-background-color: var(--theme-light-background);
+  --main-text-color: var(--theme-light-main-text-color);
+  --secondary-text-color: var(--theme-light-secondary-text-color);
+
+  /*Light mode*/
+  --theme-light-background: #fff;
+  --theme-light-main-text-color: #000;
+  --theme-light-secondary-text-color: var(--light-gray);
+
+  /*Dark mode*/
+  --theme-dark-background: #000;
+  --theme-dark-main-text-color: #fff;
+  --theme-dark-secondary-text-color: var(--lighter-gray);
+
   --light-gray: #656565;
   --lighter-gray: #a0a0a0;
   --very-light-gray: #e5e5e5;
@@ -11,25 +22,31 @@
   --max-page-content-width: 1100px;
   --main-padding: .5rem 1rem;
   --button-radius: .25rem;
-
   --blue: #0d6efd;
-
   --user-font-scale: 1rem -16px;
   font-family: Arial, sans-serif;
   font-size: 1rem;
   font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
+  background-color: var(--main-background-color);
   color: var(--main-text-color);;
   user-select: none;
   padding: 0;
   margin: 0;
+  min-width: 360px;
 }
 
-* {
-  box-sizing: border-box;
+html.dark {
+  --main-background-color: var(--theme-dark-background);
+  --main-text-color: var(--theme-dark-main-text-color);
+  --secondary-text-color: var(--theme-dark-secondary-text-color);
 }
 
 a {
@@ -38,14 +55,11 @@ a {
 }
 
 #__next {
-  overflow-x: hidden;
-  overflow-y: auto;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 4rem 2rem;
-  width: 100vw;
   min-height: 100vh;
-  display: grid;
-  justify-content: center;
 }
 
 .page-container {

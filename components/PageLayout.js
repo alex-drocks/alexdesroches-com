@@ -37,11 +37,27 @@ export default function PageLayout({children, pageTitle, pageDescription, pageCa
       <meta name="twitter:description" content={process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION}/>
       <meta name="twitter:card" content="summary"/>
 
+      {/*<link rel="apple-touch-icon" sizes="180x180"*/}
+      {/*      href={process.env.NEXT_PUBLIC_WEBSITE_URL + "/favicons/apple-touch-icon.png"}/>*/}
+      {/*<link rel="icon" type="image/png" sizes="32x32"*/}
+      {/*      href={process.env.NEXT_PUBLIC_WEBSITE_URL + "/favicons/favicon-32x32.png"}/>*/}
+      {/*<link rel="icon" type="image/png" sizes="16x16"*/}
+      {/*      href={process.env.NEXT_PUBLIC_WEBSITE_URL + "/favicons/favicon-16x16.png"}/>*/}
+      {/*<link rel="manifest" href="/site.webmanifest"/>*/}
+      {/*<link rel="mask-icon" color="#5d6d72"*/}
+      {/*      href={process.env.NEXT_PUBLIC_WEBSITE_URL + "/favicons/safari-pinned-tab.svg"}/>      */}
+
       <link rel="apple-touch-icon" sizes="180x180"
-            href={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/icons/apple-` +
-            `touch-icon.png`}/>
-      <link rel="mask-icon" href={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/icons/safari-pinned-tab.svg`}
-            color="#21beeb"/>
+            href={"/favicons/apple-touch-icon.png"}/>
+      <link rel="icon" type="image/png" sizes="32x32"
+            href={"/favicons/favicon-32x32.png"}/>
+      <link rel="icon" type="image/png" sizes="16x16"
+            href={"/favicons/favicon-16x16.png"}/>
+      <link rel="manifest" href="/site.webmanifest"/>
+      <link rel="mask-icon" color="#5d6d72"
+            href={"/favicons/safari-pinned-tab.svg"}/>
+      <meta name="msapplication-TileColor" content="#2b5797"/>
+      <meta name="theme-color" content="#ffffff"/>
 
       {/* /!*google analytics*!/ */}
       {

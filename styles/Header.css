@@ -55,7 +55,13 @@ header nav .left-branding {
   flex-wrap: wrap;
   letter-spacing: -1px;
   margin-right: 2em;
-  font-variant: petite-caps;
+}
+
+header nav .left-branding pre {
+  font-size: 1.125rem;
+  margin: 0;
+  padding: 0;
+  white-space: break-spaces;
 }
 
 header nav .page-links {

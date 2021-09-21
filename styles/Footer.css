@@ -44,5 +44,63 @@ footer .background--boat {
   height: 42px;
   min-width: 42px;
   min-height: 42px;
-  filter: drop-shadow(0 9px 10px var(--almost-white));
+  filter: drop-shadow(0 10px 9px var(--almost-white));
+  animation: moveBoat 2s infinite alternate ease-in-out;
+}
+
+
+@keyframes moveBoat {
+  from {
+    transform: translate(0, -0.05rem);
+  }
+
+  to {
+    transform: translate(-0.075rem, 0.125rem);
+  }
+}
+
+footer .background--fish {
+  position: absolute;
+  bottom: 0;
+  left: -24px;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  animation: moveFish 60s infinite ease-in-out, bounceFish 1.5s infinite ease-in-out alternate;
+}
+
+@keyframes moveFish {
+  0% {
+    bottom: -0.2vw;
+    left: -24px;
+    opacity: 25%;
+  }
+
+  30% {
+    bottom: 1.5vw;
+    left: 30vw;
+    opacity: 15%;
+  }
+
+  60% {
+    bottom: -0.9vw;
+    left: 60vw;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0.1vw;
+    left: 101vw;
+    opacity: 25%;
+  }
+}
+
+@keyframes bounceFish {
+  0% {
+    transform: translateY(-0.25vh);
+  }
+  100% {
+    transform: translateY(0.25vh);
+  }
 }

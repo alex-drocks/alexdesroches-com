@@ -30,11 +30,17 @@ footer .fishing-game {
   width: inherit;
 }
 
+footer .fishing-game svg:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
 footer .fishing-game .background--waves {
   width: inherit;
 }
 
-footer .fishing-game .background--boat {
+footer .fishing-game .boat {
   position: absolute;
   bottom: 3vw;
   left: 9vw;
@@ -42,8 +48,9 @@ footer .fishing-game .background--boat {
   height: 42px;
   min-width: 42px;
   min-height: 42px;
-  filter: drop-shadow(0 10px 9px var(--almost-white));
+  filter: drop-shadow(-1px 10px 10px var(--almost-white));
   animation: moveBoat 2s infinite alternate ease-in-out;
+  transition: left 3s, bottom 4s;
 }
 
 
@@ -57,7 +64,7 @@ footer .fishing-game .background--boat {
   }
 }
 
-footer .fishing-game .background--fish {
+footer .fishing-game .fish {
   position: absolute;
   bottom: 0;
   left: -24px;

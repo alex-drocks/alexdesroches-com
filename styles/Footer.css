@@ -50,7 +50,7 @@ footer .fishing-game .boat {
   min-height: 42px;
   filter: drop-shadow(-1px 10px 10px var(--almost-white));
   animation: moveBoat 2s infinite alternate ease-in-out;
-  transition: left 3s, bottom 4s;
+  transition: left 2.8s, bottom 3.5s;
 }
 
 
@@ -107,5 +107,11 @@ footer .fishing-game .fish {
   }
   100% {
     transform: translateY(0.25vh);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .fish {
+    display: none;
   }
 }

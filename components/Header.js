@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import {useEffect, useState} from "react";
 import {useTheme} from 'next-themes';
 import Tippy from '@tippyjs/react';
+import ActiveLink from './ActiveLink'
 
 
 export default function Header() {
@@ -11,7 +11,7 @@ export default function Header() {
       <header>
         <nav>
           <div className="left-branding">
-            <Link href="/"><a><pre>Alexandre Desroches</pre></a></Link>
+            <ActiveLink href="/"><a><pre>Alexandre Desroches</pre></a></ActiveLink>
           </div>
           <ul className="page-links do-not-display-on-mobile">
             <MainNavLinks/>
@@ -33,7 +33,7 @@ function MobileMenu({isMobileMenuOpened}) {
   return (
     <nav className="mobile-menu do-not-display-on-desktop">
       <ul className="page-links">
-        <li><Link href="/"><a>Page principale</a></Link></li>
+        <li><ActiveLink href="/"><a>Page principale</a></ActiveLink></li>
         <MainNavLinks/>
       </ul>
     </nav>
@@ -43,9 +43,9 @@ function MobileMenu({isMobileMenuOpened}) {
 
 function MainNavLinks() {
   return (<>
-    <li><Link href="/a-propos"><a>À propos</a></Link></li>
-    <li><Link href="/programmation"><a>Programmation & Développement&nbsp;web</a></Link></li>
-    <li><Link href="/musique"><a>Musique & Sonorisation</a></Link></li>
+    <li><ActiveLink href="/a-propos/"><a>À propos</a></ActiveLink></li>
+    <li><ActiveLink href="/programmation/"><a>Programmation & Développement&nbsp;web</a></ActiveLink></li>
+    <li><ActiveLink href="/musique/"><a>Musique & Sonorisation</a></ActiveLink></li>
   </>);
 }
 

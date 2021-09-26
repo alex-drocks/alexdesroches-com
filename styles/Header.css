@@ -83,7 +83,7 @@ header nav a {
   width: inherit;
 }
 
-header nav a:hover {
+header nav a:hover, header nav a.active-next-link {
   color: white;
   background-color: var(--blue);
 }

@@ -1,5 +1,5 @@
 footer {
-  position: relative;
+  /*position: relative;*/
   width: 100%;
   padding: 0;
   margin: 0;
@@ -24,10 +24,12 @@ footer .content .copyright {
 }
 
 footer .fishing-game {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   width: inherit;
+  overflow: hidden;
 }
 
 footer .fishing-game svg:focus {
@@ -50,18 +52,7 @@ footer .fishing-game .boat {
   min-height: 42px;
   filter: drop-shadow(-1px 10px 10px var(--almost-white));
   animation: moveBoat 2s infinite alternate ease-in-out;
-  transition: left 2.8s, bottom 3.5s;
-}
-
-
-@keyframes moveBoat {
-  from {
-    transform: translate(0, -0.05rem);
-  }
-
-  to {
-    transform: translate(-0.075rem, 0.125rem);
-  }
+  transition: left 3s, bottom 3s;
 }
 
 footer .fishing-game .fish {
@@ -73,6 +64,16 @@ footer .fishing-game .fish {
   min-width: 24px;
   min-height: 24px;
   animation: moveFish 60s infinite ease-in-out, bounceFish 1.5s infinite ease-in-out alternate;
+}
+
+@keyframes moveBoat {
+  from {
+    transform: translate(0, -0.09rem);
+  }
+
+  to {
+    transform: translate(-0.075rem, 0.1rem);
+  }
 }
 
 @keyframes moveFish {

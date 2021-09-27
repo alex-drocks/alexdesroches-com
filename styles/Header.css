@@ -54,14 +54,13 @@ header nav .left-branding {
   justify-content: flex-start;
   flex-wrap: wrap;
   letter-spacing: -1px;
+  margin-left: 1em;
   margin-right: 2em;
 }
 
-header nav .left-branding pre {
+header nav .left-branding a {
+  font-family: monospace;
   font-size: 1.125rem;
-  margin: 0;
-  padding: 0;
-  white-space: break-spaces;
 }
 
 header nav .page-links {
@@ -72,7 +71,6 @@ header nav .page-links {
   margin-left: 2em;
   column-gap: 1rem;
   list-style: none;
-  text-align: center;
 }
 
 header nav a {
@@ -81,6 +79,8 @@ header nav a {
   border-radius: var(--button-radius);
   display: block;
   width: inherit;
+  text-align: center;
+  line-height: 1;
 }
 
 header nav a:hover, header nav a.active-next-link {
@@ -101,13 +101,21 @@ header nav a:hover, header nav a.active-next-link {
   }
 
   .mobile-menu {
-    border-bottom: 1px solid var(--very-light-gray);
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    background-color: var(--main-background-color);
+    border-bottom: 4px solid var(--very-light-gray);
+    padding: 2rem 0;
   }
 
   .mobile-menu .page-links {
     line-height: 3;
     list-style: none;
-    font-weight: 600;
+    color: var(--secondary-text-color);
+  }
+
+  .mobile-menu .page-links .active-next-link {
     text-decoration: underline;
   }
 
@@ -118,5 +126,17 @@ header nav a:hover, header nav a.active-next-link {
   header button {
     margin-bottom: .5rem;
     margin-top: .5rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  header nav .left-branding {
+    margin-left: 0;
+    width: min-content;
+  }
+
+  header nav a.active-next-link {
+    color: var(--secondary-text-color);
+    background-color: transparent;
   }
 }

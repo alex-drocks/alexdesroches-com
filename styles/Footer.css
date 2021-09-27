@@ -1,5 +1,12 @@
+:root {
+  --boat-size: 42px;
+  --fish-size: 20px;
+  --bounce-boat-top: translate(0, -0.085rem);
+  --bounce-boat-bottom: translate(-0.075rem, 0.1rem);
+}
+
 footer {
-  /*position: relative;*/
+  position: relative;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -46,33 +53,42 @@ footer .fishing-game .boat {
   position: absolute;
   bottom: 3vw;
   left: 9vw;
-  width: 42px;
-  height: 42px;
-  min-width: 42px;
-  min-height: 42px;
+  width: var(--boat-size);
+  height: var(--boat-size);
+  min-width: var(--boat-size);
+  min-height: var(--boat-size);
   filter: drop-shadow(-1px 10px 10px var(--almost-white));
-  animation: moveBoat 2s infinite alternate ease-in-out;
+  animation: bounceBoat 2s infinite alternate ease-in-out;
   transition: left 3s, bottom 3s;
 }
 
 footer .fishing-game .fish {
   position: absolute;
   bottom: 0;
-  left: -24px;
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  left: calc(0 - var(--fish-size));
+  width: var(--fish-size);
+  height: var(--fish-size);
+  min-width: var(--fish-size);
+  min-height: var(--fish-size);
   animation: moveFish 60s infinite ease-in-out, bounceFish 1.5s infinite ease-in-out alternate;
 }
 
-@keyframes moveBoat {
+@keyframes bounceBoat {
   from {
-    transform: translate(0, -0.09rem);
+    transform: translate(0, -0.085rem);
   }
 
   to {
     transform: translate(-0.075rem, 0.1rem);
+  }
+}
+
+@keyframes bounceFish {
+  0% {
+    transform: translateY(-0.25vh);
+  }
+  100% {
+    transform: translateY(0.25vh);
   }
 }
 
@@ -102,16 +118,16 @@ footer .fishing-game .fish {
   }
 }
 
-@keyframes bounceFish {
-  0% {
-    transform: translateY(-0.25vh);
+@media screen and (max-width: 768px) {
+  :root {
+    --boat-size: 24px;
+    --bounce-boat-top: translate(0, -0.06rem);
   }
-  100% {
-    transform: translateY(0.25vh);
-  }
-}
 
-@media screen and (max-width: 500px) {
+  .boat {
+    filter: drop-shadow(-1px 5px 5px var(--almost-white)) !important;
+  }
+
   .fish {
     display: none;
   }

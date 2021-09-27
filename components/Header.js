@@ -11,7 +11,7 @@ export default function Header() {
       <header>
         <nav>
           <div className="left-branding">
-            <ActiveLink href="/"><a><pre>Alexandre Desroches</pre></a></ActiveLink>
+            <ActiveLink href="/"><a>Alexandre Desroches</a></ActiveLink>
           </div>
           <ul className="page-links do-not-display-on-mobile">
             <MainNavLinks/>

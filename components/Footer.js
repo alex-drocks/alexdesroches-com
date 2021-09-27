@@ -1,5 +1,4 @@
-import Tippy from "@tippyjs/react"
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export default function Footer() {
   return (
@@ -14,16 +13,26 @@ export default function Footer() {
 
 
 function FishingGame() {
-  const [boatPos, setBoatPos] = useState({left: "9vw", bottom: "3vw"})
+  const defaultBoatPos = {left: "9vw", bottom: "3vw"};
+  const [boatPos, setBoatPos] = useState(defaultBoatPos);
 
   const handleClick = (e) => {
-    const clickedX = e.clientX
-    const clickedY = e.clientY
+    const clickedX = e.clientX;
+    const clickedY = e.clientY;
     setBoatPos({
       left: clickedX,
       bottom: (window.innerHeight - (clickedY - 4)) + "px"
-    })
-  }
+    });
+  };
+
+  const resetBoatPosOnResizeEvents = () => {
+    setBoatPos(defaultBoatPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", resetBoatPosOnResizeEvents);
+    return () => window.removeEventListener("resize", resetBoatPosOnResizeEvents);
+  }, []);
 
   return (
     <div className="fishing-game">
@@ -31,7 +40,7 @@ function FishingGame() {
       <Fish handleClick={handleClick}/>
       <Waves/>
     </div>
-  )
+  );
 }
 
 
@@ -45,22 +54,19 @@ function Boat({pos}) {
       <path
         d="M545.2 91.2c45.2 235.5 62.3 379.1 60.5 506.8-.8 50.7-2.6 77.1-8.3 116-9 62-26.3 118.2-49.8 162.2l-7.2 13.5 312.6.6c171.8.3 312.7.4 312.9.1 1.2-1.2-30.1-70-52-113.9C1048.5 645 974.5 528.9 880.1 410 799.7 308.7 695 200.1 584.5 103.4 564.4 85.8 541.2 66 540.7 66c-.2 0 1.8 11.4 4.5 25.2zM422 345.5c0 2.9-8.2 36.8-12.6 52.4-27.7 97.1-74.5 179.4-146.8 258-35.3 38.4-69.3 69.5-149.6 136.6-56.7 47.4-83.6 70.7-103 89.3l-9.5 9.1 211.3.1H423V617.5c0-150.4-.2-273.5-.5-273.5s-.5.7-.5 1.5z"/>
     </svg>
-  )
+  );
 }
 
 
 function Fish({handleClick}) {
   return (
-    <Tippy content="Attrape-moi si tu peux!">
-      <svg className="fish"
-           onClick={handleClick}
-           xmlns="http://www.w3.org/2000/svg" fillRule="evenodd"
-           clipRule="evenodd">
-        <path
-          d="M21 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 0c-1 3-3 5-6 6a7 7 0 0 1 1-10l5 4m-7 6-1 1-6 2H9l1-3-6-4-4 2V8l4 2c1-1 3-3 6-3L9 4h1c3 0 4 1 5 2l3 1c-2 1-3 3-3 5l2 5"/>
-      </svg>
-    </Tippy>
-  )
+    <svg
+      className="fish" onClick={handleClick}
+      xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" viewBox="0 0 24 24">
+      <path
+        d="M21 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 0c-1 3-3 5-6 6a7 7 0 0 1 1-10l5 4m-7 6-1 1-6 2H9l1-3-6-4-4 2V8l4 2c1-1 3-3 6-3L9 4h1c3 0 4 1 5 2l3 1c-2 1-3 3-3 5l2 5"/>
+    </svg>
+  );
 }
 
 
@@ -74,5 +80,5 @@ function Waves() {
         d="m0 110 40-5c40-5 120-15 200-17.3 80-2.4 160 3 240 10.3 80 7.3 160 16.7 240 17.2s160-7.9 200-12l40-4.2v52H0Z"
         fill="#06f"/>
     </svg>
-  )
+  );
 }

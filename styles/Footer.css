@@ -57,9 +57,10 @@ footer .fishing-game .boat {
   height: var(--boat-size);
   min-width: var(--boat-size);
   min-height: var(--boat-size);
-  filter: drop-shadow(-1px 10px 10px var(--almost-white));
+  filter: drop-shadow(-1px .75vw .65vw var(--extremely-light-gray));
   animation: bounceBoat 2s infinite alternate ease-in-out;
-  transition: left 3s, bottom 3s;
+  transition: left 2s, bottom 1s;
+  z-index: 2;
 }
 
 footer .fishing-game .fish {
@@ -75,11 +76,11 @@ footer .fishing-game .fish {
 
 @keyframes bounceBoat {
   from {
-    transform: translate(0, -0.085rem);
+    transform: var(--bounce-boat-top);
   }
 
   to {
-    transform: translate(-0.075rem, 0.1rem);
+    transform: var(--bounce-boat-bottom);
   }
 }
 
@@ -118,17 +119,49 @@ footer .fishing-game .fish {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   :root {
-    --boat-size: 24px;
-    --bounce-boat-top: translate(0, -0.06rem);
+    --boat-size: 34px;
+    --fish-size: 14px;
+    --bounce-boat-top: translate(0, 0);
+    --bounce-boat-bottom: translate(-0.05rem, 0.1rem);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --boat-size: 26px;
   }
 
   .boat {
     filter: drop-shadow(-1px 5px 5px var(--almost-white)) !important;
+    left: 4vw !important;
+    bottom: 2.5vw !important;
   }
 
   .fish {
     display: none;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  :root {
+    --boat-size: 20px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  :root {
+    --boat-size: 18px;
+  }
+
+  .boat {
+    bottom: 2.1vw !important;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  :root {
+    --boat-size: 16px;
   }
 }

@@ -10,7 +10,7 @@
   --theme-light-secondary-text-color: var(--light-gray);
 
   /*Dark Mode*/
-  --theme-dark-background: #000;
+  --theme-dark-background: #222;
   --theme-dark-main-text-color: #fff;
   --theme-dark-secondary-text-color: #a7a7a7;
 

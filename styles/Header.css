@@ -7,7 +7,7 @@
   margin-top: var(--page-padding);
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
-  max-width: 1750px;
+  max-width: 1700px;
 }
 
 header {
@@ -126,6 +126,10 @@ header nav a:hover, header nav a.active-next-link {
   header button {
     margin-bottom: .5rem;
     margin-top: .5rem;
+  }
+
+  header button:last-of-type {
+    margin-left: .5em;
   }
 }
 

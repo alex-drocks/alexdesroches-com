@@ -3,16 +3,20 @@
   --main-background-color: var(--theme-light-background);
   --main-foreground-color: var(--theme-light-main-text-color);
   --secondary-text-color: var(--theme-light-secondary-text-color);
+  --text-link-color: var(--theme-light-text-link-color);
 
   /*Light Mode*/
   --theme-light-background: #fff;
   --theme-light-main-text-color: #000;
   --theme-light-secondary-text-color: var(--light-gray);
+  --theme-light-text-link-color: var(--blue);
 
   /*Dark Mode*/
-  --theme-dark-background: #222;
+  --theme-dark-background: #1f2028;
   --theme-dark-main-text-color: #fff;
   --theme-dark-secondary-text-color: #a7a7a7;
+  --theme-dark-text-link-color: var(--theme-dark-main-text-color);
+
 
   --light-gray: #656565;
   --lighter-gray: #a0a0a0;
@@ -60,33 +64,40 @@ html.dark {
   height: 100vh;
 }
 
-.page-container {
+main.page-container {
   padding: 3rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.readable-width-container {
+div.readable-width-container {
+  width: 100%;
   max-width: var(--max-page-content-width);
-  padding: 2rem 0;
   user-select: text;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 0;
+  letter-spacing: -1px;
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
+
   margin: 3rem 0 1rem 0;
 }
 
 h3 {
-  font-size: 1.875rem;
+  font-size: 1.125rem;
+
   margin: 3rem 0 1rem 0;
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 a {
@@ -101,10 +112,10 @@ p {
 .text-link {
   text-decoration: underline;
   margin: .25rem 0;
-  color: var(--blue);
+  color: var(--text-link-color);
   filter: brightness(70%);
   font-family: monospace, Arial, sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 

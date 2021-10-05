@@ -16,7 +16,7 @@ footer {
 footer .content {
   z-index: 2;
   position: absolute;
-  bottom: calc(5vw + 1.9vh);
+  bottom: calc(5vw + 1.5vh);
   display: flex;
   flex-direction: column;
   width: inherit;
@@ -71,7 +71,7 @@ footer .fishing-game .fish {
   height: var(--fish-size);
   min-width: var(--fish-size);
   min-height: var(--fish-size);
-  animation: moveFish 60s infinite ease-in-out, bounceFish 1.5s infinite ease-in-out alternate;
+  animation: moveFish 50s infinite ease-in-out, bounceFish 1.5s infinite ease-in-out alternate;
 }
 
 @keyframes bounceBoat {
@@ -148,6 +148,9 @@ footer .fishing-game .fish {
   :root {
     --boat-size: 20px;
   }
+  footer {
+    margin-top: 1rem;
+  }
 }
 
 @media screen and (max-width: 430px) {
@@ -160,7 +163,7 @@ footer .fishing-game .fish {
   }
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 360px) {
   :root {
     --boat-size: 16px;
   }

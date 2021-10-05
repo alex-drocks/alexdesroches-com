@@ -20,7 +20,7 @@
   --extremely-light-gray: #f0f0f0;
   --almost-white: #fbfbfb;
   --main-box-shadow: 0 1px 10px rgba(0, 8, 28, .75);
-  --max-page-content-width: 1100px;
+  --max-page-content-width: 680px;
   --elements-padding: .5rem 1rem;
   --page-padding: 4rem;
   --button-radius: .25rem;
@@ -61,17 +61,18 @@ html.dark {
 }
 
 .page-container {
-  padding: var(--page-padding);
+  padding: 3rem 1rem;
 }
 
 .readable-width-container {
-  max-width: 680px;
+  max-width: var(--max-page-content-width);
   padding: 2rem 0;
   user-select: text;
 }
 
 h1 {
   font-size: 2.5rem;
+  margin-top: 0;
 }
 
 h2 {
@@ -93,6 +94,25 @@ a {
   text-decoration: none;
 }
 
+p {
+  color: var(--secondary-text-color);
+}
+
+.text-link {
+  text-decoration: underline;
+  margin: .25rem 0;
+  color: var(--blue);
+  filter: brightness(70%);
+  font-family: monospace, Arial, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.text-link:hover {
+  color: var(--main-foreground-color);
+
+}
+
 @media screen and (max-width: 1024px) {
   :root {
     --page-padding: 2rem;
@@ -102,5 +122,9 @@ a {
 @media screen and (max-width: 500px) {
   :root {
     --page-padding: .25rem;
+  }
+
+  .page-container {
+    padding: 2rem 1rem
   }
 }

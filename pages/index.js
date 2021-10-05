@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageLayout from "../components/PageLayout";
 
 export default function Index() {
@@ -8,15 +9,19 @@ export default function Index() {
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL}
     >
       <div className="readable-width-container">
-        <h1>Portfolio d'<em>Alexandre Desroches</em></h1>
-        <h2>Bienvenue!</h2>
+        <h1>Alexandre Desroches</h1>
+        <h2>Programmeur de logiciels, applications et sites webs</h2>
         <p>
-          Mon nom est Alexandre Desroches.
+          Je suis un travailleur autonome qui offre des services de programmation, conception d'applications webs et
+          de sites internets. Je suis disponible, à la demande, pour vos projets.
         </p>
+        <h3>Programmeur indépendant (freelancer)</h3>
         <p>
-          J'offre des services de programmation, de conception de sites webs,
-          ainsi que de composition musicale et de mixage audio.
+          Mes forces en programmation sont surtout pour les langages&nbsp;: Javascript, HTML, CSS. Dans cet écosystème,
+          je maîtrise des technologies modernes en forte demande telles que&nbsp;: React.js, Next.js, Electron.js et
+          Firebase.
         </p>
+        <Link href="/programmation"><a className="text-link">Services de programmation&nbsp;&rarr;</a></Link>
       </div>
     </PageLayout>
   );

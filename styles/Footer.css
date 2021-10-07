@@ -142,14 +142,19 @@ footer .fishing-game .fish {
   .fish {
     display: none;
   }
+
+  footer {
+    margin-top: 2rem;
+  }
 }
 
 @media screen and (max-width: 565px) {
   :root {
     --boat-size: 20px;
   }
+
   footer {
-    margin-top: 1rem;
+    margin-top: 3rem;
   }
 }
 

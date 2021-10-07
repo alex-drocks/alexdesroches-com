@@ -66,7 +66,7 @@ html.dark {
 }
 
 main.page-container {
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 0 1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -112,9 +112,8 @@ p {
 
 .text-link {
   text-decoration: underline;
-  margin: .25rem 0;
   color: var(--text-link-color);
-  filter: brightness(75%);
+  filter: brightness(83%);
   font-family: monospace, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 600;

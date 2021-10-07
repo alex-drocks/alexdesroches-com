@@ -43,6 +43,7 @@ function MobileMenu({isMobileMenuOpened}) {
 
 function MainNavLinks() {
   return (<>
+    <li><ActiveLink href="/contact/"><a>Contact</a></ActiveLink></li>
     <li><ActiveLink href="/a-propos/"><a>À propos</a></ActiveLink></li>
     <li><ActiveLink href="/programmation/"><a>Programmation & Développement&nbsp;web</a></ActiveLink></li>
     <li><ActiveLink href="/musique/"><a>Musique & Sonorisation</a></ActiveLink></li>

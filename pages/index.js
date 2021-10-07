@@ -10,20 +10,21 @@ export default function Index() {
     >
       <div className="readable-width-container">
         <h1>Alexandre Desroches</h1>
-        <h2>Programmeur de logiciels, applications webs et sites internets.</h2>
+        <h2>Programmeur pigiste (freelance)</h2>
         <p>
-          Je suis un passionné de code.
-          En tant que travailleur autonome, j'offre des services personnalisés de programmation pour répondre aux
-          besoins de vos projets.
+          En tant que travailleur autonome, j'offre des services de programmation sur mesure pour vos projets
+          de logiciels, applications webs et sites internets; qu'ils soient grands ou petits.
         </p>
-        <h3>Programmation à la demande (freelance)</h3>
+        <Link href="/contact"><a className="text-link">Contactez-moi&nbsp;&rarr;</a></Link>
+
+        <h3>Expertise en développement web Front-End moderne</h3>
         <p>
-          Mes forces en programmation, sont basées sur les fondements des langages du web. C'est-à-dire,
+          Mes forces en programmation, sont basées principalement sur les langages du web. C'est-à-dire,
           Javascript, HTML et CSS.
         </p>
         <p>
-          Dans ce vaste écosystème, je maîtrise des technologies modernes en forte demande telles que&nbsp;: Node.js,
-          React.js, Next.js, Electron.js et Firebase.
+          Dans ce vaste écosystème de conception web, je maîtrise des technologies modernes en forte demande telles
+          que&nbsp;: Node.js, React.js, Next.js, Electron.js, Squarespace, Wordpress et Firebase.
         </p>
         <Link href="/programmation"><a className="text-link">Services de programmation freelance&nbsp;&rarr;</a></Link>
       </div>

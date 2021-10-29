@@ -1,8 +1,8 @@
-import PageLayout from "../components/PageLayout";
+import PageTemplate from "../components/PageTemplate";
 
 export default function APropos() {
   return (
-    <PageLayout
+    <PageTemplate
       pageTitle={"À propos | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription="En savoir plus à propos d'Alexandre Desroches."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/a-propos/"}
@@ -32,6 +32,6 @@ export default function APropos() {
           mon environnement de travail.
         </p>
       </div>
-    </PageLayout>
+    </PageTemplate>
   );
 }

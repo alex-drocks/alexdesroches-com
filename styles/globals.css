@@ -14,11 +14,11 @@
   /*Dark Mode*/
   --theme-dark-background: #1f2028;
   --theme-dark-main-text-color: #fff;
-  --theme-dark-secondary-text-color: #a7a7a7;
+  --theme-dark-secondary-text-color: #aaa;
   --theme-dark-text-link-color: #fff;
 
 
-  --light-gray: #656565;
+  --light-gray: #646464;
   --lighter-gray: #a0a0a0;
   --very-light-gray: #e5e5e5;
   --extremely-light-gray: #f0f0f0;
@@ -30,7 +30,9 @@
   --button-radius: .25rem;
   --blue: #0d6efd;
   --user-font-scale: 1rem -16px;
-  font-family: Arial, sans-serif;
+  --ff-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ff-monospace: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-family: var(--ff-sans-serif);
   font-size: 1rem;
   font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
 }
@@ -79,6 +81,10 @@ div.readable-width-container {
   user-select: text;
 }
 
+h1, a {
+  font-family: var(--ff-monospace);
+}
+
 h1 {
   font-size: 2rem;
   margin-top: 0;
@@ -86,14 +92,13 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 
   margin: 3rem 0 1rem 0;
 }
 
 h3 {
-  font-size: 1.125rem;
-
+  font-size: 1rem;
   margin: 3rem 0 1rem 0;
 }
 
@@ -113,9 +118,8 @@ p {
 .text-link {
   text-decoration: underline;
   color: var(--text-link-color);
-  filter: brightness(83%);
-  font-family: monospace, Arial, sans-serif;
-  font-size: 1rem;
+  filter: brightness(68%);
+  font-size: .75rem;
   font-weight: 600;
 }
 

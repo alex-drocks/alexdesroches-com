@@ -1,9 +1,9 @@
 import Head from 'next/head';
-
 import Header from "./Header";
 import Footer from "./Footer";
 
-export default function PageLayout({children, pageTitle, pageDescription, pageCanonicalURL}) {
+
+export default function PageTemplate({children, pageTitle, pageDescription, pageCanonicalURL}) {
   return (<>
     <Head>
       {/* Page Meta */}

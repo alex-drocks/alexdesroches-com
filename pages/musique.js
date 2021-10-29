@@ -1,8 +1,8 @@
-import PageLayout from "../components/PageLayout";
+import PageTemplate from "../components/PageTemplate";
 
 export default function Musique() {
   return (
-    <PageLayout
+    <PageTemplate
       pageTitle={"Musique | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription="Services de composition musicale et services de mixage audio. Musique, podcasts et plus. Alexandre Desroches freelancer travaillant avec Cubase et Reaper depuis plus de 10 ans."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/musique/"}
@@ -36,6 +36,6 @@ export default function Musique() {
         <a href="https://drocksrecords.com">D Rocks Records</a>
 
       </div>
-    </PageLayout>
+    </PageTemplate>
   );
 }

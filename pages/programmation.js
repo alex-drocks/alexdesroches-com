@@ -1,8 +1,8 @@
-import PageLayout from "../components/PageLayout";
+import PageTemplate from "../components/PageTemplate";
 
 export default function Programmation() {
   return (
-    <PageLayout
+    <PageTemplate
       pageTitle={"Programmation | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription="Services de programmation et conception de sites webs. Alexandre Desroches freelancer. Javascript, React, NodeJS, Firebase, HTML, CSS."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/programmation/"}
@@ -87,6 +87,6 @@ export default function Programmation() {
           </ul>
         </div>
       </div>
-    </PageLayout>
+    </PageTemplate>
   );
 }

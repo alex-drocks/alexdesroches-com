@@ -1,22 +1,22 @@
 {
   "name": "alexdesroches.com",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "firebase deploy --only hosting"
   },
   "dependencies": {
-    "@tippyjs/react": "^4.2.5",
-    "next": "11.1.2",
+    "next": "12.0.1",
     "next-themes": "^0.0.15",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "12.0.1"
   }
 }

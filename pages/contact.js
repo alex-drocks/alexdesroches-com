@@ -1,8 +1,8 @@
-import PageLayout from "../components/PageLayout";
+import PageTemplate from "../components/PageTemplate";
 
 export default function Contact() {
   return (
-    <PageLayout
+    <PageTemplate
       pageTitle={"Contact | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription="Contacter Alexandre Desroches."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/contact/"}
@@ -25,7 +25,7 @@ export default function Contact() {
           1684 Girard, Ste-Madeleine, QC Canada, J0H 1S0
         </p>
       </div>
-    </PageLayout>
+    </PageTemplate>
   );
 }
 

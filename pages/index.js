@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PageTemplate from "../components/PageTemplate";
+import ResponsiveImage from "../components/ResponsiveImage";
 
 
 export default function Index() {
@@ -46,14 +47,28 @@ export default function Index() {
             Alexandre Desroches
             <br/>
             <br/>
-            <img className="handwritten-signature" src="/images/signature-256w-black.png"
-                 alt="Signature Alexandre Desroches"/>
+            <ResponsiveImage
+              path="/images/signature/signature"
+              alt="Signature Alexandre Desroches"
+              renderedWidth={92}
+              renderedHeight={92}
+              desktopWidth={276}
+              mobileWidth={184}
+              className="handwritten-signature"
+            />
           </p>
         </div>
         <div className="max-text-width">
           <div className="stylish-image">
             <span className="stylish-image--overlay-text">Art is thinking</span>
-            <img src="/images/whitebloc.jpg" alt="Art is thinking"/>
+            <ResponsiveImage
+              path="/images/whitebloc/whitebloc"
+              alt="Art is Thinking"
+              renderedWidth={501}
+              renderedHeight={751}
+              desktopWidth={1002}
+              mobileWidth={501}
+            />
           </div>
         </div>
       </div>

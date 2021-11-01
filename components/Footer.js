@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer>
       <pre className="copyright">©&nbsp;<span>{new Date().getFullYear()}</span>&nbsp;Alexandre&nbsp;Desroches</pre>
-      <FishingGame/>
+      {/*<FishingGame/>*/}
     </footer>
   );
 };

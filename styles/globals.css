@@ -152,11 +152,15 @@ p {
   width: inherit;
 }
 
+.stylish-image picture {
+  width: inherit;
+}
+
 .stylish-image img {
   border-radius: .25rem;
   box-shadow: 100px 100px 100px var(--secondary-text-color);
-  opacity: 0.86;
-  transition: opacity .6s;
+  opacity: 0.89;
+  transition: opacity .5s;
 }
 
 .stylish-image:hover img {
@@ -167,14 +171,10 @@ p {
   z-index: 2;
   position: absolute;
   top: 87%;
-  left: 40%;
+  left: 39%;
   transform: rotateZ(10deg);
   color: var(--secondary-text-color);
-  text-shadow: 1px 1px 2px var(--secondary-text-color);
-}
-
-.stylish-image:hover .stylish-image--overlay-text {
-  text-shadow: 1px 1px 1px var(--secondary-text-color);
+  opacity: 0.9;
 }
 
 .handwritten-signature {

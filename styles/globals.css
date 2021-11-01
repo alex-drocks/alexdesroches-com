@@ -24,7 +24,10 @@
   --extremely-light-gray: #f0f0f0;
   --almost-white: #fbfbfb;
   --main-box-shadow: 0 1px 10px rgba(0, 8, 28, .75);
-  --max-page-content-width: 680px;
+
+  --max-content-width: 1280px;
+  --max-text-width: 630px;
+
   --elements-padding: .5rem 1rem;
   --page-padding: 4rem;
   --button-radius: .25rem;
@@ -58,6 +61,10 @@ html.dark {
   --text-link-color: var(--theme-dark-text-link-color);
 }
 
+html.dark .handwritten-signature {
+  filter: invert();
+}
+
 #__next {
   display: flex;
   flex-direction: column;
@@ -68,20 +75,33 @@ html.dark {
 }
 
 main.page-container {
-  padding: 3rem 1rem 0 1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   align-items: center;
 }
 
-div.readable-width-container {
+.max-content-width {
   width: 100%;
-  max-width: var(--max-page-content-width);
-  user-select: text;
+  max-width: var(--max-content-width);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-h1, a {
+.max-text-width {
+  width: 100%;
+  max-width: var(--max-text-width);
+  padding: var(--page-padding);
+}
+
+img {
+  width: inherit;
+  height: auto;
+}
+
+h2, a {
   font-family: var(--ff-monospace);
 }
 
@@ -92,8 +112,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.25rem;
-
+  font-size: 1.75rem;
   margin: 3rem 0 1rem 0;
 }
 
@@ -119,13 +138,48 @@ p {
   text-decoration: underline;
   color: var(--text-link-color);
   filter: brightness(68%);
-  font-size: .75rem;
+  font-size: .8125rem;
   font-weight: 600;
 }
 
 .text-link:hover {
   color: var(--text-link-color);
   filter: hue-rotate(1deg);
+}
+
+.stylish-image {
+  position: relative;
+  width: inherit;
+}
+
+.stylish-image img {
+  border-radius: .25rem;
+  box-shadow: 100px 100px 100px var(--secondary-text-color);
+  opacity: 0.86;
+  transition: opacity .6s;
+}
+
+.stylish-image:hover img {
+  opacity: 1;
+}
+
+.stylish-image--overlay-text {
+  z-index: 2;
+  position: absolute;
+  top: 87%;
+  left: 40%;
+  transform: rotateZ(10deg);
+  color: var(--secondary-text-color);
+  text-shadow: 1px 1px 2px var(--secondary-text-color);
+}
+
+.stylish-image:hover .stylish-image--overlay-text {
+  text-shadow: 1px 1px 1px var(--secondary-text-color);
+}
+
+.handwritten-signature {
+  width: 92px;
+  height: 92px;
 }
 
 @media screen and (max-width: 1024px) {

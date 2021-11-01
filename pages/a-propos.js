@@ -7,7 +7,7 @@ export default function APropos() {
       pageDescription="En savoir plus à propos d'Alexandre Desroches."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/a-propos/"}
     >
-      <div className="readable-width-container">
+      <div className="max-text-width">
         <h1>À propos d'Alexandre Desroches</h1>
         <p>
           Je suis un passionné de code, cinéma, musique, composition, théologie et philosophie.

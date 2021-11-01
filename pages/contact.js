@@ -7,7 +7,7 @@ export default function Contact() {
       pageDescription="Contacter Alexandre Desroches."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/contact/"}
     >
-      <div className="readable-width-container">
+      <div className="max-text-width">
         <h1>Contacter Alexandre Desroches</h1>
         <p>
           Vous pouvez me joindre par le moyen que vous préférez. Soit par courriel, téléphone, Facebook, Twitter, etc.
@@ -30,7 +30,7 @@ export default function Contact() {
 }
 
 function ContactLink({label, url}) {
-  return(
+  return (
     <p>
       <a className="text-link" href={url}>{label}&nbsp;&rarr;</a>
     </p>

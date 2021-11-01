@@ -6,7 +6,6 @@
   width: 100%;
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
-  max-width: 1800px;
 }
 
 header {
@@ -21,11 +20,15 @@ header button {
   height: 2.1rem;
   padding: 0;
   margin-left: 2rem;
-  margin-right: 1rem;
+  margin-right: 0;
   border: 1px solid var(--lighter-gray);
   border-radius: var(--button-radius);
   background-color: transparent;
   cursor: pointer;
+}
+
+header button:hover {
+  background-color: var(--blue);
 }
 
 header button svg {
@@ -33,6 +36,10 @@ header button svg {
   padding: .4rem;
   fill: var(--main-foreground-color);
   stroke: var(--main-foreground-color);
+}
+
+header .toggle-dark-mode-button {
+  border-color: transparent;
 }
 
 header .toggle-mobile-menu-button {
@@ -47,19 +54,14 @@ header nav {
 }
 
 header nav .left-branding {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  letter-spacing: -1px;
-  margin-left: 1em;
-  margin-right: 2em;
+  margin: 0;
+  font-weight: 600;
 }
 
 header nav .left-branding a {
   font-family: monospace;
   font-size: 1.125rem;
+  margin: inherit;
 }
 
 header nav .page-links {
@@ -70,21 +72,22 @@ header nav .page-links {
   margin-left: 2em;
   column-gap: 1rem;
   list-style: none;
+  letter-spacing: -1px;
 }
 
 header nav a {
   color: var(--secondary-text-color);
-  padding: var(--elements-padding);
-  border-radius: var(--button-radius);
+  margin: var(--elements-padding);
+  padding: .25rem .2rem .25rem 0;
   display: block;
   width: inherit;
   text-align: center;
   line-height: 1;
+  border-bottom: 2px solid transparent;
 }
 
 header nav a:hover, header nav a.active-next-link {
-  color: white;
-  background-color: var(--blue);
+  border-bottom-color: var(--blue);
 }
 
 @media screen and (min-width: 756px) {
@@ -135,7 +138,7 @@ header nav a:hover, header nav a.active-next-link {
 @media screen and (max-width: 430px) {
   header nav .left-branding {
     margin-left: 0;
-    width: min-content;
+    /*width: min-content;*/
   }
 
   header nav a.active-next-link {

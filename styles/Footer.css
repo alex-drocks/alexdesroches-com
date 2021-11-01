@@ -8,22 +8,12 @@
 footer {
   position: relative;
   width: 100%;
-  padding: 0;
   margin: 0;
-  background: var(--main-background-color);
+  /*padding: 2rem;*/
 }
 
-footer .content {
-  z-index: 2;
-  position: absolute;
-  bottom: calc(5vw + 1.5vh);
-  display: flex;
-  flex-direction: column;
-  width: inherit;
-  padding: 0 calc(var(--page-padding) + 1rem);
-}
-
-footer .content .copyright {
+footer .copyright {
+  margin-top: 4rem;
   font-size: 0.875rem;
   color: var(--light-gray);
   white-space: break-spaces;

@@ -4,9 +4,7 @@ import {useEffect, useState} from "react";
 export default function Footer() {
   return (
     <footer>
-      <div className="content">
-        <pre className="copyright">©&nbsp;<span>{new Date().getFullYear()}</span>&nbsp;Alexandre&nbsp;Desroches</pre>
-      </div>
+      <pre className="copyright">©&nbsp;<span>{new Date().getFullYear()}</span>&nbsp;Alexandre&nbsp;Desroches</pre>
       <FishingGame/>
     </footer>
   );

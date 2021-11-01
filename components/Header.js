@@ -9,9 +9,9 @@ export default function Header() {
     <div className="header-container">
       <header>
         <nav>
-          <div className="left-branding">
+          <h1 className="left-branding">
             <ActiveLink href="/"><a>Alexandre Desroches</a></ActiveLink>
-          </div>
+          </h1>
           <ul className="page-links do-not-display-on-mobile">
             <MainNavLinks/>
           </ul>
@@ -21,7 +21,8 @@ export default function Header() {
       </header>
       <MobileMenu isMobileMenuOpened={isMobileMenuOpened}/>
     </div>
-  );
+  )
+    ;
 }
 
 
@@ -42,10 +43,9 @@ function MobileMenu({isMobileMenuOpened}) {
 
 function MainNavLinks() {
   return (<>
+    <li><ActiveLink href="/programmation/"><a>Services de programmation</a></ActiveLink></li>
+    <li><ActiveLink href="/a-propos/"><a>À&nbsp;propos</a></ActiveLink></li>
     <li><ActiveLink href="/contact/"><a>Contact</a></ActiveLink></li>
-    <li><ActiveLink href="/a-propos/"><a>À propos</a></ActiveLink></li>
-    <li><ActiveLink href="/programmation/"><a>Programmation & Développement&nbsp;web</a></ActiveLink></li>
-    <li><ActiveLink href="/musique/"><a>Musique & Sonorisation</a></ActiveLink></li>
   </>);
 }
 

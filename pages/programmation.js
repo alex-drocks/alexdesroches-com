@@ -7,7 +7,7 @@ export default function Programmation() {
       pageDescription="Services de programmation et conception de sites webs. Alexandre Desroches freelancer. Javascript, React, NodeJS, Firebase, HTML, CSS."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/programmation/"}
     >
-      <div className="readable-width-container">
+      <div className="max-text-width">
         <h1>Services de programmation et de conception&nbsp;web</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores blanditiis dolor dolorum eaque

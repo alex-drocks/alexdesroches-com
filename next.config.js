@@ -1,4 +1,7 @@
 module.exports = {
   reactStrictMode: true,
-  trailingSlash: true
+  trailingSlash: true,
+  experimental: {
+    scrollRestoration: true,
+  },
 }

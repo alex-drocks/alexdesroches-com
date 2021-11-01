@@ -34,7 +34,7 @@ export default function Index() {
             que&nbsp;: Node.js, React.js, Next.js, Electron.js, Squarespace, Wordpress et Firebase.
           </p>
           <Link href="/programmation">
-            <a className="text-link">Mes services de programmation freelance&nbsp;&rarr;</a>
+            <a className="text-link">Services de programmation freelance&nbsp;&rarr;</a>
           </Link>
 
           <h3>Faisons équipe&nbsp;!</h3>

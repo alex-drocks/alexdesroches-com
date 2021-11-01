@@ -131,18 +131,13 @@ header nav a:hover, header nav a.active-next-link {
   }
 
   header button:last-of-type {
-    margin-left: .5em;
+    margin-left: 2rem;
   }
 }
 
-@media screen and (max-width: 430px) {
-  header nav .left-branding {
-    margin-left: 0;
-    /*width: min-content;*/
-  }
-
-  header nav a.active-next-link {
-    color: var(--secondary-text-color);
-    background-color: transparent;
+@media screen and (max-width: 500px) {
+  .header-container {
+    padding-left: .75rem;
+    padding-right: .75rem;
   }
 }

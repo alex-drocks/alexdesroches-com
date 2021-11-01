@@ -103,12 +103,12 @@ img {
 
 h2, a {
   font-family: var(--ff-monospace);
+  letter-spacing: -1px;
 }
 
 h1 {
   font-size: 2rem;
   margin-top: 0;
-  letter-spacing: -1px;
 }
 
 h2 {
@@ -138,7 +138,7 @@ p {
   text-decoration: underline;
   color: var(--text-link-color);
   filter: brightness(68%);
-  font-size: .8125rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -188,12 +188,19 @@ p {
   }
 }
 
+
 @media screen and (max-width: 500px) {
   :root {
     --page-padding: .25rem;
   }
+}
 
-  .page-container {
-    padding: 2rem 1rem
+@media screen and (max-width: 330px) {
+  header nav h1.left-branding a {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 }

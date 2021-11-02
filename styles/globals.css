@@ -14,7 +14,7 @@
   /*Dark Mode*/
   --theme-dark-background: #1f2028;
   --theme-dark-main-text-color: #fff;
-  --theme-dark-secondary-text-color: #aaa;
+  --theme-dark-secondary-text-color: #b7b7b7;
   --theme-dark-text-link-color: #fff;
 
 
@@ -23,6 +23,7 @@
   --very-light-gray: #e5e5e5;
   --extremely-light-gray: #f0f0f0;
   --almost-white: #fbfbfb;
+  --blue: #0d6efd;
   --main-box-shadow: 0 1px 10px rgba(0, 8, 28, .75);
 
   --max-content-width: 1280px;
@@ -30,8 +31,8 @@
 
   --elements-padding: .5rem 1rem;
   --page-padding: 4rem;
+
   --button-radius: .25rem;
-  --blue: #0d6efd;
   --user-font-scale: 1rem -16px;
   --ff-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --ff-monospace: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
@@ -82,12 +83,15 @@ main.page-container {
   align-items: center;
 }
 
-.max-content-width {
-  width: 100%;
-  max-width: var(--max-content-width);
+.display-flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.max-content-width {
+  width: 100%;
+  max-width: var(--max-content-width);
 }
 
 .max-text-width {
@@ -108,17 +112,16 @@ h2, a {
 
 h1 {
   font-size: 2rem;
-  margin-top: 0;
 }
 
 h2 {
   font-size: 1.75rem;
-  margin: 3rem 0 1rem 0;
+  margin: 2rem 0 1rem 0;
 }
 
 h3 {
   font-size: 1rem;
-  margin: 3rem 0 1rem 0;
+  margin: 3.25rem 0 1rem 0;
 }
 
 h4 {
@@ -137,9 +140,9 @@ p {
 .text-link {
   text-decoration: underline;
   color: var(--text-link-color);
-  filter: brightness(68%);
+  filter: brightness(71%);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .text-link:hover {
@@ -191,7 +194,7 @@ p {
 
 @media screen and (max-width: 500px) {
   :root {
-    --page-padding: .25rem;
+    --page-padding: 1rem;
   }
 }
 

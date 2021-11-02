@@ -10,8 +10,8 @@ export default function Index() {
       pageDescription="Portfolio d'Alexandre Desroches."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL}
     >
-      <div className="max-content-width">
-        <div className="max-text-width flex-col">
+      <div className="max-content-width display-flex">
+        <div className="max-text-width">
           <h2>Programmeur pigiste (freelance)</h2>
           <p>
             En tant que travailleur autonome, j'offre mes services de programmation pour vos projets de
@@ -19,8 +19,7 @@ export default function Index() {
             de logiciels pour ordinateurs, applications webs et conception de sites internets à la fine pointe de la
             technologie.
           </p>
-          <Link href="/contact"><a className="text-link">Contactez-moi pour discuter de votre
-            projet&nbsp;&rarr;</a>
+          <Link href="/contact"><a className="text-link">Proposez-moi un mandat&nbsp;&rarr;</a>
           </Link>
 
           <h3>Expertise en développement web Front-End moderne</h3>
@@ -34,14 +33,13 @@ export default function Index() {
             que&nbsp;: Node.js, React.js, Next.js, Electron.js, Squarespace, Wordpress et Firebase.
           </p>
           <Link href="/programmation">
-            <a className="text-link">Services de programmation freelance&nbsp;&rarr;</a>
+            <a className="text-link">En savoir plus à propos de mes services de programmation&nbsp;&rarr;</a>
           </Link>
 
           <h3>Faisons équipe&nbsp;!</h3>
           <p>
-            Proposez-moi un projet sur lequel vous voulez collaborer
-            pour réaliser vos idées.
-            Concevons des choses géniales ensemble.
+            {/*Parlez-moi de votre projet et réalisons ensemble vos idées.*/}
+            Ce sera un plaisir pour moi de discuter de votre projet afin qu'ensemble nous puissions réaliser vos idées.
             <br/>
             <br/>
             Alexandre Desroches
@@ -58,7 +56,8 @@ export default function Index() {
             />
           </p>
         </div>
-        <div className="max-text-width">
+
+        <div className="max-text-width display-flex">
           <div className="stylish-image">
             <span className="stylish-image--overlay-text">Art is thinking</span>
             <ResponsiveImage

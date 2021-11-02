@@ -19,7 +19,7 @@ export default function Index() {
             de logiciels pour ordinateurs, applications webs et conception de sites internets à la fine pointe de la
             technologie.
           </p>
-          <Link href="/contact"><a className="text-link">Proposez-moi un mandat&nbsp;&rarr;</a>
+          <Link href="/contact"><a className="text-link">Contactez-moi pour proposer un mandat&nbsp;&rarr;</a>
           </Link>
 
           <h3>Expertise en développement web Front-End moderne</h3>

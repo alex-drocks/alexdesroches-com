@@ -17,7 +17,6 @@
   --theme-dark-secondary-text-color: #b7b7b7;
   --theme-dark-text-link-color: #fff;
 
-
   --light-gray: #646464;
   --lighter-gray: #a0a0a0;
   --very-light-gray: #e5e5e5;
@@ -150,31 +149,31 @@ p {
   filter: hue-rotate(1deg);
 }
 
-.stylish-image {
+.whitebloc-stylish-image {
   position: relative;
   width: inherit;
 }
 
-.stylish-image picture {
+.whitebloc-stylish-image picture {
   width: inherit;
 }
 
-.stylish-image img {
+.whitebloc-stylish-image img {
   border-radius: .25rem;
   box-shadow: 100px 100px 100px var(--secondary-text-color);
   opacity: 0.89;
   transition: opacity .5s;
 }
 
-.stylish-image:hover img {
+.whitebloc-stylish-image:hover img {
   opacity: 1;
 }
 
-.stylish-image--overlay-text {
+.whitebloc-stylish-image--overlay-text {
   z-index: 2;
   position: absolute;
-  top: 87%;
-  left: 39%;
+  top: 85%;
+  left: 40%;
   transform: rotateZ(10deg);
   color: var(--secondary-text-color);
   opacity: 0.9;
@@ -185,12 +184,18 @@ p {
   height: 92px;
 }
 
+@media screen and (max-width: 1250px) {
+  .whitebloc-stylish-image--overlay-text {
+    top: 86%;
+    left: 35%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   :root {
     --page-padding: 2rem;
   }
 }
-
 
 @media screen and (max-width: 500px) {
   :root {
@@ -205,5 +210,10 @@ p {
 
   h2 {
     font-size: 1.5rem;
+  }
+
+  .whitebloc-stylish-image--overlay-text {
+    top: 86%;
+    left: 33%;
   }
 }

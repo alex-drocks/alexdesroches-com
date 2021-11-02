@@ -58,8 +58,8 @@ export default function Index() {
         </div>
 
         <div className="max-text-width display-flex">
-          <div className="whitebloc-stylish-image">
-            <span className="whitebloc-stylish-image--overlay-text">Art is Thinking</span>
+          <div className="stylish-shadow-image">
+            <span className="stylish-shadow-image--overlay-text">Art is Thinking</span>
             <ResponsiveImage
               path="/images/whitebloc/whitebloc"
               alt="Art is Thinking"

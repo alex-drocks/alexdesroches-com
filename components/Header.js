@@ -44,8 +44,8 @@ function MobileMenu({isMobileMenuOpened}) {
 function MainNavLinks() {
   return (<>
     <li><ActiveLink href="/programmation/"><a>Services de programmation</a></ActiveLink></li>
-    <li><ActiveLink href="/a-propos/"><a>À&nbsp;propos</a></ActiveLink></li>
     <li><ActiveLink href="/contact/"><a>Contact</a></ActiveLink></li>
+    <li><ActiveLink href="/a-propos/"><a>À&nbsp;propos</a></ActiveLink></li>
   </>);
 }
 

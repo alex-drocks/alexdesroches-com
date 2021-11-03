@@ -134,6 +134,7 @@ a {
 
 p {
   color: var(--secondary-text-color);
+  line-height: 1.5;
 }
 
 .text-link {
@@ -180,6 +181,7 @@ p {
 }
 
 .handwritten-signature {
+  margin-top: .5rem;
   width: 92px;
   height: 92px;
 }

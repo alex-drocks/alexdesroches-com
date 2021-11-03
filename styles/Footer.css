@@ -17,3 +17,19 @@ footer .copyright {
   color: var(--secondary-text-color);
   white-space: break-spaces;
 }
+
+@media screen and (max-width: 1024px) {
+  footer {
+    margin-top: 7rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    margin-top: 8rem;
+  }
+
+  footer .copyright {
+    margin-top: 2rem;
+  }
+}

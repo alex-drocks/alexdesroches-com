@@ -12,20 +12,21 @@ export default function Index() {
     >
       <div className="max-content-width display-flex">
         <div className="max-text-width">
-          <h2>Programmeur pigiste (freelance)</h2>
+          <h2>Programmeur pigiste (freelancer)</h2>
           <p>
-            En tant que travailleur autonome, j'offre mes services de programmation pour vos projets de
+            Je m'appelle Alexandre Desroches, je suis un travailleur autonome qui offre des services de programmation
+            pour vos projets de
             développement
             de logiciels pour ordinateurs, applications webs et conception de sites internets à la fine pointe de la
             technologie.
           </p>
-          <Link href="/contact"><a className="text-link">Contactez-moi pour proposer un mandat&nbsp;&rarr;</a>
+          <Link href="/contact"><a className="text-link">Contactez-moi pour me proposer un mandat&nbsp;&rarr;</a>
           </Link>
 
-          <h3>Expertise en développement web Front-End moderne</h3>
+          <h3>Mon expertise est le développement web Front-End moderne.</h3>
           <p>
-            Mes forces en programmation, sont basées principalement sur les langages du web. C'est-à-dire,
-            Javascript, HTML et CSS; dont tous les sites internet et applications webs dépendent.
+            En effet, mes forces en programmation, sont basées principalement sur les langages du web. C'est-à-dire,
+            Javascript, HTML et CSS; Dont les sites internet et applications webs dépendent.
           </p>
           <p>
             Dans ce vaste écosystème de conception web, je maîtrise des technologies modernes en forte demande
@@ -38,23 +39,23 @@ export default function Index() {
 
           <h3>Faisons équipe&nbsp;!</h3>
           <p>
-            {/*Parlez-moi de votre projet et réalisons ensemble vos idées.*/}
             Ce sera un plaisir pour moi de discuter de votre projet afin qu'ensemble nous puissions réaliser vos idées.
-            <br/>
-            <br/>
-            Alexandre Desroches
-            <br/>
-            <br/>
-            <ResponsiveImage
-              path="/images/signature/signature"
-              alt="Signature Alexandre Desroches"
-              renderedWidth={92}
-              renderedHeight={92}
-              desktopWidth={276}
-              mobileWidth={184}
-              className="handwritten-signature"
-            />
           </p>
+
+          {/*<Link href="/a-propos">*/}
+          {/*  <a className="text-link">À propos de Alexandre Desroches&nbsp;&rarr;</a>*/}
+          {/*</Link>*/}
+          {/*<br/>*/}
+
+          <ResponsiveImage
+            path="/images/signature/signature"
+            alt="Signature Alexandre Desroches"
+            renderedWidth={92}
+            renderedHeight={92}
+            desktopWidth={276}
+            mobileWidth={184}
+            className="handwritten-signature"
+          />
         </div>
 
         <div className="max-text-width display-flex">

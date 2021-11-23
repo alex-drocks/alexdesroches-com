@@ -1,0 +1,10 @@
+.stylishImage {
+  filter: grayscale(77%) brightness(111%);
+}
+
+.imageTextOverlay {
+  left: 8%;
+  top: unset;
+  bottom: 5%;
+  transform: rotateZ(0deg);
+}

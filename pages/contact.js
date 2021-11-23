@@ -1,6 +1,6 @@
 import PageTemplate from "../components/PageTemplate";
-import styles from "../styles/contact.module.css";
 import ResponsiveImage from "../components/ResponsiveImage";
+import styles from "../styles/contact.module.css";
 
 export default function Contact() {
   return (
@@ -94,10 +94,10 @@ export default function Contact() {
         <section className="max-text-width">
           <div className="stylish-shadow-image">
             <span
-              className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Art is Communication</span>
+              className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Art is Communicating</span>
             <ResponsiveImage
               path="/images/celltower/celltower"
-              alt="Art is Communication"
+              alt="Art is Communicating"
               renderedWidth={501}
               renderedHeight={752}
               desktopWidth={1000}

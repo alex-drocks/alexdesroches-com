@@ -91,8 +91,12 @@ header nav a {
   border-bottom: 2px solid transparent;
 }
 
-header nav a:hover, header nav a.active-next-link {
+header nav a:hover {
   border-bottom-color: var(--blue);
+}
+
+header nav a.active-next-link {
+  font-weight: bold;
 }
 
 @media screen and (min-width: 756px) {

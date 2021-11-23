@@ -40,11 +40,6 @@ export default function Index() {
             Ce sera un plaisir pour moi de discuter de votre projet afin qu'ensemble nous puissions réaliser vos idées.
           </p>
 
-          {/*<Link href="/a-propos">*/}
-          {/*  <a className="text-link">À propos de Alexandre Desroches&nbsp;&rarr;</a>*/}
-          {/*</Link>*/}
-          {/*<br/>*/}
-
           <ResponsiveImage
             path="/images/signature/signature"
             alt="Signature Alexandre Desroches"

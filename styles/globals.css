@@ -2,28 +2,35 @@
   /*Main Theme Variables*/
   --main-background-color: var(--theme-light-background);
   --main-foreground-color: var(--theme-light-main-text-color);
+  --main-border-color: var(--theme-light-border-color);
+  --main-box-shadow-color: var(--theme-light-box-shadow-color);
+  --main-text-link-color: var(--theme-light-text-link-color);
   --secondary-text-color: var(--theme-light-secondary-text-color);
-  --text-link-color: var(--theme-light-text-link-color);
 
   /*Light Mode*/
   --theme-light-background: #fff;
   --theme-light-main-text-color: #000;
   --theme-light-secondary-text-color: var(--light-gray);
   --theme-light-text-link-color: var(--blue);
+  --theme-light-border-color: var(--extremely-light-gray);
+  --theme-light-box-shadow-color: var(--light-gray);
 
   /*Dark Mode*/
   --theme-dark-background: #1f2028;
   --theme-dark-main-text-color: #fff;
   --theme-dark-secondary-text-color: #b7b7b7;
   --theme-dark-text-link-color: #fff;
+  --theme-dark-border-color: var(--dark-gray);
+  --theme-dark-box-shadow-color: #777;
 
+
+  --dark-gray: #404040;
   --light-gray: #646464;
   --lighter-gray: #a0a0a0;
   --very-light-gray: #e5e5e5;
   --extremely-light-gray: #f0f0f0;
   --almost-white: #fbfbfb;
   --blue: #0d6efd;
-  --main-box-shadow: 0 1px 10px rgba(0, 8, 28, .75);
 
   --max-content-width: 1280px;
   --max-text-width: 630px;
@@ -57,8 +64,10 @@ body {
 html.dark {
   --main-background-color: var(--theme-dark-background);
   --main-foreground-color: var(--theme-dark-main-text-color);
+  --main-border-color: var(--theme-dark-border-color);
+  --main-box-shadow-color: var(--theme-dark-box-shadow-color);
   --secondary-text-color: var(--theme-dark-secondary-text-color);
-  --text-link-color: var(--theme-dark-text-link-color);
+  --main-text-link-color: var(--theme-dark-text-link-color);
 }
 
 html.dark .handwritten-signature {
@@ -86,6 +95,10 @@ main.page-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .max-content-width {
@@ -139,14 +152,14 @@ p {
 
 .text-link {
   text-decoration: underline;
-  color: var(--text-link-color);
+  color: var(--main-text-link-color);
   filter: brightness(71%);
   font-size: 1rem;
   font-weight: 500;
 }
 
 .text-link:hover {
-  color: var(--text-link-color);
+  color: var(--main-text-link-color);
   filter: hue-rotate(1deg);
 }
 
@@ -161,7 +174,7 @@ p {
 
 .stylish-shadow-image img {
   border-radius: .25rem;
-  box-shadow: 100px 100px 100px var(--secondary-text-color);
+  box-shadow: 100px 100px 100px var(--main-box-shadow-color);
   opacity: 0.89;
   transition: opacity .5s;
 }
@@ -176,8 +189,13 @@ p {
   top: 86%;
   left: 40%;
   transform: rotateZ(10deg);
-  color: var(--secondary-text-color);
+  color: var(--light-gray);
   opacity: 0.9;
+}
+
+.stylish-shadow-image:hover .stylish-shadow-image--overlay-text {
+  /*color: black;*/
+  opacity: 1;
 }
 
 .handwritten-signature {

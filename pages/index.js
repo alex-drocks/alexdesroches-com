@@ -12,15 +12,13 @@ export default function Index() {
     >
       <div className="max-content-width display-flex">
         <div className="max-text-width">
-          <h2>Programmeur pigiste (freelancer)</h2>
+          <h2>Programmeur pigiste (freelance)</h2>
           <p>
             Je m'appelle Alexandre Desroches, je suis un travailleur autonome qui offre des services de programmation
-            pour vos projets de
-            développement
-            de logiciels pour ordinateurs, applications webs et conception de sites internets à la fine pointe de la
-            technologie.
+            pour le développement de logiciels d'ordinateurs, applications webs et conception de sites internets à la
+            fine pointe de la technologie.
           </p>
-          <Link href="/contact"><a className="text-link">Contactez-moi pour me proposer un mandat&nbsp;&rarr;</a>
+          <Link href="/contact"><a className="text-link">Contactez-moi pour votre projet&nbsp;&rarr;</a>
           </Link>
 
           <h3>Mon expertise est le développement web Front-End moderne.</h3>

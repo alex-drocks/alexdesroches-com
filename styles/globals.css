@@ -173,7 +173,7 @@ p {
 .stylish-shadow-image--overlay-text {
   z-index: 2;
   position: absolute;
-  top: 85%;
+  top: 86%;
   left: 40%;
   transform: rotateZ(10deg);
   color: var(--secondary-text-color);
@@ -215,7 +215,7 @@ p {
   }
 
   .stylish-shadow-image--overlay-text {
-    top: 86%;
+    top: 85%;
     left: 33%;
   }
 }

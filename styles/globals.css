@@ -153,7 +153,7 @@ p {
 .text-link {
   text-decoration: underline;
   color: var(--main-text-link-color);
-  filter: brightness(71%);
+  filter: brightness(77%);
   font-size: 1rem;
   font-weight: 500;
 }

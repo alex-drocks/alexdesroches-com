@@ -12,11 +12,16 @@
 .contactLink a {
   display: flex;
   align-items: center;
+  color: var(--main-text-link-color);
 }
 
 .contactLink a svg {
-  margin-right: .75rem;
-  fill: var(--main-foreground-color);
+  margin-right: 1rem;
+  fill: var(--blue);
+}
+
+.contactLink:hover a svg {
+  opacity: 1;
 }
 
 .imageTextOverlay {

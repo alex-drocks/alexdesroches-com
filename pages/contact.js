@@ -6,15 +6,15 @@ export default function Contact() {
   return (
     <PageTemplate
       pageTitle={"Contact | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Contacter Alexandre Desroches."
+      pageDescription="Contacter Alexandre Desroches. Coordonnées directes, téléphone cellulaire et courriel."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/contact/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">
           <h2>Contacter Alexandre Desroches</h2>
           <p>
-            Je suis joignable en tout temps grâce au moyen de communication que vous préférez
-            et ce sera un plaisir pour moi de discuter avec vous.
+            N'hésitez pas à me contacter, ce sera un plaisir pour moi de discuter avec vous.
+            Je suis joignable en tout temps par l'un des moyens de communication ci-dessous&nbsp;:
           </p>
 
           <ul className={styles.contactLinks}>

@@ -1,83 +1,40 @@
-import {useEffect, useState} from "react";
-
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer>
+      <div className="display-flex flex-row">
+        <p className="max-text-width services-description">
+          Services de programmation sur mesure et à la demande. Programmeur situé sur la Rive-Sud de Montréal.
+          Possibilité de travail à distance incluant horaires flexibles, tarification à l'heure avec facture détaillée
+          à
+          l'appui, et aucun engagement à long terme nécessaire.
+        </p>
+
+        <div className="max-text-width footer-links">
+          <ul>
+            <li>
+              <Link href="/a-propos">
+                <a className="text-link">En savoir plus à propos de moi&nbsp;&rarr;</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/programmation">
+                <a className="text-link">Consulter mon portfolio&nbsp;&rarr;</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact">
+                <a className="text-link">Contactez-moi&nbsp;&rarr;</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
       <pre className="copyright">©&nbsp;<span>{new Date().getFullYear()}</span>&nbsp;Alexandre&nbsp;Desroches</pre>
-      <FishingGame/>
+
     </footer>
   );
 };
-
-
-function FishingGame() {
-  const defaultBoatPos = {left: "9vw", bottom: "3vw"};
-  const [boatPos, setBoatPos] = useState(defaultBoatPos);
-
-  const handleClick = (e) => {
-    const clickedX = e.clientX;
-    const clickedY = e.clientY;
-    setBoatPos({
-      left: clickedX,
-      bottom: (window.innerHeight - (clickedY - 4)) + "px"
-    });
-  };
-
-  const resetBoatPosOnResizeEvents = () => {
-    setBoatPos(defaultBoatPos);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", resetBoatPosOnResizeEvents);
-    return () => window.removeEventListener("resize", resetBoatPosOnResizeEvents);
-  }, []);
-
-  return (
-    <div className="fishing-game">
-      <Boat pos={boatPos}/>
-      <Fish handleClick={handleClick}/>
-      <Waves/>
-    </div>
-  );
-}
-
-
-function Boat({pos}) {
-  return (
-    <svg className="boat"
-         style={{left: pos.left, bottom: pos.bottom}}
-         version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1259 1280">
-      <path
-        d="M469.2 1.5c-11.7 3.3-21.9 11.9-27.4 23.3-3.1 6.3-3.3 7.3-3.3 17.7 0 10.2.2 11.4 3.1 17.5 1.7 3.6 5.2 8.8 7.7 11.6l4.7 5.2v885.7l-220.5.3-220.6.2 11.8 13.8c29.4 34.4 52.9 59.8 86.8 93.8 61 61.2 113.4 105.4 167 140.9 65.2 43.2 117.8 64.1 169.7 67.6 27.4 1.9 72.8.4 109.3-3.7 157.7-17.3 347.1-89.3 541-205.7 50.9-30.5 118.1-75.2 154.4-102.6l5.5-4.1-375.5-.2-375.4-.3-.3-443-.2-442.9 2.9-3.1c11.9-12.6 16-28.9 11.1-43.6-4.1-12-11.3-20.1-22.7-25.6-6.1-2.9-8.7-3.6-15.5-3.9-5.4-.3-10.1.1-13.6 1.1z"/>
-      <path
-        d="M545.2 91.2c45.2 235.5 62.3 379.1 60.5 506.8-.8 50.7-2.6 77.1-8.3 116-9 62-26.3 118.2-49.8 162.2l-7.2 13.5 312.6.6c171.8.3 312.7.4 312.9.1 1.2-1.2-30.1-70-52-113.9C1048.5 645 974.5 528.9 880.1 410 799.7 308.7 695 200.1 584.5 103.4 564.4 85.8 541.2 66 540.7 66c-.2 0 1.8 11.4 4.5 25.2zM422 345.5c0 2.9-8.2 36.8-12.6 52.4-27.7 97.1-74.5 179.4-146.8 258-35.3 38.4-69.3 69.5-149.6 136.6-56.7 47.4-83.6 70.7-103 89.3l-9.5 9.1 211.3.1H423V617.5c0-150.4-.2-273.5-.5-273.5s-.5.7-.5 1.5z"/>
-    </svg>
-  );
-}
-
-
-function Fish({handleClick}) {
-  return (
-    <svg
-      className="fish" onClick={handleClick}
-      xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" viewBox="0 0 24 24">
-      <path
-        d="M21 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 0c-1 3-3 5-6 6a7 7 0 0 1 1-10l5 4m-7 6-1 1-6 2H9l1-3-6-4-4 2V8l4 2c1-1 3-3 6-3L9 4h1c3 0 4 1 5 2l3 1c-2 1-3 3-3 5l2 5"/>
-    </svg>
-  );
-}
-
-
-function Waves() {
-  return (
-    <svg className="background--waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 130">
-      <path d="m0 61 40-1.2c40-1.1 120-3.5 200 3s160 21.9 240 23.5C560 88 640 76 720 75s160 9 200 14l40 5v57H0Z"
-            fill="#d7d7d7"/>
-      <path
-        id="blueWaveCurve"
-        d="m0 110 40-5c40-5 120-15 200-17.3 80-2.4 160 3 240 10.3 80 7.3 160 16.7 240 17.2s160-7.9 200-12l40-4.2v52H0Z"
-        fill="#06f"/>
-    </svg>
-  );
-}

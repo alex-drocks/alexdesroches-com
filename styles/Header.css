@@ -12,7 +12,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--extremely-light-gray);
+  border-bottom: 1px solid var(--main-border-color);
 }
 
 header button {
@@ -28,7 +28,12 @@ header button {
 }
 
 header button:hover {
-  background-color: var(--blue);
+  background-color: var(--main-foreground-color);
+}
+
+header button:hover svg {
+  fill: var(--main-background-color);
+  stroke: var(--main-background-color);
 }
 
 header button svg {
@@ -86,8 +91,13 @@ header nav a {
   border-bottom: 2px solid transparent;
 }
 
-header nav a:hover, header nav a.active-next-link {
+header nav a:hover {
   border-bottom-color: var(--blue);
+}
+
+header nav a.active-next-link {
+  font-weight: bold;
+  color: var(--main-foreground-color);
 }
 
 @media screen and (min-width: 756px) {
@@ -105,14 +115,15 @@ header nav a:hover, header nav a.active-next-link {
   .mobile-menu {
     z-index: 99;
     position: fixed;
-    width: 100%;
+    left: var(--page-padding);
+    right: var(--page-padding);
     background-color: var(--main-background-color);
-    border-bottom: 4px solid var(--very-light-gray);
-    padding: 2rem 0;
+    border: 8px solid var(--very-light-gray);
+    padding: 3rem 0;
   }
 
   .mobile-menu .page-links {
-    line-height: 3;
+    line-height: 4;
     list-style: none;
     color: var(--secondary-text-color);
   }
@@ -131,18 +142,6 @@ header nav a:hover, header nav a.active-next-link {
   }
 
   header button:last-of-type {
-    margin-left: .5em;
-  }
-}
-
-@media screen and (max-width: 430px) {
-  header nav .left-branding {
-    margin-left: 0;
-    /*width: min-content;*/
-  }
-
-  header nav a.active-next-link {
-    color: var(--secondary-text-color);
-    background-color: transparent;
+    margin-left: 2rem;
   }
 }

@@ -21,8 +21,7 @@ export default function Header() {
       </header>
       <MobileMenu isMobileMenuOpened={isMobileMenuOpened}/>
     </div>
-  )
-    ;
+  );
 }
 
 
@@ -56,10 +55,14 @@ function ToggleThemeColorsButton() {
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null;
-
-  function toggleTheme() {
-    setTheme(theme === "light" ? "dark" : "light");
+  if (!mounted) {
+    return (
+      <button
+        className="toggle-dark-mode-button"
+        aria-label="Toggle Dark Mode Button"
+        type="button"
+      />
+    );
   }
 
   return (
@@ -67,7 +70,7 @@ function ToggleThemeColorsButton() {
       className="toggle-dark-mode-button"
       aria-label="Toggle Dark Mode Button"
       type="button"
-      onClick={toggleTheme}
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {
         theme === "light" ? (

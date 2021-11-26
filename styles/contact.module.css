@@ -1,0 +1,31 @@
+.contactLinks {
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contactLink {
+  margin: 1.5rem 0;
+  width: max-content;
+}
+
+.contactLink a {
+  display: flex;
+  align-items: center;
+  color: var(--main-text-link-color);
+}
+
+.contactLink a svg {
+  margin-right: 1rem;
+  fill: var(--blue);
+}
+
+.contactLink:hover a svg {
+  opacity: 1;
+}
+
+.imageTextOverlay {
+  top: 89%;
+  left: 16%;
+  transform: rotateZ(2deg);
+}

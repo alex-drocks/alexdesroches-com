@@ -1,165 +1,69 @@
-:root {
-  --boat-size: 42px;
-  --fish-size: 20px;
-  --bounce-boat-top: translate(0, -0.085rem);
-  --bounce-boat-bottom: translate(-0.075rem, 0.1rem);
+footer {
+  width: 100%;
+  margin: 10rem 0 0 0;
+  border-top: 1px solid var(--main-border-color);
 }
 
-footer {
-  position: relative;
-  width: 100%;
+footer .services-description {
+  margin: 0 0 var(--page-padding);
+}
+
+footer .max-text-width {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+footer .flex-row {
+  padding-top: var(--page-padding);
+  padding-bottom: var(--page-padding);
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
   margin: 0;
-  /*padding: 2rem;*/
+}
+
+.footer-links li {
+  flex-grow: 2;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 footer .copyright {
-  margin-top: 4rem;
+  margin: 0 0 2.5rem 0;
   font-size: 0.875rem;
-  color: var(--light-gray);
+  color: var(--secondary-text-color);
   white-space: break-spaces;
   text-align: center;
 }
 
-footer .fishing-game {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: inherit;
-  overflow: hidden;
-}
-
-footer .fishing-game svg:focus {
-  outline: none;
-  border: none;
-  box-shadow: none;
-}
-
-footer .fishing-game .background--waves {
-  width: inherit;
-}
-
-footer .fishing-game .boat {
-  position: absolute;
-  bottom: 3vw;
-  left: 9vw;
-  width: var(--boat-size);
-  height: var(--boat-size);
-  min-width: var(--boat-size);
-  min-height: var(--boat-size);
-  filter: drop-shadow(-1px .75vw .65vw var(--extremely-light-gray));
-  animation: bounceBoat 2s infinite alternate ease-in-out;
-  transition: left 2.5s, bottom 2s;
-  z-index: 2;
-}
-
-footer .fishing-game .fish {
-  position: absolute;
-  bottom: 0;
-  left: calc(0 - var(--fish-size));
-  width: var(--fish-size);
-  height: var(--fish-size);
-  min-width: var(--fish-size);
-  min-height: var(--fish-size);
-  animation: moveFish 50s infinite ease-in-out, bounceFish 1.5s infinite ease-in-out alternate;
-}
-
-@keyframes bounceBoat {
-  from {
-    transform: var(--bounce-boat-top);
-  }
-
-  to {
-    transform: var(--bounce-boat-bottom);
-  }
-}
-
-@keyframes bounceFish {
-  0% {
-    transform: translateY(-0.25vh);
-  }
-  100% {
-    transform: translateY(0.25vh);
-  }
-}
-
-@keyframes moveFish {
-  0% {
-    bottom: -0.2vw;
-    left: -24px;
-    opacity: 25%;
-  }
-
-  30% {
-    bottom: 1.5vw;
-    left: 30vw;
-    opacity: 15%;
-  }
-
-  60% {
-    bottom: -0.9vw;
-    left: 60vw;
-    opacity: 0;
-  }
-
-  100% {
-    bottom: 0.1vw;
-    left: 101vw;
-    opacity: 25%;
-  }
-}
-
 @media screen and (max-width: 1024px) {
-  :root {
-    --boat-size: 34px;
-    --fish-size: 14px;
-    --bounce-boat-top: translate(0, 0);
-    --bounce-boat-bottom: translate(-0.05rem, 0.1rem);
-  }
-}
-
-@media screen and (max-width: 800px) {
-  :root {
-    --boat-size: 26px;
-  }
-
-  .boat {
-    filter: drop-shadow(-1px 5px 5px var(--almost-white)) !important;
-    left: 4vw !important;
-    bottom: 2.5vw !important;
-  }
-
-  .fish {
-    display: none;
-  }
-
   footer {
-    margin-top: 2rem;
+    margin-top: 13rem;
   }
 }
 
-@media screen and (max-width: 565px) {
-  :root {
-    --boat-size: 20px;
-  }
-
+@media screen and (max-width: 500px) {
   footer {
-    margin-top: 3rem;
+    margin-top: 14rem;
+  }
+
+  .footer-links {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  footer .services-description {
+    margin-top: 1rem;
   }
 }
 
-@media screen and (max-width: 430px) {
-  :root {
-    --boat-size: 18px;
-  }
-
-  .boat {
-    bottom: 2.1vw !important;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  :root {
-    --boat-size: 16px;
+@media screen and (max-width: 380px) {
+  footer {
+    margin-top: 13rem;
   }
 }

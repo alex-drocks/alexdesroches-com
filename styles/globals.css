@@ -2,36 +2,43 @@
   /*Main Theme Variables*/
   --main-background-color: var(--theme-light-background);
   --main-foreground-color: var(--theme-light-main-text-color);
+  --main-border-color: var(--theme-light-border-color);
+  --main-box-shadow-color: var(--theme-light-box-shadow-color);
+  --main-text-link-color: var(--theme-light-text-link-color);
   --secondary-text-color: var(--theme-light-secondary-text-color);
-  --text-link-color: var(--theme-light-text-link-color);
 
   /*Light Mode*/
   --theme-light-background: #fff;
   --theme-light-main-text-color: #000;
   --theme-light-secondary-text-color: var(--light-gray);
   --theme-light-text-link-color: var(--blue);
+  --theme-light-border-color: var(--extremely-light-gray);
+  --theme-light-box-shadow-color: var(--light-gray);
 
   /*Dark Mode*/
   --theme-dark-background: #1f2028;
   --theme-dark-main-text-color: #fff;
-  --theme-dark-secondary-text-color: #aaa;
+  --theme-dark-secondary-text-color: #b7b7b7;
   --theme-dark-text-link-color: #fff;
+  --theme-dark-border-color: var(--dark-gray);
+  --theme-dark-box-shadow-color: #777;
 
 
+  --dark-gray: #404040;
   --light-gray: #646464;
   --lighter-gray: #a0a0a0;
   --very-light-gray: #e5e5e5;
   --extremely-light-gray: #f0f0f0;
   --almost-white: #fbfbfb;
-  --main-box-shadow: 0 1px 10px rgba(0, 8, 28, .75);
+  --blue: #0d6efd;
 
   --max-content-width: 1280px;
   --max-text-width: 630px;
 
   --elements-padding: .5rem 1rem;
   --page-padding: 4rem;
+
   --button-radius: .25rem;
-  --blue: #0d6efd;
   --user-font-scale: 1rem -16px;
   --ff-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --ff-monospace: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
@@ -57,8 +64,10 @@ body {
 html.dark {
   --main-background-color: var(--theme-dark-background);
   --main-foreground-color: var(--theme-dark-main-text-color);
+  --main-border-color: var(--theme-dark-border-color);
+  --main-box-shadow-color: var(--theme-dark-box-shadow-color);
   --secondary-text-color: var(--theme-dark-secondary-text-color);
-  --text-link-color: var(--theme-dark-text-link-color);
+  --main-text-link-color: var(--theme-dark-text-link-color);
 }
 
 html.dark .handwritten-signature {
@@ -80,14 +89,22 @@ main.page-container {
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
+  animation: fadein 1s;
+}
+
+.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .max-content-width {
   width: 100%;
   max-width: var(--max-content-width);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .max-text-width {
@@ -103,22 +120,21 @@ img {
 
 h2, a {
   font-family: var(--ff-monospace);
+  letter-spacing: -1px;
 }
 
 h1 {
   font-size: 2rem;
-  margin-top: 0;
-  letter-spacing: -1px;
 }
 
 h2 {
   font-size: 1.75rem;
-  margin: 3rem 0 1rem 0;
+  margin: 2rem 0 1rem 0;
 }
 
 h3 {
   font-size: 1rem;
-  margin: 3rem 0 1rem 0;
+  margin: 3.25rem 0 1rem 0;
 }
 
 h4 {
@@ -132,54 +148,77 @@ a {
 
 p {
   color: var(--secondary-text-color);
+  line-height: 1.5;
 }
 
 .text-link {
   text-decoration: underline;
-  color: var(--text-link-color);
-  filter: brightness(68%);
-  font-size: .8125rem;
-  font-weight: 600;
+  color: var(--main-text-link-color);
+  filter: brightness(77%);
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .text-link:hover {
-  color: var(--text-link-color);
+  color: var(--main-text-link-color);
   filter: hue-rotate(1deg);
 }
 
-.stylish-image {
+.stylish-shadow-image {
   position: relative;
   width: inherit;
 }
 
-.stylish-image img {
-  border-radius: .25rem;
-  box-shadow: 100px 100px 100px var(--secondary-text-color);
-  opacity: 0.86;
-  transition: opacity .6s;
+.stylish-shadow-image picture {
+  width: inherit;
 }
 
-.stylish-image:hover img {
+.stylish-shadow-image img {
+  border-radius: .25rem;
+  box-shadow: 100px 100px 100px var(--main-box-shadow-color);
+  opacity: 0.89;
+  transition: opacity .5s;
+}
+
+.stylish-shadow-image:hover img {
   opacity: 1;
 }
 
-.stylish-image--overlay-text {
+.stylish-shadow-image--overlay-text {
   z-index: 2;
   position: absolute;
-  top: 87%;
+  top: 86%;
   left: 40%;
   transform: rotateZ(10deg);
-  color: var(--secondary-text-color);
-  text-shadow: 1px 1px 2px var(--secondary-text-color);
+  color: var(--light-gray);
+  opacity: 0.9;
 }
 
-.stylish-image:hover .stylish-image--overlay-text {
-  text-shadow: 1px 1px 1px var(--secondary-text-color);
+.stylish-shadow-image:hover .stylish-shadow-image--overlay-text {
+  /*color: black;*/
+  opacity: 1;
 }
 
 .handwritten-signature {
+  margin-top: .5rem;
   width: 92px;
   height: 92px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .stylish-shadow-image--overlay-text {
+    top: 86%;
+    left: 35%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -190,10 +229,21 @@ p {
 
 @media screen and (max-width: 500px) {
   :root {
-    --page-padding: .25rem;
+    --page-padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  header nav h1.left-branding a {
+    font-size: 1rem;
   }
 
-  .page-container {
-    padding: 2rem 1rem
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .stylish-shadow-image--overlay-text {
+    top: 85%;
+    left: 33%;
   }
 }

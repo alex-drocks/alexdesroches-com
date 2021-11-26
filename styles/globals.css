@@ -89,7 +89,7 @@ main.page-container {
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
-  transition: opacity .7s;
+  animation: fadein .75s;
 }
 
 .display-flex {
@@ -203,6 +203,15 @@ p {
   margin-top: .5rem;
   width: 92px;
   height: 92px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1250px) {

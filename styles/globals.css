@@ -89,6 +89,7 @@ main.page-container {
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
+  transition: opacity .7s;
 }
 
 .display-flex {

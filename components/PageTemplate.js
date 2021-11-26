@@ -1,9 +1,17 @@
+import {useEffect, useRef} from "react";
 import Head from 'next/head';
 import Header from "./Header";
 import Footer from "./Footer";
 
 
 export default function PageTemplate({children, pageTitle, pageDescription, pageCanonicalURL}) {
+  const mainRef = useRef();
+
+  useEffect(() => {
+    // fade-in opacity from 0 to 1 with a CSS transition
+    mainRef.current?.style.opacity = 1;
+  }, [])
+
   return (<>
     <Head>
       {/* Page Meta */}
@@ -67,7 +75,7 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
 
     <Header/>
 
-    <main className="page-container">
+    <main className="page-container" style={{opacity: 0}} ref={mainRef}>
       {children}
     </main>
 

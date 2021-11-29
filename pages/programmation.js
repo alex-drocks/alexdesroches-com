@@ -158,10 +158,10 @@ export default function Programmation() {
         </div>
       </section>
 
-      <svg className={styles.waveTop} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 100">
-        <path fill="var(--main-background-color)" d="M0 0h900v100H0z"/>
+      <svg className={styles.waveTop} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150">
+        <path fill="var(--main-background-color)" d="M0 0h900v150H0z"/>
         <path fill="var(--blue)"
-              d="m0 25 37.5 9.5C75 44 150 63 225 65s150-13 225-19.8c75-6.9 150-5.5 225 .5s150 16.6 187.5 22L900 73v28H0Z"/>
+              d="m0 11 37.5 11C75 33 150 55 225 71.2c75 16.1 150 26.5 225 17.5s150-37.4 225-45.5C750 35 825 47 862.5 53l37.5 6v92H0Z"/>
       </svg>
 
       <section className={styles.services}>
@@ -178,10 +178,10 @@ export default function Programmation() {
         <h4>Scripts d'automatisation</h4>
       </section>
 
-      <svg className={styles.waveBottom} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 100">
-        <path fill="var(--main-background-color)" d="M0 0h900v100H0z"/>
+      <svg className={styles.waveBottom} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150">
+        <path fill="var(--main-background-color)" d="M0 0h900v150H0z"/>
         <path fill="var(--blue)"
-              d="m0 31 37.5 5.5C75 42 150 53 225 58.2c75 5.1 150 4.5 225-4s150-24.9 225-21.5C750 36 825 59 862.5 70.5L900 82V0H0Z"/>
+              d="m0 13 37.5 11C75 35 150 57 225 64.3c75 7.4 150 0 225-7.6C525 49 600 41 675 52.2c75 11.1 150 41.5 187.5 56.6L900 124V0H0Z"/>
       </svg>
 
       <section className="projects max-content-width display-flex">

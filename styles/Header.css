@@ -136,12 +136,7 @@ header nav a.active-next-link {
     display: block;
   }
 
-  header button {
-    margin-bottom: .5rem;
-    margin-top: .5rem;
-  }
-
-  header button:last-of-type {
-    margin-left: 2rem;
+  header {
+    padding: .75rem 0
   }
 }

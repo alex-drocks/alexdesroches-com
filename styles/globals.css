@@ -18,14 +18,14 @@
   /*Dark Mode*/
   --theme-dark-background: #1f2028;
   --theme-dark-main-text-color: #fff;
-  --theme-dark-secondary-text-color: #b7b7b7;
+  --theme-dark-secondary-text-color: #b9b9b9;
   --theme-dark-text-link-color: #fff;
   --theme-dark-border-color: var(--dark-gray);
   --theme-dark-box-shadow-color: #777;
 
 
   --dark-gray: #404040;
-  --light-gray: #646464;
+  --light-gray: #636363;
   --lighter-gray: #a0a0a0;
   --very-light-gray: #e5e5e5;
   --extremely-light-gray: #f0f0f0;

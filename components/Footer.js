@@ -15,12 +15,12 @@ export default function Footer() {
           <ul>
             <li>
               <Link href="/a-propos">
-                <a className="text-link">En savoir plus à propos de moi&nbsp;&rarr;</a>
+                <a className="text-link">À propos de moi&nbsp;&rarr;</a>
               </Link>
             </li>
             <li>
               <Link href="/programmation">
-                <a className="text-link">Consulter mon portfolio&nbsp;&rarr;</a>
+                <a className="text-link">Mon portfolio&nbsp;&rarr;</a>
               </Link>
             </li>
             <li>

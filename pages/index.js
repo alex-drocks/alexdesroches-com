@@ -36,7 +36,7 @@ export default function Index() {
 
           <h3>Faisons équipe&nbsp;!</h3>
           <p>
-            Confiez-moi un nouveau projet ou joignons nos forces en collaborant avec votre équipe.{" "}
+            Confiez-moi un nouveau Project ou joignons nos forces en collaborant avec votre équipe.{" "}
             <Link href="/contact"><a className="text-link">Contactez-moi&nbsp;&rarr;</a></Link>
           </p>
           <ResponsiveImage

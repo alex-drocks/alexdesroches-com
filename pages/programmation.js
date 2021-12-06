@@ -79,8 +79,8 @@ export default function Programmation() {
               </ExternalLink>
             </li>
             <li>
-              <ExternalLink url="https://en.wikipedia.org/wiki/JSON">
-                JSON
+              <ExternalLink url="https://en.wikipedia.org/wiki/GitHub">
+                Github
               </ExternalLink>
             </li>
             <li>
@@ -184,17 +184,47 @@ export default function Programmation() {
             d="m0 13 37.5 11C75 35 150 57 225 64.3c75 7.4 150 0 225-7.6C525 49 600 41 675 52.2c75 11.1 150 41.5 187.5 56.6L900 124V0H0Z"/>
     </svg>
 
-    <section className={styles.projets + " max-content-width display-flex"}>
+    <section className={styles.projects + " max-content-width display-flex"}>
       <h2>Projects réalisés</h2>
       <Project
-        title="Finance&nbsp;D"
-        description="Logiciel de comptabilité pour ordinateurs Windows et Mac.
-        Facturation et tenue de livres, suivi des taxes et des résultats financiers pour les travailleurs
-        autonomes du Québec."
+        title="Finance&nbsp;D — Site Internet pour logiciel et apps de comptabilité"
+
+        description="Finance&nbsp;D, est une entreprise que j'ai démarrée
+        dans le but d'offrir une variété d'outils spécifiques pour la comptabilité.
+        J'ai donc créé un site Internet pour rendre accessibles mon logiciel de tenue de livres
+        ainsi que 3 applications web différentes servant chacune à solutionner des problèmes spécifiques."
+
         imgSrc="/images/programmation/finance-d/finance-d"
-        technologies="Javascript, HTML, CSS, Node.js, Electron.js, PHP, WordPress, WooCommerce, Google Firebase,
-         Web Hosting Canada."
+
+        features="Site Internet de présentation responsive avec React.js et une forte attention aux SEO
+        et à la performance du site qui frôle le 100%, plateforme de commerce en ligne avec WordPress et WooCommerce,
+        ainsi qu'un moyen de donner en ligne avec Stripe."
+
+        technologies="React.js, Javascript, Node.js, HTML, CSS, WordPress, WooCommerce, Stripe,
+         Web Hosting Canada, Github."
+
         timespan="2019 - aujourd'hui"
+
+        url="https://finance-d.com"
+      />
+      <Project
+        title="Finance&nbsp;D — Logiciel de tenue de livres pour Windows et Mac"
+
+        description="Mon plus gros projet jusqu'à présent est ce logiciel de comptabilité pour ordinateurs Windows et Mac.
+        Je l'ai créé avec les travailleurs autonomes du Québec en tête. Le but est la simplicité d'utilisation et l'efficacité.
+        Ce logiciel est ma plus grande fierté en programmation. À mon avis, il vaut la peine à découvrir et il est 100% gratuit."
+
+        imgSrc="/images/programmation/finance-d/finance-d"
+
+        features="Logiciel pour ordinateurs Windows et Mac. Incluant la certification de signature du code avec SSL.com,
+         une documentation complète pour les utilisateurs, la distribution par internet, les mises à jours automatiques,
+         le soutien technique et un système de logs privé pour assurer la qualité."
+
+        technologies="Javascript, HTML, CSS, Node.js, Electron.js, Google Firebase,
+         Web Hosting Canada, Github."
+
+        timespan="2019 - aujourd'hui"
+
         url="https://finance-d.com"
       />
     </section>

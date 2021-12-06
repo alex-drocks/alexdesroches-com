@@ -3,36 +3,40 @@ import ResponsiveImage from "./ResponsiveImage";
 import ExternalLink from "./ExternalLink";
 
 
-export default function Project({title, description, imgSrc, technologies, timespan, url}) {
+export default function Project({title, description, imgSrc, features, technologies, timespan, url}) {
   return (
     <div className={styles.project + " max-content-width display-flex"}>
       <div className={styles.leftColumn + " max-text-width"}>
         <h3>{title}</h3>
-        <p>
-          {description}{" "}
-          <ExternalLink url={url} className="text-link">En savoir plus&nbsp;&rarr;</ExternalLink>
-        </p>
-        <ResponsiveImage
-          path={imgSrc}
-          alt={title}
-          renderedWidth={501}
-          renderedHeight={752}
-          desktopWidth={1000}
-          mobileWidth={501}
-        />
+        <p>{description}</p>
+        <ExternalLink url={url}>
+          <ResponsiveImage
+            path={imgSrc}
+            alt={title}
+            renderedWidth={501}
+            renderedHeight={752}
+            desktopWidth={1000}
+            mobileWidth={501}
+          />
+        </ExternalLink>
+
       </div>
       <div className={styles.rightColumn + " max-text-width"}>
         <div>
-          <strong>Technologies utilisées&nbsp;:</strong>
+          <h4>Technologies utilisées&nbsp;:</h4>
           <p>{technologies}</p>
         </div>
         <div>
-          <strong>Chronologie&nbsp;:</strong>{" "}
+          <h4>Réalisations incluses&nbsp;:</h4>
+          <p>{features}</p>
+        </div>
+        <div>
+          <h4>Chronologie&nbsp;:</h4>{" "}
           <span>{timespan}</span>
         </div>
         <br/>
         <div>
-          <strong>Lien pour obtenir plus de détails&nbsp;:</strong>{" "}
+          <h4>Lien pour obtenir plus de détails&nbsp;:</h4>{" "}
           <span><ExternalLink url={url} className="text-link">{url}</ExternalLink></span>
         </div>
       </div>

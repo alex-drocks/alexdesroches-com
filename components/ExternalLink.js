@@ -3,8 +3,8 @@ export default function ExternalLink({url, className, children}) {
     <a href={url}
        target="_blank"
        rel="noopener noreferrer"
-       aria-label={`Cliquez pour plus d'informations à propos de : ${children}`}
-       title={`Cliquez pour plus d'informations à propos de : ${children}`}
+       aria-label="Cliquez pour ouvrir ce lien dans une nouvelle fenêtre"
+       title="Cliquez pour ouvrir ce lien dans une nouvelle fenêtre"
        className={className}
     >
       {children}

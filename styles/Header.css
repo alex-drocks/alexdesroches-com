@@ -20,6 +20,14 @@
   cursor: pointer;
 }
 
+.header-container button svg {
+  height: 100%;
+  width: 100%;
+  padding: .4rem;
+  fill: var(--main-foreground-color);
+  stroke: var(--main-foreground-color);
+}
+
 .header-container button:hover {
   background-color: var(--main-foreground-color);
 }
@@ -27,13 +35,6 @@
 .header-container button:hover svg {
   fill: var(--main-background-color);
   stroke: var(--main-background-color);
-}
-
-.header-container button svg {
-  height: 100%;
-  padding: .4rem;
-  fill: var(--main-foreground-color);
-  stroke: var(--main-foreground-color);
 }
 
 .header-container .toggle-dark-mode-button {

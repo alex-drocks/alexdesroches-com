@@ -113,7 +113,17 @@ header nav a.active-next-link {
     display: none !important;
   }
 
-  .mobile-menu {
+
+  header .toggle-mobile-menu-button {
+    display: block;
+    width: 2.5rem;
+  }
+
+  header {
+    padding: .75rem 0
+  }
+
+  nav.mobile-menu {
     z-index: 99;
     position: fixed;
     left: var(--page-padding);
@@ -123,47 +133,39 @@ header nav a.active-next-link {
     padding: 3rem 0;
   }
 
-  .mobile-menu strong {
+  nav.mobile-menu strong {
     position: absolute;
     top: 1rem;
     left: 1rem;
     text-transform: uppercase;
   }
 
-  .mobile-menu .page-links {
+  nav.mobile-menu .page-links {
     line-height: 4;
     list-style: none;
     color: var(--secondary-text-color);
   }
 
-  .mobile-menu .page-links .active-next-link {
+  nav.mobile-menu .page-links .active-next-link {
     text-decoration: underline;
   }
 
-  .mobile-menu button {
+  nav.mobile-menu .toggle-dark-mode-button {
     width: max-content;
   }
 
-  .mobile-menu button div {
+  nav.mobile-menu .toggle-dark-mode-button div {
     display: flex;
     align-items: center;
     width: auto;
-    height: inherit;
+    height: 100%;
   }
 
-  .mobile-menu button div span {
+  nav.mobile-menu .toggle-dark-mode-button div span {
     padding-right: .75rem;
   }
 
-  .mobile-menu button:is(:active, :hover, :focus) div span {
+  nav.mobile-menu .toggle-dark-mode-button:is(:active, :hover, :focus) div span {
     color: var(--main-background-color);
-  }
-
-  header .toggle-mobile-menu-button {
-    display: block;
-  }
-
-  header {
-    padding: .75rem 0
   }
 }

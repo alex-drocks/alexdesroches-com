@@ -8,22 +8,24 @@ import Project from "../components/Project";
 export default function Programmation() {
   return (<PageTemplate
     pageTitle={"Programmation | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-    pageDescription="Services de programmation et conception de sites webs. Alexandre Desroches freelancer. Javascript, React, NodeJS, Firebase, HTML, CSS."
+    pageDescription="Services de programmation et développement de sites Internet. Alexandre Desroches freelancer. Javascript, React, Node, Firebase, HTML, CSS."
     pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/programmation/"}
   >
     <section className="skills max-content-width display-flex">
       <div className="max-text-width">
-        <h2>Services de programmation et conception&nbsp;web</h2>
+        <h2>Services de Programmation et Développement&nbsp;Web</h2>
+
+        <h3>Ce que je fais&nbsp;:</h3>
         <p>
-          Je suis un développeur expérimenté avec les technologies du web, les logiciels desktop pour Mac et
-          Windows,
-          ainsi que l'automatisation de tâches sur Windows.
+          Je suis un développeur expérimenté avec les technologies du Web, les logiciels desktop pour Mac et
+          Windows, ainsi que l'automatisation de tâches sur Windows.
           Mon domaine d'expertise est donc assez vaste.
-          Pouvant concevoir applications, logiciels, outils internes et sites internets selon votre demande.
+          Pouvant maintenir et <strong>concevoir, selon votre
+          demande</strong> — applications Web, logiciels, outils internes et sites Internet de haute qualité.
         </p>
         <p>
-          Je suis capable de prendre en charge un nouveau Project et de le mener à terme ainsi que de poursuivre le
-          développement de Projects existants, seul, ou en collaborant avec votre équipe de développeurs.
+          Ainsi, je peux prendre en charge un nouveau project et le mener à terme et/ou
+          poursuivre le développement de projects existants, seul, ou en collaborant avec votre équipe de développeurs.
         </p>
 
         <h3>Langages et technologies maîtrisées&nbsp;:</h3>
@@ -83,7 +85,7 @@ export default function Programmation() {
             </li>
             <li>
               <ExternalLink url="https://en.wikipedia.org/wiki/WordPress">
-                Wordpress
+                WordPress
               </ExternalLink>
             </li>
             <li>
@@ -165,17 +167,15 @@ export default function Programmation() {
     </svg>
 
     <section className={styles.services}>
-      <h3>Ce que je fais</h3>
-      <p className="max-text-width">
-        Programmation pour la création et la maintenance de vos Projects TI, avec une
-        expertise particulière dans les domaines suivants&nbsp;:
-      </p>
-      <h4>Sites internet</h4>
-      <h4>Applications web</h4>
-      <h4>Commerces en ligne</h4>
-      <h4>Logiciels pour ordinateurs</h4>
-      <h4>Web scraping</h4>
-      <h4>Scripts d'automatisation</h4>
+      <h3>Services offerts</h3>
+      <ul className="max-text-width">
+        <li>Sites Internet</li>
+        <li>Applications Web</li>
+        <li>Commerces en ligne</li>
+        <li>Logiciels pour ordinateurs</li>
+        <li>Web scraping</li>
+        <li>Scripts d'automatisation</li>
+      </ul>
     </section>
 
     <svg className={styles.waveBottom} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150">
@@ -185,14 +185,15 @@ export default function Programmation() {
     </svg>
 
     <section className={styles.projets + " max-content-width display-flex"}>
-      <h2 className="max-text-width">Portfolio des projects que j'ai réalisés</h2>
+      <h2>Projects réalisés</h2>
       <Project
-        title="Logiciel Finance D"
+        title="Finance&nbsp;D"
         description="Logiciel de comptabilité pour ordinateurs Windows et Mac.
         Facturation et tenue de livres, suivi des taxes et des résultats financiers pour les travailleurs
         autonomes du Québec."
         imgSrc="/images/programmation/finance-d/finance-d"
-        technologies="Javascript, HTML, CSS, Node.js, Electron.js, PHP, Google Firebase, Web Hosting Canada"
+        technologies="Javascript, HTML, CSS, Node.js, Electron.js, PHP, WordPress, WooCommerce, Google Firebase,
+         Web Hosting Canada."
         timespan="2019 - aujourd'hui"
         url="https://finance-d.com"
       />

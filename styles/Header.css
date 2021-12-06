@@ -8,14 +8,7 @@
   padding-right: var(--page-padding);
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--main-border-color);
-}
-
-header button {
+.header-container button {
   width: 2.1rem;
   height: 2.1rem;
   padding: 0;
@@ -27,24 +20,31 @@ header button {
   cursor: pointer;
 }
 
-header button:hover {
+.header-container button:hover {
   background-color: var(--main-foreground-color);
 }
 
-header button:hover svg {
+.header-container button:hover svg {
   fill: var(--main-background-color);
   stroke: var(--main-background-color);
 }
 
-header button svg {
+.header-container button svg {
   height: 100%;
   padding: .4rem;
   fill: var(--main-foreground-color);
   stroke: var(--main-foreground-color);
 }
 
-header .toggle-dark-mode-button {
+.header-container .toggle-dark-mode-button {
   border-color: transparent;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--main-border-color);
 }
 
 header .toggle-mobile-menu-button {
@@ -122,6 +122,13 @@ header nav a.active-next-link {
     padding: 3rem 0;
   }
 
+  .mobile-menu strong {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    text-transform: uppercase;
+  }
+
   .mobile-menu .page-links {
     line-height: 4;
     list-style: none;
@@ -130,6 +137,25 @@ header nav a.active-next-link {
 
   .mobile-menu .page-links .active-next-link {
     text-decoration: underline;
+  }
+
+  .mobile-menu button {
+    width: max-content;
+  }
+
+  .mobile-menu button div {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: inherit;
+  }
+
+  .mobile-menu button div span {
+    padding-right: .75rem;
+  }
+
+  .mobile-menu button:is(:active, :hover, :focus) div span {
+    color: var(--main-background-color);
   }
 
   header .toggle-mobile-menu-button {

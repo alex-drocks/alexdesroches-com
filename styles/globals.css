@@ -18,14 +18,14 @@
   /*Dark Mode*/
   --theme-dark-background: #1f2028;
   --theme-dark-main-text-color: #fff;
-  --theme-dark-secondary-text-color: #b9b9b9;
+  --theme-dark-secondary-text-color: #c0c0c0;
   --theme-dark-text-link-color: #fff;
   --theme-dark-border-color: var(--dark-gray);
   --theme-dark-box-shadow-color: #777;
 
 
   --dark-gray: #404040;
-  --light-gray: #636363;
+  --light-gray: #686868;
   --lighter-gray: #a0a0a0;
   --very-light-gray: #e5e5e5;
   --extremely-light-gray: #f0f0f0;
@@ -135,6 +135,14 @@ h3 {
 
 h4 {
   font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--ff-monospace);
+}
+
+h5 {
+  font-size: .6875rem;
+  color: var(--secondary-text-color);
 }
 
 a {
@@ -144,7 +152,11 @@ a {
 
 p {
   color: var(--secondary-text-color);
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+li {
+  color: var(--secondary-text-color);
 }
 
 .text-link {
@@ -193,6 +205,10 @@ p {
 .stylish-shadow-image:hover .stylish-shadow-image--overlay-text {
   /*color: black;*/
   opacity: 1;
+}
+
+.handwritten-signature-container {
+  justify-content: space-between;
 }
 
 .handwritten-signature {

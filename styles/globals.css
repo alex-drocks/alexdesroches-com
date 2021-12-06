@@ -157,6 +157,7 @@ p {
 
 li {
   color: var(--secondary-text-color);
+  line-height: 1.6;
 }
 
 .text-link {
@@ -236,6 +237,10 @@ li {
 @media screen and (max-width: 1024px) {
   :root {
     --page-padding: 2rem;
+  }
+
+  li {
+    line-height: 2.25;
   }
 }
 

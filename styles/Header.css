@@ -130,19 +130,24 @@ header nav a.active-next-link {
     right: var(--page-padding);
     background-color: var(--main-background-color);
     border: 8px solid var(--very-light-gray);
-    padding: 3rem 0;
+    padding: 3rem 0 2.5rem 0;
+  }
+
+  nav.mobile-menu ul {
+    margin-top: 3rem;
   }
 
   nav.mobile-menu strong {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 2rem;
+    left: 2.5rem;
     text-transform: uppercase;
   }
 
   nav.mobile-menu .page-links {
     line-height: 4;
     list-style: none;
+    padding-left: 2.5rem;
     color: var(--secondary-text-color);
   }
 

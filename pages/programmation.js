@@ -138,7 +138,7 @@ export default function Programmation() {
             </li>
             <li>
               <ExternalLink url="https://en.wikipedia.org/wiki/Go_(programming_language)">
-                Go
+                Go Lang
               </ExternalLink>
             </li>
           </ul>

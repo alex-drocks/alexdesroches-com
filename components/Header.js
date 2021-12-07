@@ -16,7 +16,7 @@ export default function Header() {
             <MainNavLinks/>
           </ul>
         </nav>
-        <ToggleThemeColorsButton/>
+        <ToggleThemeColorsButton className="do-not-display-on-mobile"/>
         <ToggleMobileMenuButton isMobileMenuOpened={isMobileMenuOpened} setIsMobileMenuOpened={setIsMobileMenuOpened}/>
       </header>
       <MobileMenu isMobileMenuOpened={isMobileMenuOpened}/>
@@ -31,10 +31,13 @@ function MobileMenu({isMobileMenuOpened}) {
 
   return (
     <nav className="mobile-menu do-not-display-on-desktop">
+      <strong>Menu de navigation</strong>
       <ul className="page-links">
         <li><ActiveLink href="/"><a>Page principale</a></ActiveLink></li>
         <MainNavLinks/>
       </ul>
+      <br/>
+      <ToggleThemeColorsButton shouldDisplayText={true}/>
     </nav>
   );
 }
@@ -49,7 +52,7 @@ function MainNavLinks() {
 }
 
 
-function ToggleThemeColorsButton() {
+function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
   const [mounted, setMounted] = useState(false);
   const {theme, setTheme} = useTheme();
 
@@ -58,7 +61,7 @@ function ToggleThemeColorsButton() {
   if (!mounted) {
     return (
       <button
-        className="toggle-dark-mode-button"
+        className={"toggle-dark-mode-button " + className}
         aria-label="Toggle Dark Mode Button"
         type="button"
       />
@@ -67,22 +70,28 @@ function ToggleThemeColorsButton() {
 
   return (
     <button
-      className="toggle-dark-mode-button"
+      className={"toggle-dark-mode-button " + className}
       aria-label="Toggle Dark Mode Button"
       type="button"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {
         theme === "light" ? (
-          <svg className="turn-on-dark-mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
-          </svg>
+          <div>
+            <svg className="turn-on-dark-mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            </svg>
+            {shouldDisplayText && <span>Thème&nbsp;foncé</span>}
+          </div>
         ) : (
-          <svg className="turn-on-light-mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-          </svg>
+          <div>
+            <svg className="turn-on-light-mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+            {shouldDisplayText && <span>Thème&nbsp;clair</span>}
+          </div>
         )
       }
     </button>

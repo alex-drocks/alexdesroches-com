@@ -18,12 +18,9 @@
   flex-grow: 1;
 }
 
-.waveTop {
-  margin: 6rem 0 0 0;
-}
-
-.waveBottom {
-  margin: 0 0 0 0;
+.techListsContainer li a:hover {
+  text-decoration: underline;
+  color: var(--main-foreground-color);
 }
 
 .services {
@@ -31,59 +28,97 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 3rem 1.5rem;
   margin: 0;
   background-color: var(--blue);
-}
-
-.services h3, .services h4, .services p {
-  width: inherit;
-  text-align: center;
+  color: white;
 }
 
 .services h3 {
-  color: black;
+  width: inherit;
+  text-align: center;
   margin: 0;
   font-family: var(--ff-sans-serif);
   font-size: 2.5rem;
 }
 
-.services h4 {
-  color: white;
-  font-family: var(--ff-monospace);
-  font-size: 1.25rem;
+.services ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 3rem 0 1.5rem 0;
 }
 
-.services p {
-  color: black;
+.services li {
+  color: inherit;
   font-size: 1.25rem;
-  margin: 1rem;
-  padding: 1rem;
-  font-weight: 400;
+  text-align: center;
+  line-height: 2.25;
 }
 
-.projets {
+.projects {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .project {
-  margin-top: var(--page-padding);
+  position: relative;
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+  color: var(--secondary-text-color);
 }
 
 .project h3 {
   margin-top: 0;
+  color: var(--main-foreground-color);
+}
+
+.project h4 {
+  margin-top: 2.75rem;
+}
+
+.project strong {
+  font-size: .75rem;
 }
 
 .project img {
-  max-width: 501px;
+  max-width: 100%;
   box-shadow: 0 0 2px var(--secondary-text-color);
+}
+
+.project img:hover {
+  box-shadow: 0 1px 6px var(--secondary-text-color);
+}
+
+.project .leftColumn,
+.project .rightColumn {
+  padding-top: 0;
+}
+
+.project .rightColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-left: 1px solid var(--lighter-gray);
+}
+
+@media screen and (max-width: 1260px) {
+  .project .rightColumn {
+    border-left-color: transparent;
+  }
+
+  .project .customShapeDivider {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .waveTop {
     margin: 12rem 0 0 0;
+  }
+
+  .services {
+    padding: 3rem 1.5rem;
   }
 
   .waveBottom {

@@ -119,6 +119,11 @@ export default function Programmation() {
                 Python
               </ExternalLink>
             </li>
+            <li>
+              <ExternalLink url="https://en.wikipedia.org/wiki/Go_(programming_language)">
+                Go Lang
+              </ExternalLink>
+            </li>
           </ul>
           <ul>
             <li>
@@ -137,8 +142,13 @@ export default function Programmation() {
               </ExternalLink>
             </li>
             <li>
-              <ExternalLink url="https://en.wikipedia.org/wiki/Go_(programming_language)">
-                Go Lang
+              <ExternalLink url="https://en.wikipedia.org/wiki/VirtualBox">
+                VirtualBox
+              </ExternalLink>
+            </li>
+            <li>
+              <ExternalLink url="https://en.wikipedia.org/wiki/Linux">
+                Linux
               </ExternalLink>
             </li>
           </ul>
@@ -194,38 +204,80 @@ export default function Programmation() {
         J'ai donc créé un site Internet pour rendre accessibles mon logiciel de tenue de livres
         ainsi que 3 applications web différentes servant chacune à solutionner des problèmes spécifiques."
 
-        imgSrc="/images/programmation/finance-d/finance-d"
+        imgSrc="/images/programmation/finance-d/website/finance-d"
+
+        technologies="React.js, Javascript, Node.js, HTML, CSS, WordPress, WooCommerce, Stripe,
+         Web Hosting Canada, Github."
 
         features="Site Internet de présentation responsive avec React.js et une forte attention aux SEO
         et à la performance du site qui frôle le 100%, plateforme de commerce en ligne avec WordPress et WooCommerce,
         ainsi qu'un moyen de donner en ligne avec Stripe."
-
-        technologies="React.js, Javascript, Node.js, HTML, CSS, WordPress, WooCommerce, Stripe,
-         Web Hosting Canada, Github."
 
         timespan="2019 - aujourd'hui"
 
         url="https://finance-d.com"
       />
       <Project
-        title="Finance&nbsp;D — Logiciel de tenue de livres pour Windows et Mac"
+        title="Logiciel de tenue de livres pour Windows et Mac — Finance&nbsp;D"
 
         description="Mon plus gros projet jusqu'à présent est ce logiciel de comptabilité pour ordinateurs Windows et Mac.
         Je l'ai créé avec les travailleurs autonomes du Québec en tête. Le but est la simplicité d'utilisation et l'efficacité.
         Ce logiciel est ma plus grande fierté en programmation. À mon avis, il vaut la peine à découvrir et il est 100% gratuit."
 
-        imgSrc="/images/programmation/finance-d/finance-d"
+        imgSrc="/images/programmation/finance-d/software/finance-d_desktop_software"
+
+        technologies="Electron.js, Javascript, HTML, CSS, Node.js, VirtualBox VM, Google Firebase,
+         Web Hosting Canada, Github."
 
         features="Logiciel pour ordinateurs Windows et Mac. Incluant la certification de signature du code avec SSL.com,
          une documentation complète pour les utilisateurs, la distribution par internet, les mises à jours automatiques,
          le soutien technique et un système de logs privé pour assurer la qualité."
 
-        technologies="Javascript, HTML, CSS, Node.js, Electron.js, Google Firebase,
-         Web Hosting Canada, Github."
-
         timespan="2019 - aujourd'hui"
 
-        url="https://finance-d.com"
+        url="https://magasin.finance-d.com/produit/logiciel-tenue-de-livres-simplifiee/"
+      />
+      <Project
+        title="Site Internet de Gestion Desroches Inc."
+
+        description="Gestion Desroches est une entreprise offrant des services de comptabilité.
+         J'ai eu le mandant de remplacer le site Internet qui était conçu avec Squarespace auparavant.
+         J'ai donc programmé le nouveau site avec React.js, puis changé d'hébergeur et reconfiguré les courriels
+         @gestiondesroches.com. Cette migration a permis d'économiser des milliers de dollars en frais annuels."
+
+        imgSrc="/images/programmation/gestion-desroches/site-gestion-desroches"
+
+        technologies="React.js, Javascript, HTML, CSS, Node.js, Next.js, Web Hosting Canada, Github, Microsoft Outlook,
+         Calendly, PHP."
+
+        features="Conception du site avec React, gestion de l'hébergement et des adresses courriels de l'entreprise
+        avec Web Hosting Canada pour remplacer Squarespace, optimisations SEO, formulaire de contact PHP et
+        prise de rendez-vous en-ligne avec Calendly."
+
+        timespan="Créé à contrat pendant le mois de décembre 2020, total environ 30 heures."
+
+        url="https://gestiondesroches.com"
+      />
+      <Project
+        title="Web app pour la gestion des payes et employés — Finance&nbsp;D"
+
+        description="Il s'agit d'une application Web créée pour simplifier la gestion des périodes de payes
+        et des employés en collaboration avec un comptable.
+        J'ai conçu le Front-End avec React et le Back-End avec Google Firebase."
+
+        imgSrc="/images/programmation/finance-d/payes/app-payes"
+
+        technologies="React.js, Firebase, Javascript, HTML, CSS, Node.js, Web Hosting Canada, Github, PHP,
+        WordPress, WooCommerce, WooCommerce License Manager."
+
+        features="Programmation Full-Stack. C'est-à-dire, le Front-End avec React.js et le Back-End avec Firebase
+        pour l'authentification et la base de donnée. Le serveur de license est géré avec WooCommerce License Manager
+        et des appels API PHP de l'application vers WooCommerce. L'interface se met à jour en temps réel grâce
+        à React et Firebase real-time similaire à Google Sheets par exemple. La base de donnée est du No-SQL."
+
+        timespan="Créée à contrat en 2021, en investissant quelques heures par mois."
+
+        url="https://finance-d.com/periodes-de-payes-simplifiees/"
       />
     </section>
   </PageTemplate>);

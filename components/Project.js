@@ -41,6 +41,5 @@ export default function Project({title, description, imgSrc, features, technolog
         </div>
       </div>
     </div>
-
   )
 }

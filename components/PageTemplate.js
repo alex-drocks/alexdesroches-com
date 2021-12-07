@@ -48,21 +48,6 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
             href={"/favicons/safari-pinned-tab.svg"}/>
       <meta name="msapplication-TileColor" content="#2b5797"/>
       <meta name="theme-color" content="#ffffff"/>
-
-      {/* /!*google analytics*!/ */}
-      {
-        process.env.NODE_ENV === 'production' && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_FIREBASE_ANALYTICS_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{__html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');`,}}
-            />
-          </>
-        )
-      }
     </Head>
 
     <Header/>

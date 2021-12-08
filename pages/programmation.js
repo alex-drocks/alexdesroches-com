@@ -7,7 +7,7 @@ import Project from "../components/Project";
 
 export default function Programmation() {
   return (<PageTemplate
-    pageTitle={"Programmation | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
+    pageTitle={"Services de programmation | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
     pageDescription="Services de programmation et développement de sites Internet. Alexandre Desroches freelancer. Javascript, React, Node, Firebase, HTML, CSS."
     pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/programmation/"}
   >
@@ -24,8 +24,8 @@ export default function Programmation() {
           demande</strong> — applications Web, logiciels, outils internes et sites Internet de haute qualité.
         </p>
         <p>
-          Ainsi, je peux prendre en charge un nouveau project et le mener à terme et/ou
-          poursuivre le développement de projects existants, seul, ou en collaborant avec votre équipe de développeurs.
+          Ainsi, je peux prendre en charge un nouveau projet et le mener à terme et/ou
+          poursuivre le développement de projets existants, seul, ou en collaborant avec votre équipe de développeurs.
         </p>
 
         <h3>Langages et technologies maîtrisées&nbsp;:</h3>
@@ -195,7 +195,7 @@ export default function Programmation() {
     </svg>
 
     <section className={styles.projects + " max-content-width display-flex"}>
-      <h2>Projects réalisés</h2>
+      <h2>Projets réalisés</h2>
       <Project
         title="Finance&nbsp;D — Site Internet pour logiciel et apps de comptabilité"
 
@@ -211,7 +211,9 @@ export default function Programmation() {
 
         features="Site Internet de présentation responsive avec React.js et une forte attention aux SEO
         et à la performance du site qui frôle le 100%, plateforme de commerce en ligne avec WordPress et WooCommerce,
-        ainsi qu'un moyen de donner en ligne avec Stripe."
+        ainsi qu'un moyen de donner en ligne avec Stripe. Le site est classé sur la première page des résultats
+        Google Search de façon organique sans aucune publicité payante pour
+        le terme 'Logiciel comptable gratuit Québec'."
 
         timespan="2019 - aujourd'hui"
 
@@ -231,7 +233,8 @@ export default function Programmation() {
 
         features="Logiciel pour ordinateurs Windows et Mac. Incluant la certification de signature du code avec SSL.com,
          une documentation complète pour les utilisateurs, la distribution par internet, les mises à jours automatiques,
-         le soutien technique et un système de logs privé pour assurer la qualité."
+         le soutien technique et un système de logs privé pour assurer la qualité. Au moment de la rédaction, les avis
+         d'utilisateurs sur Capterra.ca ont une moyenne de 4.9 étoiles sur 5."
 
         timespan="2019 - aujourd'hui"
 

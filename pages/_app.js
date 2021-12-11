@@ -8,11 +8,14 @@ import '../styles/globals.css';
 import '../styles/Header.css';
 import '../styles/Footer.css';
 
-function MyApp({Component, pageProps, nonce}) {
+const isProduction = process.env.NODE_ENV === "production";
+
+
+function MyApp({Component, pageProps}) {
   const router = useRouter()
 
   useEffect(() => {
-    if (process?.env?.NODE_ENV !== "development") {
+    if (isProduction) {
       const handleRouteChange = (url) => {
         gtag.pageview(url)
       }
@@ -27,11 +30,11 @@ function MyApp({Component, pageProps, nonce}) {
     <>
       {/*Google Analytics*/}
       {
-        process.env.NODE_ENV === "production" && (
+        isProduction && (
           <>
             <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
               strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
             />
             <Script
               id="google-analytics-init"

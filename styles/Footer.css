@@ -33,6 +33,24 @@ footer .flex-row {
   margin-bottom: 1rem;
 }
 
+.footer-links--social {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  column-gap: 2.1rem;
+  margin-bottom: .75rem;
+}
+
+.footer-links--social svg {
+  fill: var(--blue);
+  filter: brightness(90%);
+}
+
+.footer-links--social a:is(:hover,:focus) svg {
+  fill: var(--secondary-text-color);
+}
+
 footer .copyright {
   margin: 0 0 2.5rem 0;
   font-size: 0.875rem;
@@ -45,6 +63,10 @@ footer .copyright {
   footer {
     margin-top: 13rem;
   }
+
+  footer .footer-links--social {
+    margin-top: 2rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -52,7 +74,7 @@ footer .copyright {
     margin-top: 14rem;
   }
 
-  .footer-links {
+  footer .footer-links {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }

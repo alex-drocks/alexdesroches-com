@@ -1,4 +1,9 @@
 import Link from "next/link";
+import ExternalLink from "./ExternalLink";
+import {FacebookLogo, GithubLogo, LinkedinLogo, TwitterLogo} from "./Logos";
+
+import {myContactLinks} from "../lib/myContactLinks";
+
 
 export default function Footer() {
   return (
@@ -30,6 +35,13 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+      </div>
+
+      <div className="footer-links--social">
+        <ExternalLink url={myContactLinks.linkedIn}><LinkedinLogo/></ExternalLink>
+        <ExternalLink url={myContactLinks.facebook}><FacebookLogo/></ExternalLink>
+        <ExternalLink url={myContactLinks.twitter}><TwitterLogo/></ExternalLink>
+        <ExternalLink url={myContactLinks.github}><GithubLogo/></ExternalLink>
       </div>
 
 

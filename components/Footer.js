@@ -10,10 +10,11 @@ export default function Footer() {
     <footer>
       <div className="display-flex flex-row">
         <p className="max-text-width services-description">
-          Services de programmation sur mesure et à la demande. Programmeur situé sur la Rive-Sud de Montréal.
-          Possibilité de travail à distance incluant horaires flexibles, tarification à l'heure avec facture détaillée
-          à
-          l'appui, et aucun engagement à long terme nécessaire.
+          <strong><Link href="/programmation">Services de programmation</Link></strong> sur mesure et à la demande.
+          Programmeur situé sur la Rive-Sud de
+          Montréal. Possibilité de travail à distance incluant horaires flexibles, tarification à l'heure avec facture
+          détaillée
+          à l'appui, et aucun engagement à long terme nécessaire.
         </p>
 
         <div className="max-text-width footer-links">
@@ -44,8 +45,11 @@ export default function Footer() {
         <ExternalLink url={myContactLinks.github}><GithubLogo/></ExternalLink>
       </div>
 
+      <div>
+        <pre className="entreprise">9423-7518 Québec Inc.</pre>
+        <pre className="copyright">©&nbsp;<span>{new Date().getFullYear()}</span>&nbsp;Alexandre&nbsp;Desroches</pre>
+      </div>
 
-      <pre className="copyright">©&nbsp;<span>{new Date().getFullYear()}</span>&nbsp;Alexandre&nbsp;Desroches</pre>
 
     </footer>
   );

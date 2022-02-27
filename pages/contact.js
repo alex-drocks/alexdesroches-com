@@ -71,14 +71,19 @@ export default function Contact() {
 
           <h3>Coordonnées pour me joindre</h3>
           <p>
-            {myContactLinks.email}<br/>
-            {myContactLinks.cellphone}<br/>
-            <br/>
-            1684, rue Girard<br/>
-            Ste-Marie-Madeleine<br/>
-            Québec, Canada<br/>
-            J0H 1S0
+            <ExternalLink url={`mailto:${myContactLinks.email}`}>{myContactLinks.email}</ExternalLink><br/>
           </p>
+          <p>
+            <ExternalLink url={`tel:${myContactLinks.cellphone}`}>{myContactLinks.cellphone}</ExternalLink><br/>
+          </p>
+          <ExternalLink url="https://maps.google.com/?q=1684+Rue+Girard+Sainte-Madeleine+QC+J0H+1S0">
+            <address>
+              1684, rue Girard<br/>
+              Ste-Marie-Madeleine<br/>
+              Québec, Canada<br/>
+              J0H 1S0
+            </address>
+          </ExternalLink>
 
         </section>
 

@@ -80,7 +80,7 @@ export default function Programmation() {
             </li>
             <li>
               <ExternalLink url="https://en.wikipedia.org/wiki/GitHub">
-                Github
+                Github, Gitlab
               </ExternalLink>
             </li>
             <li>
@@ -281,6 +281,26 @@ export default function Programmation() {
         timespan="Créée à contrat en 2021, en investissant quelques heures par mois."
 
         url="https://finance-d.com/periodes-de-payes-simplifiees/"
+      />
+      <Project
+        title="Ce site"
+
+        description="Le site que vous visualisez en ce moment est conçu avec React et Next JS. J'ai choisi ces technologies
+        car elles sont mes préférées. En effet, React est génial. Et, Next.js est un framework par-dessus React qui
+        est d'une aide très appréciable. Next.js permet d'être performant, clean et satisfait en programmant.
+        C'est super le fun. Je le recommande à tous."
+
+        imgSrc="/images/programmation/alexdesrochescom/alexdesroches"
+
+        technologies="React.js, Next.js, Javascript, HTML, CSS, Node.js, Firebase Hosting, Github."
+
+        features="Design, contenu, programmation, mise en ligne et optimisation des performances.
+         Ce site est open-source. Vous pouvez d'ailleurs consulter le code source en allant sur mon
+          repository de Github (lien ci-dessous)."
+
+        timespan="Créé initialement en 2021, et révisé pendant mes temps libres."
+
+        url="https://github.com/alex-drocks/alexdesroches-com"
       />
     </section>
   </PageTemplate>);

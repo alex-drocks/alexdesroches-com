@@ -12,46 +12,46 @@ const isProduction = process.env.NODE_ENV === "production";
 
 
 function MyApp({Component, pageProps}) {
-  const router = useRouter()
-
-  useEffect(() => {
-    if (isProduction) {
-      const handleRouteChange = (url) => {
-        gtag.pageview(url)
-      }
-      router.events.on('routeChangeComplete', handleRouteChange)
-      return () => {
-        router.events.off('routeChangeComplete', handleRouteChange)
-      }
-    }
-  }, [router.events])
+  // const router = useRouter()
+  //
+  // useEffect(() => {
+  //   if (isProduction) {
+  //     const handleRouteChange = (url) => {
+  //       gtag.pageview(url)
+  //     }
+  //     router.events.on('routeChangeComplete', handleRouteChange)
+  //     return () => {
+  //       router.events.off('routeChangeComplete', handleRouteChange)
+  //     }
+  //   }
+  // }, [router.events])
 
   return (
     <>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
-      {
-        isProduction && (
-          <>
-            <Script
-              strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-            />
-            <Script
-              id="gtag-init"
-              strategy="afterInteractive"
-            >
-              {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${gtag.GA_TRACKING_ID}', {
-                page_path: window.location.pathname,
-              });
-            `}
-            </Script>
-          </>
-        )
-      }
+      {/*{*/}
+      {/*  isProduction && (*/}
+      {/*    <>*/}
+      {/*      <Script*/}
+      {/*        strategy="afterInteractive"*/}
+      {/*        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}*/}
+      {/*      />*/}
+      {/*      <Script*/}
+      {/*        id="gtag-init"*/}
+      {/*        strategy="afterInteractive"*/}
+      {/*      >*/}
+      {/*        {`*/}
+      {/*        window.dataLayer = window.dataLayer || [];*/}
+      {/*        function gtag(){dataLayer.push(arguments);}*/}
+      {/*        gtag('js', new Date());*/}
+      {/*        gtag('config', '${gtag.GA_TRACKING_ID}', {*/}
+      {/*          page_path: window.location.pathname,*/}
+      {/*        });*/}
+      {/*      `}*/}
+      {/*      </Script>*/}
+      {/*    </>*/}
+      {/*  )*/}
+      {/*}*/}
 
       {/*app*/}
       <ThemeProvider defaultTheme="light" attribute="class" disableTransitionOnChange>

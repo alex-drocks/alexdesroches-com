@@ -1,6 +1,11 @@
 import {useEffect, useState} from "react";
 import {useTheme} from 'next-themes';
 import ActiveLink from './ActiveLink'
+import {useIsEnglish} from "../hooks/useIsEnglish";
+import InternalLink from "./InternalLink";
+import {useLocalStorage} from "../hooks/useLocalStorage";
+import {useRouter} from "next/router";
+import getInternalPageLink from "../lib/getInternalPageLink";
 
 
 export default function Header() {
@@ -10,12 +15,18 @@ export default function Header() {
       <header>
         <nav>
           <h1 className="left-branding">
-            <ActiveLink href="/"><a>Alexandre Desroches</a></ActiveLink>
+            <InternalLink
+              isActiveLink={true}
+              page="index"
+            >
+              Alexandre Desroches
+            </InternalLink>
           </h1>
           <ul className="page-links do-not-display-on-mobile">
             <MainNavLinks/>
           </ul>
         </nav>
+        <ToggleLanguageButton shouldDisplayText={true}/>
         <ToggleThemeColorsButton className="do-not-display-on-mobile"/>
         <ToggleMobileMenuButton isMobileMenuOpened={isMobileMenuOpened} setIsMobileMenuOpened={setIsMobileMenuOpened}/>
       </header>
@@ -26,14 +37,25 @@ export default function Header() {
 
 
 function MobileMenu({isMobileMenuOpened}) {
+  const isEnglish = useIsEnglish()
+
   if (!isMobileMenuOpened)
     return null;
 
   return (
     <nav className="mobile-menu do-not-display-on-desktop">
-      <strong>Menu de navigation</strong>
+      <strong>
+        {isEnglish ? <>Navigation Menu</> : <>Menu de navigation</>}
+      </strong>
       <ul className="page-links">
-        <li><ActiveLink href="/"><a>Page principale</a></ActiveLink></li>
+        <li>
+          <InternalLink
+            isActiveLink={true}
+            page="index"
+          >
+            {isEnglish ? <>Home Page</> : <>Page principale</>}
+          </InternalLink>
+        </li>
         <MainNavLinks/>
       </ul>
       <br/>
@@ -44,11 +66,66 @@ function MobileMenu({isMobileMenuOpened}) {
 
 
 function MainNavLinks() {
-  return (<>
-    <li><ActiveLink href="/programmation/"><a>Services de programmation</a></ActiveLink></li>
-    <li><ActiveLink href="/a-propos/"><a>À&nbsp;propos</a></ActiveLink></li>
-    <li><ActiveLink href="/contact/"><a>Contact</a></ActiveLink></li>
-  </>);
+  const isEnglish = useIsEnglish()
+  if (isEnglish) {
+    return (
+      <>
+        <li>
+          <InternalLink
+            isActiveLink={true}
+            page="programming"
+          >
+            Programming Services
+          </InternalLink>
+        </li>
+        <li>
+          <InternalLink
+            isActiveLink={true}
+            page="about"
+          >
+            About
+          </InternalLink>
+        </li>
+        <li>
+          <InternalLink
+            isActiveLink={true}
+            page="contact"
+          >
+            Contact
+          </InternalLink>
+        </li>
+      </>
+    )
+  }
+
+  return (
+    <>
+      <li>
+        <InternalLink
+          isActiveLink={true}
+          page="programming"
+        >
+          Services de programmation
+        </InternalLink>
+      </li>
+      <li>
+        <InternalLink
+          isActiveLink={true}
+          page="about"
+        >
+          À&nbsp;propos
+        </InternalLink>
+      </li>
+      <li>
+        <InternalLink
+          isActiveLink={true}
+          page="contact"
+        >
+          Contact
+        </InternalLink>
+      </li>
+    </>
+  );
 }
 
 
@@ -56,12 +133,14 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
   const [mounted, setMounted] = useState(false);
   const {theme, setTheme} = useTheme();
 
+  const isEnglish = useIsEnglish()
+
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {
     return (
       <button
-        className={"toggle-dark-mode-button " + className}
+        className={"toggle-button " + className}
         aria-label="Toggle Dark Mode Button"
         type="button"
       />
@@ -70,7 +149,7 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
 
   return (
     <button
-      className={"toggle-dark-mode-button " + className}
+      className={"toggle-button " + className}
       aria-label="Toggle Dark Mode Button"
       type="button"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
@@ -82,7 +161,7 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                     d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
             </svg>
-            {shouldDisplayText && <span>Thème&nbsp;foncé</span>}
+            {shouldDisplayText && <span>{isEnglish ? <>Dark&nbsp;Theme</> : <>Thème&nbsp;foncé</>}</span>}
           </div>
         ) : (
           <div>
@@ -90,10 +169,30 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                     d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
             </svg>
-            {shouldDisplayText && <span>Thème&nbsp;clair</span>}
+            {shouldDisplayText && <span>{isEnglish ? <>Light&nbsp;Theme</> : <>Thème&nbsp;foncé</>}</span>}
           </div>
         )
       }
+    </button>
+  );
+}
+
+function ToggleLanguageButton({className = "", shouldDisplayText = false}) {
+  const router = useRouter()
+  const isEnglish = useIsEnglish()
+
+  const toggleLang = () => {
+    router.push(isEnglish ? "/" : "/en/")
+  }
+
+  return (
+    <button
+      className={"toggle-button language" + className}
+      aria-label="Toggle Website Language"
+      type="button"
+      onClick={toggleLang}
+    >
+      {isEnglish ? "FR" : "EN"}
     </button>
   );
 }

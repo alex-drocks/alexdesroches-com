@@ -37,8 +37,12 @@
   stroke: var(--main-background-color);
 }
 
-.header-container .toggle-dark-mode-button {
+.header-container .toggle-button {
   border-color: transparent;
+}
+
+.header-container .toggle-button.language:hover {
+  color: var(--main-background-color);
 }
 
 header {
@@ -155,22 +159,22 @@ header nav a.active-next-link {
     text-decoration: underline;
   }
 
-  nav.mobile-menu .toggle-dark-mode-button {
+  nav.mobile-menu .toggle-button {
     width: max-content;
   }
 
-  nav.mobile-menu .toggle-dark-mode-button div {
+  nav.mobile-menu .toggle-button div {
     display: flex;
     align-items: center;
     width: auto;
     height: 100%;
   }
 
-  nav.mobile-menu .toggle-dark-mode-button div span {
+  nav.mobile-menu .toggle-button div span {
     padding-right: .75rem;
   }
 
-  nav.mobile-menu .toggle-dark-mode-button:is(:active, :hover, :focus) div span {
+  nav.mobile-menu .toggle-button:is(:active, :hover, :focus) div span {
     color: var(--main-background-color);
   }
 }

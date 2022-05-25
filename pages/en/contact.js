@@ -1,35 +1,33 @@
-import PageTemplate from "../components/PageTemplate";
-import ResponsiveImage from "../components/ResponsiveImage";
-import ExternalLink from "../components/ExternalLink";
+import React from 'react';
+import PageTemplate from "../../components/PageTemplate";
+import styles from "../../styles/contact.module.css";
+import ContactLink from "../../components/ContactLink";
+import {myContactLinks} from "../../lib/myContactLinks";
 import {
-  MessengerLogo,
-  EmailLogo,
   CellphoneLogo,
-  LinkedinLogo,
-  GithubLogo,
+  EmailLogo,
   FacebookLogo,
+  GithubLogo,
+  LinkedinLogo,
+  MessengerLogo,
   TwitterLogo
-} from "../components/Logos";
+} from "../../components/Logos";
+import ExternalLink from "../../components/ExternalLink";
+import ResponsiveImage from "../../components/ResponsiveImage";
 
-import {myContactLinks} from "../lib/myContactLinks";
-import ContactLink from "../components/ContactLink";
-
-import styles from "../styles/contact.module.css";
-
-
-export default function Contact() {
+const Contact = () => {
   return (
     <PageTemplate
       pageTitle={"Contact | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Contacter Alexandre Desroches. Coordonnées directes, téléphone cellulaire et courriel."
-      pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/contact/"}
+      pageDescription="Alexandre Desroches's contact info. Cellphone number, email and social network links."
+      pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/contact/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">
-          <h2>Contacter Alexandre Desroches</h2>
+          <h2>Contact Alexandre Desroches</h2>
           <p>
-            N'hésitez pas à me contacter, ce sera un plaisir pour moi de discuter avec vous.
-            Je suis joignable en tout temps par l'un des moyens ci-dessous&nbsp;:
+            Feel free to contact me, it will be my pleasure to discuss with you.
+            I'm available about anytime using one of the below links:
           </p>
 
           <ul className={styles.contactLinks}>
@@ -70,7 +68,7 @@ export default function Contact() {
             />
           </ul>
 
-          <h3>Coordonnées pour me joindre</h3>
+          <h3>Contact info</h3>
           <p>
             <ExternalLink url={`mailto:${myContactLinks.email}`}>{myContactLinks.email}</ExternalLink><br/>
           </p>
@@ -105,4 +103,6 @@ export default function Contact() {
       </div>
     </PageTemplate>
   );
-}
+};
+
+export default Contact;

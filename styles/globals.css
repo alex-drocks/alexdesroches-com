@@ -55,7 +55,7 @@ html,
 body {
   background-color: var(--main-background-color);
   color: var(--main-foreground-color);;
-  user-select: none;
+  user-select: text;
   padding: 0;
   margin: 0;
   min-width: 280px;

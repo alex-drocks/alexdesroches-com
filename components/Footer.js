@@ -3,36 +3,71 @@ import ExternalLink from "./ExternalLink";
 import {FacebookLogo, GithubLogo, LinkedinLogo, TwitterLogo} from "./Logos";
 
 import {myContactLinks} from "../lib/myContactLinks";
+import InternalLink from "./InternalLink";
+import {useIsEnglish} from "../hooks/useIsEnglish";
 
 
 export default function Footer() {
+  const isEnglish = useIsEnglish()
   return (
     <footer>
       <div className="display-flex flex-row">
         <p className="max-text-width services-description">
-          <strong><Link href="/programmation">Services de programmation</Link></strong> sur mesure et à la demande.
-          Programmeur situé sur la Rive-Sud de
-          Montréal. Possibilité de travail à distance incluant horaires flexibles, tarification à l'heure avec facture
-          détaillée
-          à l'appui, et aucun engagement à long terme nécessaire.
+          {
+            isEnglish ? (
+              <>
+                On demand <strong>
+                <InternalLink page="programming">
+                  programming services
+                </InternalLink>
+              </strong>.
+                Located near Montreal, in Canada.
+                Available for remote work and flexible hours to fit your needs, with a detailed invoice
+                and no long-term commitment needed. Let's get the job done.
+              </>
+            ) : (
+              <>
+                <strong>
+                  <InternalLink page="programming">
+                    Services de programmation
+                  </InternalLink>
+                </strong> sur mesure et à la demande.
+                Programmeur situé sur la Rive-Sud de
+                Montréal. Possibilité de travail à distance incluant horaires flexibles, tarification à l'heure avec
+                facture détaillée à l'appui, et aucun engagement à long terme nécessaire.
+              </>
+            )
+          }
         </p>
 
         <div className="max-text-width footer-links">
           <ul>
             <li>
-              <Link href="/a-propos">
-                <a className="text-link">À propos de moi&nbsp;&rarr;</a>
-              </Link>
+              <InternalLink
+                page="about"
+                className="text-link"
+                withArrow={true}
+              >
+                {isEnglish ? "About me" : "À propos de moi"}
+              </InternalLink>
             </li>
             <li>
-              <Link href="/programmation">
-                <a className="text-link">Mon portfolio&nbsp;&rarr;</a>
-              </Link>
+              <InternalLink
+                page="programming"
+                className="text-link"
+                withArrow={true}
+              >
+                {isEnglish ? "My portfolio" : "Mon portfolio"}
+              </InternalLink>
             </li>
             <li>
-              <Link href="/contact">
-                <a className="text-link">Contactez-moi&nbsp;&rarr;</a>
-              </Link>
+              <InternalLink
+                page="contact"
+                className="text-link"
+                withArrow={true}
+              >
+                {isEnglish ? "Contact me" : "Contactez-moi"}
+              </InternalLink>
             </li>
           </ul>
         </div>

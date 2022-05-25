@@ -6,7 +6,7 @@ export default function About() {
   return (
     <PageTemplate
       pageTitle={"À propos | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="En savoir plus à propos d'Alexandre Desroches. Programmeur Javascript, Web, Front-end."
+      pageDescription="En savoir plus à propos d'Alexandre Desroches. Programmeur Javascript, développement Web, Front-end."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/a-propos/"}
     >
       <div className="max-content-width display-flex">

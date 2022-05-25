@@ -18,7 +18,7 @@ export default function About() {
           </p>
           <p>
             Je suis dans la trentaine, habitant au Canada dans la province du Québec, avec ma chère épouse Cathy
-            et bientôt notre premier né&nbsp;!
+            et Samuel, notre nouveau né&nbsp;!
           </p>
           <p>
             Depuis mon enfance, <strong>j'aime ce qui est technologique, créatif et qui amène à la

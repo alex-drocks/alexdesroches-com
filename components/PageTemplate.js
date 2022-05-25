@@ -32,7 +32,7 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
             <meta property="og:type" content="website"/>
             <meta property="og:description" content={process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION_EN}/>
             <meta property="og:image"
-                  content={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en" + process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE}/>
+                  content={process.env.NEXT_PUBLIC_WEBSITE_URL + process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE}/>
             <meta property="og:image:width" content={process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE_WIDTH}/>
             <meta property="og:image:height" content={process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE_HEIGHT}/>
 
@@ -41,7 +41,7 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
                   content={`${process.env.NEXT_PUBLIC_WEBSITE_TITLE} | ${process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION_EN}`}/>
             />
             <meta name="twitter:image"
-                  content={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en" + process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE}/>
+                  content={process.env.NEXT_PUBLIC_WEBSITE_URL + process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE}/>
             <meta name="twitter:url" content={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}/>
             <meta name="twitter:description" content={process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION_EN}/>
             <meta name="twitter:card" content="summary"/>

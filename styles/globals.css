@@ -222,6 +222,14 @@ li {
   height: 92px;
 }
 
+.address {
+  font-style: normal;
+  color: var(--secondary-text-color);
+}
+
+.resume.cont
+
+
 @keyframes fadein {
   from {
     opacity: 0;

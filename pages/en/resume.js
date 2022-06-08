@@ -13,7 +13,7 @@ import styles from "../../styles/contact.module.css";
 export default function Contact() {
   const [pdfUrl, setPdfUrl] = useState("")
   useEffect(() => {
-    setPdfUrl(`${window.location.origin}/resume/RESUME-Alexandre-Desroches-2021.pdf`)
+    setPdfUrl(`${window.location.origin}/resume/RESUME-Alexandre-Desroches-2022.pdf`)
   }, [])
   return (
     <PageTemplate
@@ -30,7 +30,7 @@ export default function Contact() {
               url={pdfUrl}
               className="text-link"
             >
-              <strong>Resume-Alexandre-Desroches-2021.pdf</strong>
+              <strong>Resume-Alexandre-Desroches-2022.pdf</strong>
             </ExternalLink>
           </p>
 

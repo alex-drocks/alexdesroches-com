@@ -2,12 +2,12 @@ import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
 import ExternalLink from "../components/ExternalLink";
 import {
-  MessengerLogo,
-  EmailLogo,
   CellphoneLogo,
-  LinkedinLogo,
-  GithubLogo,
+  EmailLogo,
   FacebookLogo,
+  GithubLogo,
+  LinkedinLogo,
+  MessengerLogo,
   TwitterLogo
 } from "../components/Logos";
 
@@ -90,8 +90,8 @@ export default function Contact() {
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
-            <span
-              className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Art is Communicating</span>
+            {/*<span*/}
+            {/*  className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Art is Communicating</span>*/}
             <ResponsiveImage
               path="/images/celltower/celltower"
               alt="Art is Communicating"

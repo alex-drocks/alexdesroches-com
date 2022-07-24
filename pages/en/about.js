@@ -9,7 +9,7 @@ const About = () => {
   return (
     <PageTemplate
       pageTitle={"About | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Get to know more about Alexandre Desroches - Javascript Web Developer with Front-End Web Development expertise."
+      pageDescription="Get to know more about Alexandre Desroches - JavaScript Web Developer with Front-End Web Development expertise."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/about/"}
     >
       <div className="max-content-width display-flex">
@@ -60,7 +60,7 @@ const About = () => {
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
-            <span className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Art is Revealing</span>
+            {/*<span className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Art is Revealing</span>*/}
             <ResponsiveImage
               path="/images/about/about"
               alt="Art is Revealing"

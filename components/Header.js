@@ -1,11 +1,8 @@
 import {useEffect, useState} from "react";
 import {useTheme} from 'next-themes';
-import ActiveLink from './ActiveLink'
 import {useIsEnglish} from "../hooks/useIsEnglish";
 import InternalLink from "./InternalLink";
-import {useLocalStorage} from "../hooks/useLocalStorage";
 import {useRouter} from "next/router";
-import getInternalPageLink from "../lib/getInternalPageLink";
 
 
 export default function Header() {
@@ -44,9 +41,7 @@ function MobileMenu({isMobileMenuOpened}) {
 
   return (
     <nav className="mobile-menu do-not-display-on-desktop">
-      <strong>
-        {isEnglish ? <>Navigation Menu</> : <>Menu de navigation</>}
-      </strong>
+      <strong>Menu</strong>
       <ul className="page-links">
         <li>
           <InternalLink

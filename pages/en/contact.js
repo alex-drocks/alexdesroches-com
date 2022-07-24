@@ -88,8 +88,8 @@ const Contact = () => {
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
-            <span
-              className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Art is Communicating</span>
+            {/*<span*/}
+            {/*  className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Art is Communicating</span>*/}
             <ResponsiveImage
               path="/images/celltower/celltower"
               alt="Art is Communicating"

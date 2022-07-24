@@ -9,7 +9,7 @@ const Programming = () => {
   return (
     <PageTemplate
       pageTitle={"Programming Services & Portfolio | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Alexandre Desroches Front-End Web Developer. Javascript, React, Node, Firebase, HTML, CSS, and more."
+      pageDescription="Alexandre Desroches Front-End Web Developer. JavaScript, React, Node, Firebase, HTML, CSS, and more."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/programming/"}
     >
       <section className="skills max-content-width display-flex">
@@ -33,7 +33,7 @@ const Programming = () => {
             <ul>
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/JavaScript">
-                  Javascript
+                  JavaScript
                 </ExternalLink>
               </li>
               <li>
@@ -207,7 +207,7 @@ const Programming = () => {
 
           imgSrc="/images/programmation/finance-d/website/finance-d"
 
-          technologies="React.js, Javascript, Node.js, HTML, CSS, WordPress, WooCommerce, Stripe,
+          technologies="React.js, JavaScript, Node.js, HTML, CSS, WordPress, WooCommerce, Stripe,
          Web Hosting Canada, GitHub."
 
           features="Responsive website using React.js with a focus on SEO
@@ -229,7 +229,7 @@ const Programming = () => {
 
           imgSrc="/images/programmation/finance-d/software/finance-d_desktop_software"
 
-          technologies="Electron.js, Javascript, HTML, CSS, Node.js, VirtualBox VM, Google Firebase,
+          technologies="Electron.js, JavaScript, HTML, CSS, Node.js, VirtualBox VM, Google Firebase,
          Web Hosting Canada, GitHub."
 
           features="Desktop software for Windows et Mac. Including code signing certificate management obtained through SSL.com,
@@ -253,7 +253,7 @@ const Programming = () => {
 
           imgSrc="/images/programmation/gestion-desroches/site-gestion-desroches"
 
-          technologies="React.js, Javascript, HTML, CSS, Node.js, Next.js, Web Hosting Canada, GitHub, Microsoft Outlook,
+          technologies="React.js, JavaScript, HTML, CSS, Node.js, Next.js, Web Hosting Canada, GitHub, Microsoft Outlook,
          Calendly, PHP."
 
           features="Created the website form scratch with React.js, web hosting and email management, SEO,
@@ -272,7 +272,7 @@ const Programming = () => {
 
           imgSrc="/images/programmation/finance-d/payes/app-payes"
 
-          technologies="React.js, Firebase, Javascript, HTML, CSS, Node.js, Web Hosting Canada, GitHub, PHP,
+          technologies="React.js, Firebase, JavaScript, HTML, CSS, Node.js, Web Hosting Canada, GitHub, PHP,
         WordPress, WooCommerce, WooCommerce License Manager."
 
           features="Full-Stack. Meaning, Front-End with React.js and the Back-End with Firebase
@@ -292,7 +292,7 @@ const Programming = () => {
 
           imgSrc="/images/programmation/alexdesrochescom/alexdesroches"
 
-          technologies="React.js, Next.js, Javascript, HTML, CSS, Node.js, Firebase Hosting, GitHub."
+          technologies="React.js, Next.js, JavaScript, HTML, CSS, Node.js, Firebase Hosting, GitHub."
 
           features="Design, programming, content, translation, hosting and performance optimisations.
          This website is open-source - you can peek into the source code in my GitHub repository (link below)."

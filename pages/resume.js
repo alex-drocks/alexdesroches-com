@@ -37,7 +37,7 @@ export default function Contact() {
 
           <h3>En résumé</h3>
           <p>
-            Programmeur JavaScript depuis 3 ans. Spécialisé avec le développement Web Front-End et React.
+            Programmeur JavaScript depuis plus de 3 ans. Spécialisé avec le développement Web Front-End et React.
           </p>
 
           <h3>Mes informations</h3>

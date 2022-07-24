@@ -3,13 +3,14 @@ import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
 import ExternalLink from "../components/ExternalLink";
 import Project from "../components/Project";
+import React from "react";
 
 
 export default function Programmation() {
   return (
     <PageTemplate
       pageTitle={"Services de programmation | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Services de programmation et développement de sites Internet. Alexandre Desroches freelancer. Javascript, React, Node, Firebase, HTML, CSS."
+      pageDescription="Services de programmation et développement de sites Internet. Alexandre Desroches freelancer. JavaScript, React, Node, Firebase, HTML, CSS."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/programmation/"}
     >
       <section className="skills max-content-width display-flex">
@@ -34,7 +35,7 @@ export default function Programmation() {
             <ul>
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/JavaScript">
-                  Javascript
+                  JavaScript
                 </ExternalLink>
               </li>
               <li>
@@ -207,7 +208,7 @@ export default function Programmation() {
 
           imgSrc="/images/programmation/finance-d/website/finance-d"
 
-          technologies="React.js, Javascript, Node.js, HTML, CSS, WordPress, WooCommerce, Stripe,
+          technologies="React.js, JavaScript, Node.js, HTML, CSS, WordPress, WooCommerce, Stripe,
          Web Hosting Canada, GitHub."
 
           features="Site Internet de présentation responsive avec React.js et une forte attention aux SEO
@@ -229,7 +230,7 @@ export default function Programmation() {
 
           imgSrc="/images/programmation/finance-d/software/finance-d_desktop_software"
 
-          technologies="Electron.js, Javascript, HTML, CSS, Node.js, VirtualBox VM, Google Firebase,
+          technologies="Electron.js, JavaScript, HTML, CSS, Node.js, VirtualBox VM, Google Firebase,
          Web Hosting Canada, GitHub."
 
           features="Logiciel pour ordinateurs Windows et Mac. Incluant la certification de signature du code avec SSL.com,
@@ -251,7 +252,7 @@ export default function Programmation() {
 
           imgSrc="/images/programmation/gestion-desroches/site-gestion-desroches"
 
-          technologies="React.js, Javascript, HTML, CSS, Node.js, Next.js, Web Hosting Canada, GitHub, Microsoft Outlook,
+          technologies="React.js, JavaScript, HTML, CSS, Node.js, Next.js, Web Hosting Canada, GitHub, Microsoft Outlook,
          Calendly, PHP."
 
           features="Conception du site avec React, gestion de l'hébergement et des adresses courriels de l'entreprise
@@ -271,7 +272,7 @@ export default function Programmation() {
 
           imgSrc="/images/programmation/finance-d/payes/app-payes"
 
-          technologies="React.js, Firebase, Javascript, HTML, CSS, Node.js, Web Hosting Canada, GitHub, PHP,
+          technologies="React.js, Firebase, JavaScript, HTML, CSS, Node.js, Web Hosting Canada, GitHub, PHP,
         WordPress, WooCommerce, WooCommerce License Manager."
 
           features="Programmation Full-Stack. C'est-à-dire, le Front-End avec React.js et le Back-End avec Firebase
@@ -293,7 +294,7 @@ export default function Programmation() {
 
           imgSrc="/images/programmation/alexdesrochescom/alexdesroches"
 
-          technologies="React.js, Next.js, Javascript, HTML, CSS, Node.js, Firebase Hosting, GitHub."
+          technologies="React.js, Next.js, JavaScript, HTML, CSS, Node.js, Firebase Hosting, GitHub."
 
           features="Design, contenu, programmation, mise en ligne et optimisation des performances.
          Ce site est open-source. Vous pouvez d'ailleurs consulter le code source en allant sur mon
@@ -303,6 +304,18 @@ export default function Programmation() {
 
           url="https://github.com/alex-drocks/alexdesroches-com"
         />
+      </section>
+      <section className={styles.endingSection}>
+        <p>
+          Voilà&nbsp;!
+        </p>
+        <p>
+          J'ai fait plusieurs autres projets, mais ceux-ci étaient les plus pertinents pour démontrer ce que je maîtrise
+          le mieux.
+        </p>
+        <p>
+          Si vous souhaitez en savoir plus à propos de moi, n'hésitez pas à me contacter.
+        </p>
       </section>
     </PageTemplate>
   );

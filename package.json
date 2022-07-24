@@ -8,8 +8,7 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "preview": "next start",
     "lint": "next lint",
-    "export": "npm run build && next export",
-    "deploy": "npm run export && firebase deploy --only hosting"
+    "export": "npm run build && next export"
   },
   "author": {
     "name": "Alexandre Desroches",

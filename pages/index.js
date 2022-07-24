@@ -15,20 +15,20 @@ export default function Index() {
           <h2>Programmeur freelance (pigiste)</h2>
           <p>
             Mon nom est Alexandre Desroches. Je suis un développeur autonome, offrant des services de
-            programmation de logiciels pour ordinateurs, applications Web et sites Internet.
+            programmation de logiciels, applications Web et sites Internet, selon vos besoins.
           </p>
           <Link href="/a-propos"><a className="text-link">En savoir plus à propos de moi&nbsp;&rarr;</a></Link>
 
           <h3>Mon expertise est le Développement Web Front-End.</h3>
           <p>
-            En effet, mes forces en programmation, sont basées principalement sur les langages du Web.
-            C'est-à-dire, HTML, CSS et Javascript; Dont les sites Internet et applications Web
+            Mes forces en programmation, sont basées principalement sur les langages du Web.
+            C'est-à-dire, HTML, CSS et <strong>JavaScript</strong>; Dont les sites Internet et applications Web
             dépendent.
           </p>
           <p>
             Dans ce vaste univers, je maîtrise des technologies modernes en forte demande
             telles
-            que&nbsp;: React.js, Next.js, Node.js, Electron.js, Squarespace, WordPress, WooCommerce et
+            que&nbsp;: <strong>React.js</strong>, Next.js, Node.js, Electron.js, Squarespace, WordPress, WooCommerce et
             Firebase.
           </p>
           <Link href="/programmation">
@@ -56,7 +56,7 @@ export default function Index() {
 
         <div className="max-text-width display-flex">
           <div className="stylish-shadow-image">
-            <span className="stylish-shadow-image--overlay-text">Art is Thinking</span>
+            {/*<span className="stylish-shadow-image--overlay-text">Art is Thinking</span>*/}
             <ResponsiveImage
               path="/images/whitebloc/whitebloc"
               alt="Art is Thinking"

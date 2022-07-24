@@ -22,11 +22,11 @@ const Index = () => {
           <h3>I'm good with Front-End Web Development.</h3>
           <p>
             In fact, my strengths are mostly built on top of the Web languages.
-            So at the core - HTML, CSS and Javascript.
+            So at the core - HTML, CSS and <strong>JavaScript</strong>.
           </p>
           <p>
             In this vast ecosystem, I master modern - on demand - technologies like&nbsp;:
-            React.js, Next.js, Node.js, Electron.js, Squarespace, WordPress, WooCommerce,
+            <strong>React.js</strong>, Next.js, Node.js, Electron.js, Squarespace, WordPress, WooCommerce,
             Firebase and more.
           </p>
           <Link href="/en/programming">
@@ -54,7 +54,7 @@ const Index = () => {
 
         <div className="max-text-width display-flex">
           <div className="stylish-shadow-image">
-            <span className="stylish-shadow-image--overlay-text">Art is Thinking</span>
+            {/*<span className="stylish-shadow-image--overlay-text">Art is Thinking</span>*/}
             <ResponsiveImage
               path="/images/whitebloc/whitebloc"
               alt="Art is Thinking"

@@ -1,6 +1,6 @@
 {
   "name": "alexdesroches.com",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,8 +8,7 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "preview": "next start",
     "lint": "next lint",
-    "export": "npm run build && next export",
-    "deploy": "npm run export && firebase deploy --only hosting"
+    "export": "npm run build && next export"
   },
   "author": {
     "name": "Alexandre Desroches",
@@ -29,14 +28,14 @@
     "node": ">=16.13.2"
   },
   "dependencies": {
-    "next": "12.1.6",
+    "next": "12.2.3",
     "next-themes": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "eslint": "^8.17.0",
-    "eslint-config-next": "12.1.6",
-    "next-sitemap": "^3.0.5"
+    "eslint": "^8.20.0",
+    "eslint-config-next": "12.2.3",
+    "next-sitemap": "^3.1.11"
   }
 }

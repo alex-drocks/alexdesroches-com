@@ -84,14 +84,6 @@ function MainNavLinks() {
         <li>
           <InternalLink
             isActiveLink={true}
-            page="resume"
-          >
-            My Resume
-          </InternalLink>
-        </li>
-        <li>
-          <InternalLink
-            isActiveLink={true}
             page="contact"
           >
             Contact
@@ -117,14 +109,6 @@ function MainNavLinks() {
           page="about"
         >
           À&nbsp;propos
-        </InternalLink>
-      </li>
-      <li>
-        <InternalLink
-          isActiveLink={true}
-          page="resume"
-        >
-          Mon CV
         </InternalLink>
       </li>
       <li>

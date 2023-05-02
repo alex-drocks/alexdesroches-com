@@ -1,15 +1,7 @@
 import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
 import ExternalLink from "../components/ExternalLink";
-import {
-  CellphoneLogo,
-  EmailLogo,
-  FacebookLogo,
-  GithubLogo,
-  LinkedinLogo,
-  MessengerLogo,
-  TwitterLogo
-} from "../components/Logos";
+import {CellphoneLogo, EmailLogo, FacebookLogo, GithubLogo, LinkedinLogo, MessengerLogo} from "../components/Logos";
 
 import {myContactLinks} from "../lib/myContactLinks";
 import ContactLink from "../components/ContactLink";
@@ -63,11 +55,11 @@ export default function Contact() {
               url={myContactLinks.facebook}
               svgIcon={<FacebookLogo/>}
             />
-            <ContactLink
-              label="Twitter"
-              url={myContactLinks.twitter}
-              svgIcon={<TwitterLogo/>}
-            />
+            {/*<ContactLink*/}
+            {/*  label="Twitter"*/}
+            {/*  url={myContactLinks.twitter}*/}
+            {/*  svgIcon={<TwitterLogo/>}*/}
+            {/*/>*/}
           </ul>
 
           <h3>Coordonnées pour me joindre</h3>

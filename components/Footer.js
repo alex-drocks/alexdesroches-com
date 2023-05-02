@@ -1,6 +1,5 @@
-import Link from "next/link";
 import ExternalLink from "./ExternalLink";
-import {FacebookLogo, GithubLogo, LinkedinLogo, TwitterLogo} from "./Logos";
+import {FacebookLogo, GithubLogo, LinkedinLogo} from "./Logos";
 
 import {myContactLinks} from "../lib/myContactLinks";
 import InternalLink from "./InternalLink";
@@ -76,7 +75,7 @@ export default function Footer() {
       <div className="footer-links--social">
         <ExternalLink url={myContactLinks.linkedIn}><LinkedinLogo/></ExternalLink>
         <ExternalLink url={myContactLinks.facebook}><FacebookLogo/></ExternalLink>
-        <ExternalLink url={myContactLinks.twitter}><TwitterLogo/></ExternalLink>
+        {/*<ExternalLink url={myContactLinks.twitter}><TwitterLogo/></ExternalLink>*/}
         <ExternalLink url={myContactLinks.github}><GithubLogo/></ExternalLink>
       </div>
 

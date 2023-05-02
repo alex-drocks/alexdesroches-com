@@ -3,15 +3,7 @@ import PageTemplate from "../../components/PageTemplate";
 import styles from "../../styles/contact.module.css";
 import ContactLink from "../../components/ContactLink";
 import {myContactLinks} from "../../lib/myContactLinks";
-import {
-  CellphoneLogo,
-  EmailLogo,
-  FacebookLogo,
-  GithubLogo,
-  LinkedinLogo,
-  MessengerLogo,
-  TwitterLogo
-} from "../../components/Logos";
+import {CellphoneLogo, EmailLogo, FacebookLogo, GithubLogo, LinkedinLogo, MessengerLogo} from "../../components/Logos";
 import ExternalLink from "../../components/ExternalLink";
 import ResponsiveImage from "../../components/ResponsiveImage";
 
@@ -61,11 +53,11 @@ const Contact = () => {
               url={myContactLinks.facebook}
               svgIcon={<FacebookLogo/>}
             />
-            <ContactLink
-              label="Twitter"
-              url={myContactLinks.twitter}
-              svgIcon={<TwitterLogo/>}
-            />
+            {/*<ContactLink*/}
+            {/*  label="Twitter"*/}
+            {/*  url={myContactLinks.twitter}*/}
+            {/*  svgIcon={<TwitterLogo/>}*/}
+            {/*/>*/}
           </ul>
 
           <h3>Contact info</h3>

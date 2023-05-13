@@ -28,8 +28,8 @@ export default function Index() {
           <p>
             Dans ce vaste univers, je maîtrise des technologies modernes en forte demande
             telles
-            que&nbsp;: <strong>React.js</strong>, Next.js, Node.js, Electron.js, Squarespace, WordPress, WooCommerce et
-            Firebase.
+            que&nbsp;: <strong>React.js</strong>, Next.js, Node.js, Electron.js, <strong>Angular</strong>, Squarespace,
+            WordPress, WooCommerce et Firebase.
           </p>
           <Link href="/programmation">
             <a className="text-link">Mes services de programmation&nbsp;&rarr;</a>

@@ -52,15 +52,11 @@ const About = () => {
           <Link href="/en/programming"><a className="text-link">Look at my portfolio&nbsp;&rarr;</a></Link>
           <br/>
           <br/>
-          <Link href="/en/resume"><a className="text-link">Read my resume&nbsp;&rarr;</a></Link>
-          <br/>
-          <br/>
           <Link href="/en/contact"><a className="text-link">Contact me&nbsp;&rarr;</a></Link>
         </section>
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
-            {/*<span className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Art is Revealing</span>*/}
             <ResponsiveImage
               path="/images/about/about"
               alt="Art is Revealing"

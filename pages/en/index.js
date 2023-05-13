@@ -14,28 +14,29 @@ const Index = () => {
         <div className="max-text-width">
           <h2>Freelance Web Developer</h2>
           <p>
-            My name is <strong>Alexandre Desroches</strong>. I am a passionate Web developer, providing high quality
-            services for software and website programming. I love coding and build great apps.
+            I am <strong>Alexandre Desroches</strong>, a dedicated Web developer offering top-notch services in software
+            and website programming. I thrive on coding and providing outstanding results.
           </p>
-          <Link href="/en/about"><a className="text-link">More about me&nbsp;&rarr;</a></Link>
+          <Link href="/en/about"><a className="text-link">Learn more about me&nbsp;&rarr;</a></Link>
 
-          <h3>I'm good with Front-End Web Development.</h3>
+          <h3>I'm proficient in Front-End Web Development.</h3>
           <p>
             In fact, my strengths are mostly built on top of the Web languages.
             So at the core - HTML, CSS and <strong>JavaScript</strong>.
           </p>
           <p>
-            In this vast ecosystem, I master modern - on demand - technologies like&nbsp;:
-            <strong>React.js</strong>, Next.js, Node.js, Electron.js, Squarespace, WordPress, WooCommerce,
-            Firebase and more.
+            In this vast ecosystem, I master modern - on demand - technologies like:&nbsp;
+            <strong>React.js</strong>, Next.js, Node.js, Electron.js, <strong>Angular</strong>, Squarespace, WordPress,
+            WooCommerce, Firebase and more.
           </p>
           <Link href="/en/programming">
-            <a className="text-link">Portfolio / Programming services&nbsp;&rarr;</a>
+            <a className="text-link">My Portfolio / Programming services&nbsp;&rarr;</a>
           </Link>
 
-          <h3>Let's team up!</h3>
+          <h3>Let's work together!</h3>
           <p>
-            Hand me a new project to build your idea from scratch, or let's join our strengths together with your team.
+            I'll bring your idea to life from the ground up. Alternatively, let's combine our
+            strengths and collaborate with your team.
           </p>
           <div className="handwritten-signature-container display-flex">
             <Link href="/en/contact"><a className="text-link">Contact me&nbsp;&rarr;</a></Link>

@@ -3,7 +3,7 @@ import PageTemplate from "../../components/PageTemplate";
 import styles from "../../styles/contact.module.css";
 import ContactLink from "../../components/ContactLink";
 import {myContactLinks} from "../../lib/myContactLinks";
-import {CellphoneLogo, EmailLogo, FacebookLogo, GithubLogo, LinkedinLogo, MessengerLogo} from "../../components/Logos";
+import {CellphoneLogo, EmailLogo, LinkedinLogo} from "../../components/Logos";
 import ExternalLink from "../../components/ExternalLink";
 import ResponsiveImage from "../../components/ResponsiveImage";
 
@@ -18,23 +18,23 @@ const Contact = () => {
         <section className="max-text-width">
           <h2>Contact Alexandre Desroches</h2>
           <p>
-            Feel free to contact me, it will be my pleasure to discuss with you.
-            I'm available about anytime using one of the below links:
+            Feel free to contact me, it will be a pleasure to discuss about your project.
+            You can reach me via one of the links below:
           </p>
 
           <ul className={styles.contactLinks}>
+            {/*<ContactLink*/}
+            {/*  label="Messenger"*/}
+            {/*  url={myContactLinks.messenger}*/}
+            {/*  svgIcon={<MessengerLogo/>}*/}
+            {/*/>*/}
             <ContactLink
-              label="Messenger"
-              url={myContactLinks.messenger}
-              svgIcon={<MessengerLogo/>}
-            />
-            <ContactLink
-              label="Courriel"
+              label="Email"
               url={`mailto:${myContactLinks.email}`}
               svgIcon={<EmailLogo/>}
             />
             <ContactLink
-              label="Cellulaire"
+              label="Mobile phone"
               url={`tel:${myContactLinks.cellphone}`}
               svgIcon={<CellphoneLogo/>}
             />
@@ -43,16 +43,16 @@ const Contact = () => {
               url={myContactLinks.linkedIn}
               svgIcon={<LinkedinLogo/>}
             />
-            <ContactLink
-              label="GitHub"
-              url={myContactLinks.github}
-              svgIcon={<GithubLogo/>}
-            />
-            <ContactLink
-              label="Facebook"
-              url={myContactLinks.facebook}
-              svgIcon={<FacebookLogo/>}
-            />
+            {/*<ContactLink*/}
+            {/*  label="GitHub"*/}
+            {/*  url={myContactLinks.github}*/}
+            {/*  svgIcon={<GithubLogo/>}*/}
+            {/*/>*/}
+            {/*<ContactLink*/}
+            {/*  label="Facebook"*/}
+            {/*  url={myContactLinks.facebook}*/}
+            {/*  svgIcon={<FacebookLogo/>}*/}
+            {/*/>*/}
             {/*<ContactLink*/}
             {/*  label="Twitter"*/}
             {/*  url={myContactLinks.twitter}*/}
@@ -60,8 +60,11 @@ const Contact = () => {
             {/*/>*/}
           </ul>
 
-          <h3>Contact info</h3>
+          <h3>Detailed information to contact me</h3>
           <p>
+            Alexandre Desroches
+          </p>
+          <p style={{color: "var(--main-foreground-color)"}}>
             <ExternalLink url={`mailto:${myContactLinks.email}`}>{myContactLinks.email}</ExternalLink><br/>
           </p>
           <p>

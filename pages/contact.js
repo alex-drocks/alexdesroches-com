@@ -1,7 +1,7 @@
 import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
 import ExternalLink from "../components/ExternalLink";
-import {CellphoneLogo, EmailLogo, FacebookLogo, GithubLogo, LinkedinLogo, MessengerLogo} from "../components/Logos";
+import {CellphoneLogo, EmailLogo, LinkedinLogo} from "../components/Logos";
 
 import {myContactLinks} from "../lib/myContactLinks";
 import ContactLink from "../components/ContactLink";
@@ -20,16 +20,16 @@ export default function Contact() {
         <section className="max-text-width">
           <h2>Contacter Alexandre Desroches</h2>
           <p>
-            N'hésitez pas à me contacter, ce sera un plaisir pour moi de discuter avec vous.
+            N'hésitez pas à me contacter, ce sera un plaisir de discuter de votre projet.
             Je suis joignable en tout temps par l'un des moyens ci-dessous&nbsp;:
           </p>
 
           <ul className={styles.contactLinks}>
-            <ContactLink
-              label="Messenger"
-              url={myContactLinks.messenger}
-              svgIcon={<MessengerLogo/>}
-            />
+            {/*<ContactLink*/}
+            {/*  label="Messenger"*/}
+            {/*  url={myContactLinks.messenger}*/}
+            {/*  svgIcon={<MessengerLogo/>}*/}
+            {/*/>*/}
             <ContactLink
               label="Courriel"
               url={`mailto:${myContactLinks.email}`}
@@ -45,16 +45,16 @@ export default function Contact() {
               url={myContactLinks.linkedIn}
               svgIcon={<LinkedinLogo/>}
             />
-            <ContactLink
-              label="GitHub"
-              url={myContactLinks.github}
-              svgIcon={<GithubLogo/>}
-            />
-            <ContactLink
-              label="Facebook"
-              url={myContactLinks.facebook}
-              svgIcon={<FacebookLogo/>}
-            />
+            {/*<ContactLink*/}
+            {/*  label="GitHub"*/}
+            {/*  url={myContactLinks.github}*/}
+            {/*  svgIcon={<GithubLogo/>}*/}
+            {/*/>*/}
+            {/*<ContactLink*/}
+            {/*  label="Facebook"*/}
+            {/*  url={myContactLinks.facebook}*/}
+            {/*  svgIcon={<FacebookLogo/>}*/}
+            {/*/>*/}
             {/*<ContactLink*/}
             {/*  label="Twitter"*/}
             {/*  url={myContactLinks.twitter}*/}
@@ -62,7 +62,10 @@ export default function Contact() {
             {/*/>*/}
           </ul>
 
-          <h3>Coordonnées pour me joindre</h3>
+          <h3>Informations détaillées pour me joindre</h3>
+          <p>
+            Alexandre Desroches
+          </p>
           <p style={{color: "var(--main-foreground-color)"}}>
             <ExternalLink url={`mailto:${myContactLinks.email}`}>{myContactLinks.email}</ExternalLink><br/>
           </p>

@@ -64,6 +64,11 @@ const Programming = () => {
             </ul>
             <ul>
               <li>
+                <ExternalLink url="https://en.wikipedia.org/wiki/Angular_(web_framework)">
+                  Angular
+                </ExternalLink>
+              </li>
+              <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/Electron_(software_framework)">
                   Electron.js
                 </ExternalLink>
@@ -86,11 +91,6 @@ const Programming = () => {
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/WordPress">
                   WordPress
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/WooCommerce">
-                  WooCommerce
                 </ExternalLink>
               </li>
             </ul>
@@ -127,8 +127,8 @@ const Programming = () => {
             </ul>
             <ul>
               <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Angular_(web_framework)">
-                  Angular.js
+                <ExternalLink url="https://en.wikipedia.org/wiki/WooCommerce">
+                  WooCommerce
                 </ExternalLink>
               </li>
               <li>

@@ -1,7 +1,6 @@
 import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
 import styles from "../styles/a-propos.module.css";
-import InternalLink from "../components/InternalLink";
 
 export default function About() {
   return (
@@ -43,13 +42,10 @@ export default function About() {
             environnement de travail. Avec moi, vous pouvez vous attendre au professionnalisme et à l'excellence de mon
             travail. Je donne toujours le meilleur de moi-même peu importe la responsabilité.
           </p>
-          <br/>
-          <InternalLink page="resume" withArrow={true} className="text-link">Consulter mon CV</InternalLink>
         </section>
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
-            {/*<span className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Art is Revealing</span>*/}
             <ResponsiveImage
               path="/images/about/about"
               alt="Art is Revealing"

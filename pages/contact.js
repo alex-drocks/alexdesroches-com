@@ -35,11 +35,11 @@ export default function Contact() {
               url={`mailto:${myContactLinks.email}`}
               svgIcon={<EmailLogo/>}
             />
-            <ContactLink
+            {/* <ContactLink
               label="Cellulaire"
               url={`tel:${myContactLinks.cellphone}`}
               svgIcon={<CellphoneLogo/>}
-            />
+            /> */}
             <ContactLink
               label="LinkedIn"
               url={myContactLinks.linkedIn}
@@ -61,25 +61,6 @@ export default function Contact() {
             {/*  svgIcon={<TwitterLogo/>}*/}
             {/*/>*/}
           </ul>
-
-          <h3>Informations détaillées pour me joindre</h3>
-          <p>
-            Alexandre Desroches
-          </p>
-          <p style={{color: "var(--main-foreground-color)"}}>
-            <ExternalLink url={`mailto:${myContactLinks.email}`}>{myContactLinks.email}</ExternalLink><br/>
-          </p>
-          <p>
-            <ExternalLink url={`tel:${myContactLinks.cellphone}`}>{myContactLinks.cellphone}</ExternalLink><br/>
-          </p>
-          <ExternalLink url="https://maps.google.com/?q=1684+Rue+Girard+Sainte-Madeleine+QC+J0H+1S0">
-            <address className="address">
-              1684, rue Girard<br/>
-              Ste-Marie-Madeleine<br/>
-              Québec, Canada<br/>
-              J0H 1S0
-            </address>
-          </ExternalLink>
 
         </section>
 

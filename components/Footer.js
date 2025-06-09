@@ -21,8 +21,7 @@ export default function Footer() {
                 </InternalLink>
               </strong>.
                 Located near Montreal, in Canada.
-                Available for remote work and flexible hours to fit your needs, with a detailed invoice
-                and no long-term commitment needed. Let's get the job done.
+                Available for remote work and flexible hours to fit your needs.
               </>
             ) : (
               <>
@@ -30,10 +29,10 @@ export default function Footer() {
                   <InternalLink page="programming">
                     Services de programmation
                   </InternalLink>
-                </strong> sur mesure et à la demande.
+                </strong> à la demande.
                 Programmeur situé sur la Rive-Sud de
-                Montréal. Possibilité de travail à distance incluant horaires flexibles, tarification à l'heure avec
-                facture détaillée à l'appui, et aucun engagement à long terme nécessaire.
+                Montréal. Tarification à l'heure avec
+                facture détaillée à l'appui.
               </>
             )
           }
@@ -74,8 +73,6 @@ export default function Footer() {
 
       <div className="footer-links--social">
         <ExternalLink url={myContactLinks.linkedIn}><LinkedinLogo/></ExternalLink>
-        <ExternalLink url={myContactLinks.facebook}><FacebookLogo/></ExternalLink>
-        {/*<ExternalLink url={myContactLinks.twitter}><TwitterLogo/></ExternalLink>*/}
         <ExternalLink url={myContactLinks.github}><GithubLogo/></ExternalLink>
       </div>
 

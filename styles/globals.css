@@ -227,9 +227,8 @@ li {
   color: var(--secondary-text-color);
 }
 
-.resume.cont
-
-
+.resume.cont {
+}
 @keyframes fadein {
   from {
     opacity: 0;

@@ -137,6 +137,7 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
       <button
         className={"toggle-button " + className}
         aria-label="Toggle Dark Mode Button"
+        aria-hidden="true"
         type="button"
       />
     );

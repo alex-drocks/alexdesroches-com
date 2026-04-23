@@ -9,7 +9,7 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
   const isEnglish = useIsEnglish()
   useEffect(() => {
     document.documentElement.lang = isEnglish ? "en" : "fr-CA"
-  }, [])
+  }, [isEnglish])
   return (
     <>
       {

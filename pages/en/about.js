@@ -1,4 +1,3 @@
-import React from 'react';
 import PageTemplate from "../../components/PageTemplate";
 import styles from "../../styles/a-propos.module.css";
 import ResponsiveImage from "../../components/ResponsiveImage";

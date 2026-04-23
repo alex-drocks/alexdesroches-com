@@ -5,6 +5,79 @@ import {useIsEnglish} from "../hooks/useIsEnglish";
 import {useEffect} from "react";
 
 
+function StructuredData() {
+  const siteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
+  const titles = {
+    base: process.env.NEXT_PUBLIC_WEBSITE_TITLE,
+    en: process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION_EN,
+    fr: process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION,
+  };
+
+  const websiteData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}#website`,
+    "url": siteUrl,
+    "name": titles.base,
+    "description": titles.fr,
+    "alternateName": titles.en,
+    "inLanguage": ["fr-CA", "en"],
+    "publisher": {
+      "@id": `${siteUrl}#person`
+    }
+  };
+
+  const personData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${siteUrl}#person`,
+    "name": titles.base,
+    "url": siteUrl,
+    "image": siteUrl + process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE,
+    "jobTitle": "Développeur Web",
+    "jobTitle": "Développeur Web / Web Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "9423-7518 Québec Inc.",
+      "url": siteUrl,
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/alexandre-desroches-dev/",
+      "https://github.com/alex-drocks",
+    ],
+    "knowsAbout": [
+      "Développement Web",
+      "Front-End Development",
+      "JavaScript",
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Electron.js",
+      "HTML",
+      "CSS",
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Québec",
+      "addressCountry": "CA",
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(websiteData)}}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(personData)}}
+      />
+    </>
+  );
+}
+
+
 export default function PageTemplate({children, pageTitle, pageDescription, pageCanonicalURL, pageAlternateURL}) {
   const isEnglish = useIsEnglish()
   useEffect(() => {
@@ -72,6 +145,7 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
               href={"/favicons/safari-pinned-tab.svg"}/>
         <meta name="msapplication-TileColor" content="#2b5797"/>
         <meta name="theme-color" content="#ffffff"/>
+        <StructuredData/>
       </Head>
 
       <Header/>

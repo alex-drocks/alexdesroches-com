@@ -1,3 +1,5 @@
 module.exports = {
-  siteUrl: "https://alexdesroches.com"
+  siteUrl: "https://alexdesroches.com",
+  output: "export",
+  outDir: "out"
 }

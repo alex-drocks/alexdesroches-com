@@ -17,7 +17,7 @@ export default function Index() {
             Mon nom est Alexandre Desroches. Je suis un développeur autonome, offrant des services de
             programmation de logiciels, applications Web et sites Internet, selon vos besoins.
           </p>
-          <Link href="/a-propos"><a className="text-link">En savoir plus à propos de moi&nbsp;&rarr;</a></Link>
+          <Link href="/a-propos" className="text-link">En savoir plus à propos de moi&nbsp;&rarr;</Link>
 
           <h3>Mon expertise est le Développement Web Front-End.</h3>
           <p>
@@ -31,8 +31,8 @@ export default function Index() {
             que&nbsp;: <strong>React.js</strong>, Next.js, Node.js, Electron.js, <strong>Angular</strong>, Squarespace,
             WordPress, WooCommerce et Firebase.
           </p>
-          <Link href="/programmation">
-            <a className="text-link">Mes services de programmation&nbsp;&rarr;</a>
+          <Link href="/programmation" className="text-link">
+            Mes services de programmation&nbsp;&rarr;
           </Link>
 
           <h3>Faisons équipe&nbsp;!</h3>
@@ -40,7 +40,7 @@ export default function Index() {
             Confiez-moi un nouveau project ou joignons nos forces en collaborant avec votre équipe.
           </p>
           <div className="handwritten-signature-container display-flex">
-            <Link href="/contact"><a className="text-link">Contactez-moi&nbsp;&rarr;</a></Link>
+            <Link href="/contact" className="text-link">Contactez-moi&nbsp;&rarr;</Link>
             <ResponsiveImage
               path="/images/signature/signature"
               alt="Signature Alexandre Desroches"

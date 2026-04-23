@@ -1,4 +1,3 @@
-import React from 'react';
 import PageTemplate from "../../components/PageTemplate";
 import styles from "../../styles/a-propos.module.css";
 import ResponsiveImage from "../../components/ResponsiveImage";
@@ -49,10 +48,10 @@ const About = () => {
           <p>
             This is who I am in a nutshell!
           </p>
-          <Link href="/en/programming"><a className="text-link">Look at my portfolio&nbsp;&rarr;</a></Link>
+          <Link href="/en/programming" className="text-link">Look at my portfolio&nbsp;&rarr;</Link>
           <br/>
           <br/>
-          <Link href="/en/contact"><a className="text-link">Contact me&nbsp;&rarr;</a></Link>
+          <Link href="/en/contact" className="text-link">Contact me&nbsp;&rarr;</Link>
         </section>
 
         <section className="max-text-width">

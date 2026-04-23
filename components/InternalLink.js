@@ -1,4 +1,3 @@
-import React from 'react';
 import ActiveLink from "./ActiveLink";
 import {useIsEnglish} from "../hooks/useIsEnglish";
 import Link from "next/link";
@@ -11,15 +10,13 @@ const InternalLink = ({page = "", className = "", isActiveLink = false, withArro
 
   if (isActiveLink) {
     return (
-      <ActiveLink href={href}><a className={className}>{children}</a></ActiveLink>
+      <ActiveLink href={href} className={className}>{children}</ActiveLink>
     )
   }
 
   return (
-    <Link href={href}>
-      <a className={className}>
-        {children}{withArrow ? <>&nbsp;&rarr;</> : null}
-      </a>
+    <Link href={href} className={className}>
+      {children}{withArrow ? <>&nbsp;&rarr;</> : null}
     </Link>
   );
 };

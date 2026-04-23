@@ -1,4 +1,3 @@
-import React from 'react';
 import PageTemplate from "../../components/PageTemplate";
 import styles from "../../styles/programmation.module.css";
 import ExternalLink from "../../components/ExternalLink";

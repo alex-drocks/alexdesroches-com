@@ -9,7 +9,7 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
   const isEnglish = useIsEnglish()
   useEffect(() => {
     document.documentElement.lang = isEnglish ? "en" : "fr-CA"
-  }, [])
+  }, [isEnglish])
   return (
     <>
       {
@@ -39,7 +39,6 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
             {/* Twitter Meta */}
             <meta name="twitter:title"
                   content={`${process.env.NEXT_PUBLIC_WEBSITE_TITLE} | ${process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION_EN}`}/>
-            />
             <meta name="twitter:image"
                   content={process.env.NEXT_PUBLIC_WEBSITE_URL + process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE}/>
             <meta name="twitter:url" content={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}/>
@@ -85,7 +84,6 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
             {/* Twitter Meta */}
             <meta name="twitter:title"
                   content={`${process.env.NEXT_PUBLIC_WEBSITE_TITLE} | ${process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION}`}/>
-            />
             <meta name="twitter:image"
                   content={process.env.NEXT_PUBLIC_WEBSITE_URL + process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE}/>
             <meta name="twitter:url" content={process.env.NEXT_PUBLIC_WEBSITE_URL}/>

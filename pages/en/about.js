@@ -22,7 +22,7 @@ const About = () => {
           </p>
           <p>
             I am {calculateAge(new Date(1989, 4, 29))} years old, living in Canada in the province
-            of Quebec, with my beloved wife Cathy and our new born son Samuel!
+            of Quebec, with my beloved wife Cathy and our newborn son Samuel!
           </p>
           <p>
             Since my childhood, <strong>I love what is technological, creative and demands reflection</strong>.{" "}
@@ -35,7 +35,7 @@ const About = () => {
             <strong>
               I'm a persevering, passionate and excellence-oriented worker.
             </strong>{" "}
-            I don't like failing and do my best to succeed. When I do fail, I take it hardly, but this is the drive that
+            I don't like failing and do my best to succeed. When I do fail, I take it hard, but this is the drive that
             keeps me wanting more. What I hate the most is giving up. To me, real failure is giving up when you are so
             close to success. This is why{" "}<strong>I constantly strive to progress</strong> rather than resigning
             myself to

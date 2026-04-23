@@ -15,11 +15,11 @@ export default function About() {
           <h2>À propos d'Alex Desroches</h2>
           <p>
             Je suis un <strong>passionné de programmation</strong>, cinéma, jeux vidéos, musique, composition musicale,
-            théologie et philosophie. Bref, à peu près tout ce qui éveil mon côté créatif et nourri mon imagination.
+            théologie et philosophie. Bref, à peu près tout ce qui éveille mon côté créatif et nourrit mon imagination.
           </p>
           <p>
             Je suis dans la trentaine, habitant au Canada dans la province du Québec, avec ma chère épouse Cathy
-            et Samuel, notre nouveau né&nbsp;!
+            et Samuel, notre nouveau-né&nbsp;!
           </p>
           <p>
             Depuis mon enfance, <strong>j'aime ce qui est technologique, créatif et qui amène à la
@@ -27,14 +27,14 @@ export default function About() {
             Pour citer un exemple plutôt drôle... étant très jeune, j'ai reçu mon premier piano électronique
             pour Noël et j'ai joué jusqu'à ce que les piles soient épuisées&nbsp;! Cette anecdote démontre encore bien
             ma personnalité d'aujourd'hui. Quand je découvre quelque chose que j'aime, comme la musique ou la
-            programmation, je suis investi à fond sur çà.
+            programmation, je suis investi à fond sur ça.
           </p>
           <p>
             <strong>
               J'ai une personnalité de travailleur&nbsp;: persévérant, passionné et orienté sur l'excellence.
             </strong>{" "}
             Je n'aime pas l'échec et je fais mon mieux à chaque défi pour réussir à bien faire. Quand j'échoue, je le
-            prend difficilement, mais çà me propulse vers d'autres niveaux de persévérance. Ce que j'aime encore moins
+            prends difficilement, mais ça me propulse vers d'autres niveaux de persévérance. Ce que j'aime encore moins
             que l'échec, est l'abandon. Pour moi, abandonner est le véritable échec. Alors,{" "}
             <strong>je m'efforce constamment à progresser</strong> plutôt qu'à me résigner à la défaite.
           </p>

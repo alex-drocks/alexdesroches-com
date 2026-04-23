@@ -182,7 +182,7 @@ const Programming = () => {
           <li>Websites</li>
           <li>Web Apps</li>
           <li>Online Commerce</li>
-          <li>Desktop Softwares</li>
+          <li>Desktop Software</li>
           <li>Web Scraping</li>
           <li>Automation Scripts</li>
           <li>...and more</li>
@@ -256,7 +256,7 @@ const Programming = () => {
           technologies="React.js, JavaScript, HTML, CSS, Node.js, Next.js, Web Hosting Canada, GitHub, Microsoft Outlook,
          Calendly, PHP."
 
-          features="Created the website form scratch with React.js, web hosting and email management, SEO,
+          features="Created the website from scratch with React.js, web hosting and email management, SEO,
            PHP contact form and online booking with Calendly."
 
           timespan="December 2020"

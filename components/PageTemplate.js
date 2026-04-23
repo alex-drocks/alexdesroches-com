@@ -5,7 +5,7 @@ import {useIsEnglish} from "../hooks/useIsEnglish";
 import {useEffect} from "react";
 
 
-function StructuredData() {
+function StructuredData({description = "Portfolio d'Alexandre Desroches - Services de programmation web."}) {
   const siteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
   const titles = {
     base: process.env.NEXT_PUBLIC_WEBSITE_TITLE,
@@ -19,7 +19,7 @@ function StructuredData() {
     "@id": `${siteUrl}#website`,
     "url": siteUrl,
     "name": titles.base,
-    "description": titles.fr,
+    "description": description,
     "alternateName": titles.en,
     "inLanguage": ["fr-CA", "en"],
     "publisher": {
@@ -34,7 +34,6 @@ function StructuredData() {
     "name": titles.base,
     "url": siteUrl,
     "image": siteUrl + process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE,
-    "jobTitle": "Développeur Web",
     "jobTitle": "Développeur Web / Web Developer",
     "worksFor": {
       "@type": "Organization",
@@ -106,9 +105,9 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
         {/* hreflang alternates */}
         {pageAlternateURL && (
           <>
-            <link rel="alternate" hrefLang="fr" href={frenchCanonicalURL}/>
-            <link rel="alternate" hrefLang="en" href={englishCanonicalURL}/>
-            <link rel="alternate" hrefLang="x-default" href={frenchCanonicalURL}/>
+            <link rel="alternate" hreflang="fr" href={frenchCanonicalURL}/>
+            <link rel="alternate" hreflang="en" href={englishCanonicalURL}/>
+            <link rel="alternate" hreflang="x-default" href={frenchCanonicalURL}/>
           </>
         )}
 
@@ -145,7 +144,7 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
               href={"/favicons/safari-pinned-tab.svg"}/>
         <meta name="msapplication-TileColor" content="#2b5797"/>
         <meta name="theme-color" content="#ffffff"/>
-        <StructuredData/>
+        <StructuredData description={pageDescription}/>
       </Head>
 
       <Header/>

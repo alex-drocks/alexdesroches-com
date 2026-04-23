@@ -1,7 +1,7 @@
 import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
 import ExternalLink from "../components/ExternalLink";
-import {CellphoneLogo, EmailLogo, LinkedinLogo} from "../components/Logos";
+import {EmailLogo, LinkedinLogo} from "../components/Logos";
 
 import {myContactLinks} from "../lib/myContactLinks";
 import ContactLink from "../components/ContactLink";

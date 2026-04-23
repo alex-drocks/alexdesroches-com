@@ -2,7 +2,7 @@ import PageTemplate from "../../components/PageTemplate";
 import styles from "../../styles/contact.module.css";
 import ContactLink from "../../components/ContactLink";
 import {myContactLinks} from "../../lib/myContactLinks";
-import {CellphoneLogo, EmailLogo, LinkedinLogo} from "../../components/Logos";
+import {EmailLogo, LinkedinLogo} from "../../components/Logos";
 import ExternalLink from "../../components/ExternalLink";
 import ResponsiveImage from "../../components/ResponsiveImage";
 

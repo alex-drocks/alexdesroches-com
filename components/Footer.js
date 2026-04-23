@@ -1,5 +1,5 @@
 import ExternalLink from "./ExternalLink";
-import {FacebookLogo, GithubLogo, LinkedinLogo} from "./Logos";
+import {GithubLogo, LinkedinLogo} from "./Logos";
 
 import {myContactLinks} from "../lib/myContactLinks";
 import InternalLink from "./InternalLink";

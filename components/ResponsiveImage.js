@@ -20,7 +20,7 @@ export default function ResponsiveImage(
         type="image/webp"
       />
       <img
-        srcSet={`${path}.jpg ${desktopWidth}w, ${path}-${mobileWidth}w.jpg`}
+        srcSet={`${path}.jpg ${desktopWidth}w, ${path}-${mobileWidth}w.jpg ${mobileWidth}w`}
         src={`${path}.jpg`}
         alt={alt}
         width={renderedWidth}
@@ -28,6 +28,6 @@ export default function ResponsiveImage(
         className={className || ""}
       />
     </picture>
-  )
+  );
 }
 

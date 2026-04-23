@@ -3,6 +3,7 @@ import {useTheme} from 'next-themes';
 import {useIsEnglish} from "../hooks/useIsEnglish";
 import InternalLink from "./InternalLink";
 import {useRouter} from "next/router";
+import {getAlternateInternalPath} from "../lib/getInternalPageLink";
 
 
 export default function Header() {
@@ -175,16 +176,16 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
 }
 
 function ToggleLanguageButton({className = "", shouldDisplayText = false}) {
-  const router = useRouter()
-  const isEnglish = useIsEnglish()
+  const router = useRouter();
+  const isEnglish = useIsEnglish();
 
   const toggleLang = () => {
-    router.push(isEnglish ? "/" : "/en/")
-  }
+    router.push(getAlternateInternalPath(router.asPath));
+  };
 
   return (
     <button
-      className={"toggle-button language" + className}
+      className={`toggle-button language${className ? ` ${className}` : ""}`}
       aria-label="Toggle Website Language"
       type="button"
       onClick={toggleLang}

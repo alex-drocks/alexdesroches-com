@@ -1,11 +1,10 @@
 import {useRouter} from "next/router";
+import {isEnglishPath} from "../lib/getInternalPageLink";
 
 
 function useIsEnglish() {
-  const router = useRouter()
-  const regEx = new RegExp(/\/en\//)
-  const isEnglish = regEx.test(router.asPath)
-  return Boolean(isEnglish)
+  const router = useRouter();
+  return isEnglishPath(router.asPath);
 }
 
-export {useIsEnglish}
+export {useIsEnglish};

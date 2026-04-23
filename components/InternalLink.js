@@ -1,4 +1,3 @@
-import React from 'react';
 import ActiveLink from "./ActiveLink";
 import {useIsEnglish} from "../hooks/useIsEnglish";
 import Link from "next/link";

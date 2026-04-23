@@ -1,4 +1,3 @@
-import React from 'react';
 import PageTemplate from "../../components/PageTemplate";
 import styles from "../../styles/contact.module.css";
 import ContactLink from "../../components/ContactLink";

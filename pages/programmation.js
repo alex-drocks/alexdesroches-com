@@ -3,7 +3,6 @@ import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
 import ExternalLink from "../components/ExternalLink";
 import Project from "../components/Project";
-import Head from "next/head";
 
 export default function Programmation() {
   return (

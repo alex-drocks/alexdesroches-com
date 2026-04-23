@@ -7,7 +7,7 @@ export default function Index() {
   return (
     <PageTemplate
       pageTitle={process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Portfolio d'Alexandre Desroches."
+      pageDescription="Portfolio d'Alex Desroches."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}
     >
@@ -15,7 +15,7 @@ export default function Index() {
         <div className="max-text-width">
           <h2>Programmeur freelance (pigiste)</h2>
           <p>
-            Mon nom est Alexandre Desroches. Je suis un développeur autonome, offrant des services de
+            Mon nom est Alex Desroches. Je suis un développeur autonome, offrant des services de
             programmation de logiciels, applications Web et sites Internet, selon vos besoins.
           </p>
           <Link href="/a-propos" className="text-link">En savoir plus à propos de moi&nbsp;&rarr;</Link>
@@ -44,7 +44,7 @@ export default function Index() {
             <Link href="/contact" className="text-link">Contactez-moi&nbsp;&rarr;</Link>
             <ResponsiveImage
               path="/images/signature/signature"
-              alt="Signature Alexandre Desroches"
+              alt="Signature Alex Desroches"
               renderedWidth={92}
               renderedHeight={92}
               desktopWidth={276}

@@ -16,7 +16,7 @@ export default function Header() {
               isActiveLink={true}
               page="index"
             >
-              Alexandre Desroches
+              Alex Desroches
             </InternalLink>
           </h1>
           <ul className="page-links do-not-display-on-mobile">

@@ -10,8 +10,7 @@
     "lint": "next lint"
   },
   "author": {
-    "name": "Alexandre Desroches",
-    "email": "alex.desroches7@gmail.com",
+    "name": "Alex Desroches",
     "url": "https://alexdesroches.com"
   },
   "homepage": "https://alexdesroches.com",
@@ -20,8 +19,7 @@
     "url": "https://github.com/alex-drocks/alexdesroches-com"
   },
   "bugs": {
-    "url": "https://github.com/alex-drocks/alexdesroches-com/issues",
-    "email": "alex.desroches7@gmail.com"
+    "url": "https://github.com/alex-drocks/alexdesroches-com/issues"
   },
   "engines": {
     "node": ">=24.0.0"

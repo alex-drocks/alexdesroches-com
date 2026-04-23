@@ -233,7 +233,7 @@ export default function Programmation() {
          Web Hosting Canada, GitHub."
 
           features="Logiciel pour ordinateurs Windows et Mac. Incluant la certification de signature du code avec SSL.com,
-         une documentation complète pour les utilisateurs, la distribution par internet, les mises à jours automatiques,
+         une documentation complète pour les utilisateurs, la distribution par internet, les mises à jour automatiques,
          le soutien technique et un système de logs privé pour assurer la qualité. Au moment de la rédaction, les avis
          d'utilisateurs sur Capterra.ca ont une moyenne de 4.9 étoiles sur 5."
 
@@ -256,7 +256,7 @@ export default function Programmation() {
 
           features="Conception du site avec React, gestion de l'hébergement et des adresses courriels de l'entreprise
         avec Web Hosting Canada pour remplacer Squarespace, optimisations SEO, formulaire de contact PHP et
-        prise de rendez-vous en-ligne avec Calendly."
+        prise de rendez-vous en ligne avec Calendly."
 
           timespan="Créé à contrat pendant le mois de décembre 2020, total environ 30 heures."
 
@@ -277,7 +277,7 @@ export default function Programmation() {
           features="Programmation Full-Stack. C'est-à-dire, le Front-End avec React.js et le Back-End avec Firebase
         pour l'authentification et la base de donnée. Le serveur de license est géré avec WooCommerce License Manager
         et des appels API PHP de l'application vers WooCommerce. L'interface se met à jour en temps réel grâce
-        à React et Firebase real-time similaire à Google Sheets par exemple. La base de donnée est du No-SQL."
+        à React et Firebase real-time similaire à Google Sheets par exemple. La base de données est du No-SQL."
 
           timespan="Créée à contrat en 2021, en investissant quelques heures par mois."
 

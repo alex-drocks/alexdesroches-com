@@ -23,7 +23,7 @@ export default function Index() {
           <h3>Mon expertise est le Développement Web Front-End.</h3>
           <p>
             Mes forces en programmation, sont basées principalement sur les langages du Web.
-            C'est-à-dire, HTML, CSS et <strong>JavaScript</strong>; Dont les sites Internet et applications Web
+            C'est-à-dire, HTML, CSS et <strong>JavaScript</strong>; dont les sites Internet et applications Web
             dépendent.
           </p>
           <p>
@@ -38,7 +38,7 @@ export default function Index() {
 
           <h3>Faisons équipe&nbsp;!</h3>
           <p>
-            Confiez-moi un nouveau project ou joignons nos forces en collaborant avec votre équipe.
+            Confiez-moi un nouveau projet ou joignons nos forces en collaborant avec votre équipe.
           </p>
           <div className="handwritten-signature-container display-flex">
             <Link href="/contact" className="text-link">Contactez-moi&nbsp;&rarr;</Link>

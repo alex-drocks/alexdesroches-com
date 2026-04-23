@@ -12,6 +12,7 @@ const Contact = () => {
       pageTitle={"Contact | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription="Alexandre Desroches's contact info. Cellphone number, email and social network links."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/contact/"}
+      pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/contact/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">

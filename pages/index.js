@@ -9,6 +9,7 @@ export default function Index() {
       pageTitle={process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription="Portfolio d'Alexandre Desroches."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL}
+      pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}
     >
       <div className="max-content-width display-flex">
         <div className="max-text-width">

@@ -9,6 +9,7 @@ const Index = () => {
       pageTitle={process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription={process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION_EN}
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}
+      pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL}
     >
       <div className="max-content-width display-flex">
         <div className="max-text-width">

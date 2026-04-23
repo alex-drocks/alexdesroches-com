@@ -15,6 +15,7 @@ export default function Contact() {
       pageTitle={"Contact | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription="Contacter Alexandre Desroches. Coordonnées directes, téléphone cellulaire et courriel."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/contact/"}
+      pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/contact/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">

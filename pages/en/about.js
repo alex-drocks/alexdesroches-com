@@ -10,6 +10,7 @@ const About = () => {
       pageTitle={"About | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription="Get to know more about Alexandre Desroches - JavaScript Web Developer with Front-End Web Development expertise."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/about/"}
+      pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/a-propos/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">

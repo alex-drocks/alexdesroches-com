@@ -11,6 +11,7 @@ const Programming = () => {
       pageTitle={"Programming Services & Portfolio | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription="Alexandre Desroches Front-End Web Developer. JavaScript, React, Node, Firebase, HTML, CSS, and more."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/programming/"}
+      pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/programmation/"}
     >
       <section className="skills max-content-width display-flex">
         <div className="max-text-width">

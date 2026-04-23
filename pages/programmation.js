@@ -3,8 +3,6 @@ import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
 import ExternalLink from "../components/ExternalLink";
 import Project from "../components/Project";
-import React from "react";
-
 
 export default function Programmation() {
   return (
@@ -12,6 +10,7 @@ export default function Programmation() {
       pageTitle={"Services de programmation | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription="Services de programmation et développement de sites Internet. Alexandre Desroches freelancer. JavaScript, React, Node, Firebase, HTML, CSS."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/programmation/"}
+      pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/programming/"}
     >
       <section className="skills max-content-width display-flex">
         <div className="max-text-width">

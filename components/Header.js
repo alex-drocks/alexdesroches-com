@@ -130,6 +130,7 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
 
   const isEnglish = useIsEnglish()
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {
@@ -137,6 +138,7 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
       <button
         className={"toggle-button " + className}
         aria-label="Toggle Dark Mode Button"
+        aria-hidden="true"
         type="button"
       />
     );

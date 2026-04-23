@@ -8,6 +8,7 @@ export default function About() {
       pageTitle={"À propos | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription="En savoir plus à propos d'Alexandre Desroches. Programmeur JavaScript, développement Web, Front-end."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/a-propos/"}
+      pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/about/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">

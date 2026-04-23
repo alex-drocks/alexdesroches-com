@@ -13,6 +13,10 @@
 /.next/
 /out/
 
+# generated sitemaps (built automatically by postbuild script)
+/public/sitemap.xml
+/public/sitemap-0.xml
+
 # production
 /build
 
@@ -35,3 +39,4 @@ yarn-error.log*
 .vercel
 .firebase
 /firebase-debug.log
+node_modules

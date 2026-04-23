@@ -1,6 +1,5 @@
-import React from 'react';
-import PageTemplate from "../../components/PageTemplate";
 import Link from "next/link";
+import PageTemplate from "../../components/PageTemplate";
 import ResponsiveImage from "../../components/ResponsiveImage";
 
 const Index = () => {
@@ -9,6 +8,7 @@ const Index = () => {
       pageTitle={process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription={process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION_EN}
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}
+      pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL}
     >
       <div className="max-content-width display-flex">
         <div className="max-text-width">
@@ -17,7 +17,7 @@ const Index = () => {
             I am <strong>Alexandre Desroches</strong>, a dedicated Web developer offering top-notch services in software
             and website programming. I thrive on coding and providing outstanding results.
           </p>
-          <Link href="/en/about"><a className="text-link">Learn more about me&nbsp;&rarr;</a></Link>
+          <Link href="/en/about" className="text-link">Learn more about me&nbsp;&rarr;</Link>
 
           <h3>I'm proficient in Front-End Web Development.</h3>
           <p>
@@ -29,8 +29,8 @@ const Index = () => {
             <strong>React.js</strong>, Next.js, Node.js, Electron.js, <strong>Angular</strong>, Squarespace, WordPress,
             WooCommerce, Firebase and more.
           </p>
-          <Link href="/en/programming">
-            <a className="text-link">My Portfolio / Programming services&nbsp;&rarr;</a>
+          <Link href="/en/programming" className="text-link">
+            My Portfolio / Programming services&nbsp;&rarr;
           </Link>
 
           <h3>Let's work together!</h3>
@@ -39,7 +39,7 @@ const Index = () => {
             strengths and collaborate with your team.
           </p>
           <div className="handwritten-signature-container display-flex">
-            <Link href="/en/contact"><a className="text-link">Contact me&nbsp;&rarr;</a></Link>
+            <Link href="/en/contact" className="text-link">Contact me&nbsp;&rarr;</Link>
             <ResponsiveImage
               path="/images/signature/signature"
               alt="Alexandre Desroches's Signature."

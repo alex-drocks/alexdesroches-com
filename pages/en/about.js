@@ -1,4 +1,3 @@
-import React from 'react';
 import PageTemplate from "../../components/PageTemplate";
 import styles from "../../styles/a-propos.module.css";
 import ResponsiveImage from "../../components/ResponsiveImage";
@@ -11,6 +10,7 @@ const About = () => {
       pageTitle={"About | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription="Get to know more about Alexandre Desroches - JavaScript Web Developer with Front-End Web Development expertise."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/about/"}
+      pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/a-propos/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">
@@ -49,10 +49,10 @@ const About = () => {
           <p>
             This is who I am in a nutshell!
           </p>
-          <Link href="/en/programming"><a className="text-link">Look at my portfolio&nbsp;&rarr;</a></Link>
+          <Link href="/en/programming" className="text-link">Look at my portfolio&nbsp;&rarr;</Link>
           <br/>
           <br/>
-          <Link href="/en/contact"><a className="text-link">Contact me&nbsp;&rarr;</a></Link>
+          <Link href="/en/contact" className="text-link">Contact me&nbsp;&rarr;</Link>
         </section>
 
         <section className="max-text-width">

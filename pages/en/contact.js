@@ -1,9 +1,8 @@
-import React from 'react';
 import PageTemplate from "../../components/PageTemplate";
 import styles from "../../styles/contact.module.css";
 import ContactLink from "../../components/ContactLink";
 import {myContactLinks} from "../../lib/myContactLinks";
-import {CellphoneLogo, EmailLogo, LinkedinLogo} from "../../components/Logos";
+import {EmailLogo, LinkedinLogo} from "../../components/Logos";
 import ExternalLink from "../../components/ExternalLink";
 import ResponsiveImage from "../../components/ResponsiveImage";
 
@@ -11,8 +10,9 @@ const Contact = () => {
   return (
     <PageTemplate
       pageTitle={"Contact | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Alexandre Desroches's contact info. Cellphone number, email and social network links."
+      pageDescription="Alexandre Desroches's contact info. Email and LinkedIn."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/contact/"}
+      pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/contact/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">

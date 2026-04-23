@@ -20,7 +20,7 @@ function StructuredData({description = "Portfolio d'Alexandre Desroches - Servic
     "name": titles.base,
     "description": description,
     "alternateName": titles.en,
-    "inLanguage": ["fr-CA", "en"],
+    "inLanguage": ["fr-CA", "en-CA"],
     "publisher": {
       "@id": `${siteUrl}#person`
     }
@@ -109,7 +109,7 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
 
         {/* OpenGraph Meta */}
         <meta property="og:site_name" content={siteTitle}/>
-        <meta property="og:locale" content={isEnglish ? "en" : "fr-CA"}/>
+        <meta property="og:locale" content={isEnglish ? "en_CA" : "fr_CA"}/>
         <meta property="og:title"
               content={`${siteTitle} | ${siteDescription}`}/>
         <meta property="og:url" content={pageCanonicalURL}/>

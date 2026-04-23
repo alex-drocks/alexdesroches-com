@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Header from "./Header";
 import Footer from "./Footer";
 import {useIsEnglish} from "../hooks/useIsEnglish";
-import {useEffect} from "react";
 
 
 function StructuredData({description = "Portfolio d'Alexandre Desroches - Services de programmation web."}) {
@@ -78,10 +77,7 @@ function StructuredData({description = "Portfolio d'Alexandre Desroches - Servic
 
 
 export default function PageTemplate({children, pageTitle, pageDescription, pageCanonicalURL, pageAlternateURL}) {
-  const isEnglish = useIsEnglish()
-  useEffect(() => {
-    document.documentElement.lang = isEnglish ? "en" : "fr-CA"
-  }, [isEnglish])
+  const isEnglish = useIsEnglish();
 
   const siteTitle = process.env.NEXT_PUBLIC_WEBSITE_TITLE;
   const siteDescription = isEnglish

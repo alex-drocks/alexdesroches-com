@@ -8,13 +8,13 @@ const About = () => {
   return (
     <PageTemplate
       pageTitle={"About | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Get to know more about Alexandre Desroches - JavaScript Web Developer with Front-End Web Development expertise."
+      pageDescription="Get to know more about Alex Desroches - JavaScript Web Developer with Front-End Web Development expertise."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/about/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/a-propos/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">
-          <h2>About Alexandre Desroches</h2>
+          <h2>About Alex Desroches</h2>
           <p>
             TLDR; I am a passionate guy and <strong>I enjoy coding</strong>, movies, video games, music, music
             production, theology and philosophy. You know, about anything that awakens my creative mind and satisfies my
@@ -22,7 +22,7 @@ const About = () => {
           </p>
           <p>
             I am {calculateAge(new Date(1989, 4, 29))} years old, living in Canada in the province
-            of Quebec, with my beloved wife Cathy and our new born son Samuel!
+            of Quebec, with my beloved wife Cathy and our newborn son Samuel!
           </p>
           <p>
             Since my childhood, <strong>I love what is technological, creative and demands reflection</strong>.{" "}
@@ -35,7 +35,7 @@ const About = () => {
             <strong>
               I'm a persevering, passionate and excellence-oriented worker.
             </strong>{" "}
-            I don't like failing and do my best to succeed. When I do fail, I take it hardly, but this is the drive that
+            I don't like failing and do my best to succeed. When I do fail, I take it hard, but this is the drive that
             keeps me wanting more. What I hate the most is giving up. To me, real failure is giving up when you are so
             close to success. This is why{" "}<strong>I constantly strive to progress</strong> rather than resigning
             myself to

@@ -14,7 +14,7 @@ const Index = () => {
         <div className="max-text-width">
           <h2>Freelance Web Developer</h2>
           <p>
-            I am <strong>Alexandre Desroches</strong>, a dedicated Web developer offering top-notch services in software
+            I am <strong>Alex Desroches</strong>, a dedicated Web developer offering top-notch services in software
             and website programming. I thrive on coding and providing outstanding results.
           </p>
           <Link href="/en/about" className="text-link">Learn more about me&nbsp;&rarr;</Link>
@@ -42,7 +42,7 @@ const Index = () => {
             <Link href="/en/contact" className="text-link">Contact me&nbsp;&rarr;</Link>
             <ResponsiveImage
               path="/images/signature/signature"
-              alt="Alexandre Desroches's Signature."
+              alt="Alex Desroches's Signature."
               renderedWidth={92}
               renderedHeight={92}
               desktopWidth={276}

@@ -114,7 +114,7 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
               content={`${siteTitle} | ${siteDescription}`}/>
         <meta property="og:url" content={pageCanonicalURL}/>
         <meta property="og:type" content="website"/>
-        <meta property="og:description" content={siteDescription}/>
+        <meta property="og:description" content={pageDescription}/>
         <meta property="og:image"
               content={process.env.NEXT_PUBLIC_WEBSITE_URL + process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE}/>
         <meta property="og:image:width" content={process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE_WIDTH}/>
@@ -126,7 +126,7 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
         <meta name="twitter:image"
               content={process.env.NEXT_PUBLIC_WEBSITE_URL + process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE}/>
         <meta name="twitter:url" content={pageCanonicalURL}/>
-        <meta name="twitter:description" content={siteDescription}/>
+        <meta name="twitter:description" content={pageDescription}/>
         <meta name="twitter:card" content="summary"/>
 
         <link rel="apple-touch-icon" sizes="180x180"

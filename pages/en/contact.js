@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <PageTemplate
       pageTitle={"Contact | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Alexandre Desroches's contact info. Cellphone number, email and social network links."
+      pageDescription="Alexandre Desroches's contact info. Email and LinkedIn."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/contact/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/contact/"}
     >

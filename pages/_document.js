@@ -3,7 +3,7 @@ import Document, {Html, Head, Main, NextScript} from 'next/document';
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
-    const isEnglish = ctx.pathname.startsWith('/en');
+    const isEnglish = ctx.pathname === '/en' || ctx.pathname.startsWith('/en/');
     return {...initialProps, isEnglish};
   }
 

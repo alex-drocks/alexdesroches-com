@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import {useIsEnglish} from "../hooks/useIsEnglish";
 
 
-function StructuredData({description = "Portfolio d'Alexandre Desroches - Services de programmation web."}) {
+function StructuredData({description = ""}) {
   const siteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
   const titles = {
     base: process.env.NEXT_PUBLIC_WEBSITE_TITLE,
@@ -76,7 +76,7 @@ function StructuredData({description = "Portfolio d'Alexandre Desroches - Servic
 }
 
 
-export default function PageTemplate({children, pageTitle, pageDescription, pageCanonicalURL, pageAlternateURL}) {
+export default function PageTemplate({children, pageTitle, pageDescription, pageCanonicalURL, pageAlternateURL = ""}) {
   const isEnglish = useIsEnglish();
 
   const siteTitle = process.env.NEXT_PUBLIC_WEBSITE_TITLE;

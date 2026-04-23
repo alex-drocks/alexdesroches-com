@@ -2,7 +2,7 @@ import {useEffect} from "react";
 import {useRouter} from "next/router";
 import Script from "next/script";
 import {ThemeProvider} from 'next-themes';
-import * as gtag from '../lib/gtag'
+import * as gtag from '../lib/gtag';
 
 import '../styles/globals.css';
 import '../styles/Header.css';

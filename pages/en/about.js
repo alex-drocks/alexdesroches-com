@@ -8,13 +8,13 @@ const About = () => {
   return (
     <PageTemplate
       pageTitle={"About | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Get to know more about Alexandre Desroches - JavaScript Web Developer with Front-End Web Development expertise."
+      pageDescription="Get to know more about Alex Desroches - JavaScript Web Developer with Front-End Web Development expertise."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/about/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/a-propos/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">
-          <h2>About Alexandre Desroches</h2>
+          <h2>About Alex Desroches</h2>
           <p>
             TLDR; I am a passionate guy and <strong>I enjoy coding</strong>, movies, video games, music, music
             production, theology and philosophy. You know, about anything that awakens my creative mind and satisfies my

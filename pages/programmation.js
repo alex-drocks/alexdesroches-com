@@ -8,7 +8,7 @@ export default function Programmation() {
   return (
     <PageTemplate
       pageTitle={"Services de programmation | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Services de programmation et développement de sites Internet. Alexandre Desroches freelancer. JavaScript, React, Node, Firebase, HTML, CSS."
+      pageDescription="Services de programmation et développement de sites Internet. Alex Desroches freelancer. JavaScript, React, Node, Firebase, HTML, CSS."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/programmation/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/programming/"}
     >

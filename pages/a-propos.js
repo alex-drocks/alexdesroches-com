@@ -6,13 +6,13 @@ export default function About() {
   return (
     <PageTemplate
       pageTitle={"À propos | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="En savoir plus à propos d'Alexandre Desroches. Programmeur JavaScript, développement Web, Front-end."
+      pageDescription="En savoir plus à propos d'Alex Desroches. Programmeur JavaScript, développement Web, Front-end."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/a-propos/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/about/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">
-          <h2>À propos d'Alexandre Desroches</h2>
+          <h2>À propos d'Alex Desroches</h2>
           <p>
             Je suis un <strong>passionné de programmation</strong>, cinéma, jeux vidéos, musique, composition musicale,
             théologie et philosophie. Bref, à peu près tout ce qui éveil mon côté créatif et nourri mon imagination.

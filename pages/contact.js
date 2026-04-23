@@ -13,13 +13,13 @@ export default function Contact() {
   return (
     <PageTemplate
       pageTitle={"Contact | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Contacter Alexandre Desroches. Coordonnées directes, téléphone cellulaire et courriel."
+      pageDescription="Contacter Alex Desroches. Coordonnées directes, téléphone cellulaire et courriel."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/contact/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/contact/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">
-          <h2>Contacter Alexandre Desroches</h2>
+          <h2>Contacter Alex Desroches</h2>
           <p>
             N'hésitez pas à me contacter, ce sera un plaisir de discuter de votre projet.
             Je suis joignable en tout temps par l'un des moyens ci-dessous&nbsp;:

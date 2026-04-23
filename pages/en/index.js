@@ -1,6 +1,6 @@
-import React from 'react';
-import PageTemplate from "../../components/PageTemplate";
+import Head from 'next/head'
 import Link from "next/link";
+import PageTemplate from "../../components/PageTemplate";
 import ResponsiveImage from "../../components/ResponsiveImage";
 
 const Index = () => {

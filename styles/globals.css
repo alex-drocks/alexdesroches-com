@@ -64,7 +64,6 @@ body {
   padding: 0;
   margin: 0;
   min-width: 280px;
-  scroll-behavior: smooth;
 }
 
 html.dark {
@@ -282,25 +281,6 @@ footer :is(a, button):focus-visible {
   }
   to {
     opacity: 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html,
-  body {
-    scroll-behavior: auto;
-  }
-
-  main.page-container {
-    animation: none;
-  }
-
-  .text-link:hover,
-  .stylish-shadow-image img,
-  :is(p, span):hover,
-  a:hover,
-  button:hover {
-    transition: none;
   }
 }
 

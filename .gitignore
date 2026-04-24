@@ -40,3 +40,6 @@ yarn-error.log*
 .firebase
 /firebase-debug.log
 node_modules
+
+# bun
+package-lock.json

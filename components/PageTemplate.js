@@ -110,8 +110,7 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
         {/* OpenGraph Meta */}
         <meta property="og:site_name" content={siteTitle}/>
         <meta property="og:locale" content={isEnglish ? "en_CA" : "fr_CA"}/>
-        <meta property="og:title"
-              content={`${siteTitle} | ${siteDescription}`}/>
+        <meta property="og:title" content={pageTitle}/>
         <meta property="og:url" content={pageCanonicalURL}/>
         <meta property="og:type" content="website"/>
         <meta property="og:description" content={pageDescription}/>
@@ -121,13 +120,12 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
         <meta property="og:image:height" content={process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE_HEIGHT}/>
 
         {/* Twitter Meta */}
-        <meta name="twitter:title"
-              content={`${siteTitle} | ${siteDescription}`}/>
+        <meta name="twitter:title" content={pageTitle}/>
         <meta name="twitter:image"
               content={process.env.NEXT_PUBLIC_WEBSITE_URL + process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE}/>
         <meta name="twitter:url" content={pageCanonicalURL}/>
         <meta name="twitter:description" content={pageDescription}/>
-        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:card" content="summary_large_image"/>
 
         <link rel="apple-touch-icon" sizes="180x180"
               href={"/favicons/apple-touch-icon.png"}/>

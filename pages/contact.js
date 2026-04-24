@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <PageTemplate
       pageTitle={"Contact | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Contacter Alex Desroches. Coordonnées directes, téléphone cellulaire et courriel."
+      pageDescription="Contacter Alex Desroches par courriel et LinkedIn."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/contact/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/contact/"}
     >

@@ -133,7 +133,7 @@ header nav a.active-next-link {
     left: var(--page-padding);
     right: var(--page-padding);
     background-color: var(--main-background-color);
-    border: 8px solid var(--very-light-gray);
+    border: 8px solid var(--main-border-color);
     padding: 3rem 0 2.5rem 0;
   }
 

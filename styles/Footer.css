@@ -1,6 +1,6 @@
 footer {
     width: 100%;
-    margin: 10rem 0 0 0;
+    margin: 5rem 0 0 0;
     border-top: 1px solid var(--main-border-color);
 }
 
@@ -68,7 +68,7 @@ footer .copyright {
 
 @media screen and (max-width: 1024px) {
     footer {
-        margin-top: 13rem;
+        margin-top: 5rem;
     }
 
     footer .footer-links--social {
@@ -78,7 +78,7 @@ footer .copyright {
 
 @media screen and (max-width: 500px) {
     footer {
-        margin-top: 14rem;
+        margin-top: 4rem;
     }
 
     footer .footer-links {
@@ -93,6 +93,6 @@ footer .copyright {
 
 @media screen and (max-width: 380px) {
     footer {
-        margin-top: 13rem;
+        margin-top: 4rem;
     }
 }

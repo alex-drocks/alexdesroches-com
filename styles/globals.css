@@ -35,6 +35,11 @@
   --max-content-width: 1280px;
   --max-text-width: 630px;
 
+  --text-link-brightness: 0.77;
+  --text-link-hover-brightness: 1;
+  --text-link-dark-brightness: 0.77;
+  --text-link-dark-hover-brightness: 1.15;
+
   --elements-padding: .5rem 1rem;
   --page-padding: 4rem;
 
@@ -68,6 +73,8 @@ html.dark {
   --main-box-shadow-color: var(--theme-dark-box-shadow-color);
   --secondary-text-color: var(--theme-dark-secondary-text-color);
   --main-text-link-color: var(--theme-dark-text-link-color);
+  --text-link-brightness: var(--text-link-dark-brightness);
+  --text-link-hover-brightness: var(--text-link-dark-hover-brightness);
 }
 
 html.dark .handwritten-signature {
@@ -167,14 +174,13 @@ li {
 .text-link {
   text-decoration: underline;
   color: var(--main-text-link-color);
-  filter: brightness(77%);
+  filter: brightness(var(--text-link-brightness));
   font-size: 1rem;
   font-weight: 500;
 }
 
 .text-link:hover {
-  color: var(--main-text-link-color);
-  filter: hue-rotate(1deg);
+  filter: brightness(var(--text-link-hover-brightness));
 }
 
 .stylish-shadow-image {
@@ -229,6 +235,46 @@ li {
 
 .resume.cont {
 }
+
+/* --- Accessibility: visible focus rings for keyboard navigation --- */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Nav links: focus ring should match the existing bottom-border hover style */
+header nav a:focus-visible {
+  outline: none;
+  border-bottom-color: var(--blue);
+}
+
+/* Toggle buttons: visible focus state */
+.header-container button:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* Image links: subtle focus ring */
+.stylish-shadow-image:focus-visible img,
+.stylish-shadow-image:has(a:focus-visible) img {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: .25rem;
+}
+
+/* Footer social icons: themed focus ring */
+footer :is(a, button):focus-visible svg {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+footer :is(a, button):focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;

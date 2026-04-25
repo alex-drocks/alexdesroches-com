@@ -277,10 +277,20 @@ footer :is(a, button):focus-visible {
   outline-offset: 2px;
 }
 
+/* Reduce top padding on homepage body content after hero */
+.hero + .max-content-width .max-text-width {
+  padding-top: 1.5rem;
+}
+
+/* Reduce h2 top margin only on homepage first H2 after hero */
+.hero + .max-content-width .max-text-width h2:first-child {
+  margin-top: 0.5rem;
+}
+
 /* ── Hero section ── */
 .hero {
   width: 100%;
-  padding: clamp(3rem, 7vw, 6rem) var(--page-padding);
+  padding: clamp(3rem, 7vw, 6rem) var(--page-padding) clamp(1rem, 2vw, 2rem);
   background: linear-gradient(135deg, #eef4ff 0%, var(--theme-light-background) 60%, var(--almost-white) 100%);
 }
 

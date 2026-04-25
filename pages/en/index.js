@@ -7,7 +7,7 @@ export default function Index() {
   return (
     <PageTemplate
       pageTitle={process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Alex Desroches's Web Development Portfolio."
+      pageDescription={process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION_EN}
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL}
     >
@@ -20,7 +20,7 @@ export default function Index() {
               <span>Alexandre</span>
               <span>Desroches</span>
             </h1>
-            <div className="shimmer-bar" />
+            <div className="shimmer-bar" aria-hidden="true" />
             <p className="hero-subtitle">
               Front-end web developer. I craft fast, accessible, and beautiful
               websites — from idea to deployment.

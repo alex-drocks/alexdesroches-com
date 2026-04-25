@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap');
-
 :root {
   /*Main Theme Variables*/
   --main-background-color: var(--theme-light-background);
@@ -368,6 +366,11 @@ html.dark .hero-badge {
 
 .btn:hover {
   transform: translateY(-1px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
 }
 
 .btn-primary {

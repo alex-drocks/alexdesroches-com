@@ -7,7 +7,7 @@ export default function Index() {
   return (
     <PageTemplate
       pageTitle={process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Portfolio d'Alex Desroches."
+      pageDescription={process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION}
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}
     >
@@ -20,7 +20,7 @@ export default function Index() {
               <span>Alexandre</span>
               <span>Desroches</span>
             </h1>
-            <div className="shimmer-bar" />
+            <div className="shimmer-bar" aria-hidden="true" />
             <p className="hero-subtitle">
               Développeur web front-end. Je conçois des sites rapides,
               accessibles et élégants — de l'idée au déploiement.

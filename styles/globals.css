@@ -277,25 +277,25 @@ footer :is(a, button):focus-visible {
   outline-offset: 2px;
 }
 
-/* Reduce top padding on homepage body content after hero */
+/* Increase top margin on homepage body content after hero on desktop */
 .hero + .max-content-width .max-text-width {
-  padding-top: 1.5rem;
+  padding-top: 3rem;
 }
 
-/* Reduce h2 top margin only on homepage first H2 after hero */
+/* Increase h2 top margin on homepage first H2 after hero */
 .hero + .max-content-width .max-text-width h2:first-child {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 /* ── Hero section ── */
 .hero {
   width: 100%;
-  padding: clamp(3rem, 7vw, 6rem) var(--page-padding) clamp(1rem, 2vw, 2rem);
-  background: linear-gradient(135deg, #eef4ff 0%, var(--theme-light-background) 60%, var(--almost-white) 100%);
+  padding: clamp(3rem, 7vw, 6rem) var(--page-padding) clamp(2.5rem, 5vw, 4.5rem);
+  background: linear-gradient(135deg, #eef4ff 0%, var(--theme-light-background) 70%, var(--theme-light-background) 100%);
 }
 
 html.dark .hero {
-  background: linear-gradient(135deg, #181a24 0%, var(--theme-dark-background) 60%, #1a1a22 100%);
+  background: linear-gradient(135deg, #181a24 0%, var(--theme-dark-background) 70%, var(--theme-dark-background) 100%);
 }
 
 .hero-inner {

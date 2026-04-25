@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
+import HeroSkillShowcase from "../components/HeroSkillShowcase";
 
 
 export default function Index() {
@@ -23,7 +24,7 @@ export default function Index() {
             <div className="shimmer-bar" aria-hidden="true" />
             <p className="hero-subtitle">
               Développeur web front-end. Je conçois des sites rapides,
-              accessibles et élégants — de l'idée au déploiement.
+              accessibles et élégants, de l'idée au déploiement.
             </p>
             <div className="hero-ctas">
               <Link href="/programmation" className="btn btn-primary">
@@ -34,7 +35,15 @@ export default function Index() {
               </Link>
             </div>
           </div>
-          <div className="max-text-width display-flex" aria-hidden="true" />
+          <div className="max-text-width hero-visual-wrap">
+            <HeroSkillShowcase
+              coreLabels={{
+                build: "créer",
+                ship: "livrer",
+                maintain: "maintenir",
+              }}
+            />
+          </div>
         </div>
       </section>
 

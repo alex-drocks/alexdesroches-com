@@ -19,8 +19,8 @@ const Programming = () => {
           <h3>What I do:</h3>
           <p>
             I am an experienced developer with web technologies, desktop software for Mac and Windows, as well as task
-            automation on Windows. My area of expertise is therefore quite broad — being able to <strong>develop and
-            maintain projects, according to your needs</strong> — Web applications, softwares, internal tools,
+            automation on Windows. My area of expertise is therefore quite broad - being able to <strong>develop and
+            maintain projects, according to your needs</strong>, Web applications, softwares, internal tools,
             websites and more.
           </p>
           <p>
@@ -208,7 +208,7 @@ const Programming = () => {
       <section className={styles.projects + " max-content-width display-flex"}>
         <h2>Portfolio</h2>
         <Project
-          title="Finance&nbsp;D — A Website for multiple Accounting Tools I built"
+          title="Finance&nbsp;D, A Website for multiple Accounting Tools I built"
 
           description="Finance&nbsp;D, is my startup
         that provides various accounting tools aimed specifically at Quebec tax payers.
@@ -230,7 +230,7 @@ const Programming = () => {
           url="https://finance-d.com"
         />
         <Project
-          title="Bookkeeping software for Windows and Mac — Finance&nbsp;D"
+          title="Bookkeeping software for Windows and Mac, Finance&nbsp;D"
 
           description="My biggest project to date is this accounting software for Windows and Mac.
         I created it for free, to help small businesses in Quebec.
@@ -274,7 +274,7 @@ const Programming = () => {
           url="https://gestiondesroches.com"
         />
         <Project
-          title="Web App for employees pay period management — Finance&nbsp;D"
+          title="Web App for employees pay period management, Finance&nbsp;D"
 
           description="This is a web application created to simplify the management of pay periods
          and employees in collaboration with an accountant. I built the Front-End using React and the Back-End

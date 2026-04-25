@@ -290,17 +290,13 @@ footer :is(a, button):focus-visible {
 /* ── Hero section ── */
 .hero {
   width: 100%;
-  padding: clamp(3rem, 7vw, 6rem) var(--page-padding) clamp(2.5rem, 5vw, 4.5rem);
+  padding-top: clamp(3rem, 7vw, 6rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
   background: linear-gradient(135deg, #eef4ff 0%, var(--theme-light-background) 70%, var(--theme-light-background) 100%);
 }
 
 html.dark .hero {
   background: linear-gradient(135deg, #181a24 0%, var(--theme-dark-background) 70%, var(--theme-dark-background) 100%);
-}
-
-.hero-inner {
-  max-width: var(--max-content-width);
-  margin: 0 auto;
 }
 
 .hero-badge {

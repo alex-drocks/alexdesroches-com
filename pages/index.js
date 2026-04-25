@@ -13,25 +13,28 @@ export default function Index() {
     >
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-inner">
-          <span className="hero-badge">Programmeur freelance</span>
-          <h1 className="hero-title">
-            <span>Alexandre</span>
-            <span>Desroches</span>
-          </h1>
-          <div className="shimmer-bar" />
-          <p className="hero-subtitle">
-            Développeur web front-end. Je conçois des sites rapides,
-            accessibles et élégants — de l'idée au déploiement.
-          </p>
-          <div className="hero-ctas">
-            <Link href="/programmation" className="btn btn-primary">
-              Voir mes services →
-            </Link>
-            <Link href="/contact" className="btn btn-secondary">
-              Me contacter
-            </Link>
+        <div className="max-content-width display-flex">
+          <div className="max-text-width">
+            <span className="hero-badge">Programmeur freelance</span>
+            <h1 className="hero-title">
+              <span>Alexandre</span>
+              <span>Desroches</span>
+            </h1>
+            <div className="shimmer-bar" />
+            <p className="hero-subtitle">
+              Développeur web front-end. Je conçois des sites rapides,
+              accessibles et élégants — de l'idée au déploiement.
+            </p>
+            <div className="hero-ctas">
+              <Link href="/programmation" className="btn btn-primary">
+                Voir mes services →
+              </Link>
+              <Link href="/contact" className="btn btn-secondary">
+                Me contacter
+              </Link>
+            </div>
           </div>
+          <div className="max-text-width display-flex" aria-hidden="true" />
         </div>
       </section>
 

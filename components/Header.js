@@ -8,8 +8,17 @@ import {getAlternateInternalPath} from "../lib/getInternalPageLink";
 
 export default function Header() {
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("mobile-menu-open", isMobileMenuOpened);
+
+    return () => {
+      document.body.classList.remove("mobile-menu-open");
+    };
+  }, [isMobileMenuOpened]);
+
   return (
-    <div className="header-container">
+    <div className={`header-container${isMobileMenuOpened ? " is-mobile-menu-open" : ""}`}>
       <header>
         <nav>
           <h1 className="left-branding">
@@ -41,7 +50,7 @@ function MobileMenu({isMobileMenuOpened}) {
     return null;
 
   return (
-    <nav className="mobile-menu do-not-display-on-desktop">
+    <nav id="mobile-menu" className="mobile-menu do-not-display-on-desktop">
       <strong>Menu</strong>
       <ul className="page-links">
         <li>
@@ -54,8 +63,9 @@ function MobileMenu({isMobileMenuOpened}) {
         </li>
         <MainNavLinks/>
       </ul>
-      <br/>
-      <ToggleThemeColorsButton shouldDisplayText={true}/>
+      <div className="mobile-menu-actions">
+        <ToggleThemeColorsButton shouldDisplayText={true}/>
+      </div>
     </nav>
   );
 }
@@ -206,6 +216,8 @@ function ToggleMobileMenuButton({isMobileMenuOpened, setIsMobileMenuOpened}) {
     <button
       className="toggle-mobile-menu-button"
       aria-label="Toggle Mobile Menu Button"
+      aria-controls="mobile-menu"
+      aria-expanded={isMobileMenuOpened}
       type="button"
       onClick={toggleIsOpen}
     >

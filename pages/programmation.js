@@ -22,7 +22,7 @@ export default function Programmation() {
             Windows, ainsi que l'automatisation de tâches sur Windows.
             Mon domaine d'expertise est donc assez vaste.
             Pouvant maintenir et <strong>concevoir, selon votre
-              demande</strong> — applications Web, logiciels, outils internes et sites Internet de haute qualité.
+              demande</strong>, applications Web, logiciels, outils internes et sites Internet de haute qualité.
           </p>
           <p>
             Ainsi, je peux prendre en charge un nouveau projet et le mener à terme et/ou
@@ -208,7 +208,7 @@ export default function Programmation() {
       <section className={styles.projects + " max-content-width display-flex"}>
         <h2>Projets réalisés</h2>
         <Project
-          title="Finance&nbsp;D — Site Internet pour logiciel et apps de comptabilité"
+          title="Finance&nbsp;D, Site Internet pour logiciel et apps de comptabilité"
 
           description="Finance&nbsp;D, est une entreprise que j'ai démarrée
         dans le but d'offrir une variété d'outils spécifiques pour la comptabilité.
@@ -231,7 +231,7 @@ export default function Programmation() {
           url="https://finance-d.com"
         />
         <Project
-          title="Logiciel de tenue de livres pour Windows et Mac — Finance&nbsp;D"
+          title="Logiciel de tenue de livres pour Windows et Mac, Finance&nbsp;D"
 
           description="Mon plus gros projet jusqu'à présent est ce logiciel de comptabilité pour ordinateurs Windows et Mac.
         Je l'ai créé avec les travailleurs autonomes du Québec en tête. Le but est la simplicité d'utilisation et l'efficacité.
@@ -273,7 +273,7 @@ export default function Programmation() {
           url="https://gestiondesroches.com"
         />
         <Project
-          title="Web app pour la gestion des payes et employés — Finance&nbsp;D"
+          title="Web app pour la gestion des payes et employés, Finance&nbsp;D"
 
           description="Il s'agit d'une application Web créée pour simplifier la gestion des périodes de payes
         et des employés en collaboration avec un comptable.

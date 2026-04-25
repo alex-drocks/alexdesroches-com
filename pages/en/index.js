@@ -2,7 +2,8 @@ import Link from "next/link";
 import PageTemplate from "../../components/PageTemplate";
 import ResponsiveImage from "../../components/ResponsiveImage";
 
-const Index = () => {
+
+export default function Index() {
   return (
     <PageTemplate
       pageTitle={process.env.NEXT_PUBLIC_WEBSITE_TITLE}
@@ -10,6 +11,34 @@ const Index = () => {
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL}
     >
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="max-content-width display-flex">
+          <div className="max-text-width">
+            <span className="hero-badge">Freelance Developer</span>
+            <h1 className="hero-title">
+              <span>Alexandre</span>
+              <span>Desroches</span>
+            </h1>
+            <div className="shimmer-bar" aria-hidden="true" />
+            <p className="hero-subtitle">
+              Front-end web developer. I craft fast, accessible, and beautiful
+              websites — from idea to deployment.
+            </p>
+            <div className="hero-ctas">
+              <Link href="/en/programming" className="btn btn-primary">
+                See my services →
+              </Link>
+              <Link href="/en/contact" className="btn btn-secondary">
+                Get in touch
+              </Link>
+            </div>
+          </div>
+          <div className="max-text-width display-flex" aria-hidden="true" />
+        </div>
+      </section>
+
+      {/* Original content layout */}
       <div className="max-content-width display-flex">
         <div className="max-text-width">
           <h2>Freelance Web Developer</h2>
@@ -69,6 +98,4 @@ const Index = () => {
       </div>
     </PageTemplate>
   );
-};
-
-export default Index;
+}

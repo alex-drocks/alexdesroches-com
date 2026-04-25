@@ -22,7 +22,7 @@ export default function Programmation() {
             Windows, ainsi que l'automatisation de tâches sur Windows.
             Mon domaine d'expertise est donc assez vaste.
             Pouvant maintenir et <strong>concevoir, selon votre
-            demande</strong> — applications Web, logiciels, outils internes et sites Internet de haute qualité.
+              demande</strong> — applications Web, logiciels, outils internes et sites Internet de haute qualité.
           </p>
           <p>
             Ainsi, je peux prendre en charge un nouveau projet et le mener à terme et/ou
@@ -53,17 +53,32 @@ export default function Programmation() {
                 </ExternalLink>
               </li>
               <li>
+                <ExternalLink url="https://en.wikipedia.org/wiki/Bun_(software)">
+                  Bun.js
+                </ExternalLink>
+              </li>
+              <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/React_(JavaScript_library)">
                   React.js
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Next.js"
-                >Next.js
+                <ExternalLink url="https://en.wikipedia.org/wiki/Next.js">
+                  Next.js
+                </ExternalLink>
+              </li>
+              <li>
+                <ExternalLink url="https://en.wikipedia.org/wiki/Bittensor">
+                  Bittensor
                 </ExternalLink>
               </li>
             </ul>
             <ul>
+              <li>
+                <ExternalLink url="https://en.wikipedia.org/wiki/Python_(programming_language)">
+                  Python
+                </ExternalLink>
+              </li>
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/Angular_(web_framework)">
                   Angular
@@ -86,12 +101,17 @@ export default function Programmation() {
               </li>
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/GitHub">
-                  GitHub, GitLab
+                  Git, GitHub, GitLab
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/WordPress">
-                  WordPress
+                <ExternalLink url="https://en.wikipedia.org/wiki/Linux">
+                  Linux
+                </ExternalLink>
+              </li>
+              <li>
+                <ExternalLink url="https://en.wikipedia.org/wiki/AI_agent">
+                  AI Agents
                 </ExternalLink>
               </li>
             </ul>
@@ -116,25 +136,20 @@ export default function Programmation() {
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Python_(programming_language)">
-                  Python
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Go_(programming_language)">
-                  Go Lang
+                <ExternalLink url="https://en.wikipedia.org/wiki/SQL">
+                  SQL
                 </ExternalLink>
               </li>
             </ul>
             <ul>
               <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/WooCommerce">
-                  WooCommerce
+                <ExternalLink url="https://en.wikipedia.org/wiki/WordPress">
+                  WordPress
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Vue.js">
-                  Vue.js
+                <ExternalLink url="https://en.wikipedia.org/wiki/WooCommerce">
+                  WooCommerce
                 </ExternalLink>
               </li>
               <li>
@@ -142,14 +157,9 @@ export default function Programmation() {
                   Astro.js
                 </ExternalLink>
               </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/VirtualBox">
-                  VirtualBox
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Linux">
-                  Linux
+                            <li>
+                <ExternalLink url="https://en.wikipedia.org/wiki/Kubernetes">
+                  Kubernetes
                 </ExternalLink>
               </li>
             </ul>
@@ -172,9 +182,9 @@ export default function Programmation() {
       </section>
 
       <svg className={styles.waveTop} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150">
-        <path fill="var(--main-background-color)" d="M0 0h900v150H0z"/>
+        <path fill="var(--main-background-color)" d="M0 0h900v150H0z" />
         <path fill="var(--blue)"
-              d="m0 11 37.5 11C75 33 150 55 225 71.2c75 16.1 150 26.5 225 17.5s150-37.4 225-45.5C750 35 825 47 862.5 53l37.5 6v92H0Z"/>
+          d="m0 11 37.5 11C75 33 150 55 225 71.2c75 16.1 150 26.5 225 17.5s150-37.4 225-45.5C750 35 825 47 862.5 53l37.5 6v92H0Z" />
       </svg>
 
       <section className={styles.services}>
@@ -190,9 +200,9 @@ export default function Programmation() {
       </section>
 
       <svg className={styles.waveBottom} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150">
-        <path fill="var(--main-background-color)" d="M0 0h900v150H0z"/>
+        <path fill="var(--main-background-color)" d="M0 0h900v150H0z" />
         <path fill="var(--blue)"
-              d="m0 13 37.5 11C75 35 150 57 225 64.3c75 7.4 150 0 225-7.6C525 49 600 41 675 52.2c75 11.1 150 41.5 187.5 56.6L900 124V0H0Z"/>
+          d="m0 13 37.5 11C75 35 150 57 225 64.3c75 7.4 150 0 225-7.6C525 49 600 41 675 52.2c75 11.1 150 41.5 187.5 56.6L900 124V0H0Z" />
       </svg>
 
       <section className={styles.projects + " max-content-width display-flex"}>

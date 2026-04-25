@@ -22,7 +22,7 @@ const About = () => {
           </p>
           <p>
             I am {calculateAge(new Date(1989, 4, 29))} years old, living in Canada in the province
-            of Quebec, with my beloved wife Cathy and our newborn son Samuel!
+            of Quebec, with my beloved wife Cathy and our two kids!
           </p>
           <p>
             Since my childhood, <strong>I love what is technological, creative and demands reflection</strong>.{" "}

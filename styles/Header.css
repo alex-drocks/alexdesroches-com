@@ -56,6 +56,23 @@ header .toggle-mobile-menu-button {
   display: none;
 }
 
+.header-container .toggle-mobile-menu-button {
+  border-color: transparent;
+}
+
+.header-container .toggle-mobile-menu-button:hover {
+  background-color: var(--almost-white);
+}
+
+.header-container .toggle-mobile-menu-button:hover svg {
+  fill: var(--main-foreground-color);
+  stroke: var(--main-foreground-color);
+}
+
+html.dark .header-container .toggle-mobile-menu-button:hover {
+  background-color: rgba(255,255,255,0.06);
+}
+
 header nav {
   display: flex;
   align-items: center;
@@ -113,14 +130,35 @@ header nav a.active-next-link {
 
 
 @media screen and (max-width: 755px) {
+  body.mobile-menu-open {
+    overflow: hidden;
+  }
+
   .do-not-display-on-mobile {
     display: none !important;
   }
 
+  .header-container.is-mobile-menu-open {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    min-height: 100dvh;
+    overflow-y: auto;
+  }
+
 
   header .toggle-mobile-menu-button {
-    display: block;
-    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    min-width: 2.75rem;
+    margin-left: 1rem;
+  }
+
+  header .toggle-mobile-menu-button svg {
+    padding: .72rem;
   }
 
   header {
@@ -128,53 +166,116 @@ header nav a.active-next-link {
   }
 
   nav.mobile-menu {
-    z-index: 99;
-    position: fixed;
-    left: var(--page-padding);
-    right: var(--page-padding);
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100dvh - 5.25rem);
     background-color: var(--main-background-color);
-    border: 8px solid var(--main-border-color);
-    padding: 3rem 0 2.5rem 0;
-  }
-
-  nav.mobile-menu ul {
-    margin-top: 3rem;
+    padding: 2rem 0;
   }
 
   nav.mobile-menu strong {
-    position: absolute;
-    top: 2rem;
-    left: 2.5rem;
+    display: block;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-text-color);
+    font-family: var(--ff-monospace);
+    font-size: .75rem;
+    letter-spacing: 1px;
     text-transform: uppercase;
   }
 
   nav.mobile-menu .page-links {
-    line-height: 4;
+    display: flex;
+    flex-direction: column;
     list-style: none;
-    padding-left: 2.5rem;
+    margin: 0;
+    padding: 0;
     color: var(--secondary-text-color);
   }
 
+  nav.mobile-menu .page-links li {
+    line-height: 1.2;
+  }
+
+  nav.mobile-menu .page-links a {
+    display: flex;
+    align-items: center;
+    min-height: 4rem;
+    margin: 0;
+    padding: .9rem 0;
+    text-align: left;
+    width: 100%;
+    color: var(--secondary-text-color);
+    border-bottom: 1px solid var(--main-border-color);
+    letter-spacing: 0;
+  }
+
+  nav.mobile-menu .page-links a:hover {
+    color: var(--main-foreground-color);
+    border-bottom-color: var(--main-border-color);
+  }
+
   nav.mobile-menu .page-links .active-next-link {
-    text-decoration: underline;
+    color: var(--main-foreground-color);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  nav.mobile-menu .mobile-menu-actions {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    display: flex;
   }
 
   nav.mobile-menu .toggle-button {
-    width: max-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-height: 3rem;
+    margin-left: 0;
+    padding: .75rem 1rem .75rem 1.125rem;
+    color: var(--main-background-color);
+    background-color: var(--main-foreground-color);
+    font-family: var(--ff-sans-serif);
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+
+  html.dark nav.mobile-menu .toggle-button {
+    color: var(--theme-dark-background);
+    background-color: var(--theme-dark-main-text-color);
+  }
+
+  nav.mobile-menu .toggle-button:hover {
+    filter: brightness(.92);
+  }
+
+  html.dark nav.mobile-menu .toggle-button:hover {
+    filter: brightness(.9);
   }
 
   nav.mobile-menu .toggle-button div {
     display: flex;
     align-items: center;
-    width: auto;
-    height: 100%;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
   }
 
-  nav.mobile-menu .toggle-button div span {
-    padding-right: .75rem;
+  nav.mobile-menu .toggle-button span {
+    color: currentColor;
   }
 
-  nav.mobile-menu .toggle-button:is(:active, :hover, :focus) div span {
-    color: var(--main-background-color);
+  nav.mobile-menu .toggle-button:hover span {
+    color: currentColor;
+  }
+
+  nav.mobile-menu .toggle-button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: .1rem;
+    fill: currentColor;
+    stroke: currentColor;
   }
 }

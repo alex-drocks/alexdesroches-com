@@ -52,17 +52,32 @@ const Programming = () => {
                 </ExternalLink>
               </li>
               <li>
+                <ExternalLink url="https://en.wikipedia.org/wiki/Bun_(software)">
+                  Bun.js
+                </ExternalLink>
+              </li>
+              <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/React_(JavaScript_library)">
                   React.js
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Next.js"
-                >Next.js
+                <ExternalLink url="https://en.wikipedia.org/wiki/Next.js">
+                  Next.js
+                </ExternalLink>
+              </li>
+              <li>
+                <ExternalLink url="https://en.wikipedia.org/wiki/Bittensor">
+                  Bittensor
                 </ExternalLink>
               </li>
             </ul>
             <ul>
+              <li>
+                <ExternalLink url="https://en.wikipedia.org/wiki/Python_(programming_language)">
+                  Python
+                </ExternalLink>
+              </li>
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/Angular_(web_framework)">
                   Angular
@@ -85,12 +100,17 @@ const Programming = () => {
               </li>
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/GitHub">
-                  GitHub, GitLab
+                  Git, GitHub, GitLab
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/WordPress">
-                  WordPress
+                <ExternalLink url="https://en.wikipedia.org/wiki/Linux">
+                  Linux
+                </ExternalLink>
+              </li>
+              <li>
+                <ExternalLink url="https://en.wikipedia.org/wiki/AI_agent">
+                  AI Agents
                 </ExternalLink>
               </li>
             </ul>
@@ -115,25 +135,20 @@ const Programming = () => {
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Python_(programming_language)">
-                  Python
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Go_(programming_language)">
-                  Go language
+                <ExternalLink url="https://en.wikipedia.org/wiki/SQL">
+                  SQL
                 </ExternalLink>
               </li>
             </ul>
             <ul>
               <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/WooCommerce">
-                  WooCommerce
+                <ExternalLink url="https://en.wikipedia.org/wiki/WordPress">
+                  WordPress
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Vue.js">
-                  Vue.js
+                <ExternalLink url="https://en.wikipedia.org/wiki/WooCommerce">
+                  WooCommerce
                 </ExternalLink>
               </li>
               <li>
@@ -142,13 +157,8 @@ const Programming = () => {
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/VirtualBox">
-                  VirtualBox
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Linux">
-                  Linux
+                <ExternalLink url="https://en.wikipedia.org/wiki/Kubernetes">
+                  Kubernetes
                 </ExternalLink>
               </li>
             </ul>

@@ -11,6 +11,31 @@ export default function Index() {
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}
     >
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-inner">
+          <span className="hero-badge">Programmeur freelance</span>
+          <h1 className="hero-title">
+            <span>Alexandre</span>
+            <span>Desroches</span>
+          </h1>
+          <div className="shimmer-bar" />
+          <p className="hero-subtitle">
+            Développeur web front-end. Je conçois des sites rapides,
+            accessibles et élégants — de l'idée au déploiement.
+          </p>
+          <div className="hero-ctas">
+            <Link href="/programmation" className="btn btn-primary">
+              Voir mes services →
+            </Link>
+            <Link href="/contact" className="btn btn-secondary">
+              Me contacter
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Original content layout */}
       <div className="max-content-width display-flex">
         <div className="max-text-width">
           <h2>Programmeur freelance (pigiste)</h2>

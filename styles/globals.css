@@ -293,6 +293,11 @@ footer :is(a, button):focus-visible {
   background: linear-gradient(135deg, #eef4ff 0%, var(--theme-light-background) 70%, var(--theme-light-background) 100%);
 }
 
+.hero > .max-content-width {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 html.dark .hero {
   background: linear-gradient(135deg, #181a24 0%, var(--theme-dark-background) 70%, var(--theme-dark-background) 100%);
 }

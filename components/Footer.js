@@ -30,8 +30,7 @@ export default function Footer() {
                     Services de programmation
                   </InternalLink>
                 </strong> à la demande.
-                Programmeur situé sur la Rive-Sud de
-                Montréal. Tarification à l'heure avec
+                Programmeur situé près de Montréal. Tarification à l'heure avec
                 facture détaillée à l'appui.
               </>
             )

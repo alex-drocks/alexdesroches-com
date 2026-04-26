@@ -100,7 +100,7 @@ const Programming = () => {
               </li>
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/GitHub">
-                  Git, GitHub, GitLab
+                  Git, GitHub
                 </ExternalLink>
               </li>
               <li>

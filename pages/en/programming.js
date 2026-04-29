@@ -298,7 +298,7 @@ const Programming = () => {
           title="This website"
 
           description="The website you are viewing right now is built with React.js and Next.js. I chose both of these
-          technologies because they are great. Probably my current top choice as of 2022-05-24."
+          technologies because they are great. Probably my current top choice."
 
           imgSrc="/images/programmation/alexdesrochescom/alexdesroches"
 

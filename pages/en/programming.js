@@ -20,7 +20,7 @@ const Programming = () => {
           <p>
             I am an experienced developer with web technologies, desktop software for Mac and Windows, as well as task
             automation on Windows. My area of expertise is therefore quite broad - being able to <strong>develop and
-            maintain projects, according to your needs</strong>, Web applications, softwares, internal tools,
+            maintain projects, according to your needs</strong>, Web applications, software, internal tools,
             websites and more.
           </p>
           <p>
@@ -242,7 +242,7 @@ const Programming = () => {
           technologies="Electron.js, JavaScript, HTML, CSS, Node.js, VirtualBox VM, Google Firebase,
          Web Hosting Canada, GitHub."
 
-          features="Desktop software for Windows et Mac. Including code signing certificate management obtained through SSL.com,
+          features="Desktop software for Windows and Mac. Including code signing certificate management obtained through SSL.com,
          a complete documentation, an online distribution server with automatic updates,
          free technical support, a private admin cloud logging system to ensure app quality.
          At this time, user reviews on Capterra.ca

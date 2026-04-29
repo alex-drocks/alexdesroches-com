@@ -157,7 +157,7 @@ export default function Programmation() {
                   Astro.js
                 </ExternalLink>
               </li>
-                            <li>
+              <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/Kubernetes">
                   Kubernetes
                 </ExternalLink>
@@ -255,7 +255,7 @@ export default function Programmation() {
           title="Site Internet de Gestion Desroches Inc."
 
           description="Gestion Desroches est une entreprise offrant des services de comptabilité.
-         J'ai eu le mandant de remplacer le site Internet qui était conçu avec Squarespace auparavant.
+         J'ai eu le mandat de remplacer le site Internet qui était conçu avec Squarespace auparavant.
          J'ai donc programmé le nouveau site avec React.js, puis changé d'hébergeur et reconfiguré les courriels
          @gestiondesroches.com. Cette migration a permis d'économiser des milliers de dollars en frais annuels."
 
@@ -285,7 +285,7 @@ export default function Programmation() {
         WordPress, WooCommerce, WooCommerce License Manager."
 
           features="Programmation Full-Stack. C'est-à-dire, le Front-End avec React.js et le Back-End avec Firebase
-        pour l'authentification et la base de donnée. Le serveur de license est géré avec WooCommerce License Manager
+        pour l'authentification et la base de données. Le serveur de license est géré avec WooCommerce License Manager
         et des appels API PHP de l'application vers WooCommerce. L'interface se met à jour en temps réel grâce
         à React et Firebase real-time similaire à Google Sheets par exemple. La base de données est du No-SQL."
 

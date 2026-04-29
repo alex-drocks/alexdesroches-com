@@ -14,7 +14,7 @@ export default function About() {
         <section className="max-text-width">
           <h2>À propos d'Alex Desroches</h2>
           <p>
-            Je suis un <strong>passionné de programmation</strong>, cinéma, jeux vidéos, musique, composition musicale,
+            Je suis un <strong>passionné de programmation</strong>, cinéma, jeux vidéo, musique, composition musicale,
             théologie et philosophie. Bref, à peu près tout ce qui éveille mon côté créatif et nourrit mon imagination.
           </p>
           <p>

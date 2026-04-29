@@ -6,7 +6,7 @@ function getLinkLabel(url, isEnglish, opensNewTab) {
   }
 
   if (/^tel:/i.test(url)) {
-    return isEnglish ? "Call this phone number" : "Appeler ce numero de telephone";
+    return isEnglish ? "Call this phone number" : "Appeler ce numéro de téléphone";
   }
 
   if (opensNewTab) {

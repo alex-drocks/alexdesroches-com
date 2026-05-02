@@ -179,10 +179,7 @@ export async function onRequest({request, env}) {
 
   if (configErrors.length) {
     console.error("Contact form email address configuration is invalid.", configErrors);
-    return jsonResponse({
-      error: "Contact email is not configured.",
-      details: configErrors,
-    }, 500);
+    return jsonResponse({error: "Contact email is not configured."}, 500);
   }
 
   try {

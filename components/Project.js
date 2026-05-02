@@ -49,7 +49,6 @@ export default function Project({title, description, imgSrc, features, technolog
               : <>Chronologie&nbsp;:</>
             }
           </h4>
-          {" "}
           <span>{timespan}</span>
         </div>
         <br/>

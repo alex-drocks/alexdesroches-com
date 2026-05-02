@@ -1,33 +1,12 @@
 const size = 24;
 
 
-function MessengerLogo() {
-  return (
-    <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" fillRule="evenodd"
-         clipRule="evenodd" viewBox="0 0 24 24">
-      <path
-        d="M12 0C5.37 0 0 4.97 0 11.11c0 3.5 1.75 6.62 4.47 8.65V24l4.09-2.24c1.09.3 2.24.46 3.44.46 6.63 0 12-4.97 12-11.1C24 4.96 18.63 0 12 0zm1.2 14.96-3.06-3.26-5.97 3.26L10.73 8l3.13 3.26L19.76 8l-6.57 6.96z"/>
-    </svg>
-  )
-}
-
-
 function EmailLogo() {
   return (
     <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" fillRule="evenodd"
          clipRule="evenodd" viewBox="0 0 24 24">
       <path
         d="M22.29 21H1.7C.77 21 0 20.23 0 19.29V5.7C0 4.77.77 4 1.71 4H22.3c.94 0 1.71.77 1.71 1.71V19.3c0 .94-.77 1.71-1.71 1.71zM12 14.91 2.66 8.43 2.64 20h18.68V8.43L12 14.91zM20.87 5H3.08L12 11.23s6.25-4.4 8.87-6.23z"/>
-    </svg>
-  )
-}
-
-
-function CellphoneLogo() {
-  return (
-    <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path
-        d="M17.5 2c.276 0 .5.224.5.5v19c0 .276-.224.5-.5.5h-11c-.276 0-.5-.224-.5-.5v-19c0-.276.224-.5.5-.5h11zM20 2c0-1.104-.896-2-2-2H6C4.896 0 4 .896 4 2v20c0 1.104.896 2 2 2h12c1.104 0 2-.896 2-2V2zm-9.5 1h3c.276 0 .5.224.5.501 0 .275-.224.499-.5.499h-3c-.275 0-.5-.224-.5-.499 0-.277.225-.501.5-.501zM12 21c-.553 0-1-.448-1-1s.447-1 1-1c.552 0 .999.448.999 1s-.447 1-.999 1zm5-3H7V5h10v13z"/>
     </svg>
   )
 }
@@ -53,24 +32,4 @@ function GithubLogo() {
 }
 
 
-function FacebookLogo() {
-  return (
-    <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path
-        d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm3 8h-1.35c-.538 0-.65.221-.65.778V10h2l-.209 2H13v7h-3v-7H8v-2h2V7.692C10 5.923 10.931 5 13.029 5H15v3z"/>
-    </svg>
-  )
-}
-
-
-function TwitterLogo() {
-  return (
-    <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path
-        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195a4.9156 4.9156 0 0 0-3.594-1.555c-3.179 0-5.515 2.966-4.797 6.045C7.728 8.088 4.1 6.128 1.671 3.149c-1.29 2.213-.669 5.108 1.523 6.574a4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-    </svg>
-  )
-}
-
-
-export {MessengerLogo, EmailLogo, CellphoneLogo, LinkedinLogo, GithubLogo, FacebookLogo, TwitterLogo}
+export {EmailLogo, LinkedinLogo, GithubLogo}

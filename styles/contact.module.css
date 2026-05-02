@@ -23,9 +23,3 @@
 .contactLink:hover a svg {
   opacity: 1;
 }
-
-.imageTextOverlay {
-  top: 89%;
-  left: 16%;
-  transform: rotateZ(2deg);
-}

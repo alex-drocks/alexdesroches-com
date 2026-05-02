@@ -3,7 +3,6 @@ import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
 import HeroSkillShowcase from "../components/HeroSkillShowcase";
 
-
 export default function Index() {
   return (
     <PageTemplate
@@ -12,7 +11,6 @@ export default function Index() {
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}
     >
-      {/* Hero Section */}
       <section className="hero">
         <div className="max-content-width display-flex">
           <div className="max-text-width">
@@ -47,7 +45,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Original content layout */}
       <div className="max-content-width display-flex">
         <div className="max-text-width">
           <h2>Programmeur freelance (pigiste)</h2>
@@ -94,7 +91,6 @@ export default function Index() {
 
         <div className="max-text-width display-flex">
           <div className="stylish-shadow-image">
-            {/*<span className="stylish-shadow-image--overlay-text">Art is Thinking</span>*/}
             <ResponsiveImage
               path="/images/whitebloc/whitebloc"
               alt="Art is Thinking"

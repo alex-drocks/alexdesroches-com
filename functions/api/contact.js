@@ -191,10 +191,10 @@ async function handleContactRequest({request, env}) {
     });
 
     if (!sent.ok) {
-      return jsonResponse({error: "Email could not be sent."}, 502);
+      return jsonResponse({error: "Email could not be sent."}, 500);
     }
   } catch {
-    return jsonResponse({error: "Email could not be sent."}, 502);
+    return jsonResponse({error: "Email could not be sent."}, 500);
   }
 
   return jsonResponse({ok: true});
@@ -205,6 +205,6 @@ export async function onRequest(context) {
     return await handleContactRequest(context);
   } catch (error) {
     console.error("Contact form request failed unexpectedly.", error);
-    return jsonResponse({error: "Email could not be sent."}, 502);
+    return jsonResponse({error: "Email could not be sent."}, 500);
   }
 }

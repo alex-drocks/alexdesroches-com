@@ -71,8 +71,8 @@ export default function Footer() {
       </div>
 
       <div className="footer-links--social">
-        <ExternalLink url={myContactLinks.linkedIn}><LinkedinLogo/></ExternalLink>
-        <ExternalLink url={myContactLinks.github}><GithubLogo/></ExternalLink>
+        <ExternalLink url={myContactLinks.linkedIn} ariaLabel="My LinkedIn profile"><LinkedinLogo/></ExternalLink>
+        <ExternalLink url={myContactLinks.github} ariaLabel="My GitHub profile"><GithubLogo/></ExternalLink>
       </div>
 
       <div>

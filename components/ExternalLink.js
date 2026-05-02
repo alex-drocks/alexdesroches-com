@@ -1,6 +1,10 @@
 import {useIsEnglish} from "../hooks/useIsEnglish";
 
-function getLinkLabel(url, isEnglish, opensNewTab) {
+function getLinkLabel(url, isEnglish, opensNewTab, explicitLabel) {
+  if (explicitLabel) {
+    return explicitLabel;
+  }
+
   if (/^mailto:/i.test(url)) {
     return isEnglish ? "Send an email" : "Envoyer un courriel";
   }
@@ -11,18 +15,18 @@ function getLinkLabel(url, isEnglish, opensNewTab) {
 
   if (opensNewTab) {
     return isEnglish
-      ? "Click to open this link in a new tab"
-      : "Cliquez pour ouvrir ce lien dans un nouvel onglet";
+      ? "Open link in a new tab"
+      : "Ouvrir le lien dans un nouvel onglet";
   }
 
   return undefined;
 }
 
-export default function ExternalLink({url, className, children}) {
+export default function ExternalLink({url, className, ariaLabel, children}) {
   const isEnglish = useIsEnglish();
 
   const opensNewTab = /^https?:\/\//i.test(url);
-  const linkLabel = getLinkLabel(url, isEnglish, opensNewTab);
+  const linkLabel = getLinkLabel(url, isEnglish, opensNewTab, ariaLabel);
 
   return (
     <a

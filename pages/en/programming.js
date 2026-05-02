@@ -188,15 +188,36 @@ const Programming = () => {
 
       <section className={styles.services}>
         <h3>Offered Services</h3>
-        <ul className="max-text-width">
-          <li>Websites</li>
-          <li>Web Apps</li>
-          <li>Online Commerce</li>
-          <li>Desktop Software</li>
-          <li>Web Scraping</li>
-          <li>Automation Scripts</li>
-          <li>...and more</li>
-        </ul>
+        <div className={styles.servicesGrid}>
+          <div className={styles.serviceCard}>
+            <h4>Websites</h4>
+            <p>Static sites, blogs, and portfolios with a focus on speed, SEO, and accessibility.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4>Web Apps</h4>
+            <p>Dynamic applications with user logins, dashboards, and real-time data.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4>Online Commerce</h4>
+            <p>WooCommerce stores, Stripe integration, and custom checkout flows.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4>Desktop Software</h4>
+            <p>Cross-platform apps for Windows and Mac built with Electron.js.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4>Web Scraping</h4>
+            <p>Data extraction, automation, and API integration for hands-off workflows.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4>Automation Scripts</h4>
+            <p>Windows task automation, file processing, and time-saving tooling.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4>Consulting & Maintenance</h4>
+            <p>Code review, performance optimization, and long-term support.</p>
+          </div>
+        </div>
       </section>
 
       <svg className={styles.waveBottom} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150">

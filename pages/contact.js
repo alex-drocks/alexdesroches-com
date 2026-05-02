@@ -1,13 +1,10 @@
 import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
-import ExternalLink from "../components/ExternalLink";
+import styles from "../styles/contact.module.css";
 import {EmailLogo, LinkedinLogo} from "../components/Logos";
-
 import {myContactLinks} from "../lib/myContactLinks";
 import ContactLink from "../components/ContactLink";
-
-import styles from "../styles/contact.module.css";
-
+import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
   return (
@@ -22,53 +19,28 @@ export default function Contact() {
           <h2>Contacter Alex Desroches</h2>
           <p>
             N'hésitez pas à me contacter, ce sera un plaisir de discuter de votre projet.
-            Je suis joignable en tout temps par l'un des moyens ci-dessous&nbsp;:
+            Remplissez le formulaire ci-dessous ou contactez-moi par l'un des moyens suivants :          
           </p>
 
+          <ContactForm isEnglish={false}/>
+
           <ul className={styles.contactLinks}>
-            {/*<ContactLink*/}
-            {/*  label="Messenger"*/}
-            {/*  url={myContactLinks.messenger}*/}
-            {/*  svgIcon={<MessengerLogo/>}*/}
-            {/*/>*/}
             <ContactLink
               label="Courriel"
               url={`mailto:${myContactLinks.email}`}
               svgIcon={<EmailLogo/>}
             />
-            {/* <ContactLink
-              label="Cellulaire"
-              url={`tel:${myContactLinks.cellphone}`}
-              svgIcon={<CellphoneLogo/>}
-            /> */}
             <ContactLink
               label="LinkedIn"
               url={myContactLinks.linkedIn}
               svgIcon={<LinkedinLogo/>}
             />
-            {/*<ContactLink*/}
-            {/*  label="GitHub"*/}
-            {/*  url={myContactLinks.github}*/}
-            {/*  svgIcon={<GithubLogo/>}*/}
-            {/*/>*/}
-            {/*<ContactLink*/}
-            {/*  label="Facebook"*/}
-            {/*  url={myContactLinks.facebook}*/}
-            {/*  svgIcon={<FacebookLogo/>}*/}
-            {/*/>*/}
-            {/*<ContactLink*/}
-            {/*  label="Twitter"*/}
-            {/*  url={myContactLinks.twitter}*/}
-            {/*  svgIcon={<TwitterLogo/>}*/}
-            {/*/>*/}
           </ul>
 
         </section>
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
-            {/*<span*/}
-            {/*  className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Art is Communicating</span>*/}
             <ResponsiveImage
               path="/images/celltower/celltower"
               alt="Art is Communicating"

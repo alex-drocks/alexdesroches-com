@@ -11,7 +11,7 @@ export default function Project({title, description, imgSrc, features, technolog
       <div className={styles.leftColumn + " max-text-width"}>
         <h3>{title}</h3>
         <p>{description}</p>
-        <ExternalLink url={url}>
+        <ExternalLink url={url} ariaLabel={title}>
           <ResponsiveImage
             path={imgSrc}
             alt={title}

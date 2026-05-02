@@ -189,14 +189,36 @@ export default function Programmation() {
 
       <section className={styles.services}>
         <h3>Services offerts</h3>
-        <ul className="max-text-width">
-          <li>Sites Internet</li>
-          <li>Applications Web</li>
-          <li>Commerces en ligne</li>
-          <li>Logiciels pour ordinateurs</li>
-          <li>Web scraping</li>
-          <li>Scripts d'automatisation</li>
-        </ul>
+        <div className={styles.servicesGrid}>
+          <div className={styles.serviceCard}>
+            <h4>Sites Internet</h4>
+            <p>Sites statiques, blogs et portfolios axés sur la rapidité, le référencement et l'accessibilité.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4>Applications Web</h4>
+            <p>Applications dynamiques avec authentification, tableaux de bord et données en temps réel.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4>Commerces en ligne</h4>
+            <p>Boutiques WooCommerce, intégration Stripe et flux de paiement personnalisés.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4>Logiciels bureautiques</h4>
+            <p>Applications multiplateformes pour Windows et Mac, construites avec Electron.js.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4>Web scraping</h4>
+            <p>Extraction de données, automatisation et intégration d'API pour des flux de travail automatisés.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4>Scripts d'automatisation</h4>
+            <p>Automatisation de tâches Windows, traitement de fichiers et outils pour gagner du temps.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4>Consultation et maintenance</h4>
+            <p>Revue de code, optimisation des performances et soutien à long terme.</p>
+          </div>
+        </div>
       </section>
 
       <svg className={styles.waveBottom} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150">

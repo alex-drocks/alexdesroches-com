@@ -7,6 +7,7 @@ function ContactLink({label, url, svgIcon}) {
       <ExternalLink
         className="text-link"
         url={url}
+        ariaLabel={label}
       >
         {svgIcon}
         {label}&nbsp;&rarr;

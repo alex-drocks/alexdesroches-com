@@ -21,14 +21,14 @@ export default function Header() {
     <div className={`header-container${isMobileMenuOpened ? " is-mobile-menu-open" : ""}`}>
       <header>
         <nav>
-          <h1 className="left-branding">
+          <span className="left-branding">
             <InternalLink
               isActiveLink={true}
               page="index"
             >
               Alex Desroches
             </InternalLink>
-          </h1>
+          </span>
           <ul className="page-links do-not-display-on-mobile">
             <MainNavLinks/>
           </ul>

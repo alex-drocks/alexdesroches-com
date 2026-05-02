@@ -41,18 +41,57 @@
   font-size: 2.5rem;
 }
 
-.services ul {
-  list-style: none;
-  padding: 0;
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
   width: 100%;
-  margin: 3rem 0 1.5rem 0;
+  max-width: 1000px;
+  margin: 2rem auto 0;
+  padding: 0 1.5rem 2.5rem;
 }
 
-.services li {
-  color: inherit;
-  font-size: 1.25rem;
+.serviceCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
   text-align: center;
-  line-height: 2.25;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.serviceCard h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.15rem;
+  font-family: var(--ff-sans-serif);
+}
+
+.serviceCard p {
+  margin: 0;
+  font-size: 0.925rem;
+  opacity: 0.9;
+}
+
+@supports (backdrop-filter: blur(6px)) {
+  .serviceCard {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem 2rem;
+  }
+  .serviceCard {
+    padding: 1.25rem;
+  }
 }
 
 .projects {

@@ -21,6 +21,17 @@ The frontend posts JSON to `/api/contact`. The Function validates the fields,
 ignores honeypot submissions, and sends a plain-text email with the visitor's
 address in the `Reply-To` header.
 
+## Troubleshooting
+
+- If the browser receives `{"ok":true}` but no email is sent, inspect the request
+  payload. A non-empty `extraField` value means the hidden honeypot was filled,
+  so the Function intentionally skipped the email.
+- If Cloudflare Email Sending rejects the request, the Pages Function logs should
+  include the Cloudflare response status and body.
+- In Cloudflare, the API token's `last_used_on` field should update after a real
+  send attempt. If it stays empty, the request did not reach the Email Sending
+  API.
+
 ## References
 
 - Cloudflare Pages Functions: https://developers.cloudflare.com/pages/functions/

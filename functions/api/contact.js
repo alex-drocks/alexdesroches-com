@@ -86,7 +86,8 @@ async function sendEmail({env, payload}) {
   const apiToken = sanitizeText(env.CLOUDFLARE_EMAIL_API_TOKEN, 512);
 
   if (!accountId || !apiToken) {
-    return false;
+    console.error("Contact form email is missing Cloudflare API configuration.");
+    return {ok: false};
   }
 
   const response = await fetch(
@@ -102,12 +103,21 @@ async function sendEmail({env, payload}) {
   );
 
   if (!response.ok) {
-    return false;
+    console.error("Cloudflare Email Sending request failed.", {
+      status: response.status,
+      response: await response.text(),
+    });
+    return {ok: false};
   }
 
   const result = await response.json();
 
-  return result.success === true;
+  if (result.success !== true) {
+    console.error("Cloudflare Email Sending returned an unsuccessful response.", result);
+    return {ok: false};
+  }
+
+  return {ok: true};
 }
 
 export async function onRequest({request, env}) {
@@ -127,7 +137,8 @@ export async function onRequest({request, env}) {
     return jsonResponse({error: "Invalid request body."}, 400);
   }
 
-  if (sanitizeText(payload.company, 100)) {
+  if (sanitizeText(payload.extraField, 100)) {
+    console.info("Contact form honeypot submission skipped.");
     return jsonResponse({ok: true});
   }
 
@@ -165,7 +176,7 @@ export async function onRequest({request, env}) {
       }),
     });
 
-    if (!sent) {
+    if (!sent.ok) {
       return jsonResponse({error: "Email could not be sent."}, 502);
     }
   } catch {

@@ -7,7 +7,7 @@ const initialFormValues = {
   email: "",
   subject: "",
   message: "",
-  company: "",
+  extraField: "",
 };
 
 const copy = {
@@ -153,14 +153,14 @@ function ContactForm({language = "fr"}) {
       </div>
 
       <div className={styles.honeypot} aria-hidden="true">
-        <label htmlFor={`contact-company-${language}`}>Company</label>
+        <label htmlFor={`contact-extra-field-${language}`}>Leave this field empty</label>
         <input
-          id={`contact-company-${language}`}
-          name="company"
+          id={`contact-extra-field-${language}`}
+          name="extraField"
           type="text"
           autoComplete="off"
           tabIndex="-1"
-          value={formValues.company}
+          value={formValues.extraField}
           onChange={updateFormValue}
         />
       </div>

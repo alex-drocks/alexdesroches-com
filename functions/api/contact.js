@@ -68,14 +68,8 @@ function buildEmailBody({name, email, subject, message, language}) {
 function buildEmailPayload({sender, recipient, name, email, subject, message, language}) {
   return {
     to: recipient,
-    from: {
-      address: sender,
-      name: "alexdesroches.com",
-    },
-    reply_to: {
-      address: email,
-      name,
-    },
+    from: sender,
+    reply_to: email,
     subject: `[alexdesroches.com] ${subject}`,
     text: buildEmailBody({name, email, subject, message, language}),
   };
@@ -138,7 +132,7 @@ async function sendEmail({env, payload}) {
   return {ok: true};
 }
 
-export async function onRequest({request, env}) {
+async function handleContactRequest({request, env}) {
   if (request.method !== "POST") {
     return jsonResponse({error: "Method not allowed."}, 405, {
       Allow: "POST",
@@ -204,4 +198,13 @@ export async function onRequest({request, env}) {
   }
 
   return jsonResponse({ok: true});
+}
+
+export async function onRequest(context) {
+  try {
+    return await handleContactRequest(context);
+  } catch (error) {
+    console.error("Contact form request failed unexpectedly.", error);
+    return jsonResponse({error: "Email could not be sent."}, 502);
+  }
 }

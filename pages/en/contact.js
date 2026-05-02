@@ -23,49 +23,22 @@ const Contact = () => {
           </p>
 
           <ul className={styles.contactLinks}>
-            {/*<ContactLink*/}
-            {/*  label="Messenger"*/}
-            {/*  url={myContactLinks.messenger}*/}
-            {/*  svgIcon={<MessengerLogo/>}*/}
-            {/*/>*/}
             <ContactLink
               label="Email"
               url={`mailto:${myContactLinks.email}`}
               svgIcon={<EmailLogo/>}
             />
-            {/* <ContactLink
-              label="Mobile phone"
-              url={`tel:${myContactLinks.cellphone}`}
-              svgIcon={<CellphoneLogo/>}
-            /> */}
             <ContactLink
               label="LinkedIn"
               url={myContactLinks.linkedIn}
               svgIcon={<LinkedinLogo/>}
             />
-            {/*<ContactLink*/}
-            {/*  label="GitHub"*/}
-            {/*  url={myContactLinks.github}*/}
-            {/*  svgIcon={<GithubLogo/>}*/}
-            {/*/>*/}
-            {/*<ContactLink*/}
-            {/*  label="Facebook"*/}
-            {/*  url={myContactLinks.facebook}*/}
-            {/*  svgIcon={<FacebookLogo/>}*/}
-            {/*/>*/}
-            {/*<ContactLink*/}
-            {/*  label="Twitter"*/}
-            {/*  url={myContactLinks.twitter}*/}
-            {/*  svgIcon={<TwitterLogo/>}*/}
-            {/*/>*/}
           </ul>
 
         </section>
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
-            {/*<span*/}
-            {/*  className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Art is Communicating</span>*/}
             <ResponsiveImage
               path="/images/celltower/celltower"
               alt="Art is Communicating"

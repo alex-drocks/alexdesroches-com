@@ -90,7 +90,6 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
   return (
     <>
       <Head>
-        {/* Page Meta */}
         <meta charSet="utf-8"/>
         <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
 
@@ -98,7 +97,6 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
         <meta name="description" content={pageDescription}/>
         <link rel="canonical" href={pageCanonicalURL}/>
 
-        {/* hreflang alternates */}
         {pageAlternateURL && (
           <>
             <link rel="alternate" hrefLang="fr" href={frenchCanonicalURL}/>
@@ -107,7 +105,6 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
           </>
         )}
 
-        {/* OpenGraph Meta */}
         <meta property="og:site_name" content={siteTitle}/>
         <meta property="og:locale" content={isEnglish ? "en_CA" : "fr_CA"}/>
         <meta property="og:title" content={pageTitle}/>
@@ -119,7 +116,6 @@ export default function PageTemplate({children, pageTitle, pageDescription, page
         <meta property="og:image:width" content={process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE_WIDTH}/>
         <meta property="og:image:height" content={process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE_HEIGHT}/>
 
-        {/* Twitter Meta */}
         <meta name="twitter:title" content={pageTitle}/>
         <meta name="twitter:image"
               content={process.env.NEXT_PUBLIC_WEBSITE_URL + process.env.NEXT_PUBLIC_WEBSITE_META_IMAGE}/>

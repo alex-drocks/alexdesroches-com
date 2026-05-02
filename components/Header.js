@@ -33,7 +33,7 @@ export default function Header() {
             <MainNavLinks/>
           </ul>
         </nav>
-        <ToggleLanguageButton shouldDisplayText={true}/>
+        <ToggleLanguageButton/>
         <ToggleThemeColorsButton className="do-not-display-on-mobile"/>
         <ToggleMobileMenuButton isMobileMenuOpened={isMobileMenuOpened} setIsMobileMenuOpened={setIsMobileMenuOpened}/>
       </header>
@@ -185,7 +185,7 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
   );
 }
 
-function ToggleLanguageButton({className = "", shouldDisplayText = false}) {
+function ToggleLanguageButton({className = ""}) {
   const router = useRouter();
   const isEnglish = useIsEnglish();
 

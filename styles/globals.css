@@ -214,7 +214,6 @@ li {
 }
 
 .stylish-shadow-image:hover .stylish-shadow-image--overlay-text {
-  /*color: black;*/
   opacity: 1;
 }
 
@@ -231,9 +230,6 @@ li {
 .address {
   font-style: normal;
   color: var(--secondary-text-color);
-}
-
-.resume.cont {
 }
 
 /* --- Accessibility: visible focus rings for keyboard navigation --- */

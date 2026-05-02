@@ -111,9 +111,6 @@
     border-left-color: transparent;
   }
 
-  .project .customShapeDivider {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 1024px) {

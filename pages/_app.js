@@ -6,11 +6,9 @@ import '../styles/Footer.css';
 
 function MyApp({Component, pageProps}) {
   return (
-    <>
-      <ThemeProvider defaultTheme="light" attribute="class" disableTransitionOnChange>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </>
+    <ThemeProvider defaultTheme="light" attribute="class" disableTransitionOnChange>
+      <Component {...pageProps} />
+    </ThemeProvider>
   );
 }
 

@@ -4,6 +4,74 @@
   list-style: none;
 }
 
+.contactForm {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.formField {
+  display: grid;
+  gap: .4rem;
+}
+
+.formField label {
+  color: var(--main-foreground-color);
+  font-family: var(--ff-monospace);
+  font-size: .875rem;
+}
+
+.formField input,
+.formField textarea {
+  width: 100%;
+  border: 1px solid var(--main-border-color);
+  border-radius: var(--button-radius);
+  background: var(--main-background-color);
+  color: var(--main-foreground-color);
+  font: inherit;
+  line-height: 1.5;
+  padding: .75rem .875rem;
+}
+
+.formField textarea {
+  resize: vertical;
+  min-height: 11rem;
+}
+
+.formField input:focus,
+.formField textarea:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.contactForm button {
+  width: max-content;
+}
+
+.contactForm button:disabled,
+.formField input:disabled,
+.formField textarea:disabled {
+  cursor: not-allowed;
+  opacity: .66;
+}
+
+.formStatus {
+  margin: 0;
+  color: var(--main-foreground-color);
+}
+
+.formStatusError {
+  color: #b42318;
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contactLink {
   margin: 1.5rem 0;
   width: max-content;

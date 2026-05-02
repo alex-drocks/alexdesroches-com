@@ -1,10 +1,10 @@
 import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
-import ExternalLink from "../components/ExternalLink";
 import {EmailLogo, LinkedinLogo} from "../components/Logos";
 
 import {myContactLinks} from "../lib/myContactLinks";
 import ContactLink from "../components/ContactLink";
+import ContactForm from "../components/ContactForm";
 
 import styles from "../styles/contact.module.css";
 
@@ -22,8 +22,10 @@ export default function Contact() {
           <h2>Contacter Alex Desroches</h2>
           <p>
             N'hésitez pas à me contacter, ce sera un plaisir de discuter de votre projet.
-            Je suis joignable en tout temps par l'un des moyens ci-dessous&nbsp;:
+            Vous pouvez utiliser le formulaire ci-dessous ou me joindre par l'un de ces liens&nbsp;:
           </p>
+
+          <ContactForm language="fr"/>
 
           <ul className={styles.contactLinks}>
             <ContactLink

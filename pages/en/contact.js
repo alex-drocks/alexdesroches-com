@@ -3,8 +3,8 @@ import styles from "../../styles/contact.module.css";
 import ContactLink from "../../components/ContactLink";
 import {myContactLinks} from "../../lib/myContactLinks";
 import {EmailLogo, LinkedinLogo} from "../../components/Logos";
-import ExternalLink from "../../components/ExternalLink";
 import ResponsiveImage from "../../components/ResponsiveImage";
+import ContactForm from "../../components/ContactForm";
 
 const Contact = () => {
   return (
@@ -19,8 +19,10 @@ const Contact = () => {
           <h2>Contact Alex Desroches</h2>
           <p>
             Feel free to contact me, it will be a pleasure to discuss about your project.
-            You can reach me via one of the links below:
+            You can use the form below or reach me through one of these links:
           </p>
+
+          <ContactForm language="en"/>
 
           <ul className={styles.contactLinks}>
             <ContactLink

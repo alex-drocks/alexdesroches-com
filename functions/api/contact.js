@@ -81,6 +81,24 @@ function buildEmailPayload({sender, recipient, name, email, subject, message, la
   };
 }
 
+function validateEmailConfig({sender, recipient}) {
+  const errors = [];
+
+  if (!sender) {
+    errors.push("CONTACT_EMAIL_FROM is missing.");
+  } else if (!EMAIL_PATTERN.test(sender)) {
+    errors.push("CONTACT_EMAIL_FROM is not a valid email address.");
+  }
+
+  if (!recipient) {
+    errors.push("CONTACT_EMAIL_TO is missing.");
+  } else if (!EMAIL_PATTERN.test(recipient)) {
+    errors.push("CONTACT_EMAIL_TO is not a valid email address.");
+  }
+
+  return errors;
+}
+
 async function sendEmail({env, payload}) {
   const accountId = sanitizeText(env.CLOUDFLARE_ACCOUNT_ID, 120);
   const apiToken = sanitizeText(env.CLOUDFLARE_EMAIL_API_TOKEN, 512);
@@ -157,9 +175,14 @@ export async function onRequest({request, env}) {
     env.CONTACT_EMAIL_TO || "alex.desroches7@gmail.com",
     MAX_FIELD_LENGTHS.email,
   ).toLowerCase();
+  const configErrors = validateEmailConfig({sender, recipient});
 
-  if (!EMAIL_PATTERN.test(sender) || !EMAIL_PATTERN.test(recipient)) {
-    return jsonResponse({error: "Contact email is not configured."}, 500);
+  if (configErrors.length) {
+    console.error("Contact form email address configuration is invalid.", configErrors);
+    return jsonResponse({
+      error: "Contact email is not configured.",
+      details: configErrors,
+    }, 500);
   }
 
   try {

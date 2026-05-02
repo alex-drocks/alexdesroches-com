@@ -28,6 +28,11 @@ address in the `Reply-To` header.
   so the Function intentionally skipped the email.
 - If Cloudflare Email Sending rejects the request, the Pages Function logs should
   include the Cloudflare response status and body.
+- If the browser receives `{"error":"Contact email is not configured."}`, confirm
+  that `CONTACT_EMAIL_FROM` is set for the deployment type you are testing. Pull
+  request and branch URLs use Cloudflare's Preview environment, which has its own
+  Variables and Secrets values. The value should be the raw address, for example
+  `contact@alexdesroches.com`, with no quotes.
 - In Cloudflare, the API token's `last_used_on` field should update after a real
   send attempt. If it stays empty, the request did not reach the Email Sending
   API.

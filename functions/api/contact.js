@@ -6,6 +6,7 @@ const MAX_FIELD_LENGTHS = {
   message: 5000,
   language: 8,
 };
+const CONTACT_FORM_MODES = new Set(["disabled", "dry-run", "send"]);
 
 function jsonResponse(body, status = 200, headers = {}) {
   return new Response(JSON.stringify(body), {
@@ -93,6 +94,16 @@ function validateEmailConfig({sender, recipient}) {
   return errors;
 }
 
+function getContactFormMode(env) {
+  const mode = sanitizeText(env.CONTACT_FORM_MODE, 20).toLowerCase();
+
+  if (CONTACT_FORM_MODES.has(mode)) {
+    return mode;
+  }
+
+  return "disabled";
+}
+
 async function sendEmail({env, payload}) {
   const accountId = sanitizeText(env.CLOUDFLARE_ACCOUNT_ID, 120);
   const apiToken = sanitizeText(env.CLOUDFLARE_EMAIL_API_TOKEN, 512);
@@ -162,6 +173,18 @@ async function handleContactRequest({request, env}) {
 
   if (!name || !email || !subject || !message || !EMAIL_PATTERN.test(email)) {
     return jsonResponse({error: "Invalid contact form fields."}, 400);
+  }
+
+  const contactFormMode = getContactFormMode(env);
+
+  if (contactFormMode === "disabled") {
+    console.info("Contact form submission skipped because CONTACT_FORM_MODE is disabled.");
+    return jsonResponse({error: "Contact form is unavailable."}, 503);
+  }
+
+  if (contactFormMode === "dry-run") {
+    console.info("Contact form dry-run submission accepted.");
+    return jsonResponse({ok: true});
   }
 
   const sender = sanitizeText(env.CONTACT_EMAIL_FROM, MAX_FIELD_LENGTHS.email).toLowerCase();

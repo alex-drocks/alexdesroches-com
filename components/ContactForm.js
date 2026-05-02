@@ -20,6 +20,7 @@ const copy = {
     sending: "Envoi en cours...",
     success: "Merci. Votre message a ete envoye.",
     error: "Le message n'a pas pu etre envoye. Veuillez reessayer.",
+    unavailable: "Le formulaire est temporairement indisponible.",
     required: "Tous les champs sont requis.",
   },
   en: {
@@ -31,6 +32,7 @@ const copy = {
     sending: "Sending...",
     success: "Thanks. Your message has been sent.",
     error: "The message could not be sent. Please try again.",
+    unavailable: "The form is temporarily unavailable.",
     required: "All fields are required.",
   },
 };
@@ -82,6 +84,12 @@ function ContactForm({language = "fr"}) {
           language,
         }),
       });
+
+      if (response.status === 503) {
+        setStatus("error");
+        setStatusMessage(labels.unavailable);
+        return;
+      }
 
       if (!response.ok) {
         throw new Error("Contact form request failed.");

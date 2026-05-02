@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "cf:dev": "npx wrangler pages dev out --compatibility-date=2026-05-02",
+    "cf:tail": "npx wrangler pages deployment tail",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "preview": "next start",
     "lint": "eslint ."

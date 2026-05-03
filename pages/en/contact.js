@@ -4,7 +4,6 @@ import ContactLink from "../../components/ContactLink";
 import {myContactLinks} from "../../lib/myContactLinks";
 import {EmailLogo, LinkedinLogo} from "../../components/Logos";
 import ResponsiveImage from "../../components/ResponsiveImage";
-import ContactPixelSignal from "../../components/ContactPixelSignal";
 
 const Contact = () => {
   return (
@@ -34,8 +33,6 @@ const Contact = () => {
               svgIcon={<LinkedinLogo/>}
             />
           </ul>
-
-          <ContactPixelSignal/>
 
         </section>
 

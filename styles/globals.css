@@ -192,27 +192,83 @@ li {
 }
 
 .stylish-shadow-image {
+  --image-aura-blue: rgba(13, 110, 253, 0.22);
+  --image-aura-cyan: rgba(67, 245, 255, 0.16);
+  --image-aura-green: rgba(32, 201, 151, 0.14);
+  --image-aura-sheen: rgba(255, 255, 255, 0.2);
   position: relative;
+  isolation: isolate;
   width: inherit;
 }
 
+.stylish-shadow-image::before,
+.stylish-shadow-image::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: .5rem;
+}
+
+.stylish-shadow-image::before {
+  z-index: 0;
+  inset: -.85rem;
+  background:
+    radial-gradient(circle at 18% 20%, var(--image-aura-cyan), transparent 30%),
+    radial-gradient(circle at 82% 72%, var(--image-aura-blue), transparent 34%),
+    radial-gradient(circle at 48% 112%, var(--image-aura-green), transparent 32%);
+  filter: blur(14px);
+  opacity: .7;
+  transform: scale(.985);
+  animation: imageAuraDrift 12s ease-in-out infinite;
+}
+
+.stylish-shadow-image::after {
+  z-index: 2;
+  inset: .35rem;
+  background:
+    linear-gradient(115deg, transparent 0%, transparent 42%, var(--image-aura-sheen) 50%, transparent 58%, transparent 100%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.18) 0 1px, transparent 1.6px);
+  background-position: -140% 0, 0 0;
+  background-size: 240% 100%, 2.75rem 2.75rem;
+  opacity: .24;
+  mix-blend-mode: screen;
+  -webkit-mask-image: linear-gradient(135deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(135deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
+  animation: imageAuraSheen 10s ease-in-out infinite;
+}
+
 .stylish-shadow-image picture {
+  position: relative;
+  z-index: 1;
+  display: block;
   width: inherit;
 }
 
 .stylish-shadow-image img {
+  position: relative;
+  z-index: 1;
   border-radius: .25rem;
   box-shadow: 100px 100px 100px var(--main-box-shadow-color);
   opacity: 0.89;
-  transition: opacity .5s;
+  transition: opacity .5s, filter .5s;
+}
+
+.stylish-shadow-image:hover::before {
+  opacity: .88;
+  transform: scale(1.01);
+}
+
+.stylish-shadow-image:hover::after {
+  opacity: .34;
 }
 
 .stylish-shadow-image:hover img {
+  filter: saturate(1.04) contrast(1.02);
   opacity: 1;
 }
 
 .stylish-shadow-image--overlay-text {
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   left: 8%;
   top: unset;
@@ -232,6 +288,13 @@ li {
 .stylish-shadow-image:hover .stylish-shadow-image--overlay-text {
   color: var(--light-gray);
   opacity: 1;
+}
+
+html.dark .stylish-shadow-image {
+  --image-aura-blue: rgba(67, 245, 255, 0.2);
+  --image-aura-cyan: rgba(13, 110, 253, 0.22);
+  --image-aura-green: rgba(32, 201, 151, 0.12);
+  --image-aura-sheen: rgba(255, 255, 255, 0.13);
 }
 
 .handwritten-signature-container {
@@ -609,10 +672,43 @@ html.dark .btn-secondary:hover {
   }
 }
 
+@keyframes imageAuraDrift {
+  0%,
+  100% {
+    transform: translate3d(-1%, -.5%, 0) scale(.985);
+  }
+  50% {
+    transform: translate3d(1%, .75%, 0) scale(1.01);
+  }
+}
+
+@keyframes imageAuraSheen {
+  0%,
+  16% {
+    background-position: -140% 0, 0 0;
+  }
+  58%,
+  100% {
+    background-position: 140% 0, 0 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .stylish-shadow-image::before,
+  .stylish-shadow-image::after,
   .hero-skill-orbit,
   .hero-skill-chip {
     animation: none;
+  }
+
+  .stylish-shadow-image::before {
+    opacity: .62;
+    transform: none;
+  }
+
+  .stylish-shadow-image::after {
+    background-position: 58% 0, 0 0;
+    opacity: .18;
   }
 }
 

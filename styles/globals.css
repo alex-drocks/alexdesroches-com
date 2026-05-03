@@ -197,9 +197,9 @@ li {
   --image-aura-green: rgba(32, 201, 151, 0.14);
   --image-aura-sheen: rgba(255, 255, 255, 0.22);
   --image-aura-sheen-soft: rgba(255, 255, 255, 0.07);
-  --image-aura-star-bright: rgba(255, 255, 255, 0.22);
-  --image-aura-star-soft: rgba(255, 255, 255, 0.14);
-  --image-aura-star-faint: rgba(67, 245, 255, 0.1);
+  --image-aura-star-bright: rgba(255, 255, 255, 0.48);
+  --image-aura-star-soft: rgba(67, 245, 255, 0.3);
+  --image-aura-star-faint: rgba(13, 110, 253, 0.22);
   position: relative;
   isolation: isolate;
   width: inherit;
@@ -230,19 +230,24 @@ li {
   z-index: 2;
   inset: .35rem;
   background:
-    radial-gradient(circle at 11% 18%, var(--image-aura-star-soft) 0 .85px, transparent 1.55px),
-    radial-gradient(circle at 19% 64%, var(--image-aura-star-faint) 0 .7px, transparent 1.35px),
-    radial-gradient(circle at 27% 33%, var(--image-aura-star-bright) 0 1.05px, transparent 1.85px),
-    radial-gradient(circle at 35% 78%, var(--image-aura-star-soft) 0 .8px, transparent 1.5px),
-    radial-gradient(circle at 46% 22%, var(--image-aura-star-faint) 0 .65px, transparent 1.25px),
-    radial-gradient(circle at 54% 58%, var(--image-aura-star-soft) 0 .95px, transparent 1.65px),
-    radial-gradient(circle at 63% 37%, var(--image-aura-star-bright) 0 .9px, transparent 1.7px),
-    radial-gradient(circle at 72% 82%, var(--image-aura-star-faint) 0 .75px, transparent 1.45px),
-    radial-gradient(circle at 81% 28%, var(--image-aura-star-soft) 0 .8px, transparent 1.45px),
-    radial-gradient(circle at 88% 68%, var(--image-aura-star-bright) 0 1px, transparent 1.8px),
-    radial-gradient(circle at 94% 46%, var(--image-aura-star-faint) 0 .65px, transparent 1.3px);
-  opacity: .28;
+    radial-gradient(circle at 8% 49%, var(--image-aura-star-faint) 0 .75px, transparent 1.45px),
+    radial-gradient(circle at 11% 18%, var(--image-aura-star-soft) 0 1.05px, transparent 1.9px),
+    radial-gradient(circle at 19% 64%, var(--image-aura-star-faint) 0 .85px, transparent 1.6px),
+    radial-gradient(circle at 27% 33%, var(--image-aura-star-bright) 0 1.25px, transparent 2.1px),
+    radial-gradient(circle at 34% 88%, var(--image-aura-star-faint) 0 .8px, transparent 1.55px),
+    radial-gradient(circle at 35% 78%, var(--image-aura-star-soft) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 46% 22%, var(--image-aura-star-faint) 0 .8px, transparent 1.5px),
+    radial-gradient(circle at 54% 58%, var(--image-aura-star-soft) 0 1.15px, transparent 1.95px),
+    radial-gradient(circle at 63% 37%, var(--image-aura-star-bright) 0 1.1px, transparent 1.95px),
+    radial-gradient(circle at 69% 14%, var(--image-aura-star-soft) 0 .95px, transparent 1.75px),
+    radial-gradient(circle at 72% 82%, var(--image-aura-star-faint) 0 .9px, transparent 1.7px),
+    radial-gradient(circle at 78% 53%, var(--image-aura-star-faint) 0 .75px, transparent 1.45px),
+    radial-gradient(circle at 81% 28%, var(--image-aura-star-soft) 0 1px, transparent 1.7px),
+    radial-gradient(circle at 88% 68%, var(--image-aura-star-bright) 0 1.2px, transparent 2.05px),
+    radial-gradient(circle at 94% 46%, var(--image-aura-star-faint) 0 .8px, transparent 1.55px);
+  opacity: .46;
   mix-blend-mode: screen;
+  filter: drop-shadow(0 0 3px rgba(67, 245, 255, 0.22));
   -webkit-mask-image: linear-gradient(135deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
   mask-image: linear-gradient(135deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
   animation: imageAuraStars 14s ease-in-out infinite;
@@ -273,7 +278,7 @@ li {
   );
   background-size: 42rem 42rem;
   mix-blend-mode: screen;
-  opacity: .25;
+  opacity: .29;
   -webkit-mask-image: linear-gradient(135deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
   mask-image: linear-gradient(135deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
   animation: imageAuraSheen 12s linear infinite;
@@ -299,8 +304,9 @@ li {
   top: unset;
   bottom: 5%;
   transform: none;
-  color: var(--light-gray);
-  opacity: 0.9;
+  color: var(--very-light-gray);
+  opacity: 0.92;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
 }
 
 .stylish-shadow-image--overlay-text--angled {
@@ -311,7 +317,7 @@ li {
 }
 
 .stylish-shadow-image:hover .stylish-shadow-image--overlay-text {
-  color: var(--light-gray);
+  color: var(--very-light-gray);
   opacity: 1;
 }
 
@@ -321,9 +327,9 @@ html.dark .stylish-shadow-image {
   --image-aura-green: rgba(32, 201, 151, 0.12);
   --image-aura-sheen: rgba(255, 255, 255, 0.145);
   --image-aura-sheen-soft: rgba(255, 255, 255, 0.055);
-  --image-aura-star-bright: rgba(255, 255, 255, 0.18);
-  --image-aura-star-soft: rgba(67, 245, 255, 0.12);
-  --image-aura-star-faint: rgba(255, 255, 255, 0.08);
+  --image-aura-star-bright: rgba(255, 255, 255, 0.36);
+  --image-aura-star-soft: rgba(67, 245, 255, 0.26);
+  --image-aura-star-faint: rgba(255, 255, 255, 0.18);
 }
 
 .handwritten-signature-container {
@@ -714,13 +720,13 @@ html.dark .btn-secondary:hover {
 @keyframes imageAuraStars {
   0%,
   100% {
-    opacity: .24;
+    opacity: .4;
   }
   45% {
-    opacity: .3;
+    opacity: .5;
   }
   72% {
-    opacity: .27;
+    opacity: .45;
   }
 }
 
@@ -748,12 +754,12 @@ html.dark .btn-secondary:hover {
   }
 
   .stylish-shadow-image::after {
-    opacity: .22;
+    opacity: .36;
   }
 
   .stylish-shadow-image picture::after {
     background-position: 21rem 0;
-    opacity: .2;
+    opacity: .23;
   }
 }
 

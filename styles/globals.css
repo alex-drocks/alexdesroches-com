@@ -195,7 +195,7 @@ li {
   --image-aura-blue: rgba(13, 110, 253, 0.22);
   --image-aura-cyan: rgba(67, 245, 255, 0.16);
   --image-aura-green: rgba(32, 201, 151, 0.14);
-  --image-aura-sheen: rgba(255, 255, 255, 0.2);
+  --image-aura-sheen: rgba(255, 255, 255, 0.22);
   position: relative;
   isolation: isolate;
   width: inherit;
@@ -227,14 +227,14 @@ li {
   inset: .35rem;
   background:
     linear-gradient(115deg, transparent 0%, transparent 42%, var(--image-aura-sheen) 50%, transparent 58%, transparent 100%),
-    radial-gradient(circle, rgba(255, 255, 255, 0.18) 0 1px, transparent 1.6px);
+    radial-gradient(circle, rgba(255, 255, 255, 0.2) 0 1.05px, transparent 1.7px);
   background-position: -140% 0, 0 0;
   background-size: 240% 100%, 2.75rem 2.75rem;
-  opacity: .24;
+  opacity: .27;
   mix-blend-mode: screen;
   -webkit-mask-image: linear-gradient(135deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
   mask-image: linear-gradient(135deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
-  animation: imageAuraSheen 10s ease-in-out infinite;
+  animation: imageAuraSheen 9s ease-in-out infinite;
 }
 
 .stylish-shadow-image picture {
@@ -250,20 +250,10 @@ li {
   border-radius: .25rem;
   box-shadow: 100px 100px 100px var(--main-box-shadow-color);
   opacity: 0.89;
-  transition: opacity .5s, filter .5s;
-}
-
-.stylish-shadow-image:hover::before {
-  opacity: .88;
-  transform: scale(1.01);
-}
-
-.stylish-shadow-image:hover::after {
-  opacity: .34;
+  transition: opacity .5s;
 }
 
 .stylish-shadow-image:hover img {
-  filter: saturate(1.04) contrast(1.02);
   opacity: 1;
 }
 
@@ -294,7 +284,7 @@ html.dark .stylish-shadow-image {
   --image-aura-blue: rgba(67, 245, 255, 0.2);
   --image-aura-cyan: rgba(13, 110, 253, 0.22);
   --image-aura-green: rgba(32, 201, 151, 0.12);
-  --image-aura-sheen: rgba(255, 255, 255, 0.13);
+  --image-aura-sheen: rgba(255, 255, 255, 0.145);
 }
 
 .handwritten-signature-container {
@@ -708,7 +698,7 @@ html.dark .btn-secondary:hover {
 
   .stylish-shadow-image::after {
     background-position: 58% 0, 0 0;
-    opacity: .18;
+    opacity: .2;
   }
 }
 

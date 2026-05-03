@@ -61,6 +61,7 @@ const About = () => {
               renderedHeight={752}
               desktopWidth={1000}
               mobileWidth={501}
+              mobilePath="/images/about/about-w501"
               className={styles.stylishImage}
             />
           </div>

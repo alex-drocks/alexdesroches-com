@@ -110,7 +110,7 @@ export default function Programmation() {
               </li>
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/AI_agent">
-                  Agents IA
+                  AI Agents
                 </ExternalLink>
               </li>
             </ul>

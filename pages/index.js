@@ -82,6 +82,7 @@ export default function Index() {
               renderedHeight={92}
               desktopWidth={276}
               mobileWidth={184}
+              fallbackExtension="png"
               className="handwritten-signature"
             />
           </div>

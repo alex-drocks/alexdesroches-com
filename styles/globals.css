@@ -245,7 +245,7 @@ li {
     radial-gradient(circle at 81% 28%, var(--image-aura-star-soft) 0 1px, transparent 1.7px),
     radial-gradient(circle at 88% 68%, var(--image-aura-star-bright) 0 1.2px, transparent 2.05px),
     radial-gradient(circle at 94% 46%, var(--image-aura-star-faint) 0 .8px, transparent 1.55px);
-  opacity: .46;
+  opacity: .55;
   mix-blend-mode: normal;
   filter: drop-shadow(0 0 3px rgba(67, 245, 255, 0.22));
   -webkit-mask-image: linear-gradient(135deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
@@ -278,7 +278,7 @@ li {
   );
   background-size: 42rem 42rem;
   mix-blend-mode: screen;
-  opacity: .35;
+  opacity: .42;
   -webkit-mask-image: linear-gradient(135deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
   mask-image: linear-gradient(135deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
   animation: imageAuraSheen 12s linear infinite;
@@ -306,6 +306,12 @@ li {
   transform: none;
   color: var(--light-gray);
   opacity: 0.9;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 .stylish-shadow-image--overlay-text--angled {
@@ -313,6 +319,10 @@ li {
   bottom: auto;
   left: 40%;
   transform: rotateZ(10deg);
+}
+
+.stylish-shadow-image--overlay-text--lifted {
+  bottom: 22%;
 }
 
 .stylish-shadow-image:hover .stylish-shadow-image--overlay-text {
@@ -719,13 +729,13 @@ html.dark .btn-secondary:hover {
 @keyframes imageAuraStars {
   0%,
   100% {
-    opacity: .4;
+    opacity: .48;
   }
   45% {
-    opacity: .5;
+    opacity: .6;
   }
   72% {
-    opacity: .45;
+    opacity: .54;
   }
 }
 
@@ -753,12 +763,12 @@ html.dark .btn-secondary:hover {
   }
 
   .stylish-shadow-image::after {
-    opacity: .36;
+    opacity: .43;
   }
 
   .stylish-shadow-image picture::after {
     background-position: 21rem 0;
-    opacity: .28;
+    opacity: .34;
   }
 }
 

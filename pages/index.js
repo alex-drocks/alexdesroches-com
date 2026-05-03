@@ -6,7 +6,7 @@ import HeroSkillShowcase from "../components/HeroSkillShowcase";
 export default function Index() {
   return (
     <PageTemplate
-      pageTitle={"Développeur web pigiste au Québec | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
+      pageTitle={"Développeur web freelance au Québec | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
       pageDescription="Développeur web front-end au Québec. Création de sites rapides, accessibles et performants avec React, Next.js et JavaScript."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}
@@ -14,7 +14,7 @@ export default function Index() {
       <section className="hero">
         <div className="max-content-width display-flex">
           <div className="max-text-width">
-            <span className="hero-badge">Programmeur pigiste</span>
+            <span className="hero-badge">Programmeur freelance</span>
             <h1 className="hero-title">
               <span>Alexandre</span>{" "}
               <span>Desroches</span>
@@ -47,9 +47,9 @@ export default function Index() {
 
       <div className="max-content-width display-flex">
         <div className="max-text-width">
-          <h2>Programmeur pigiste</h2>
+          <h2>Programmeur freelance</h2>
           <p>
-            Je m'appelle <strong>Alex Desroches</strong>. Je suis développeur autonome et j'offre des{" "}
+            Je m'appelle <strong>Alex Desroches</strong>. Je suis développeur freelance (pigiste) et j'offre des{" "}
             <strong>services de programmation de logiciels, d'applications web et de sites web</strong> selon vos besoins.
           </p>
           <Link href="/a-propos" className="text-link">En savoir plus sur moi&nbsp;&rarr;</Link>

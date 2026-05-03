@@ -107,7 +107,7 @@ export default function PageTemplate({
     : process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION;
   const socialImageAlt = isEnglish
     ? "Alex Desroches, freelance web developer"
-    : "Alex Desroches, développeur web pigiste";
+    : "Alex Desroches, développeur web freelance";
 
   const frenchCanonicalURL = isEnglish ? pageAlternateURL : pageCanonicalURL;
   const englishCanonicalURL = isEnglish ? pageCanonicalURL : pageAlternateURL;

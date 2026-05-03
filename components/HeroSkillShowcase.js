@@ -1,7 +1,6 @@
 import {useEffect, useState} from "react";
-import {useIsEnglish} from "../hooks/useIsEnglish";
 
-const englishSkillWords = [
+const skillWords = [
   "JavaScript",
   "HTML",
   "CSS",
@@ -30,36 +29,7 @@ const englishSkillWords = [
   "Kubernetes",
 ];
 
-const frenchSkillWords = [
-  "JavaScript",
-  "HTML",
-  "CSS",
-  "Node.js",
-  "Bun",
-  "React.js",
-  "Next.js",
-  "Bittensor",
-  "Python",
-  "Angular",
-  "Electron.js",
-  "Firebase",
-  "AutoHotkey",
-  "Git",
-  "GitHub",
-  "GitLab",
-  "Linux",
-  "Agents IA",
-  "PHP",
-  "Java",
-  "C#",
-  "SQL",
-  "WordPress",
-  "WooCommerce",
-  "Astro.js",
-  "Kubernetes",
-];
-
-const englishInitialSkills = [
+const initialSkills = [
   "JavaScript",
   "React.js",
   "Next.js",
@@ -69,21 +39,6 @@ const englishInitialSkills = [
   "Firebase",
   "Electron.js",
   "AI Agents",
-  "Python",
-  "GitHub",
-  "Bun",
-];
-
-const frenchInitialSkills = [
-  "JavaScript",
-  "React.js",
-  "Next.js",
-  "Node.js",
-  "CSS",
-  "HTML",
-  "Firebase",
-  "Electron.js",
-  "Agents IA",
   "Python",
   "GitHub",
   "Bun",
@@ -122,9 +77,6 @@ function getRandomSkills(words, count) {
 }
 
 export default function HeroSkillShowcase({coreLabels = defaultCoreLabels}) {
-  const isEnglish = useIsEnglish();
-  const skillWords = isEnglish ? englishSkillWords : frenchSkillWords;
-  const initialSkills = isEnglish ? englishInitialSkills : frenchInitialSkills;
   const [visibleSkills, setVisibleSkills] = useState(initialSkills);
 
   useEffect(() => {
@@ -141,7 +93,7 @@ export default function HeroSkillShowcase({coreLabels = defaultCoreLabels}) {
     return () => {
       window.clearInterval(intervalId);
     };
-  }, [skillWords]);
+  }, []);
 
   return (
     <div className="hero-skill-showcase" aria-hidden="true">

@@ -26,7 +26,7 @@ export default function Index() {
             </p>
             <div className="hero-ctas">
               <Link href="/en/programming" className="btn btn-primary">
-                See my services →
+                See my services&nbsp;&rarr;
               </Link>
               <Link href="/en/contact" className="btn btn-secondary">
                 Get in touch
@@ -46,7 +46,7 @@ export default function Index() {
             I am Alex Desroches, a dedicated web developer offering high-quality software and website programming
             services. I thrive on coding and delivering outstanding results.
           </p>
-          <Link href="/en/about" className="text-link">Learn more about me →</Link>
+          <Link href="/en/about" className="text-link">Learn more about me&nbsp;&rarr;</Link>
 
           <h3>I specialize in front-end web development.</h3>
           <p>
@@ -58,7 +58,7 @@ export default function Index() {
             WooCommerce, Firebase, and more.
           </p>
           <Link href="/en/programming" className="text-link">
-            My portfolio and programming services →
+            My portfolio and programming services&nbsp;&rarr;
           </Link>
 
           <h3>Let's work together!</h3>
@@ -67,7 +67,7 @@ export default function Index() {
             strengths and collaborate with your team.
           </p>
           <div className="handwritten-signature-container display-flex">
-            <Link href="/en/contact" className="text-link">Contact me →</Link>
+            <Link href="/en/contact" className="text-link">Contact me&nbsp;&rarr;</Link>
             <ResponsiveImage
               path="/images/signature/signature"
               alt="Alex Desroches signature"

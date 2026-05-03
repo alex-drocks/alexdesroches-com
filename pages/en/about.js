@@ -45,10 +45,10 @@ const About = () => {
           <p>
             This is who I am in a nutshell!
           </p>
-          <Link href="/en/programming" className="text-link">View my portfolio →</Link>
+          <Link href="/en/programming" className="text-link">View my portfolio&nbsp;&rarr;</Link>
           <br/>
           <br/>
-          <Link href="/en/contact" className="text-link">Contact me →</Link>
+          <Link href="/en/contact" className="text-link">Contact me&nbsp;&rarr;</Link>
         </section>
 
         <section className="max-text-width">

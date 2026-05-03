@@ -19,18 +19,18 @@ export default function About() {
             imagination.
           </p>
           <p>
-            J'ai la trentaine et j'habite au Québec, au Canada, avec ma chère épouse Cathy et nos deux enfants !
+            J'ai la trentaine et j'habite au Québec, au Canada, avec ma chère épouse Cathy et nos deux enfants&nbsp;!
           </p>
           <p>
             <strong>Depuis mon enfance, j'aime tout ce qui touche à la technologie, à la créativité et à la
             réflexion.</strong>{" "}
-            Petite anecdote : très jeune, j'ai reçu mon premier piano électronique pour Noël et j'ai joué jusqu'à ce
-            que les piles soient épuisées ! Cette anecdote illustre encore bien ma personnalité d'aujourd'hui. Quand je
+            Petite anecdote&nbsp;: très jeune, j'ai reçu mon premier piano électronique pour Noël et j'ai joué jusqu'à ce
+            que les piles soient épuisées&nbsp;! Cette anecdote illustre encore bien ma personnalité d'aujourd'hui. Quand je
             découvre quelque chose que j'aime, comme la musique ou la programmation, je m'y investis à fond.
           </p>
           <p>
             <strong>
-              J'ai une personnalité de travailleur : persévérant, passionné et orienté vers l'excellence.
+              J'ai une personnalité de travailleur&nbsp;: persévérant, passionné et orienté vers l'excellence.
             </strong>{" "}
             Je n'aime pas l'échec et je fais de mon mieux pour relever chaque défi avec excellence. Quand j'échoue, je le
             prends difficilement, mais ça me propulse vers d'autres niveaux de persévérance. Ce que j'aime encore moins

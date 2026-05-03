@@ -16,7 +16,7 @@ export default function Programmation() {
         <div className="max-text-width">
           <h1>Services de programmation et développement web</h1>
 
-          <h2>Ce que je fais :</h2>
+          <h2>Ce que je fais&nbsp;:</h2>
           <p>
             Je suis un développeur expérimenté en technologies web, en logiciels de bureau pour Mac et Windows ainsi
             qu'en automatisation de tâches sous Windows. Mon domaine d'expertise est donc assez vaste. Je peux maintenir
@@ -28,7 +28,7 @@ export default function Programmation() {
             projets existants, seul ou en collaboration avec votre équipe de développeurs.
           </p>
 
-          <h2>Langages et technologies maîtrisés :</h2>
+          <h2>Langages et technologies maîtrisés&nbsp;:</h2>
           <div className={styles.techListsContainer}>
             <ul>
               <li>
@@ -116,7 +116,7 @@ export default function Programmation() {
             </ul>
           </div>
 
-          <h2>Expérience complémentaire :</h2>
+          <h2>Expérience complémentaire&nbsp;:</h2>
           <div className={styles.techListsContainer}>
             <ul>
               <li>
@@ -219,7 +219,7 @@ export default function Programmation() {
          Web Hosting Canada, GitHub."
 
           features="Site web de présentation adaptatif avec React.js, optimisé pour le SEO et la performance, avec des résultats
-        qui frôlent 100 %. Plateforme de commerce en ligne avec WordPress et WooCommerce, ainsi qu'une option de dons en ligne
+        qui frôlent 100 %. Plateforme de commerce en ligne avec WordPress et WooCommerce, ainsi qu'une option de dons en ligne
         avec Stripe. Le site se classe organiquement sur la première page des résultats Google, sans publicité payante,
         pour le terme 'logiciel comptable gratuit Québec'."
 
@@ -232,7 +232,7 @@ export default function Programmation() {
 
           description="Mon plus gros projet jusqu'à présent est ce logiciel de comptabilité pour ordinateurs Windows et Mac.
         Je l'ai créé avec les travailleurs autonomes du Québec en tête. Le but est la simplicité d'utilisation et l'efficacité.
-        Ce logiciel est ma plus grande fierté en programmation. À mon avis, il mérite d'être découvert et il est 100 % gratuit."
+        Ce logiciel est ma plus grande fierté en programmation. À mon avis, il mérite d'être découvert et il est 100 % gratuit."
 
           imgSrc="/images/programmation/finance-d/software/finance-d_desktop_software"
 
@@ -311,7 +311,7 @@ export default function Programmation() {
       </section>
       <section className={styles.endingSection}>
         <p>
-          Voilà !
+          Voilà&nbsp;!
         </p>
         <p>
           J'ai fait plusieurs autres projets, mais ceux-ci étaient les plus pertinents pour démontrer ce que je maîtrise

@@ -21,7 +21,7 @@ export default function Contact() {
           <h1>Contactez Alex Desroches</h1>
           <p>
             N'hésitez pas à me contacter. Ce sera un plaisir de discuter de votre projet.
-            Je suis joignable par l'un des moyens ci-dessous :
+            Je suis joignable par l'un des moyens ci-dessous&nbsp;:
           </p>
 
           <ul className={styles.contactLinks}>

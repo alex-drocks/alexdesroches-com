@@ -15,7 +15,7 @@ export default function Custom404() {
           <p>
             La page demandée n'existe pas ou a été déplacée.
           </p>
-          <Link href="/" className="text-link">Retour à l'accueil →</Link>
+          <Link href="/" className="text-link">Retour à l'accueil&nbsp;&rarr;</Link>
         </section>
       </div>
     </PageTemplate>

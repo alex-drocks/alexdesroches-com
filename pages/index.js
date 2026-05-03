@@ -26,7 +26,7 @@ export default function Index() {
             </p>
             <div className="hero-ctas">
               <Link href="/programmation" className="btn btn-primary">
-                Voir mes services →
+                Voir mes services&nbsp;&rarr;
               </Link>
               <Link href="/contact" className="btn btn-secondary">
                 Me contacter
@@ -52,9 +52,9 @@ export default function Index() {
             Je m'appelle Alex Desroches. Je suis développeur autonome et j'offre des services de programmation de
             logiciels, d'applications web et de sites web selon vos besoins.
           </p>
-          <Link href="/a-propos" className="text-link">En savoir plus sur moi →</Link>
+          <Link href="/a-propos" className="text-link">En savoir plus sur moi&nbsp;&rarr;</Link>
 
-          <h3>Mon expertise : le développement web front-end.</h3>
+          <h3>Mon expertise&nbsp;: le développement web front-end.</h3>
           <p>
             Mes forces en programmation reposent principalement sur les langages du web, c'est-à-dire HTML,
             CSS et <strong>JavaScript</strong>, dont dépendent les sites web et les applications web.
@@ -62,19 +62,19 @@ export default function Index() {
           <p>
             Dans ce vaste univers, je maîtrise des technologies modernes en forte demande
             telles
-            que : <strong>React.js</strong>, Next.js, Node.js, Electron.js, <strong>Angular</strong>, Squarespace,
+            que&nbsp;: <strong>React.js</strong>, Next.js, Node.js, Electron.js, <strong>Angular</strong>, Squarespace,
             WordPress, WooCommerce et Firebase.
           </p>
           <Link href="/programmation" className="text-link">
-            Mes services de programmation →
+            Mes services de programmation&nbsp;&rarr;
           </Link>
 
-          <h3>Faisons équipe !</h3>
+          <h3>Faisons équipe&nbsp;!</h3>
           <p>
             Confiez-moi un nouveau projet ou joignons nos forces en collaborant avec votre équipe.
           </p>
           <div className="handwritten-signature-container display-flex">
-            <Link href="/contact" className="text-link">Contactez-moi →</Link>
+            <Link href="/contact" className="text-link">Contactez-moi&nbsp;&rarr;</Link>
             <ResponsiveImage
               path="/images/signature/signature"
               alt="Signature d'Alex Desroches"

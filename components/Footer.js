@@ -87,7 +87,7 @@ export default function Footer() {
 
       <div>
         <pre className="entreprise">9423-7518 Québec Inc.</pre>
-        <pre className="copyright">© <span>{new Date().getFullYear()}</span> Alex Desroches</pre>
+        <pre className="copyright">©&nbsp;<span>{new Date().getFullYear()}</span>&nbsp;Alex&nbsp;Desroches</pre>
       </div>
 
 

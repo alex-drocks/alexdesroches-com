@@ -9,7 +9,7 @@ function ContactLink({label, url, svgIcon}) {
         url={url}
       >
         {svgIcon}
-        {label} →
+        {label}&nbsp;&rarr;
       </ExternalLink>
     </li>
   )

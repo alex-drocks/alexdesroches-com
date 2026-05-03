@@ -16,17 +16,8 @@ const skillWords = [
   "AutoHotkey",
   "Git",
   "GitHub",
-  "GitLab",
   "Linux",
   "AI Agents",
-  "PHP",
-  "Java",
-  "C#",
-  "SQL",
-  "WordPress",
-  "WooCommerce",
-  "Astro.js",
-  "Kubernetes",
 ];
 
 const initialSkills = [

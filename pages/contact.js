@@ -4,6 +4,7 @@ import {EmailLogo, LinkedinLogo} from "../components/Logos";
 
 import {myContactLinks} from "../lib/myContactLinks";
 import ContactLink from "../components/ContactLink";
+import ContactPixelSignal from "../components/ContactPixelSignal";
 
 import styles from "../styles/contact.module.css";
 
@@ -36,6 +37,13 @@ export default function Contact() {
               svgIcon={<LinkedinLogo/>}
             />
           </ul>
+
+          <ContactPixelSignal
+            kicker="Canal créatif"
+            title="Signal disponible"
+            description="Des pixels en orbite pour transformer une première idée en message clair."
+            status="Transmission ouverte"
+          />
 
         </section>
 

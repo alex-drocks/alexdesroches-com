@@ -38,12 +38,7 @@ export default function Contact() {
             />
           </ul>
 
-          <ContactPixelSignal
-            kicker="Canal créatif"
-            title="Signal disponible"
-            description="Des pixels en orbite pour transformer une première idée en message clair."
-            status="Transmission ouverte"
-          />
+          <ContactPixelSignal/>
 
         </section>
 

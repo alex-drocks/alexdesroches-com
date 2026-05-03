@@ -26,46 +26,40 @@
 
 .pixelSignal {
   position: relative;
-  isolation: isolate;
   overflow: hidden;
-  min-height: 14rem;
-  margin-top: 2.5rem;
-  border: 1px solid rgba(13, 110, 253, 0.22);
-  border-radius: calc(var(--button-radius) * 2);
+  width: min(100%, 22rem);
+  height: 4.75rem;
+  margin-top: 1.75rem;
+  opacity: 0.72;
   background:
-    radial-gradient(circle at 18% 22%, rgba(67, 245, 255, 0.18), transparent 32%),
-    radial-gradient(circle at 82% 0%, rgba(139, 92, 246, 0.16), transparent 28%),
-    linear-gradient(135deg, rgba(13, 110, 253, 0.09), rgba(255, 255, 255, 0.74));
-  box-shadow: 0 24px 70px rgba(13, 110, 253, 0.14);
+    linear-gradient(90deg, transparent, rgba(13, 110, 253, 0.08), transparent),
+    radial-gradient(circle at 20% 50%, rgba(67, 245, 255, 0.12), transparent 34%);
+  mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent);
 }
 
 .pixelSignal::before,
 .pixelSignal::after {
   content: "";
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
   pointer-events: none;
 }
 
 .pixelSignal::before {
-  z-index: 1;
-  background: linear-gradient(180deg, transparent, rgba(67, 245, 255, 0.16), transparent);
-  opacity: 0.55;
-  transform: translateY(-100%);
-  animation: pixelSignalScan 5.8s linear infinite;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(13, 110, 253, 0.34), rgba(67, 245, 255, 0.18), transparent);
 }
 
 .pixelSignal::after {
-  z-index: 2;
-  border: 1px solid rgba(255, 255, 255, 0.38);
-  border-radius: inherit;
-  box-shadow: inset 0 0 40px rgba(13, 110, 253, 0.08);
-}
-
-.pixelSignalCanvasHost {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  top: calc(50% - 0.25rem);
+  left: 1.75rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: rgba(32, 201, 151, 0.65);
+  box-shadow: 0 0 18px rgba(32, 201, 151, 0.42);
 }
 
 .pixelSignalCanvas {
@@ -74,97 +68,23 @@
   height: 100%;
 }
 
-.pixelSignalContent {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 14rem;
-  padding: 1.35rem;
-  color: var(--main-foreground-color);
-}
-
-.pixelSignalKicker,
-.pixelSignalStatus {
-  font-family: var(--ff-monospace);
-  font-size: 0.72rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.pixelSignalKicker {
-  margin-bottom: 0.75rem;
-  color: var(--blue);
-}
-
-.pixelSignalContent strong {
-  max-width: 12rem;
-  font-family: var(--ff-monospace);
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
-  line-height: 1.05;
-}
-
-.pixelSignalContent p {
-  max-width: 21rem;
-  margin: 0.75rem 0 1rem 0;
-  color: var(--secondary-text-color);
-}
-
-.pixelSignalStatus {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  width: max-content;
-  color: #087f5b;
-}
-
-.pixelSignalStatus::before {
-  content: "";
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background: #20c997;
-  box-shadow: 0 0 18px rgba(32, 201, 151, 0.85);
-}
-
 :global(html.dark) .pixelSignal {
+  opacity: 0.82;
   background:
-    radial-gradient(circle at 18% 22%, rgba(67, 245, 255, 0.14), transparent 32%),
-    radial-gradient(circle at 82% 0%, rgba(139, 92, 246, 0.22), transparent 28%),
-    linear-gradient(135deg, rgba(13, 110, 253, 0.16), rgba(31, 32, 40, 0.78));
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
-}
-
-:global(html.dark) .pixelSignal::after {
-  border-color: rgba(255, 255, 255, 0.12);
-}
-
-:global(html.dark) .pixelSignalStatus {
-  color: #63e6be;
-}
-
-@keyframes pixelSignalScan {
-  to {
-    transform: translateY(100%);
-  }
+    linear-gradient(90deg, transparent, rgba(67, 245, 255, 0.08), transparent),
+    radial-gradient(circle at 20% 50%, rgba(13, 110, 253, 0.18), transparent 34%);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pixelSignal::before {
-    animation: none;
-    opacity: 0.18;
-    transform: none;
+  .pixelSignal {
+    opacity: 0.42;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .pixelSignal,
-  .pixelSignalContent {
-    min-height: 12.5rem;
-  }
-
-  .pixelSignalContent {
-    padding: 1rem;
+  .pixelSignal {
+    width: 100%;
+    height: 3.75rem;
+    margin-top: 1.25rem;
   }
 }

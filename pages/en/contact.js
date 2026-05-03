@@ -35,12 +35,7 @@ const Contact = () => {
             />
           </ul>
 
-          <ContactPixelSignal
-            kicker="Creative channel"
-            title="Signal online"
-            description="Orbiting pixels turn an early idea into a clear message."
-            status="Transmission open"
-          />
+          <ContactPixelSignal/>
 
         </section>
 

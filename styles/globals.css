@@ -196,6 +196,10 @@ li {
   --image-aura-cyan: rgba(67, 245, 255, 0.16);
   --image-aura-green: rgba(32, 201, 151, 0.14);
   --image-aura-sheen: rgba(255, 255, 255, 0.22);
+  --image-aura-sheen-soft: rgba(255, 255, 255, 0.07);
+  --image-aura-star-bright: rgba(255, 255, 255, 0.22);
+  --image-aura-star-soft: rgba(255, 255, 255, 0.14);
+  --image-aura-star-faint: rgba(67, 245, 255, 0.1);
   position: relative;
   isolation: isolate;
   width: inherit;
@@ -226,15 +230,22 @@ li {
   z-index: 2;
   inset: .35rem;
   background:
-    linear-gradient(115deg, transparent 0%, transparent 42%, var(--image-aura-sheen) 50%, transparent 58%, transparent 100%),
-    radial-gradient(circle, rgba(255, 255, 255, 0.2) 0 1.05px, transparent 1.7px);
-  background-position: -140% 0, 0 0;
-  background-size: 240% 100%, 2.75rem 2.75rem;
-  opacity: .27;
+    radial-gradient(circle at 11% 18%, var(--image-aura-star-soft) 0 .85px, transparent 1.55px),
+    radial-gradient(circle at 19% 64%, var(--image-aura-star-faint) 0 .7px, transparent 1.35px),
+    radial-gradient(circle at 27% 33%, var(--image-aura-star-bright) 0 1.05px, transparent 1.85px),
+    radial-gradient(circle at 35% 78%, var(--image-aura-star-soft) 0 .8px, transparent 1.5px),
+    radial-gradient(circle at 46% 22%, var(--image-aura-star-faint) 0 .65px, transparent 1.25px),
+    radial-gradient(circle at 54% 58%, var(--image-aura-star-soft) 0 .95px, transparent 1.65px),
+    radial-gradient(circle at 63% 37%, var(--image-aura-star-bright) 0 .9px, transparent 1.7px),
+    radial-gradient(circle at 72% 82%, var(--image-aura-star-faint) 0 .75px, transparent 1.45px),
+    radial-gradient(circle at 81% 28%, var(--image-aura-star-soft) 0 .8px, transparent 1.45px),
+    radial-gradient(circle at 88% 68%, var(--image-aura-star-bright) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 94% 46%, var(--image-aura-star-faint) 0 .65px, transparent 1.3px);
+  opacity: .28;
   mix-blend-mode: screen;
   -webkit-mask-image: linear-gradient(135deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
   mask-image: linear-gradient(135deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
-  animation: imageAuraSheen 9s ease-in-out infinite;
+  animation: imageAuraStars 14s ease-in-out infinite;
 }
 
 .stylish-shadow-image picture {
@@ -242,6 +253,30 @@ li {
   z-index: 1;
   display: block;
   width: inherit;
+}
+
+.stylish-shadow-image picture::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+  border-radius: .25rem;
+  background: repeating-linear-gradient(
+    115deg,
+    transparent 0 15rem,
+    var(--image-aura-sheen-soft) 18rem,
+    var(--image-aura-sheen) 20.5rem,
+    var(--image-aura-sheen-soft) 23rem,
+    transparent 27rem,
+    transparent 42rem
+  );
+  background-size: 42rem 42rem;
+  mix-blend-mode: screen;
+  opacity: .25;
+  -webkit-mask-image: linear-gradient(135deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+  mask-image: linear-gradient(135deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+  animation: imageAuraSheen 12s linear infinite;
 }
 
 .stylish-shadow-image img {
@@ -285,6 +320,10 @@ html.dark .stylish-shadow-image {
   --image-aura-cyan: rgba(13, 110, 253, 0.22);
   --image-aura-green: rgba(32, 201, 151, 0.12);
   --image-aura-sheen: rgba(255, 255, 255, 0.145);
+  --image-aura-sheen-soft: rgba(255, 255, 255, 0.055);
+  --image-aura-star-bright: rgba(255, 255, 255, 0.18);
+  --image-aura-star-soft: rgba(67, 245, 255, 0.12);
+  --image-aura-star-faint: rgba(255, 255, 255, 0.08);
 }
 
 .handwritten-signature-container {
@@ -672,20 +711,32 @@ html.dark .btn-secondary:hover {
   }
 }
 
-@keyframes imageAuraSheen {
+@keyframes imageAuraStars {
   0%,
-  16% {
-    background-position: -140% 0, 0 0;
-  }
-  58%,
   100% {
-    background-position: 140% 0, 0 0;
+    opacity: .24;
+  }
+  45% {
+    opacity: .3;
+  }
+  72% {
+    opacity: .27;
+  }
+}
+
+@keyframes imageAuraSheen {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 42rem 0;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .stylish-shadow-image::before,
   .stylish-shadow-image::after,
+  .stylish-shadow-image picture::after,
   .hero-skill-orbit,
   .hero-skill-chip {
     animation: none;
@@ -697,7 +748,11 @@ html.dark .btn-secondary:hover {
   }
 
   .stylish-shadow-image::after {
-    background-position: 58% 0, 0 0;
+    opacity: .22;
+  }
+
+  .stylish-shadow-image picture::after {
+    background-position: 21rem 0;
     opacity: .2;
   }
 }

@@ -6,22 +6,26 @@ export default function ResponsiveImage(
     renderedHeight,
     desktopWidth,
     mobileWidth,
-    className
+    className,
+    mobilePath,
+    fallbackExtension = "jpg",
   }
 ) {
+  const resolvedMobilePath = mobilePath || `${path}-${mobileWidth}w`;
+
   return (
     <picture>
       <source
-        srcSet={`${path}.avif ${desktopWidth}w, ${path}-${mobileWidth}w.avif ${mobileWidth}w`}
+        srcSet={`${path}.avif ${desktopWidth}w, ${resolvedMobilePath}.avif ${mobileWidth}w`}
         type="image/avif"
       />
       <source
-        srcSet={`${path}.webp ${desktopWidth}w, ${path}-${mobileWidth}w.webp ${mobileWidth}w`}
+        srcSet={`${path}.webp ${desktopWidth}w, ${resolvedMobilePath}.webp ${mobileWidth}w`}
         type="image/webp"
       />
       <img
-        srcSet={`${path}.jpg ${desktopWidth}w, ${path}-${mobileWidth}w.jpg ${mobileWidth}w`}
-        src={`${path}.jpg`}
+        srcSet={`${path}.${fallbackExtension} ${desktopWidth}w, ${resolvedMobilePath}.${fallbackExtension} ${mobileWidth}w`}
+        src={`${path}.${fallbackExtension}`}
         alt={alt}
         width={renderedWidth}
         height={renderedHeight}

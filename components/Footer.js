@@ -15,13 +15,13 @@ export default function Footer() {
           {
             isEnglish ? (
               <>
-                On demand <strong>
+                On-demand <strong>
                 <InternalLink page="programming">
                   programming services
                 </InternalLink>
               </strong>.
-                Located near Montreal, in Canada.
-                Available for remote work and flexible hours to fit your needs.
+                Located near Montreal, Canada.
+                Available for remote work, with flexible hours when the project needs it.
               </>
             ) : (
               <>
@@ -30,8 +30,8 @@ export default function Footer() {
                     Services de programmation
                   </InternalLink>
                 </strong> à la demande.
-                Programmeur situé près de Montréal. Tarification à l'heure avec
-                facture détaillée à l'appui.
+                Programmeur situé près de Montréal, au Canada.
+                Tarification à l'heure avec facture détaillée à l'appui.
               </>
             )
           }
@@ -54,7 +54,7 @@ export default function Footer() {
                 className="text-link"
                 withArrow={true}
               >
-                {isEnglish ? "My portfolio" : "Mon portfolio"}
+                {isEnglish ? "My portfolio" : "Services et projets"}
               </InternalLink>
             </li>
             <li>
@@ -71,8 +71,18 @@ export default function Footer() {
       </div>
 
       <div className="footer-links--social">
-        <ExternalLink url={myContactLinks.linkedIn}><LinkedinLogo/></ExternalLink>
-        <ExternalLink url={myContactLinks.github}><GithubLogo/></ExternalLink>
+        <ExternalLink
+          url={myContactLinks.linkedIn}
+          ariaLabel={isEnglish ? "Alex Desroches on LinkedIn" : "Alex Desroches sur LinkedIn"}
+        >
+          <LinkedinLogo/>
+        </ExternalLink>
+        <ExternalLink
+          url={myContactLinks.github}
+          ariaLabel={isEnglish ? "Alex Desroches on GitHub" : "Alex Desroches sur GitHub"}
+        >
+          <GithubLogo/>
+        </ExternalLink>
       </div>
 
       <div>

@@ -21,14 +21,14 @@ export default function Header() {
     <div className={`header-container${isMobileMenuOpened ? " is-mobile-menu-open" : ""}`}>
       <header>
         <nav>
-          <h1 className="left-branding">
+          <div className="left-branding">
             <InternalLink
               isActiveLink={true}
               page="index"
             >
               Alex Desroches
             </InternalLink>
-          </h1>
+          </div>
           <ul className="page-links do-not-display-on-mobile">
             <MainNavLinks/>
           </ul>
@@ -58,7 +58,7 @@ function MobileMenu({isMobileMenuOpened}) {
             isActiveLink={true}
             page="index"
           >
-            {isEnglish ? <>Home Page</> : <>Page principale</>}
+            {isEnglish ? <>Home</> : <>Accueil</>}
           </InternalLink>
         </li>
         <MainNavLinks/>
@@ -138,8 +138,8 @@ function MainNavLinks() {
 function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
   const [mounted, setMounted] = useState(false);
   const {theme, setTheme} = useTheme();
-
   const isEnglish = useIsEnglish()
+  const ariaLabel = isEnglish ? "Toggle color theme" : "Activer ou désactiver le thème foncé";
 
   // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
@@ -148,7 +148,7 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
     return (
       <button
         className={"toggle-button " + className}
-        aria-label="Toggle Dark Mode Button"
+        aria-label={ariaLabel}
         aria-hidden="true"
         type="button"
       />
@@ -158,7 +158,7 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
   return (
     <button
       className={"toggle-button " + className}
-      aria-label="Toggle Dark Mode Button"
+      aria-label={ariaLabel}
       type="button"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
@@ -169,7 +169,7 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                     d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
             </svg>
-            {shouldDisplayText && <span>{isEnglish ? <>Dark&nbsp;Theme</> : <>Thème&nbsp;foncé</>}</span>}
+            {shouldDisplayText && <span>{isEnglish ? <>Dark&nbsp;theme</> : <>Thème&nbsp;foncé</>}</span>}
           </div>
         ) : (
           <div>
@@ -177,7 +177,7 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                     d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
             </svg>
-            {shouldDisplayText && <span>{isEnglish ? <>Light&nbsp;Theme</> : <>Thème&nbsp;clair</>}</span>}
+            {shouldDisplayText && <span>{isEnglish ? <>Light&nbsp;theme</> : <>Thème&nbsp;clair</>}</span>}
           </div>
         )
       }
@@ -196,7 +196,7 @@ function ToggleLanguageButton({className = ""}) {
   return (
     <button
       className={`toggle-button language${className ? ` ${className}` : ""}`}
-      aria-label="Toggle Website Language"
+      aria-label={isEnglish ? "View this site in French" : "Afficher le site en anglais"}
       type="button"
       onClick={toggleLang}
     >
@@ -207,6 +207,7 @@ function ToggleLanguageButton({className = ""}) {
 
 
 function ToggleMobileMenuButton({isMobileMenuOpened, setIsMobileMenuOpened}) {
+  const isEnglish = useIsEnglish();
 
   const toggleIsOpen = () => {
     setIsMobileMenuOpened(prevState => !prevState);
@@ -215,7 +216,7 @@ function ToggleMobileMenuButton({isMobileMenuOpened, setIsMobileMenuOpened}) {
   return (
     <button
       className="toggle-mobile-menu-button"
-      aria-label="Toggle Mobile Menu Button"
+      aria-label={isEnglish ? "Toggle mobile menu" : "Ouvrir ou fermer le menu mobile"}
       aria-controls="mobile-menu"
       aria-expanded={isMobileMenuOpened}
       type="button"

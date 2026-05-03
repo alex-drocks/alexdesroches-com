@@ -3,23 +3,22 @@ import styles from "../../styles/contact.module.css";
 import ContactLink from "../../components/ContactLink";
 import {myContactLinks} from "../../lib/myContactLinks";
 import {EmailLogo, LinkedinLogo} from "../../components/Logos";
-import ExternalLink from "../../components/ExternalLink";
 import ResponsiveImage from "../../components/ResponsiveImage";
 
 const Contact = () => {
   return (
     <PageTemplate
-      pageTitle={"Contact | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Alex Desroches's contact info. Email and LinkedIn."
+      pageTitle="Contact Alex Desroches | Web Developer"
+      pageDescription="Contact Alex Desroches to discuss a website, web app or JavaScript project. Reach out by email or LinkedIn."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/contact/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/contact/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">
-          <h2>Contact Alex Desroches</h2>
+          <h1>Contact Alex Desroches</h1>
           <p>
-            Feel free to contact me, it will be a pleasure to discuss about your project.
-            You can reach me via one of the links below:
+            Feel free to contact me. It would be a pleasure to <strong>talk about your project</strong>.
+            You can reach me through one of the links below:
           </p>
 
           <ul className={styles.contactLinks}>
@@ -39,6 +38,7 @@ const Contact = () => {
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
+            <span aria-hidden="true" className="stylish-shadow-image--overlay-text">Art is Communicating</span>
             <ResponsiveImage
               path="/images/celltower/celltower"
               alt="Art is Communicating"

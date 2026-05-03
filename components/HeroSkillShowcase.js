@@ -5,7 +5,7 @@ const skillWords = [
   "HTML",
   "CSS",
   "Node.js",
-  "Bun.js",
+  "Bun",
   "React.js",
   "Next.js",
   "Bittensor",
@@ -16,17 +16,8 @@ const skillWords = [
   "AutoHotkey",
   "Git",
   "GitHub",
-  "GitLab",
   "Linux",
   "AI Agents",
-  "PHP",
-  "Java",
-  "C#",
-  "SQL",
-  "WordPress",
-  "WooCommerce",
-  "Astro.js",
-  "Kubernetes",
 ];
 
 const initialSkills = [
@@ -41,7 +32,7 @@ const initialSkills = [
   "AI Agents",
   "Python",
   "GitHub",
-  "Bun.js",
+  "Bun",
 ];
 
 const defaultCoreLabels = {
@@ -65,8 +56,8 @@ const skillSlots = [
   {id: "upper-inner-east", x: "64%", y: "29%", delay: "-8s", duration: "22s", driftX: "9px", driftY: "11px", tone: "accent"},
 ];
 
-function getRandomSkills(count) {
-  const shuffledSkills = [...skillWords];
+function getRandomSkills(words, count) {
+  const shuffledSkills = [...words];
 
   for (let i = shuffledSkills.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -87,7 +78,7 @@ export default function HeroSkillShowcase({coreLabels = defaultCoreLabels}) {
     }
 
     const intervalId = window.setInterval(() => {
-      setVisibleSkills(getRandomSkills(skillSlots.length));
+      setVisibleSkills(getRandomSkills(skillWords, skillSlots.length));
     }, 5600);
 
     return () => {

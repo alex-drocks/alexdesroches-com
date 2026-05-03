@@ -7,28 +7,27 @@ import Project from "../../components/Project";
 const Programming = () => {
   return (
     <PageTemplate
-      pageTitle={"Programming Services & Portfolio | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Alex Desroches Front-End Web Developer. JavaScript, React, Node, Firebase, HTML, CSS, and more."
+      pageTitle={"Web Development Services | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
+      pageDescription="Web development services and portfolio by Alex Desroches. Websites, web apps, automation and JavaScript tools built with React, Next.js and Node.js."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/programming/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/programmation/"}
     >
       <section className="skills max-content-width display-flex">
         <div className="max-text-width">
-          <h2>Programming Services Portfolio</h2>
+          <h1>Web Development Services and Portfolio</h1>
 
-          <h3>What I do:</h3>
+          <h2>What I do:</h2>
           <p>
-            I am an experienced developer with web technologies, desktop software for Mac and Windows, as well as task
-            automation on Windows. My area of expertise is therefore quite broad - being able to <strong>develop and
-            maintain projects, according to your needs</strong>, Web applications, software, internal tools,
-            websites and more.
+            I have experience with <strong>web technologies</strong>, desktop software for Mac and Windows, and Windows
+            task automation. My area of expertise is pretty broad, so I can <strong>develop and maintain web applications,
+            software, internal tools, websites</strong>, and more depending on what you need.
           </p>
           <p>
-            Thus, I can take charge of a new project and bring it to fruition and/or
-            continue the development of existing projects, alone, or by collaborating with your team of developers.
+            I can <strong>take charge of a new project</strong> and bring it to completion, or continue developing an
+            existing project, either alone or with your team.
           </p>
 
-          <h3>Mastered Languages and Technologies:</h3>
+          <h2>Languages and technologies I know well:</h2>
           <div className={styles.techListsContainer}>
             <ul>
               <li>
@@ -53,7 +52,7 @@ const Programming = () => {
               </li>
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/Bun_(software)">
-                  Bun.js
+                  Bun
                 </ExternalLink>
               </li>
               <li>
@@ -95,7 +94,7 @@ const Programming = () => {
               </li>
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/AutoHotkey">
-                  Autohotkey
+                  AutoHotkey
                 </ExternalLink>
               </li>
               <li>
@@ -116,7 +115,7 @@ const Programming = () => {
             </ul>
           </div>
 
-          <h3>Basic knowledge:</h3>
+          <h2>Other tools I've used:</h2>
           <div className={styles.techListsContainer}>
             <ul>
               <li>
@@ -166,7 +165,7 @@ const Programming = () => {
         </div>
         <div className="max-text-width">
           <div className="stylish-shadow-image">
-            <span className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Programming is Art</span>
+            <span aria-hidden="true" className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Programming is Art</span>
             <ResponsiveImage
               path="/images/programmation/stylish/programmation"
               alt="Programming is Art"
@@ -187,14 +186,14 @@ const Programming = () => {
       </svg>
 
       <section className={styles.services}>
-        <h3>Offered Services</h3>
+        <h2>Services I offer</h2>
         <ul className="max-text-width">
           <li>Websites</li>
-          <li>Web Apps</li>
-          <li>Online Commerce</li>
-          <li>Desktop Software</li>
-          <li>Web Scraping</li>
-          <li>Automation Scripts</li>
+          <li>Web apps</li>
+          <li>E-commerce</li>
+          <li>Desktop software</li>
+          <li>Web scraping</li>
+          <li>Automation scripts</li>
           <li>...and more</li>
         </ul>
       </section>
@@ -208,58 +207,54 @@ const Programming = () => {
       <section className={styles.projects + " max-content-width display-flex"}>
         <h2>Portfolio</h2>
         <Project
-          title="Finance&nbsp;D, A Website for multiple Accounting Tools I built"
+          title="Finance D: a website I built for multiple accounting tools"
 
-          description="Finance&nbsp;D, is my startup
-        that provides various accounting tools aimed specifically at Quebec tax payers.
-        Each app tries to solve a problem by simplifying what it takes to accomplish the most with the least education
-        possible."
+          description="Finance D is my startup that provides various accounting tools aimed specifically at Quebec taxpayers.
+        Each app solves a practical problem by making accounting easier, even when the user has very little accounting knowledge."
 
           imgSrc="/images/programmation/finance-d/website/finance-d"
 
           technologies="React.js, JavaScript, Node.js, HTML, CSS, WordPress, WooCommerce, Stripe,
          Web Hosting Canada, GitHub."
 
-          features="Responsive website using React.js with a focus on SEO
-        and performance which is close to 100% scores. Online shop with WordPress and WooCommerce,
-        and a donation feature using the Stripe SDK. This website is ranked in the top Google Search results
-        for local keywords like 'Logiciel comptable gratuit Québec'."
+          features="Responsive website built with React.js, with a focus on SEO and performance scores close to 100.
+        Online shop with WordPress and WooCommerce, plus a donation feature using the Stripe SDK. This website ranks in the
+        top Google search results for a local French keyword such as 'Logiciel comptable gratuit Québec'."
 
-          timespan="2019 - Now (in my free time)"
+          timespan="2019 to present (in my free time)"
 
           url="https://finance-d.com"
         />
         <Project
-          title="Bookkeeping software for Windows and Mac, Finance&nbsp;D"
+          title="Finance D bookkeeping software for Windows and Mac"
 
           description="My biggest project to date is this accounting software for Windows and Mac.
-        I created it for free, to help small businesses in Quebec.
-        The aim is efficiency and extreme simplicity of use at the expense of more advanced accounting features being excluded.
-        In my opinion, it is worth discovering and it is 100% free."
+        I created it for free to help small businesses in Quebec. The goal is efficiency and an extremely simple user experience,
+        which means more advanced accounting features are left out. In my opinion, it is worth discovering,
+        and it is 100% free."
 
           imgSrc="/images/programmation/finance-d/software/finance-d_desktop_software"
 
           technologies="Electron.js, JavaScript, HTML, CSS, Node.js, VirtualBox VM, Google Firebase,
          Web Hosting Canada, GitHub."
 
-          features="Desktop software for Windows and Mac. Including code signing certificate management obtained through SSL.com,
-         a complete documentation, an online distribution server with automatic updates,
-         free technical support, a private admin cloud logging system to ensure app quality.
-         At this time, user reviews on Capterra.ca
-         average 4.9 stars on 5 which demonstrates its appreciation."
+          features="Desktop software for Windows and Mac, including code signing certificate management through SSL.com,
+         complete documentation, an online distribution server with automatic updates, free technical support,
+         and a private admin cloud logging system to ensure app quality. At this time, user reviews on Capterra.ca
+         average 4.9 out of 5 stars."
 
-          timespan="2019 - Now (in my free time)"
+          timespan="2019 to present (in my free time)"
 
           url="https://magasin.finance-d.com/produit/logiciel-tenue-de-livres-simplifiee/"
         />
         <Project
-          title="Gestion Desroches Inc. Website"
+          title="Gestion Desroches Inc. website"
 
           description="Gestion Desroches is a local accounting business.
-         I had the responsibility to migrate the existing website from Squarespace to a local hosting company.
-         So this implied programming the site from scratch using React.js, and configure the email accounts for the
-         @gestiondesroches.com domain. This migration helped reduce recurring annual costs by about 75%, improved the page
-         loading speeds and design flexibility."
+         I was responsible for migrating the existing website from Squarespace to a local hosting company.
+         This involved programming the site from scratch with React.js and configuring email accounts for the
+         @gestiondesroches.com domain. The migration reduced recurring annual costs by about 75%, improved page load speed,
+         and increased design flexibility."
 
           imgSrc="/images/programmation/gestion-desroches/site-gestion-desroches"
 
@@ -274,10 +269,10 @@ const Programming = () => {
           url="https://gestiondesroches.com"
         />
         <Project
-          title="Web App for employees pay period management, Finance&nbsp;D"
+          title="Web app for employee pay period management, Finance D"
 
           description="This is a web application created to simplify the management of pay periods
-         and employees in collaboration with an accountant. I built the Front-End using React and the Back-End
+         and employees in collaboration with an accountant. I built the front end with React and the back end
          with Google Firebase."
 
           imgSrc="/images/programmation/finance-d/payes/app-payes"
@@ -285,27 +280,26 @@ const Programming = () => {
           technologies="React.js, Firebase, JavaScript, HTML, CSS, Node.js, Web Hosting Canada, GitHub, PHP,
         WordPress, WooCommerce, WooCommerce License Manager."
 
-          features="Full-Stack. Meaning, Front-End with React.js and the Back-End with Firebase
-        (for the authentication and database services). License server with WooCommerce License Manager
-        and a PHP API in the middle to connect both ends. The UI is updated in realtime thanks to the
-        great Firebase Firestore database feature."
+          features="Full stack. This means the front end uses React.js and the back end uses Firebase for authentication and database services.
+        A license server with WooCommerce License Manager and a PHP API connects both ends. The UI updates in real time
+        thanks to Firebase Firestore, which works really well for real-time data."
 
-          timespan="Created in 2021, still updating it occasionally."
+          timespan="Created in 2021 and still updated occasionally."
 
           url="https://finance-d.com/periodes-de-payes-simplifiees/"
         />
         <Project
           title="This website"
 
-          description="The website you are viewing right now is built with React.js and Next.js. I chose both of these
-          technologies because they are great. Probably my current top choice."
+          description="The website you are viewing right now is built with React.js and Next.js. I chose these technologies
+          because they are great to work with. They are probably my current top choice for this type of project."
 
           imgSrc="/images/programmation/alexdesrochescom/alexdesroches"
 
           technologies="React.js, Next.js, JavaScript, HTML, CSS, Node.js, Firebase Hosting, GitHub."
 
-          features="Design, programming, content, translation, hosting and performance optimisations.
-         This website is open-source - you can peek into the source code in my GitHub repository (link below)."
+          features="Design, programming, content, translation, hosting, and performance optimization.
+         This website is open source, and you can peek into the source code in my GitHub repository (link below)."
 
           timespan="Created in 2021 and revised occasionally."
 
@@ -317,7 +311,8 @@ const Programming = () => {
           That's it!
         </p>
         <p>
-          I did many more coding projects, but those were the most relevant to what I am very good at doing.
+          I have done many more coding projects, but these are the best examples of{" "}
+          <strong>what I do best</strong>.
         </p>
         <p>
           If you would like to know more about me, please feel free to reach out to me.

@@ -6,9 +6,9 @@ import HeroSkillShowcase from "../components/HeroSkillShowcase";
 export default function Index() {
   return (
     <PageTemplate
-      pageTitle={process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription={process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION}
-      pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL}
+      pageTitle={"Développeur web freelance au Québec | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
+      pageDescription="Développeur web front-end au Québec. Création de sites rapides, accessibles et performants avec React, Next.js et JavaScript."
+      pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}
     >
       <section className="hero">
@@ -16,17 +16,17 @@ export default function Index() {
           <div className="max-text-width">
             <span className="hero-badge">Programmeur freelance</span>
             <h1 className="hero-title">
-              <span>Alexandre</span>
+              <span>Alexandre</span>{" "}
               <span>Desroches</span>
             </h1>
             <div className="shimmer-bar" aria-hidden="true" />
             <p className="hero-subtitle">
-              Développeur web front-end. Je conçois des sites rapides,
+              <strong>Développeur web front-end.</strong> Je conçois des sites rapides,
               accessibles et élégants, de l'idée au déploiement.
             </p>
             <div className="hero-ctas">
               <Link href="/programmation" className="btn btn-primary">
-                Voir mes services →
+                Voir mes services&nbsp;&rarr;
               </Link>
               <Link href="/contact" className="btn btn-secondary">
                 Me contacter
@@ -47,18 +47,17 @@ export default function Index() {
 
       <div className="max-content-width display-flex">
         <div className="max-text-width">
-          <h2>Programmeur freelance (pigiste)</h2>
+          <h2>Programmeur freelance</h2>
           <p>
-            Mon nom est Alex Desroches. Je suis un développeur autonome, offrant des services de
-            programmation de logiciels, applications Web et sites Internet, selon vos besoins.
+            Je m'appelle <strong>Alex Desroches</strong>. Je suis développeur freelance (pigiste) et j'offre des{" "}
+            <strong>services de programmation de logiciels, d'applications web et de sites web</strong> selon vos besoins.
           </p>
-          <Link href="/a-propos" className="text-link">En savoir plus à propos de moi&nbsp;&rarr;</Link>
+          <Link href="/a-propos" className="text-link">En savoir plus sur moi&nbsp;&rarr;</Link>
 
-          <h3>Mon expertise est le Développement Web Front-End.</h3>
+          <h3>Mon expertise&nbsp;: le développement web front-end.</h3>
           <p>
-            Mes forces en programmation, sont basées principalement sur les langages du Web.
-            C'est-à-dire, HTML, CSS et <strong>JavaScript</strong>; dont les sites Internet et applications Web
-            dépendent.
+            Mes forces en programmation reposent principalement sur les langages du web, c'est-à-dire HTML,
+            CSS et <strong>JavaScript</strong>, dont dépendent les sites web et les applications web.
           </p>
           <p>
             Dans ce vaste univers, je maîtrise des technologies modernes en forte demande
@@ -72,17 +71,18 @@ export default function Index() {
 
           <h3>Faisons équipe&nbsp;!</h3>
           <p>
-            Confiez-moi un nouveau projet ou joignons nos forces en collaborant avec votre équipe.
+            Confiez-moi <strong>un nouveau projet</strong> ou joignons nos forces en collaborant avec votre équipe.
           </p>
           <div className="handwritten-signature-container display-flex">
             <Link href="/contact" className="text-link">Contactez-moi&nbsp;&rarr;</Link>
             <ResponsiveImage
               path="/images/signature/signature"
-              alt="Signature Alex Desroches"
+              alt="Signature d'Alex Desroches"
               renderedWidth={92}
               renderedHeight={92}
               desktopWidth={276}
               mobileWidth={184}
+              fallbackExtension="png"
               className="handwritten-signature"
             />
           </div>
@@ -91,9 +91,10 @@ export default function Index() {
 
         <div className="max-text-width display-flex">
           <div className="stylish-shadow-image">
+            <span aria-hidden="true" className="stylish-shadow-image--overlay-text stylish-shadow-image--overlay-text--angled">L'art fait réfléchir</span>
             <ResponsiveImage
               path="/images/whitebloc/whitebloc"
-              alt="Art is Thinking"
+              alt="L'art fait réfléchir"
               renderedWidth={501}
               renderedHeight={751}
               desktopWidth={1002}

@@ -1,6 +1,5 @@
 import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
-import ExternalLink from "../components/ExternalLink";
 import {EmailLogo, LinkedinLogo} from "../components/Logos";
 
 import {myContactLinks} from "../lib/myContactLinks";
@@ -12,17 +11,17 @@ import styles from "../styles/contact.module.css";
 export default function Contact() {
   return (
     <PageTemplate
-      pageTitle={"Contact | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Contacter Alex Desroches par courriel et LinkedIn."
+      pageTitle="Contact | Alex Desroches, développeur web"
+      pageDescription="Contactez Alex Desroches pour discuter de votre site web, application ou projet JavaScript. Réponse par courriel ou LinkedIn."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/contact/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/contact/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">
-          <h2>Contacter Alex Desroches</h2>
+          <h1>Contactez Alex Desroches</h1>
           <p>
-            N'hésitez pas à me contacter, ce sera un plaisir de discuter de votre projet.
-            Je suis joignable en tout temps par l'un des moyens ci-dessous&nbsp;:
+            N'hésitez pas à me contacter. Ce sera un plaisir de <strong>discuter de votre projet</strong>.
+            Je suis joignable par l'un des moyens ci-dessous&nbsp;:
           </p>
 
           <ul className={styles.contactLinks}>
@@ -42,9 +41,10 @@ export default function Contact() {
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
+            <span aria-hidden="true" className="stylish-shadow-image--overlay-text">L'art communique</span>
             <ResponsiveImage
               path="/images/celltower/celltower"
-              alt="Art is Communicating"
+              alt="L'art communique"
               renderedWidth={501}
               renderedHeight={752}
               desktopWidth={1000}

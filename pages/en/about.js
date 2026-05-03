@@ -7,44 +7,41 @@ import {calculateAge} from "../../lib/calculateAge";
 const About = () => {
   return (
     <PageTemplate
-      pageTitle={"About | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Get to know more about Alex Desroches - JavaScript Web Developer with Front-End Web Development expertise."
+      pageTitle="About Alex Desroches | Web Developer"
+      pageDescription="Learn about Alex Desroches, a front-end web developer focused on JavaScript, React, Next.js, clean code and reliable collaboration."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/about/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/a-propos/"}
     >
       <div className="max-content-width display-flex">
         <section className="max-text-width">
-          <h2>About Alex Desroches</h2>
+          <h1>About Alex Desroches</h1>
           <p>
-            TLDR; I am a passionate guy and <strong>I enjoy coding</strong>, movies, video games, music, music
-            production, theology and philosophy. You know, about anything that awakens my creative mind and satisfies my
+            TL;DR: I'm a passionate guy and <strong>I enjoy coding</strong>, movies, video games, music production,
+            theology, and philosophy. You know, basically anything that wakes up my creative mind and feeds my
             imagination.
           </p>
           <p>
-            I am {calculateAge(new Date(1989, 4, 29))} years old, living in Canada in the province
-            of Quebec, with my beloved wife Cathy and our two kids!
+            I am {calculateAge(new Date(1989, 4, 29))} years old and live in Quebec, Canada, with my beloved wife
+            Cathy and our two kids!
           </p>
           <p>
-            Since my childhood, <strong>I love what is technological, creative and demands reflection</strong>.{" "}
-            To quote a funny example... being very young - I received my first electronic piano for Christmas
-            and I played until the batteries were empty! This anecdote further demonstrates
-            my personality today. When I discover something that I enjoy - like music or
-            programming - I'm fully invested in that.
+            Since I was a kid, <strong>I have loved things that are technological, creative, and make me think</strong>.{" "}
+            A funny example: when I was very young, I received my first electronic piano for Christmas and played
+            until the batteries were dead! This anecdote still reflects my personality today. When I discover something I
+            enjoy, like music or programming, I get fully invested in it.
           </p>
           <p>
             <strong>
-              I'm a persevering, passionate and excellence-oriented worker.
+              I'm persistent, passionate, and committed to doing excellent work.
             </strong>{" "}
-            I don't like failing and do my best to succeed. When I do fail, I take it hard, but this is the drive that
-            keeps me wanting more. What I hate the most is giving up. To me, real failure is giving up when you are so
-            close to success. This is why{" "}<strong>I constantly strive to progress</strong> rather than resigning
-            myself to
-            defeat.
+            I don't like failing, and I do my best to succeed. When I do fail, I take it hard, but it pushes me to keep
+            going. What I hate most is giving up. To me, real failure is giving up when you are so close to success.
+            This is why <strong>I constantly strive to progress</strong> rather than resign myself to defeat.
           </p>
           <p>
-            <strong>For everything I do, I give my best</strong> and I find solutions to improve my
-            working environment. With me, you can expect professionalism, excellence and trust. I always give the best
-            of myself no matter the responsibility - big or small.
+            <strong>For everything I do, I give my best</strong> and find solutions to improve my working environment.
+            With me, you can expect professional work and real effort. I always give my best, whether the responsibility
+            is big or small.
           </p>
           <p>
             This is who I am in a nutshell!
@@ -57,6 +54,7 @@ const About = () => {
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
+            <span aria-hidden="true" className="stylish-shadow-image--overlay-text">Art is Revealing</span>
             <ResponsiveImage
               path="/images/about/about"
               alt="Art is Revealing"
@@ -64,6 +62,7 @@ const About = () => {
               renderedHeight={752}
               desktopWidth={1000}
               mobileWidth={501}
+              mobilePath="/images/about/about-w501"
               className={styles.stylishImage}
             />
           </div>

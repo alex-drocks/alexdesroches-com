@@ -32,15 +32,15 @@ export default function About() {
             <strong>
               J'ai une personnalité de travailleur&nbsp;: persévérant, passionné et orienté vers l'excellence.
             </strong>{" "}
-            Je n'aime pas l'échec et je fais de mon mieux pour relever chaque défi avec excellence. Quand j'échoue, je le
+            Je n'aime pas l'échec et je fais de mon mieux, à chaque défi, pour bien faire les choses. Quand j'échoue, je le
             prends difficilement, mais ça me propulse vers d'autres niveaux de persévérance. Ce que j'aime encore moins
             que l'échec, c'est l'abandon. Pour moi, abandonner est le véritable échec. Alors,{" "}
             <strong>je m'efforce constamment de progresser</strong> plutôt que de me résigner à la défaite.
           </p>
           <p>
-            <strong>Tout ce que je fais, je le fais de mon mieux</strong>, et je trouve des solutions pour améliorer mon
-            environnement de travail. Avec moi, vous pouvez vous attendre à du professionnalisme et à un travail
-            d'excellence. Je donne toujours le meilleur de moi-même, quelle que soit la responsabilité.
+            <strong>Tout ce que je fais, je le fais de mon mieux</strong> et je trouve des solutions pour améliorer mon
+            environnement de travail. Avec moi, vous pouvez vous attendre à un travail professionnel, sérieux et bien fait.
+            Je donne toujours le meilleur de moi-même, peu importe la responsabilité.
           </p>
         </section>
 

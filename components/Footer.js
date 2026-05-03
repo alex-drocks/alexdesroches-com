@@ -21,7 +21,7 @@ export default function Footer() {
                 </InternalLink>
               </strong>.
                 Located near Montreal, Canada.
-                Available for remote work and flexible hours to fit your needs.
+                Available for remote work, with flexible hours when the project needs it.
               </>
             ) : (
               <>
@@ -31,7 +31,7 @@ export default function Footer() {
                   </InternalLink>
                 </strong> à la demande.
                 Programmeur situé près de Montréal, au Canada.
-                Tarification horaire avec facture détaillée.
+                Tarification à l'heure avec facture détaillée à l'appui.
               </>
             )
           }

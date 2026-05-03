@@ -27,7 +27,7 @@ export default function Project({title, description, imgSrc, features, technolog
         <div>
           <h4>
             {isEnglish
-              ? <>Technologies used:</>
+              ? <>Technologies I used:</>
               : <>Technologies utilisées&nbsp;:</>
             }
           </h4>

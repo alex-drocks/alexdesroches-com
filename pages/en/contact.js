@@ -17,8 +17,8 @@ const Contact = () => {
         <section className="max-text-width">
           <h1>Contact Alex Desroches</h1>
           <p>
-            Feel free to contact me. I would be happy to <strong>discuss your project</strong>.
-            You can reach me via one of the links below:
+            Feel free to contact me. It would be a pleasure to <strong>talk about your project</strong>.
+            You can reach me through one of the links below:
           </p>
 
           <ul className={styles.contactLinks}>

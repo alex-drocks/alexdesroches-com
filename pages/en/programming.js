@@ -18,16 +18,16 @@ const Programming = () => {
 
           <h2>What I do:</h2>
           <p>
-            I am experienced with <strong>web technologies</strong>, desktop software for Mac and Windows, and Windows
-            task automation. My broad expertise allows me to <strong>develop and maintain web applications, software,
-            internal tools, websites</strong>, and more according to your needs.
+            I have experience with <strong>web technologies</strong>, desktop software for Mac and Windows, and Windows
+            task automation. My area of expertise is pretty broad, so I can <strong>develop and maintain web applications,
+            software, internal tools, websites</strong>, and more depending on what you need.
           </p>
           <p>
-            I can <strong>take ownership of a new project</strong>, bring it to completion, or continue developing
-            existing projects, whether working alone or collaborating with your team.
+            I can <strong>take charge of a new project</strong> and bring it to completion, or continue developing an
+            existing project, either alone or with your team.
           </p>
 
-          <h2>Core Languages and Technologies:</h2>
+          <h2>Languages and technologies I know well:</h2>
           <div className={styles.techListsContainer}>
             <ul>
               <li>
@@ -115,7 +115,7 @@ const Programming = () => {
             </ul>
           </div>
 
-          <h2>Additional Experience:</h2>
+          <h2>Other tools I've used:</h2>
           <div className={styles.techListsContainer}>
             <ul>
               <li>
@@ -186,15 +186,15 @@ const Programming = () => {
       </svg>
 
       <section className={styles.services}>
-        <h2>Services Offered</h2>
+        <h2>Services I offer</h2>
         <ul className="max-text-width">
           <li>Websites</li>
-          <li>Web applications</li>
+          <li>Web apps</li>
           <li>E-commerce</li>
           <li>Desktop software</li>
           <li>Web scraping</li>
           <li>Automation scripts</li>
-          <li>And more</li>
+          <li>...and more</li>
         </ul>
       </section>
 
@@ -209,8 +209,8 @@ const Programming = () => {
         <Project
           title="Finance D: a website I built for multiple accounting tools"
 
-          description="Finance D is my startup that provides accounting tools designed specifically for Quebec taxpayers.
-        Each app solves a practical problem by helping users accomplish more with less accounting knowledge."
+          description="Finance D is my startup that provides various accounting tools aimed specifically at Quebec taxpayers.
+        Each app solves a practical problem by making accounting easier, even when the user has very little accounting knowledge."
 
           imgSrc="/images/programmation/finance-d/website/finance-d"
 
@@ -218,8 +218,8 @@ const Programming = () => {
          Web Hosting Canada, GitHub."
 
           features="Responsive website built with React.js, with a focus on SEO and performance scores close to 100.
-        Online shop with WordPress and WooCommerce, plus a donation feature using the Stripe SDK. This website ranks among
-        the top Google search results for local accounting software searches in Quebec."
+        Online shop with WordPress and WooCommerce, plus a donation feature using the Stripe SDK. This website ranks in the
+        top Google search results for a local French keyword such as 'Logiciel comptable gratuit Québec'."
 
           timespan="2019 to present (in my free time)"
 
@@ -229,8 +229,8 @@ const Programming = () => {
           title="Finance D bookkeeping software for Windows and Mac"
 
           description="My biggest project to date is this accounting software for Windows and Mac.
-        I created it for free to help small businesses in Quebec. The goal is efficiency and extreme ease of use,
-        so more advanced accounting features are intentionally excluded. In my opinion, it is worth discovering,
+        I created it for free to help small businesses in Quebec. The goal is efficiency and an extremely simple user experience,
+        which means more advanced accounting features are left out. In my opinion, it is worth discovering,
         and it is 100% free."
 
           imgSrc="/images/programmation/finance-d/software/finance-d_desktop_software"
@@ -241,7 +241,7 @@ const Programming = () => {
           features="Desktop software for Windows and Mac, including code signing certificate management through SSL.com,
          complete documentation, an online distribution server with automatic updates, free technical support,
          and a private admin cloud logging system to ensure app quality. At this time, user reviews on Capterra.ca
-         average 4.9 out of 5 stars, showing strong user satisfaction."
+         average 4.9 out of 5 stars."
 
           timespan="2019 to present (in my free time)"
 
@@ -271,7 +271,7 @@ const Programming = () => {
         <Project
           title="Web app for employee pay period management, Finance D"
 
-          description="This web application was created to simplify the management of pay periods
+          description="This is a web application created to simplify the management of pay periods
          and employees in collaboration with an accountant. I built the front end with React and the back end
          with Google Firebase."
 
@@ -280,9 +280,9 @@ const Programming = () => {
           technologies="React.js, Firebase, JavaScript, HTML, CSS, Node.js, Web Hosting Canada, GitHub, PHP,
         WordPress, WooCommerce, WooCommerce License Manager."
 
-          features="Full stack: the front end uses React.js and the back end uses Firebase for authentication and database services.
+          features="Full stack. This means the front end uses React.js and the back end uses Firebase for authentication and database services.
         A license server with WooCommerce License Manager and a PHP API connects both ends. The UI updates in real time
-        thanks to Firebase Firestore."
+        thanks to Firebase Firestore, which works really well for real-time data."
 
           timespan="Created in 2021 and still updated occasionally."
 
@@ -292,14 +292,14 @@ const Programming = () => {
           title="This website"
 
           description="The website you are viewing right now is built with React.js and Next.js. I chose these technologies
-          because they remain my preferred tools for this type of project."
+          because they are great to work with. They are probably my current top choice for this type of project."
 
           imgSrc="/images/programmation/alexdesrochescom/alexdesroches"
 
           technologies="React.js, Next.js, JavaScript, HTML, CSS, Node.js, Firebase Hosting, GitHub."
 
           features="Design, programming, content, translation, hosting, and performance optimization.
-         This website is open source, and you can view the source code in my GitHub repository (link below)."
+         This website is open source, and you can peek into the source code in my GitHub repository (link below)."
 
           timespan="Created in 2021 and revised occasionally."
 
@@ -311,8 +311,8 @@ const Programming = () => {
           That's it!
         </p>
         <p>
-          I have completed many more coding projects, but these are the most relevant examples of{" "}
-          <strong>my strongest work</strong>.
+          I have done many more coding projects, but these are the best examples of{" "}
+          <strong>what I do best</strong>.
         </p>
         <p>
           If you would like to know more about me, please feel free to reach out to me.

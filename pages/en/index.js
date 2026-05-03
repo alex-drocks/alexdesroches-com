@@ -21,7 +21,7 @@ export default function Index() {
             </h1>
             <div className="shimmer-bar" aria-hidden="true" />
             <p className="hero-subtitle">
-              I'm a <strong>front-end web developer</strong> who crafts fast, accessible, and beautiful
+              I'm a <strong>front-end web developer</strong>. I build fast, accessible, and good-looking
               websites, from idea to deployment.
             </p>
             <div className="hero-ctas">
@@ -43,18 +43,18 @@ export default function Index() {
         <div className="max-text-width">
           <h2>Freelance Web Developer</h2>
           <p>
-            I am <strong>Alex Desroches</strong>, a dedicated web developer offering{" "}
-            <strong>high-quality software and website programming services</strong>. I thrive on coding and delivering
-            outstanding results.
+            My name is <strong>Alex Desroches</strong>. I'm a freelance developer offering{" "}
+            <strong>software, web app, and website programming services</strong>, depending on what you need.
+            I love coding, and I care about doing good work.
           </p>
           <Link href="/en/about" className="text-link">Learn more about me&nbsp;&rarr;</Link>
 
-          <h3>I specialize in front-end web development.</h3>
+          <h3>I'm proficient in front-end web development.</h3>
           <p>
-            My strengths are built on core web technologies: HTML, CSS, and <strong>JavaScript</strong>.
+            In fact, my strengths are mostly built on core web technologies: HTML, CSS, and <strong>JavaScript</strong>.
           </p>
           <p>
-            I work with modern, in-demand technologies such as:{" "}
+            In this vast ecosystem, I work with modern, in-demand technologies like:{" "}
             <strong>React.js</strong>, Next.js, Node.js, Electron.js, <strong>Angular</strong>, Squarespace, WordPress,
             WooCommerce, Firebase, and more.
           </p>
@@ -64,7 +64,7 @@ export default function Index() {
 
           <h3>Let's work together!</h3>
           <p>
-            I'll bring <strong>your idea to life</strong> from the ground up. Alternatively, let's combine our
+            I'll bring <strong>your idea to life</strong> from the ground up. Or, let's combine our
             strengths and collaborate with your team.
           </p>
           <div className="handwritten-signature-container display-flex">

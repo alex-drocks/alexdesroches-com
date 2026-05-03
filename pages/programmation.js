@@ -20,8 +20,8 @@ export default function Programmation() {
           <p>
             Je suis un <strong>développeur expérimenté en technologies web</strong>, en logiciels de bureau pour Mac et
             Windows ainsi qu'en automatisation de tâches sous Windows. Mon domaine d'expertise est donc assez vaste.
-            Je peux <strong>maintenir et concevoir, selon vos besoins</strong>, des applications web, des logiciels, des
-            outils internes et des sites web de haute qualité.
+            Je peux <strong>concevoir et maintenir, selon vos besoins</strong>, des applications web, des logiciels, des
+            outils internes et des sites web solides.
           </p>
           <p>
             Ainsi, je peux <strong>prendre en charge un nouveau projet et le mener à terme</strong>, ou poursuivre le
@@ -207,11 +207,11 @@ export default function Programmation() {
       <section className={styles.projects + " max-content-width display-flex"}>
         <h2>Projets réalisés</h2>
         <Project
-          title="Site web Finance D pour logiciel et applications de comptabilité"
+          title="Finance D, site web pour logiciel et applications de comptabilité"
 
-          description="Finance D est une entreprise que j'ai démarrée dans le but d'offrir une variété d'outils de comptabilité.
+          description="Finance D est une entreprise que j'ai démarrée dans le but d'offrir une variété d'outils spécifiques pour la comptabilité.
         J'ai donc créé un site web pour rendre accessibles mon logiciel de tenue de livres ainsi que trois applications web différentes,
-        chacune conçue pour résoudre des problèmes spécifiques."
+        servant chacune à solutionner des problèmes spécifiques."
 
           imgSrc="/images/programmation/finance-d/website/finance-d"
 
@@ -232,16 +232,16 @@ export default function Programmation() {
 
           description="Mon plus gros projet jusqu'à présent est ce logiciel de comptabilité pour ordinateurs Windows et Mac.
         Je l'ai créé avec les travailleurs autonomes du Québec en tête. Le but est la simplicité d'utilisation et l'efficacité.
-        Ce logiciel est ma plus grande fierté en programmation. À mon avis, il mérite d'être découvert et il est 100 % gratuit."
+        Ce logiciel est ma plus grande fierté en programmation. À mon avis, il vaut la peine d'être découvert et il est 100 % gratuit."
 
           imgSrc="/images/programmation/finance-d/software/finance-d_desktop_software"
 
           technologies="Electron.js, JavaScript, HTML, CSS, Node.js, VirtualBox VM, Google Firebase,
          Web Hosting Canada, GitHub."
 
-          features="Logiciel pour ordinateurs Windows et Mac, incluant la certification de signature de code avec SSL.com,
+          features="Logiciel pour ordinateurs Windows et Mac, incluant le certificat de signature de code avec SSL.com,
          une documentation complète pour les utilisateurs, la distribution en ligne, les mises à jour automatiques,
-         le soutien technique et un système privé de journalisation pour assurer la qualité. Au moment de la rédaction,
+         le soutien technique et un système privé de logs pour assurer la qualité. Au moment de la rédaction,
          les avis d'utilisateurs sur Capterra.ca affichent une moyenne de 4,9 étoiles sur 5."
 
           timespan="2019 à aujourd'hui"
@@ -293,18 +293,18 @@ export default function Programmation() {
           title="Ce site"
 
           description="Le site que vous visualisez en ce moment est conçu avec React.js et Next.js. J'ai choisi ces technologies
-        parce qu'elles font partie de mes préférées. Next.js ajoute à React des fonctionnalités qui facilitent la création
-        de sites performants, bien structurés et agréables à développer."
+        parce qu'elles font partie de mes préférées. En effet, React est génial, et Next.js ajoute à React des fonctionnalités
+        qui aident à créer des sites performants, propres et agréables à programmer. C'est super le fun. Je le recommande à tous."
 
           imgSrc="/images/programmation/alexdesrochescom/alexdesroches"
 
           technologies="React.js, Next.js, JavaScript, HTML, CSS, Node.js, Firebase Hosting, GitHub."
 
           features="Design, contenu, programmation, mise en ligne et optimisation des performances.
-         Ce site est à code source ouvert. Vous pouvez d'ailleurs consulter le code source dans mon
-          dépôt GitHub (lien ci-dessous)."
+         Ce site est open-source. Vous pouvez d'ailleurs consulter le code source dans mon
+          repository GitHub (lien ci-dessous)."
 
-          timespan="Créé initialement en 2021, puis révisé durant mon temps libre."
+          timespan="Créé initialement en 2021, puis révisé dans mes temps libres."
 
           url="https://github.com/alex-drocks/alexdesroches-com"
         />

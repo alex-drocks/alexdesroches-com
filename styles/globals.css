@@ -230,6 +230,7 @@ li {
 }
 
 .stylish-shadow-image:hover .stylish-shadow-image--overlay-text {
+  color: var(--light-gray);
   opacity: 1;
 }
 

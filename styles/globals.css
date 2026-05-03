@@ -258,6 +258,8 @@ li {
   z-index: 1;
   display: block;
   width: inherit;
+  overflow: hidden;
+  border-radius: .25rem;
 }
 
 .stylish-shadow-image picture::after {
@@ -276,7 +278,8 @@ li {
     transparent 27rem,
     transparent 42rem
   );
-  background-size: 42rem 42rem;
+  background-size: 42rem 100%;
+  background-repeat: repeat-x;
   mix-blend-mode: screen;
   opacity: .42;
   -webkit-mask-image: linear-gradient(135deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
@@ -285,6 +288,7 @@ li {
 }
 
 .stylish-shadow-image img {
+  display: block;
   position: relative;
   z-index: 1;
   border-radius: .25rem;

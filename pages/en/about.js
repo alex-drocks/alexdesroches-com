@@ -16,8 +16,8 @@ const About = () => {
         <section className="max-text-width">
           <h1>About Alex Desroches</h1>
           <p>
-            TL;DR: I am passionate about coding, movies, video games, music production, theology, and philosophy:
-            anything that awakens my creative mind and fuels my imagination.
+            TL;DR: I am <strong>passionate about coding</strong>, movies, video games, music production, theology,
+            and philosophy: anything that awakens my creative mind and fuels my imagination.
           </p>
           <p>
             I am {calculateAge(new Date(1989, 4, 29))} years old and live in Quebec, Canada, with my beloved wife

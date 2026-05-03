@@ -14,9 +14,9 @@ export default function About() {
         <section className="max-text-width">
           <h1>À propos d'Alex Desroches</h1>
           <p>
-            Je suis passionné de programmation, de cinéma, de jeux vidéo, de musique, de composition musicale,
-            de théologie et de philosophie. Bref, à peu près tout ce qui éveille mon côté créatif et nourrit mon
-            imagination.
+            Je suis <strong>passionné de programmation</strong>, de cinéma, de jeux vidéo, de musique, de composition
+            musicale, de théologie et de philosophie. Bref, à peu près tout ce qui éveille mon côté créatif et nourrit
+            mon imagination.
           </p>
           <p>
             J'ai la trentaine et j'habite au Québec, au Canada, avec ma chère épouse Cathy et nos deux enfants&nbsp;!

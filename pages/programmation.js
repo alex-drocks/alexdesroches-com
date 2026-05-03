@@ -18,14 +18,14 @@ export default function Programmation() {
 
           <h2>Ce que je fais&nbsp;:</h2>
           <p>
-            Je suis un développeur expérimenté en technologies web, en logiciels de bureau pour Mac et Windows ainsi
-            qu'en automatisation de tâches sous Windows. Mon domaine d'expertise est donc assez vaste. Je peux maintenir
-            et concevoir, selon vos besoins, des applications web, des logiciels, des outils internes et des sites web de
-            haute qualité.
+            Je suis un <strong>développeur expérimenté en technologies web</strong>, en logiciels de bureau pour Mac et
+            Windows ainsi qu'en automatisation de tâches sous Windows. Mon domaine d'expertise est donc assez vaste.
+            Je peux <strong>maintenir et concevoir, selon vos besoins</strong>, des applications web, des logiciels, des
+            outils internes et des sites web de haute qualité.
           </p>
           <p>
-            Ainsi, je peux prendre en charge un nouveau projet et le mener à terme, ou poursuivre le développement de
-            projets existants, seul ou en collaboration avec votre équipe de développeurs.
+            Ainsi, je peux <strong>prendre en charge un nouveau projet et le mener à terme</strong>, ou poursuivre le
+            développement de projets existants, seul ou en collaboration avec votre équipe de développeurs.
           </p>
 
           <h2>Langages et technologies maîtrisés&nbsp;:</h2>
@@ -314,8 +314,8 @@ export default function Programmation() {
           Voilà&nbsp;!
         </p>
         <p>
-          J'ai fait plusieurs autres projets, mais ceux-ci étaient les plus pertinents pour démontrer ce que je maîtrise
-          le mieux.
+          J'ai fait plusieurs autres projets, mais ceux-ci étaient les plus pertinents pour démontrer{" "}
+          <strong>ce que je maîtrise le mieux</strong>.
         </p>
         <p>
           Si vous souhaitez en savoir plus sur moi, n'hésitez pas à me contacter.

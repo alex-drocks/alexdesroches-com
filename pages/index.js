@@ -21,7 +21,7 @@ export default function Index() {
             </h1>
             <div className="shimmer-bar" aria-hidden="true" />
             <p className="hero-subtitle">
-              Développeur web front-end. Je conçois des sites rapides,
+              <strong>Développeur web front-end.</strong> Je conçois des sites rapides,
               accessibles et élégants, de l'idée au déploiement.
             </p>
             <div className="hero-ctas">
@@ -49,8 +49,8 @@ export default function Index() {
         <div className="max-text-width">
           <h2>Programmeur pigiste</h2>
           <p>
-            Je m'appelle Alex Desroches. Je suis développeur autonome et j'offre des services de programmation de
-            logiciels, d'applications web et de sites web selon vos besoins.
+            Je m'appelle <strong>Alex Desroches</strong>. Je suis développeur autonome et j'offre des{" "}
+            <strong>services de programmation de logiciels, d'applications web et de sites web</strong> selon vos besoins.
           </p>
           <Link href="/a-propos" className="text-link">En savoir plus sur moi&nbsp;&rarr;</Link>
 
@@ -71,7 +71,7 @@ export default function Index() {
 
           <h3>Faisons équipe&nbsp;!</h3>
           <p>
-            Confiez-moi un nouveau projet ou joignons nos forces en collaborant avec votre équipe.
+            Confiez-moi <strong>un nouveau projet</strong> ou joignons nos forces en collaborant avec votre équipe.
           </p>
           <div className="handwritten-signature-container display-flex">
             <Link href="/contact" className="text-link">Contactez-moi&nbsp;&rarr;</Link>

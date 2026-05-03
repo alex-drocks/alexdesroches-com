@@ -18,13 +18,13 @@ const Programming = () => {
 
           <h2>What I do:</h2>
           <p>
-            I am experienced with web technologies, desktop software for Mac and Windows, and Windows task automation.
-            My broad expertise allows me to develop and maintain web applications, software, internal tools, websites,
-            and more according to your needs.
+            I am experienced with <strong>web technologies</strong>, desktop software for Mac and Windows, and Windows
+            task automation. My broad expertise allows me to <strong>develop and maintain web applications, software,
+            internal tools, websites</strong>, and more according to your needs.
           </p>
           <p>
-            I can take ownership of a new project, bring it to completion, or continue developing existing projects,
-            whether working alone or collaborating with your team.
+            I can <strong>take ownership of a new project</strong>, bring it to completion, or continue developing
+            existing projects, whether working alone or collaborating with your team.
           </p>
 
           <h2>Core Languages and Technologies:</h2>
@@ -311,7 +311,8 @@ const Programming = () => {
           That's it!
         </p>
         <p>
-          I have completed many more coding projects, but these are the most relevant examples of my strongest work.
+          I have completed many more coding projects, but these are the most relevant examples of{" "}
+          <strong>my strongest work</strong>.
         </p>
         <p>
           If you would like to know more about me, please feel free to reach out to me.

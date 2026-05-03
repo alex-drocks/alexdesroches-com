@@ -20,7 +20,7 @@ export default function Contact() {
         <section className="max-text-width">
           <h1>Contactez Alex Desroches</h1>
           <p>
-            N'hésitez pas à me contacter. Ce sera un plaisir de discuter de votre projet.
+            N'hésitez pas à me contacter. Ce sera un plaisir de <strong>discuter de votre projet</strong>.
             Je suis joignable par l'un des moyens ci-dessous&nbsp;:
           </p>
 

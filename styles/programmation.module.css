@@ -9,6 +9,10 @@
   transform: rotateZ(0deg);
 }
 
+:global(.skills) h2 {
+  margin-top: 2.5rem;
+}
+
 .techListsContainer {
   display: flex;
 }

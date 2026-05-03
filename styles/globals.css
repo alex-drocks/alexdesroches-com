@@ -214,11 +214,19 @@ li {
 .stylish-shadow-image--overlay-text {
   z-index: 2;
   position: absolute;
-  top: 86%;
-  left: 40%;
-  transform: rotateZ(10deg);
+  left: 8%;
+  top: unset;
+  bottom: 5%;
+  transform: none;
   color: var(--light-gray);
   opacity: 0.9;
+}
+
+.stylish-shadow-image--overlay-text--angled {
+  top: 86%;
+  bottom: auto;
+  left: 40%;
+  transform: rotateZ(10deg);
 }
 
 .stylish-shadow-image:hover .stylish-shadow-image--overlay-text {
@@ -608,7 +616,7 @@ html.dark .btn-secondary:hover {
 }
 
 @media screen and (max-width: 1250px) {
-  .stylish-shadow-image--overlay-text {
+  .stylish-shadow-image--overlay-text--angled {
     top: 86%;
     left: 35%;
   }
@@ -649,7 +657,7 @@ html.dark .btn-secondary:hover {
     font-size: 1.375rem;
   }
 
-  .stylish-shadow-image--overlay-text {
+  .stylish-shadow-image--overlay-text--angled {
     top: 85%;
     left: 33%;
   }

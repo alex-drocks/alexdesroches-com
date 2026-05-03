@@ -49,7 +49,7 @@ module.exports = {
 
     return {
       loc: path,
-      changefreq: normalizedPath === "/" || normalizedPath === "/en/" ? "weekly" : "monthly",
+      changefreq: "monthly",
       priority: prioritiesByPath[normalizedPath] || 0.6,
       lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
       alternateRefs: alternateRefsByPath[normalizedPath] || [],

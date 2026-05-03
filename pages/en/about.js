@@ -54,6 +54,7 @@ const About = () => {
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
+            <span aria-hidden="true" className="stylish-shadow-image--overlay-text">Art is Revealing</span>
             <ResponsiveImage
               path="/images/about/about"
               alt="Art is Revealing"

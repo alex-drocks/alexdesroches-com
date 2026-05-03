@@ -125,9 +125,9 @@ export default function PageTemplate({
 
         {pageAlternateURL && (
           <>
-            <link rel="alternate" hrefLang="fr-CA" href={frenchCanonicalURL}/>
-            <link rel="alternate" hrefLang="en-CA" href={englishCanonicalURL}/>
-            <link rel="alternate" hrefLang="x-default" href={frenchCanonicalURL}/>
+            <link rel="alternate" hreflang="fr-CA" href={frenchCanonicalURL}/>
+            <link rel="alternate" hreflang="en-CA" href={englishCanonicalURL}/>
+            <link rel="alternate" hreflang="x-default" href={frenchCanonicalURL}/>
           </>
         )}
 

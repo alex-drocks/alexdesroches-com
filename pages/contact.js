@@ -41,6 +41,7 @@ export default function Contact() {
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
+            <span aria-hidden="true" className="stylish-shadow-image--overlay-text">L'art communique</span>
             <ResponsiveImage
               path="/images/celltower/celltower"
               alt="L'art communique"

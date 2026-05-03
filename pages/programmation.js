@@ -166,7 +166,7 @@ export default function Programmation() {
         </div>
         <div className="max-text-width">
           <div className="stylish-shadow-image">
-            <span className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Programmer est un art</span>
+            <span aria-hidden="true" className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Programmer est un art</span>
             <ResponsiveImage
               path="/images/programmation/stylish/programmation"
               alt="Programmer est un art"

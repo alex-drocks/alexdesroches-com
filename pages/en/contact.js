@@ -38,6 +38,7 @@ const Contact = () => {
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
+            <span aria-hidden="true" className="stylish-shadow-image--overlay-text">Art is Communicating</span>
             <ResponsiveImage
               path="/images/celltower/celltower"
               alt="Art is Communicating"

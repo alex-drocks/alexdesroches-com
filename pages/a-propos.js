@@ -45,6 +45,7 @@ export default function About() {
 
         <section className="max-text-width">
           <div className="stylish-shadow-image">
+            <span aria-hidden="true" className="stylish-shadow-image--overlay-text">L'art révèle</span>
             <ResponsiveImage
               path="/images/about/about"
               alt="L'art révèle"

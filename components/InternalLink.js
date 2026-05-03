@@ -16,7 +16,7 @@ const InternalLink = ({page = "", className = "", isActiveLink = false, withArro
 
   return (
     <Link href={href} className={className}>
-      {children}{withArrow ? <>&nbsp;&rarr;</> : null}
+      {children}{withArrow ? <> →</> : null}
     </Link>
   );
 };

@@ -27,8 +27,8 @@ export default function Project({title, description, imgSrc, features, technolog
         <div>
           <h4>
             {isEnglish
-              ? <>Technologies I used:</>
-              : <>Technologies utilisées&nbsp;:</>
+              ? <>Technologies used:</>
+              : <>Technologies utilisées :</>
             }
           </h4>
           <p>{technologies}</p>
@@ -36,8 +36,8 @@ export default function Project({title, description, imgSrc, features, technolog
         <div>
           <h4>
             {isEnglish
-              ? <>Achievements included:</>
-              : <>Réalisations incluses&nbsp;:</>
+              ? <>Key features:</>
+              : <>Ce qui a été réalisé :</>
             }
           </h4>
           <p>{features}</p>
@@ -45,8 +45,8 @@ export default function Project({title, description, imgSrc, features, technolog
         <div>
           <h4>
             {isEnglish
-              ? <>Chronology:</>
-              : <>Chronologie&nbsp;:</>
+              ? <>Timeline:</>
+              : <>Chronologie :</>
             }
           </h4>
           <span>{timespan}</span>
@@ -55,8 +55,8 @@ export default function Project({title, description, imgSrc, features, technolog
         <div>
           <h4>
             {isEnglish
-              ? <>More details link:</>
-              : <>Lien pour obtenir plus de détails&nbsp;:</>
+              ? <>More details:</>
+              : <>Plus de détails :</>
             }
           </h4>{" "}
           <span><ExternalLink url={url} className="text-link">{url}</ExternalLink></span>

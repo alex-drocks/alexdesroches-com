@@ -1,11 +1,12 @@
 import {useEffect, useState} from "react";
+import {useIsEnglish} from "../hooks/useIsEnglish";
 
-const skillWords = [
+const englishSkillWords = [
   "JavaScript",
   "HTML",
   "CSS",
   "Node.js",
-  "Bun.js",
+  "Bun",
   "React.js",
   "Next.js",
   "Bittensor",
@@ -29,7 +30,36 @@ const skillWords = [
   "Kubernetes",
 ];
 
-const initialSkills = [
+const frenchSkillWords = [
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "Node.js",
+  "Bun",
+  "React.js",
+  "Next.js",
+  "Bittensor",
+  "Python",
+  "Angular",
+  "Electron.js",
+  "Firebase",
+  "AutoHotkey",
+  "Git",
+  "GitHub",
+  "GitLab",
+  "Linux",
+  "Agents IA",
+  "PHP",
+  "Java",
+  "C#",
+  "SQL",
+  "WordPress",
+  "WooCommerce",
+  "Astro.js",
+  "Kubernetes",
+];
+
+const englishInitialSkills = [
   "JavaScript",
   "React.js",
   "Next.js",
@@ -41,7 +71,22 @@ const initialSkills = [
   "AI Agents",
   "Python",
   "GitHub",
-  "Bun.js",
+  "Bun",
+];
+
+const frenchInitialSkills = [
+  "JavaScript",
+  "React.js",
+  "Next.js",
+  "Node.js",
+  "CSS",
+  "HTML",
+  "Firebase",
+  "Electron.js",
+  "Agents IA",
+  "Python",
+  "GitHub",
+  "Bun",
 ];
 
 const defaultCoreLabels = {
@@ -65,8 +110,8 @@ const skillSlots = [
   {id: "upper-inner-east", x: "64%", y: "29%", delay: "-8s", duration: "22s", driftX: "9px", driftY: "11px", tone: "accent"},
 ];
 
-function getRandomSkills(count) {
-  const shuffledSkills = [...skillWords];
+function getRandomSkills(words, count) {
+  const shuffledSkills = [...words];
 
   for (let i = shuffledSkills.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -77,6 +122,9 @@ function getRandomSkills(count) {
 }
 
 export default function HeroSkillShowcase({coreLabels = defaultCoreLabels}) {
+  const isEnglish = useIsEnglish();
+  const skillWords = isEnglish ? englishSkillWords : frenchSkillWords;
+  const initialSkills = isEnglish ? englishInitialSkills : frenchInitialSkills;
   const [visibleSkills, setVisibleSkills] = useState(initialSkills);
 
   useEffect(() => {
@@ -87,13 +135,13 @@ export default function HeroSkillShowcase({coreLabels = defaultCoreLabels}) {
     }
 
     const intervalId = window.setInterval(() => {
-      setVisibleSkills(getRandomSkills(skillSlots.length));
+      setVisibleSkills(getRandomSkills(skillWords, skillSlots.length));
     }, 5600);
 
     return () => {
       window.clearInterval(intervalId);
     };
-  }, []);
+  }, [skillWords]);
 
   return (
     <div className="hero-skill-showcase" aria-hidden="true">

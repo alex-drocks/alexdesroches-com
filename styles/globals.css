@@ -125,11 +125,12 @@ img {
   height: auto;
 }
 
-h2, a {
+h1, h2, a {
   font-family: var(--ff-monospace);
   letter-spacing: 0;
 }
 
+h1,
 h2 {
   font-size: 1.75rem;
   margin: 2rem 0 1rem 0;
@@ -629,10 +630,11 @@ html.dark .btn-secondary:hover {
 }
 
 @media screen and (max-width: 330px) {
-  header nav h1.left-branding a {
+  header nav .left-branding a {
     font-size: 1rem;
   }
 
+  h1,
   h2 {
     font-size: 1.5rem;
   }

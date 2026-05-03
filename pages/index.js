@@ -6,17 +6,17 @@ import HeroSkillShowcase from "../components/HeroSkillShowcase";
 export default function Index() {
   return (
     <PageTemplate
-      pageTitle={process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription={process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION}
-      pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL}
+      pageTitle={"Développeur web pigiste au Québec | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
+      pageDescription="Développeur web front-end au Québec. Création de sites rapides, accessibles et performants avec React, Next.js et JavaScript."
+      pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/"}
     >
       <section className="hero">
         <div className="max-content-width display-flex">
           <div className="max-text-width">
-            <span className="hero-badge">Programmeur freelance</span>
+            <span className="hero-badge">Programmeur pigiste</span>
             <h1 className="hero-title">
-              <span>Alexandre</span>
+              <span>Alexandre</span>{" "}
               <span>Desroches</span>
             </h1>
             <div className="shimmer-bar" aria-hidden="true" />
@@ -47,38 +47,37 @@ export default function Index() {
 
       <div className="max-content-width display-flex">
         <div className="max-text-width">
-          <h2>Programmeur freelance (pigiste)</h2>
+          <h2>Programmeur pigiste</h2>
           <p>
-            Mon nom est Alex Desroches. Je suis un développeur autonome, offrant des services de
-            programmation de logiciels, applications Web et sites Internet, selon vos besoins.
+            Je m'appelle Alex Desroches. Je suis développeur autonome et j'offre des services de programmation de
+            logiciels, d'applications web et de sites web selon vos besoins.
           </p>
-          <Link href="/a-propos" className="text-link">En savoir plus à propos de moi&nbsp;&rarr;</Link>
+          <Link href="/a-propos" className="text-link">En savoir plus sur moi →</Link>
 
-          <h3>Mon expertise est le Développement Web Front-End.</h3>
+          <h3>Mon expertise : le développement web front-end.</h3>
           <p>
-            Mes forces en programmation, sont basées principalement sur les langages du Web.
-            C'est-à-dire, HTML, CSS et <strong>JavaScript</strong>; dont les sites Internet et applications Web
-            dépendent.
+            Mes forces en programmation reposent principalement sur les langages du web, c'est-à-dire HTML,
+            CSS et <strong>JavaScript</strong>, dont dépendent les sites web et les applications web.
           </p>
           <p>
             Dans ce vaste univers, je maîtrise des technologies modernes en forte demande
             telles
-            que&nbsp;: <strong>React.js</strong>, Next.js, Node.js, Electron.js, <strong>Angular</strong>, Squarespace,
+            que : <strong>React.js</strong>, Next.js, Node.js, Electron.js, <strong>Angular</strong>, Squarespace,
             WordPress, WooCommerce et Firebase.
           </p>
           <Link href="/programmation" className="text-link">
-            Mes services de programmation&nbsp;&rarr;
+            Mes services de programmation →
           </Link>
 
-          <h3>Faisons équipe&nbsp;!</h3>
+          <h3>Faisons équipe !</h3>
           <p>
             Confiez-moi un nouveau projet ou joignons nos forces en collaborant avec votre équipe.
           </p>
           <div className="handwritten-signature-container display-flex">
-            <Link href="/contact" className="text-link">Contactez-moi&nbsp;&rarr;</Link>
+            <Link href="/contact" className="text-link">Contactez-moi →</Link>
             <ResponsiveImage
               path="/images/signature/signature"
-              alt="Signature Alex Desroches"
+              alt="Signature d'Alex Desroches"
               renderedWidth={92}
               renderedHeight={92}
               desktopWidth={276}
@@ -93,7 +92,7 @@ export default function Index() {
           <div className="stylish-shadow-image">
             <ResponsiveImage
               path="/images/whitebloc/whitebloc"
-              alt="Art is Thinking"
+              alt="L'art fait réfléchir"
               renderedWidth={501}
               renderedHeight={751}
               desktopWidth={1002}

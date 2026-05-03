@@ -7,29 +7,28 @@ import Project from "../components/Project";
 export default function Programmation() {
   return (
     <PageTemplate
-      pageTitle={"Services de programmation | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
-      pageDescription="Services de programmation et développement de sites Internet. Alex Desroches freelancer. JavaScript, React, Node, Firebase, HTML, CSS."
+      pageTitle={"Services de développement web | " + process.env.NEXT_PUBLIC_WEBSITE_TITLE}
+      pageDescription="Services de développement web et portfolio d'Alex Desroches. Sites, applications web, automatisation et outils JavaScript avec React, Next.js et Node.js."
       pageCanonicalURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/programmation/"}
       pageAlternateURL={process.env.NEXT_PUBLIC_WEBSITE_URL + "/en/programming/"}
     >
       <section className="skills max-content-width display-flex">
         <div className="max-text-width">
-          <h2>Services de Programmation et Développement&nbsp;Web</h2>
+          <h1>Services de programmation et développement web</h1>
 
-          <h3>Ce que je fais&nbsp;:</h3>
+          <h2>Ce que je fais :</h2>
           <p>
-            Je suis un développeur expérimenté avec les technologies du Web, les logiciels desktop pour Mac et
-            Windows, ainsi que l'automatisation de tâches sur Windows.
-            Mon domaine d'expertise est donc assez vaste.
-            Pouvant maintenir et <strong>concevoir, selon votre
-              demande</strong>, applications Web, logiciels, outils internes et sites Internet de haute qualité.
+            Je suis un développeur expérimenté en technologies web, en logiciels de bureau pour Mac et Windows ainsi
+            qu'en automatisation de tâches sous Windows. Mon domaine d'expertise est donc assez vaste. Je peux maintenir
+            et concevoir, selon vos besoins, des applications web, des logiciels, des outils internes et des sites web de
+            haute qualité.
           </p>
           <p>
-            Ainsi, je peux prendre en charge un nouveau projet et le mener à terme et/ou
-            poursuivre le développement de projets existants, seul, ou en collaborant avec votre équipe de développeurs.
+            Ainsi, je peux prendre en charge un nouveau projet et le mener à terme, ou poursuivre le développement de
+            projets existants, seul ou en collaboration avec votre équipe de développeurs.
           </p>
 
-          <h3>Langages et technologies maîtrisées&nbsp;:</h3>
+          <h2>Langages et technologies maîtrisés :</h2>
           <div className={styles.techListsContainer}>
             <ul>
               <li>
@@ -54,7 +53,7 @@ export default function Programmation() {
               </li>
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/Bun_(software)">
-                  Bun.js
+                  Bun
                 </ExternalLink>
               </li>
               <li>
@@ -96,7 +95,7 @@ export default function Programmation() {
               </li>
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/AutoHotkey">
-                  Autohotkey
+                  AutoHotkey
                 </ExternalLink>
               </li>
               <li>
@@ -111,13 +110,13 @@ export default function Programmation() {
               </li>
               <li>
                 <ExternalLink url="https://en.wikipedia.org/wiki/AI_agent">
-                  AI Agents
+                  Agents IA
                 </ExternalLink>
               </li>
             </ul>
           </div>
 
-          <h3>Connaissances de base&nbsp;:</h3>
+          <h2>Expérience complémentaire :</h2>
           <div className={styles.techListsContainer}>
             <ul>
               <li>
@@ -167,10 +166,10 @@ export default function Programmation() {
         </div>
         <div className="max-text-width">
           <div className="stylish-shadow-image">
-            <span className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Programming is Art</span>
+            <span className={styles.imageTextOverlay + " stylish-shadow-image--overlay-text"}>Programmer est un art</span>
             <ResponsiveImage
               path="/images/programmation/stylish/programmation"
-              alt="Programming is Art"
+              alt="Programmer est un art"
               renderedWidth={501}
               renderedHeight={752}
               desktopWidth={1000}
@@ -188,13 +187,13 @@ export default function Programmation() {
       </svg>
 
       <section className={styles.services}>
-        <h3>Services offerts</h3>
+        <h2>Services offerts</h2>
         <ul className="max-text-width">
-          <li>Sites Internet</li>
-          <li>Applications Web</li>
-          <li>Commerces en ligne</li>
-          <li>Logiciels pour ordinateurs</li>
-          <li>Web scraping</li>
+          <li>Sites web</li>
+          <li>Applications web</li>
+          <li>Boutiques en ligne</li>
+          <li>Applications de bureau</li>
+          <li>Extraction de données web</li>
           <li>Scripts d'automatisation</li>
         </ul>
       </section>
@@ -208,54 +207,52 @@ export default function Programmation() {
       <section className={styles.projects + " max-content-width display-flex"}>
         <h2>Projets réalisés</h2>
         <Project
-          title="Finance&nbsp;D, Site Internet pour logiciel et apps de comptabilité"
+          title="Site web Finance D pour logiciel et applications de comptabilité"
 
-          description="Finance&nbsp;D, est une entreprise que j'ai démarrée
-        dans le but d'offrir une variété d'outils spécifiques pour la comptabilité.
-        J'ai donc créé un site Internet pour rendre accessibles mon logiciel de tenue de livres
-        ainsi que 3 applications web différentes servant chacune à solutionner des problèmes spécifiques."
+          description="Finance D est une entreprise que j'ai démarrée dans le but d'offrir une variété d'outils de comptabilité.
+        J'ai donc créé un site web pour rendre accessibles mon logiciel de tenue de livres ainsi que trois applications web différentes,
+        chacune conçue pour résoudre des problèmes spécifiques."
 
           imgSrc="/images/programmation/finance-d/website/finance-d"
 
           technologies="React.js, JavaScript, Node.js, HTML, CSS, WordPress, WooCommerce, Stripe,
          Web Hosting Canada, GitHub."
 
-          features="Site Internet de présentation responsive avec React.js et une forte attention aux SEO
-        et à la performance du site qui frôle le 100%, plateforme de commerce en ligne avec WordPress et WooCommerce,
-        ainsi qu'un moyen de donner en ligne avec Stripe. Le site est classé sur la première page des résultats
-        Google Search de façon organique sans aucune publicité payante pour
-        le terme 'Logiciel comptable gratuit Québec'."
+          features="Site web de présentation adaptatif avec React.js, optimisé pour le SEO et la performance, avec des résultats
+        qui frôlent 100 %. Plateforme de commerce en ligne avec WordPress et WooCommerce, ainsi qu'une option de dons en ligne
+        avec Stripe. Le site se classe organiquement sur la première page des résultats Google, sans publicité payante,
+        pour le terme 'logiciel comptable gratuit Québec'."
 
-          timespan="2019 - aujourd'hui"
+          timespan="2019 à aujourd'hui"
 
           url="https://finance-d.com"
         />
         <Project
-          title="Logiciel de tenue de livres pour Windows et Mac, Finance&nbsp;D"
+          title="Logiciel de tenue de livres pour Windows et Mac, Finance D"
 
           description="Mon plus gros projet jusqu'à présent est ce logiciel de comptabilité pour ordinateurs Windows et Mac.
         Je l'ai créé avec les travailleurs autonomes du Québec en tête. Le but est la simplicité d'utilisation et l'efficacité.
-        Ce logiciel est ma plus grande fierté en programmation. À mon avis, il vaut la peine à découvrir et il est 100% gratuit."
+        Ce logiciel est ma plus grande fierté en programmation. À mon avis, il mérite d'être découvert et il est 100 % gratuit."
 
           imgSrc="/images/programmation/finance-d/software/finance-d_desktop_software"
 
           technologies="Electron.js, JavaScript, HTML, CSS, Node.js, VirtualBox VM, Google Firebase,
          Web Hosting Canada, GitHub."
 
-          features="Logiciel pour ordinateurs Windows et Mac. Incluant la certification de signature du code avec SSL.com,
-         une documentation complète pour les utilisateurs, la distribution par internet, les mises à jour automatiques,
-         le soutien technique et un système de logs privé pour assurer la qualité. Au moment de la rédaction, les avis
-         d'utilisateurs sur Capterra.ca ont une moyenne de 4.9 étoiles sur 5."
+          features="Logiciel pour ordinateurs Windows et Mac, incluant la certification de signature de code avec SSL.com,
+         une documentation complète pour les utilisateurs, la distribution en ligne, les mises à jour automatiques,
+         le soutien technique et un système privé de journalisation pour assurer la qualité. Au moment de la rédaction,
+         les avis d'utilisateurs sur Capterra.ca affichent une moyenne de 4,9 étoiles sur 5."
 
-          timespan="2019 - aujourd'hui"
+          timespan="2019 à aujourd'hui"
 
           url="https://magasin.finance-d.com/produit/logiciel-tenue-de-livres-simplifiee/"
         />
         <Project
-          title="Site Internet de Gestion Desroches Inc."
+          title="Site web de Gestion Desroches Inc."
 
           description="Gestion Desroches est une entreprise offrant des services de comptabilité.
-         J'ai eu le mandat de remplacer le site Internet qui était conçu avec Squarespace auparavant.
+         J'ai eu le mandat de remplacer le site web qui était conçu avec Squarespace auparavant.
          J'ai donc programmé le nouveau site avec React.js, puis changé d'hébergeur et reconfiguré les courriels
          @gestiondesroches.com. Cette migration a permis d'économiser des milliers de dollars en frais annuels."
 
@@ -264,66 +261,64 @@ export default function Programmation() {
           technologies="React.js, JavaScript, HTML, CSS, Node.js, Next.js, Web Hosting Canada, GitHub, Microsoft Outlook,
          Calendly, PHP."
 
-          features="Conception du site avec React, gestion de l'hébergement et des adresses courriels de l'entreprise
-        avec Web Hosting Canada pour remplacer Squarespace, optimisations SEO, formulaire de contact PHP et
+          features="Conception du site avec React, gestion de l'hébergement et des adresses courriel de l'entreprise
+        avec Web Hosting Canada pour remplacer Squarespace, optimisation SEO, formulaire de contact PHP et
         prise de rendez-vous en ligne avec Calendly."
 
-          timespan="Créé à contrat pendant le mois de décembre 2020, total environ 30 heures."
+          timespan="Réalisé à contrat en décembre 2020, pour un total d'environ 30 heures."
 
           url="https://gestiondesroches.com"
         />
         <Project
-          title="Web app pour la gestion des payes et employés, Finance&nbsp;D"
+          title="Application web pour la gestion de la paie et des employés, Finance D"
 
-          description="Il s'agit d'une application Web créée pour simplifier la gestion des périodes de payes
-        et des employés en collaboration avec un comptable.
-        J'ai conçu le Front-End avec React et le Back-End avec Google Firebase."
+          description="Il s'agit d'une application web créée pour simplifier la gestion des périodes de paie
+        et des employés, en collaboration avec un comptable. J'ai conçu le front-end avec React et le back-end avec Google Firebase."
 
           imgSrc="/images/programmation/finance-d/payes/app-payes"
 
           technologies="React.js, Firebase, JavaScript, HTML, CSS, Node.js, Web Hosting Canada, GitHub, PHP,
         WordPress, WooCommerce, WooCommerce License Manager."
 
-          features="Programmation Full-Stack. C'est-à-dire, le Front-End avec React.js et le Back-End avec Firebase
-        pour l'authentification et la base de données. Le serveur de license est géré avec WooCommerce License Manager
+          features="Programmation full-stack, c'est-à-dire le front-end avec React.js et le back-end avec Firebase
+        pour l'authentification et la base de données. Le serveur de licences est géré avec WooCommerce License Manager
         et des appels API PHP de l'application vers WooCommerce. L'interface se met à jour en temps réel grâce
-        à React et Firebase real-time similaire à Google Sheets par exemple. La base de données est du No-SQL."
+        à React et Firebase, de manière similaire à Google Sheets. La base de données est NoSQL."
 
-          timespan="Créée à contrat en 2021, en investissant quelques heures par mois."
+          timespan="Réalisée à contrat en 2021, à raison de quelques heures par mois."
 
           url="https://finance-d.com/periodes-de-payes-simplifiees/"
         />
         <Project
           title="Ce site"
 
-          description="Le site que vous visualisez en ce moment est conçu avec React et Next JS. J'ai choisi ces technologies
-        car elles sont mes préférées. En effet, React est génial. Et, Next.js est un framework par-dessus React qui
-        est d'une aide très appréciable. Next.js permet d'être performant, clean et satisfait en programmant.
-        C'est super le fun. Je le recommande à tous."
+          description="Le site que vous visualisez en ce moment est conçu avec React.js et Next.js. J'ai choisi ces technologies
+        parce qu'elles font partie de mes préférées. Next.js ajoute à React des fonctionnalités qui facilitent la création
+        de sites performants, bien structurés et agréables à développer."
 
           imgSrc="/images/programmation/alexdesrochescom/alexdesroches"
 
           technologies="React.js, Next.js, JavaScript, HTML, CSS, Node.js, Firebase Hosting, GitHub."
 
           features="Design, contenu, programmation, mise en ligne et optimisation des performances.
-         Ce site est open-source. Vous pouvez d'ailleurs consulter le code source en allant sur mon
-          repository de GitHub (lien ci-dessous)."
+         Ce site est à code source ouvert. Vous pouvez d'ailleurs consulter le code source dans mon
+          dépôt GitHub (lien ci-dessous)."
 
-          timespan="Créé initialement en 2021, et révisé pendant mes temps libres."
+          timespan="Créé initialement en 2021, puis révisé durant mon temps libre."
 
           url="https://github.com/alex-drocks/alexdesroches-com"
         />
       </section>
       <section className={styles.endingSection}>
         <p>
-          Voilà&nbsp;!
+          Voilà !
         </p>
         <p>
           J'ai fait plusieurs autres projets, mais ceux-ci étaient les plus pertinents pour démontrer ce que je maîtrise
           le mieux.
         </p>
         <p>
-          Si vous souhaitez en savoir plus à propos de moi, n'hésitez pas à me contacter.
+          Si vous souhaitez en savoir plus sur moi, n'hésitez pas à me contacter.
         </p>
       </section>
     </PageTemplate>

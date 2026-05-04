@@ -86,8 +86,9 @@ header nav .left-branding {
 }
 
 header nav .left-branding a {
-  font-family: monospace;
+  font-family: var(--ff-monospace);
   font-size: 1.125rem;
+  letter-spacing: -0.04em;
   margin: inherit;
 }
 
@@ -99,7 +100,7 @@ header nav .page-links {
   margin-left: 2em;
   column-gap: 1rem;
   list-style: none;
-  letter-spacing: -1px;
+  letter-spacing: -0.03em;
 }
 
 header nav a {
@@ -110,6 +111,7 @@ header nav a {
   width: inherit;
   text-align: center;
   line-height: 1;
+  font-weight: 500;
   border-bottom: 2px solid transparent;
 }
 
@@ -118,7 +120,7 @@ header nav a:hover {
 }
 
 header nav a.active-next-link {
-  font-weight: bold;
+  font-weight: 600;
   color: var(--main-foreground-color);
 }
 

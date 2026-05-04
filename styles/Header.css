@@ -9,6 +9,10 @@
 }
 
 .header-container button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
   width: 2.1rem;
   height: 2.1rem;
   padding: 0;
@@ -24,7 +28,7 @@
   height: 100%;
   width: 100%;
   padding: .4rem;
-  fill: var(--main-foreground-color);
+  fill: none;
   stroke: var(--main-foreground-color);
 }
 
@@ -33,7 +37,7 @@
 }
 
 .header-container button:hover svg {
-  fill: var(--main-background-color);
+  fill: none;
   stroke: var(--main-background-color);
 }
 
@@ -77,10 +81,13 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
 }
 
 header nav .left-branding {
+  flex: 0 0 auto;
   margin: 0;
   font-weight: 600;
 }
@@ -97,6 +104,7 @@ header nav .page-links {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  min-width: 0;
   margin-left: 2em;
   column-gap: 1rem;
   list-style: none;
@@ -122,6 +130,16 @@ header nav a:hover {
 header nav a.active-next-link {
   font-weight: 600;
   color: var(--main-foreground-color);
+}
+
+.header-container .toggle-mobile-menu-button svg {
+  fill: var(--main-foreground-color);
+  stroke: none;
+}
+
+.header-container .toggle-mobile-menu-button:hover svg {
+  fill: var(--main-foreground-color);
+  stroke: none;
 }
 
 @media screen and (min-width: 756px) {
@@ -156,7 +174,7 @@ header nav a.active-next-link {
     width: 2.75rem;
     height: 2.75rem;
     min-width: 2.75rem;
-    margin-left: 1rem;
+    margin-left: 0;
   }
 
   header .toggle-mobile-menu-button svg {
@@ -164,7 +182,29 @@ header nav a.active-next-link {
   }
 
   header {
+    gap: .75rem;
     padding: .75rem 0
+  }
+
+  header nav {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+  }
+
+  header nav .left-branding {
+    min-width: 0;
+  }
+
+  header nav .left-branding a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .header-container .toggle-button.language {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   nav.mobile-menu {

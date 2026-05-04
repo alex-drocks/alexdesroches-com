@@ -140,7 +140,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 h3 {
@@ -223,7 +223,7 @@ li {
 }
 
 .stylish-shadow-image--overlay-text--angled {
-  top: 86%;
+  top: 87%;
   bottom: auto;
   left: 40%;
   transform: rotateZ(10deg);

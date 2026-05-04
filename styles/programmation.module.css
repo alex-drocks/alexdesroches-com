@@ -13,38 +13,6 @@
   margin-top: 2.5rem;
 }
 
-@media screen and (min-width: 1025px) {
-  :global(.skills) {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: start;
-  }
-
-  :global(.skills) > :global(.max-text-width):first-child {
-    display: contents;
-  }
-
-  :global(.skills) > :global(.max-text-width):first-child > h1 {
-    grid-column: 1 / -1;
-    width: 100%;
-    max-width: none;
-    padding: var(--page-padding) var(--page-padding) 0;
-    margin-bottom: 0;
-  }
-
-  :global(.skills) > :global(.max-text-width):first-child > :not(h1) {
-    grid-column: 1;
-    margin-left: var(--page-padding);
-    margin-right: var(--page-padding);
-  }
-
-  :global(.skills) > :global(.max-text-width):nth-child(2) {
-    grid-column: 2;
-    grid-row: 2 / span 20;
-    max-width: none;
-  }
-}
-
 .techListsContainer {
   display: flex;
 }

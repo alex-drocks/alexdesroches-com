@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "preview": "next start",
+    "preview": "node scripts/preview-static.mjs out",
     "lint": "eslint ."
   },
   "author": {

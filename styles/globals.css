@@ -361,7 +361,7 @@ html.dark .hero-badge {
 
 .hero-title {
   font-family: var(--ff-sans-serif);
-  font-size: clamp(2.75rem, 8vw, 5.25rem);
+  font-size: clamp(2.75rem, 7vw, 4.625rem);
   font-weight: 700;
   line-height: .92;
   letter-spacing: -0.06em;

@@ -28,7 +28,7 @@ export default function Programmation() {
             développement de projets existants, seul ou en collaboration avec votre équipe de développeurs.
           </p>
 
-          <h2>Langages et technologies maîtrisés&nbsp;:</h2>
+          <h2>Technologies maîtrisées&nbsp;:</h2>
           <div className={styles.techListsContainer}>
             <ul>
               <li>

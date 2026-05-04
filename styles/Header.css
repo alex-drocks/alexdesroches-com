@@ -32,6 +32,11 @@
   stroke: var(--main-foreground-color);
 }
 
+.header-container button svg.turn-on-light-mode {
+  fill: var(--main-foreground-color);
+  stroke: none;
+}
+
 .header-container button:hover {
   background-color: var(--main-foreground-color);
 }
@@ -39,6 +44,11 @@
 .header-container button:hover svg {
   fill: none;
   stroke: var(--main-background-color);
+}
+
+.header-container button:hover svg.turn-on-light-mode {
+  fill: var(--main-background-color);
+  stroke: none;
 }
 
 .header-container .toggle-button {
@@ -321,5 +331,10 @@ header nav a.active-next-link {
     padding: .1rem;
     fill: currentColor;
     stroke: currentColor;
+  }
+
+  nav.mobile-menu .toggle-button svg.turn-on-light-mode {
+    fill: currentColor;
+    stroke: none;
   }
 }

@@ -158,6 +158,8 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
         className={"toggle-button " + className}
         aria-label={ariaLabel}
         aria-hidden="true"
+        disabled
+        tabIndex={-1}
         type="button"
       />
     );

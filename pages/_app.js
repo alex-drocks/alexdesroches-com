@@ -1,6 +1,7 @@
 import {ThemeProvider} from 'next-themes';
 
 import '../styles/globals.css';
+import '../styles/image-sheen.css';
 import '../styles/Header.css';
 import '../styles/Footer.css';
 

@@ -1,0 +1,368 @@
+@property --image-sheen-blue-alpha {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0.249;
+}
+
+@property --image-sheen-cyan-alpha {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0.153;
+}
+
+@property --image-sheen-purple-alpha {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0.103;
+}
+
+@property --image-sheen-dusk-alpha {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0.052;
+}
+
+@property --image-sheen-magenta-alpha {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0.159;
+}
+
+@property --image-sheen-ember-alpha {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0.132;
+}
+
+@property --image-sheen-warm-alpha {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0.188;
+}
+
+@property --image-sheen-ray-hue {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 205deg;
+}
+
+@property --image-sheen-ray-tint-alpha {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --image-sheen-drift-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+@property --image-sheen-drift-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+@property --image-sheen-drift-alt-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+@property --image-sheen-drift-alt-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+.stylish-shadow-image {
+  --image-sheen-ray: rgba(255, 255, 255, 0.314);
+  --image-sheen-soft: rgba(255, 255, 255, 0.135);
+  --image-sheen-ray-hue: 205deg;
+  --image-sheen-ray-tint-alpha: 0;
+  --image-sheen-ray-tint-low: 0.13;
+  --image-sheen-ray-tint-mid: 0.25;
+  --image-sheen-ray-tint-peak: 0.36;
+  --image-sheen-ray-hue-halo: hsl(var(--image-sheen-ray-hue) 100% 72% / calc(var(--image-sheen-ray-tint-alpha) * .38));
+  --image-sheen-ray-hue-edge: hsl(var(--image-sheen-ray-hue) 100% 66% / calc(var(--image-sheen-ray-tint-alpha) * .68));
+  --image-sheen-ray-hue-core: hsl(var(--image-sheen-ray-hue) 98% 58% / var(--image-sheen-ray-tint-alpha));
+  --image-sheen-ray-visible-halo: hsl(var(--image-sheen-ray-hue) 100% 68% / calc(var(--image-sheen-ray-tint-alpha) * .792));
+  --image-sheen-ray-visible-edge: hsl(var(--image-sheen-ray-hue) 100% 59% / calc(var(--image-sheen-ray-tint-alpha) * 1.331));
+  --image-sheen-ray-visible-core: hsl(var(--image-sheen-ray-hue) 100% 53% / calc(var(--image-sheen-ray-tint-alpha) * 1.837));
+  --image-sheen-prism-blue: hsl(222 100% 55% / calc(var(--image-sheen-ray-tint-alpha) * 1.08));
+  --image-sheen-prism-cyan: hsl(195 100% 54% / calc(var(--image-sheen-ray-tint-alpha) * .84));
+  --image-sheen-prism-violet: hsl(266 100% 58% / calc(var(--image-sheen-ray-tint-alpha) * .96));
+  --image-sheen-prism-purple: hsl(286 100% 54% / calc(var(--image-sheen-ray-tint-alpha) * 1.1));
+  --image-sheen-prism-magenta: hsl(320 100% 57% / calc(var(--image-sheen-ray-tint-alpha) * 1.04));
+  --image-sheen-prism-red: hsl(352 100% 61% / calc(var(--image-sheen-ray-tint-alpha) * .84));
+  --image-sheen-blue-rgb: 13 110 253;
+  --image-sheen-cyan-rgb: 91 190 255;
+  --image-sheen-purple-rgb: 60 38 130;
+  --image-sheen-dusk-rgb: 112 88 154;
+  --image-sheen-magenta-rgb: 245 78 145;
+  --image-sheen-ember-rgb: 255 112 88;
+  --image-sheen-warm-rgb: 255 172 128;
+  --image-sheen-blue-min: 0.249;
+  --image-sheen-blue-peak: 0.582;
+  --image-sheen-cyan-min: 0.153;
+  --image-sheen-cyan-peak: 0.383;
+  --image-sheen-purple-min: 0.103;
+  --image-sheen-purple-peak: 0.306;
+  --image-sheen-dusk-min: 0.052;
+  --image-sheen-dusk-peak: 0.149;
+  --image-sheen-magenta-min: 0.159;
+  --image-sheen-magenta-peak: 0.401;
+  --image-sheen-ember-min: 0.132;
+  --image-sheen-ember-peak: 0.343;
+  --image-sheen-warm-min: 0.188;
+  --image-sheen-warm-peak: 0.467;
+  --image-sheen-blue-alpha: var(--image-sheen-blue-min);
+  --image-sheen-cyan-alpha: var(--image-sheen-cyan-min);
+  --image-sheen-purple-alpha: var(--image-sheen-purple-min);
+  --image-sheen-dusk-alpha: var(--image-sheen-dusk-min);
+  --image-sheen-magenta-alpha: var(--image-sheen-magenta-min);
+  --image-sheen-ember-alpha: var(--image-sheen-ember-min);
+  --image-sheen-warm-alpha: var(--image-sheen-warm-min);
+  --image-sheen-blue: rgb(var(--image-sheen-blue-rgb) / var(--image-sheen-blue-alpha));
+  --image-sheen-cyan: rgb(var(--image-sheen-cyan-rgb) / var(--image-sheen-cyan-alpha));
+  --image-sheen-purple: rgb(var(--image-sheen-purple-rgb) / var(--image-sheen-purple-alpha));
+  --image-sheen-dusk: rgb(var(--image-sheen-dusk-rgb) / var(--image-sheen-dusk-alpha));
+  --image-sheen-magenta: rgb(var(--image-sheen-magenta-rgb) / var(--image-sheen-magenta-alpha));
+  --image-sheen-ember: rgb(var(--image-sheen-ember-rgb) / var(--image-sheen-ember-alpha));
+  --image-sheen-warm: rgb(var(--image-sheen-warm-rgb) / var(--image-sheen-warm-alpha));
+  --image-sheen-drift-x: 0%;
+  --image-sheen-drift-y: 0%;
+  --image-sheen-drift-alt-x: 0%;
+  --image-sheen-drift-alt-y: 0%;
+  isolation: isolate;
+}
+
+.stylish-shadow-image picture {
+  position: relative;
+  z-index: 1;
+  display: block;
+  line-height: 0;
+}
+
+.stylish-shadow-image img {
+  position: relative;
+  z-index: 0;
+  display: block;
+}
+
+.stylish-shadow-image picture::before,
+.stylish-shadow-image picture::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  border-radius: .25rem;
+  clip-path: inset(0 round .25rem);
+}
+
+.stylish-shadow-image picture::before {
+  background:
+    linear-gradient(112deg, transparent 0%, transparent 16%, var(--image-sheen-ray-hue-halo) 27%, var(--image-sheen-ray-hue-edge) 34%, var(--image-sheen-ray-hue-core) 39%, var(--image-sheen-ray-hue-edge) 45%, var(--image-sheen-ray-hue-halo) 54%, transparent 68%, transparent 100%),
+    linear-gradient(112deg, transparent 0%, transparent 19%, var(--image-sheen-cyan) 25%, var(--image-sheen-blue) 29%, var(--image-sheen-dusk) 32%, var(--image-sheen-soft) 35%, var(--image-sheen-ray) 39%, var(--image-sheen-purple) 42%, var(--image-sheen-magenta) 45%, var(--image-sheen-soft) 49%, transparent 64%, transparent 100%),
+    linear-gradient(68deg, transparent 0%, transparent 45%, var(--image-sheen-blue) 56%, var(--image-sheen-warm) 64%, var(--image-sheen-ember) 69%, transparent 84%, transparent 100%),
+    radial-gradient(ellipse at calc(17% + var(--image-sheen-drift-x)) calc(13% + var(--image-sheen-drift-y)), var(--image-sheen-cyan), transparent 44%),
+    radial-gradient(ellipse at calc(54% + var(--image-sheen-drift-alt-x)) calc(11% + var(--image-sheen-drift-y)), var(--image-sheen-dusk), transparent 46%),
+    radial-gradient(ellipse at calc(76% + var(--image-sheen-drift-alt-x)) calc(18% + var(--image-sheen-drift-alt-y)), var(--image-sheen-purple), transparent 42%),
+    radial-gradient(ellipse at calc(81% + var(--image-sheen-drift-x)) calc(20% + var(--image-sheen-drift-alt-y)), var(--image-sheen-magenta), transparent 42%),
+    radial-gradient(ellipse at calc(82% + var(--image-sheen-drift-alt-x)) calc(77% + var(--image-sheen-drift-y)), var(--image-sheen-ember), transparent 50%);
+  background-size: 260% 120%, 260% 120%, 260% 140%, 120% 100%, 100% 100%, 110% 100%, 110% 100%, 100% 100%;
+  background-position: 45% 48%, 45% 48%, 54% 52%, center, center, center, center, center;
+  mix-blend-mode: screen;
+  opacity: .68;
+  animation:
+    imageSheenRays 7.8s linear infinite alternate,
+    imageSheenRayHue 10.5s ease-in-out infinite,
+    imageSheenColorPulse 5.75s ease-in-out infinite,
+    imageSheenColorDrift 14s linear infinite alternate;
+  will-change: background-position, opacity;
+}
+
+.stylish-shadow-image picture::after {
+  background:
+    linear-gradient(112deg, transparent 0%, transparent 11%, var(--image-sheen-prism-blue) 22%, var(--image-sheen-prism-cyan) 31%, var(--image-sheen-prism-violet) 40%, var(--image-sheen-prism-purple) 49%, var(--image-sheen-prism-magenta) 58%, var(--image-sheen-prism-red) 66%, transparent 80%, transparent 100%),
+    linear-gradient(112deg, transparent 0%, transparent 14%, var(--image-sheen-ray-visible-halo) 25%, var(--image-sheen-ray-visible-edge) 34%, var(--image-sheen-ray-visible-core) 39%, var(--image-sheen-ray-visible-edge) 46%, var(--image-sheen-ray-visible-halo) 57%, transparent 72%, transparent 100%),
+    linear-gradient(124deg, transparent 0%, transparent 37%, var(--image-sheen-blue) 46%, var(--image-sheen-soft) 52%, var(--image-sheen-purple) 56%, var(--image-sheen-magenta) 60%, transparent 72%, transparent 100%),
+    radial-gradient(ellipse at calc(38% + var(--image-sheen-drift-alt-x)) calc(16% + var(--image-sheen-drift-y)), var(--image-sheen-dusk), transparent 44%),
+    radial-gradient(ellipse at calc(72% + var(--image-sheen-drift-x)) calc(24% + var(--image-sheen-drift-alt-y)), var(--image-sheen-blue), transparent 42%),
+    radial-gradient(ellipse at calc(32% + var(--image-sheen-drift-alt-x)) calc(80% + var(--image-sheen-drift-alt-y)), var(--image-sheen-warm), transparent 48%),
+    radial-gradient(ellipse at calc(88% + var(--image-sheen-drift-x)) calc(58% + var(--image-sheen-drift-y)), var(--image-sheen-ember), transparent 46%);
+  background-size: 280% 120%, 260% 120%, 145% 130%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-position: 45% 48%, 45% 48%, 52% 48%, center, center, center, center;
+  mix-blend-mode: normal;
+  opacity: .31;
+  filter: saturate(1.24) hue-rotate(0deg);
+  animation:
+    imageSheenHaze 9.4s linear infinite alternate-reverse,
+    imageSheenRayHue 10.5s ease-in-out infinite,
+    imageSheenPrismShift 8.6s linear infinite,
+    imageSheenColorPulse 6.5s ease-in-out 1s infinite,
+    imageSheenHazeColorDrift 18s linear infinite alternate;
+  will-change: background-position, opacity, filter;
+}
+
+html.dark .stylish-shadow-image {
+  --image-sheen-ray: rgba(255, 255, 255, 0.228);
+  --image-sheen-soft: rgba(255, 255, 255, 0.101);
+  --image-sheen-ray-tint-low: 0.11;
+  --image-sheen-ray-tint-mid: 0.21;
+  --image-sheen-ray-tint-peak: 0.31;
+  --image-sheen-warm-rgb: 255 154 120;
+  --image-sheen-blue-min: 0.319;
+  --image-sheen-blue-peak: 0.637;
+  --image-sheen-cyan-min: 0.194;
+  --image-sheen-cyan-peak: 0.44;
+  --image-sheen-purple-min: 0.131;
+  --image-sheen-purple-peak: 0.323;
+  --image-sheen-dusk-min: 0.115;
+  --image-sheen-dusk-peak: 0.278;
+  --image-sheen-magenta-min: 0.177;
+  --image-sheen-magenta-peak: 0.416;
+  --image-sheen-ember-min: 0.14;
+  --image-sheen-ember-peak: 0.359;
+  --image-sheen-warm-min: 0.161;
+  --image-sheen-warm-peak: 0.406;
+}
+
+@keyframes imageSheenRays {
+  from {
+    background-position: -18.1% 48%, -18.1% 48%, 1.9% 52%, 47.22% 49%, 50% 49%, 55.56% 48%, 45.46% 51%, 42.64% 52%;
+    opacity: .58;
+  }
+  to {
+    background-position: 82.1% 52%, 82.1% 52%, 102.1% 50%, 52.78% 51%, 51% 50%, 44.44% 52%, 56.54% 48%, 53.36% 49%;
+    opacity: .72;
+  }
+}
+
+@keyframes imageSheenHaze {
+  from {
+    background-position: -18.1% 48%, -18.1% 48%, 35.19% 48%, 50% 49%, 44.21% 50%, 52.78% 48%, 41.4% 52%;
+    opacity: .22;
+  }
+  to {
+    background-position: 82.1% 52%, 82.1% 52%, 70.81% 52%, 51% 50%, 57.79% 48%, 47.22% 52%, 60.6% 48%;
+    opacity: .32;
+  }
+}
+
+@keyframes imageSheenColorPulse {
+  0%,
+  100% {
+    --image-sheen-blue-alpha: var(--image-sheen-blue-min);
+    --image-sheen-cyan-alpha: var(--image-sheen-cyan-min);
+    --image-sheen-purple-alpha: var(--image-sheen-purple-min);
+    --image-sheen-dusk-alpha: var(--image-sheen-dusk-min);
+    --image-sheen-magenta-alpha: var(--image-sheen-magenta-min);
+    --image-sheen-ember-alpha: var(--image-sheen-ember-min);
+    --image-sheen-warm-alpha: var(--image-sheen-warm-min);
+  }
+  45%,
+  60% {
+    --image-sheen-blue-alpha: var(--image-sheen-blue-peak);
+    --image-sheen-cyan-alpha: var(--image-sheen-cyan-peak);
+    --image-sheen-purple-alpha: var(--image-sheen-purple-peak);
+    --image-sheen-dusk-alpha: var(--image-sheen-dusk-peak);
+    --image-sheen-magenta-alpha: var(--image-sheen-magenta-peak);
+    --image-sheen-ember-alpha: var(--image-sheen-ember-peak);
+    --image-sheen-warm-alpha: var(--image-sheen-warm-peak);
+  }
+}
+
+@keyframes imageSheenRayHue {
+  0%,
+  100% {
+    --image-sheen-ray-hue: 205deg;
+    --image-sheen-ray-tint-alpha: 0;
+  }
+  12% {
+    --image-sheen-ray-hue: 235deg;
+    --image-sheen-ray-tint-alpha: var(--image-sheen-ray-tint-low);
+  }
+  28% {
+    --image-sheen-ray-hue: 285deg;
+    --image-sheen-ray-tint-alpha: var(--image-sheen-ray-tint-peak);
+  }
+  44% {
+    --image-sheen-ray-hue: 330deg;
+    --image-sheen-ray-tint-alpha: var(--image-sheen-ray-tint-mid);
+  }
+  60% {
+    --image-sheen-ray-hue: 390deg;
+    --image-sheen-ray-tint-alpha: var(--image-sheen-ray-tint-peak);
+  }
+  76% {
+    --image-sheen-ray-hue: 470deg;
+    --image-sheen-ray-tint-alpha: var(--image-sheen-ray-tint-mid);
+  }
+  90% {
+    --image-sheen-ray-hue: 525deg;
+    --image-sheen-ray-tint-alpha: var(--image-sheen-ray-tint-low);
+  }
+}
+
+@keyframes imageSheenPrismShift {
+  0% {
+    filter: saturate(1.24) hue-rotate(0deg);
+  }
+  33% {
+    filter: saturate(1.34) hue-rotate(18deg);
+  }
+  66% {
+    filter: saturate(1.31) hue-rotate(-18deg);
+  }
+  100% {
+    filter: saturate(1.24) hue-rotate(0deg);
+  }
+}
+
+@keyframes imageSheenColorDrift {
+  from {
+    --image-sheen-drift-x: -5%;
+    --image-sheen-drift-y: -2%;
+    --image-sheen-drift-alt-x: 4%;
+    --image-sheen-drift-alt-y: 2%;
+  }
+  to {
+    --image-sheen-drift-x: 7%;
+    --image-sheen-drift-y: 3%;
+    --image-sheen-drift-alt-x: -6%;
+    --image-sheen-drift-alt-y: -3%;
+  }
+}
+
+@keyframes imageSheenHazeColorDrift {
+  from {
+    --image-sheen-drift-x: 4%;
+    --image-sheen-drift-y: -2%;
+    --image-sheen-drift-alt-x: -5%;
+    --image-sheen-drift-alt-y: 3%;
+  }
+  to {
+    --image-sheen-drift-x: -7%;
+    --image-sheen-drift-y: 3%;
+    --image-sheen-drift-alt-x: 6%;
+    --image-sheen-drift-alt-y: -2%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stylish-shadow-image picture::before,
+  .stylish-shadow-image picture::after {
+    animation: none;
+  }
+
+  .stylish-shadow-image picture::before {
+    opacity: .54;
+  }
+
+  .stylish-shadow-image picture::after {
+    opacity: .24;
+  }
+}

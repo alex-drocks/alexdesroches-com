@@ -30,6 +30,7 @@ export default function Header() {
             </InternalLink>
           </div>
           <ul className="page-links do-not-display-on-mobile">
+            <HomeNavLink/>
             <MainNavLinks/>
           </ul>
         </nav>
@@ -44,8 +45,6 @@ export default function Header() {
 
 
 function MobileMenu({isMobileMenuOpened}) {
-  const isEnglish = useIsEnglish()
-
   if (!isMobileMenuOpened)
     return null;
 
@@ -53,20 +52,29 @@ function MobileMenu({isMobileMenuOpened}) {
     <nav id="mobile-menu" className="mobile-menu do-not-display-on-desktop">
       <strong>Menu</strong>
       <ul className="page-links">
-        <li>
-          <InternalLink
-            isActiveLink={true}
-            page="index"
-          >
-            {isEnglish ? <>Home</> : <>Accueil</>}
-          </InternalLink>
-        </li>
+        <HomeNavLink/>
         <MainNavLinks/>
       </ul>
       <div className="mobile-menu-actions">
         <ToggleThemeColorsButton shouldDisplayText={true}/>
       </div>
     </nav>
+  );
+}
+
+
+function HomeNavLink() {
+  const isEnglish = useIsEnglish()
+
+  return (
+    <li>
+      <InternalLink
+        isActiveLink={true}
+        page="index"
+      >
+        {isEnglish ? <>Home</> : <>Accueil</>}
+      </InternalLink>
+    </li>
   );
 }
 

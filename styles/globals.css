@@ -372,10 +372,6 @@ html.dark .hero-badge {
   display: block;
 }
 
-.hero-title span + span {
-  padding-left: clamp(1.5rem, 7vw, 4.75rem);
-}
-
 .shimmer-bar {
   width: 48px;
   height: 3px;
@@ -684,10 +680,6 @@ html.dark .btn-secondary:hover {
 
   .hero + .max-content-width .max-text-width {
     padding-top: 2rem;
-  }
-
-  .hero-title span + span {
-    padding-left: 0;
   }
 
   .hero-badge {

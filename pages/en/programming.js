@@ -27,7 +27,7 @@ const Programming = () => {
             existing project, either alone or with your team.
           </p>
 
-          <h2>Languages and technologies I know well:</h2>
+          <h2>Technologies I know well:</h2>
           <div className={styles.techListsContainer}>
             <ul>
               <li>

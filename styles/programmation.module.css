@@ -69,6 +69,14 @@
   align-items: center;
 }
 
+.projects > h2 {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(2rem, 4.6vw, 3rem);
+  letter-spacing: -0.055em;
+  line-height: .96;
+}
+
 .project {
   position: relative;
   margin-top: 5rem;

@@ -41,6 +41,15 @@ export default function Footer() {
           <ul>
             <li>
               <InternalLink
+                page="index"
+                className="text-link"
+                withArrow={true}
+              >
+                {isEnglish ? "Home" : "Accueil"}
+              </InternalLink>
+            </li>
+            <li>
+              <InternalLink
                 page="about"
                 className="text-link"
                 withArrow={true}

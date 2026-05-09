@@ -1,8 +1,9 @@
 import PageTemplate from "../../components/PageTemplate";
 import styles from "../../styles/a-propos.module.css";
 import ResponsiveImage from "../../components/ResponsiveImage";
+import Link from "next/link";
 
-export default function About() {
+const About = () => {
   return (
     <PageTemplate
       pageTitle="About Alex Desroches | Web Developer"
@@ -14,14 +15,16 @@ export default function About() {
         <section className="max-text-width">
           <h1>About Alex Desroches</h1>
           <p>
-            I'm passionate about programming, movies, video games, music production, theology, and philosophy.
-            Basically, anything that sparks my creative side and feeds my imagination.
+            TL;DR: I'm a passionate guy and <strong>I enjoy coding</strong>, movies, video games, music production,
+            theology, and philosophy. You know, basically anything that wakes up my creative mind and feeds my
+            imagination.
           </p>
           <p>
-            I'm in my thirties and live in Quebec, Canada, with my beloved wife Cathy and our two kids!
+            I'm in my thirties and live in Quebec, Canada, with my beloved wife
+            Cathy and our two kids!
           </p>
           <p>
-            <strong>Since childhood, I've loved anything related to technology, creativity, and thinking.</strong>{" "}
+            Since I was a kid, <strong>I have loved things that are technological, creative, and make me think</strong>.{" "}
             A funny example: when I was very young, I received my first electronic piano for Christmas and played
             until the batteries were dead! This anecdote still reflects my personality today. When I discover something I
             enjoy, like music or programming, I get fully invested in it.
@@ -36,9 +39,16 @@ export default function About() {
           </p>
           <p>
             <strong>For everything I do, I give my best</strong> and find solutions to improve my working environment.
-            With me, you can expect professional, thorough, and well-done work. I always give my best, whether the
-            responsibility is big or small.
+            With me, you can expect professional work and real effort. I always give my best, whether the responsibility
+            is big or small.
           </p>
+          <p>
+            This is who I am in a nutshell!
+          </p>
+          <Link href="/en/programming" className="text-link">Look at my portfolio&nbsp;&rarr;</Link>
+          <br/>
+          <br/>
+          <Link href="/en/contact" className="text-link">Contact me&nbsp;&rarr;</Link>
         </section>
 
         <section className="max-text-width">
@@ -59,4 +69,7 @@ export default function About() {
       </div>
     </PageTemplate>
   );
-}
+};
+
+
+export default About;

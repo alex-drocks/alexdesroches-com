@@ -20,7 +20,7 @@ const About = () => {
             theology, and philosophy. You know, basically anything that wakes up my creative mind and feeds my
             imagination.
           </p>
-          <p>
+          <p suppressHydrationWarning>
             I am {calculateAge(new Date(1989, 4, 29))} years old and live in Quebec, Canada, with my beloved wife
             Cathy and our two kids!
           </p>

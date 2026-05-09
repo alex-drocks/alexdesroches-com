@@ -2,7 +2,6 @@ import PageTemplate from "../../components/PageTemplate";
 import styles from "../../styles/a-propos.module.css";
 import ResponsiveImage from "../../components/ResponsiveImage";
 import Link from "next/link";
-import {calculateAge} from "../../lib/calculateAge";
 
 const About = () => {
   return (
@@ -21,7 +20,7 @@ const About = () => {
             imagination.
           </p>
           <p>
-            I am {calculateAge(new Date(1989, 4, 29))} years old and live in Quebec, Canada, with my beloved wife
+            I'm in my thirties and live in Quebec, Canada, with my beloved wife
             Cathy and our two kids!
           </p>
           <p>

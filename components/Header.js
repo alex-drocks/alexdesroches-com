@@ -196,11 +196,11 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
 }
 
 function ToggleLanguageButton({className = ""}) {
-  const router = useRouter();
+  const { push, asPath } = useRouter();
   const isEnglish = useIsEnglish();
 
   const toggleLang = () => {
-    router.push(getAlternateInternalPath(router.asPath));
+    push(getAlternateInternalPath(asPath));
   };
 
   return (

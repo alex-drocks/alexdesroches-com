@@ -1,43 +1,43 @@
 @property --image-sheen-blue-alpha {
   syntax: "<number>";
   inherits: true;
-  initial-value: 0.249;
+  initial-value: 0.308;
 }
 
 @property --image-sheen-cyan-alpha {
   syntax: "<number>";
   inherits: true;
-  initial-value: 0.153;
+  initial-value: 0.18;
 }
 
 @property --image-sheen-purple-alpha {
   syntax: "<number>";
   inherits: true;
-  initial-value: 0.103;
+  initial-value: 0.055;
 }
 
 @property --image-sheen-dusk-alpha {
   syntax: "<number>";
   inherits: true;
-  initial-value: 0.052;
+  initial-value: 0.044;
 }
 
 @property --image-sheen-magenta-alpha {
   syntax: "<number>";
   inherits: true;
-  initial-value: 0.159;
+  initial-value: 0.045;
 }
 
 @property --image-sheen-ember-alpha {
   syntax: "<number>";
   inherits: true;
-  initial-value: 0.132;
+  initial-value: 0.052;
 }
 
 @property --image-sheen-warm-alpha {
   syntax: "<number>";
   inherits: true;
-  initial-value: 0.188;
+  initial-value: 0.084;
 }
 
 @property --image-sheen-ray-hue {
@@ -92,31 +92,31 @@
   --image-sheen-ray-visible-core: hsl(var(--image-sheen-ray-hue) 100% 53% / calc(var(--image-sheen-ray-tint-alpha) * 1.837));
   --image-sheen-prism-blue: hsl(222 100% 55% / calc(var(--image-sheen-ray-tint-alpha) * 1.08));
   --image-sheen-prism-cyan: hsl(195 100% 54% / calc(var(--image-sheen-ray-tint-alpha) * .84));
-  --image-sheen-prism-violet: hsl(266 100% 58% / calc(var(--image-sheen-ray-tint-alpha) * .96));
-  --image-sheen-prism-purple: hsl(286 100% 54% / calc(var(--image-sheen-ray-tint-alpha) * 1.1));
-  --image-sheen-prism-magenta: hsl(320 100% 57% / calc(var(--image-sheen-ray-tint-alpha) * 1.04));
-  --image-sheen-prism-red: hsl(352 100% 61% / calc(var(--image-sheen-ray-tint-alpha) * .84));
+  --image-sheen-prism-violet: hsl(248 94% 60% / calc(var(--image-sheen-ray-tint-alpha) * .58));
+  --image-sheen-prism-purple: hsl(232 96% 58% / calc(var(--image-sheen-ray-tint-alpha) * .54));
+  --image-sheen-prism-magenta: hsl(214 100% 58% / calc(var(--image-sheen-ray-tint-alpha) * .48));
+  --image-sheen-prism-red: hsl(202 100% 56% / calc(var(--image-sheen-ray-tint-alpha) * .4));
   --image-sheen-blue-rgb: 13 110 253;
   --image-sheen-cyan-rgb: 91 190 255;
-  --image-sheen-purple-rgb: 60 38 130;
-  --image-sheen-dusk-rgb: 112 88 154;
-  --image-sheen-magenta-rgb: 245 78 145;
-  --image-sheen-ember-rgb: 255 112 88;
-  --image-sheen-warm-rgb: 255 172 128;
-  --image-sheen-blue-min: 0.249;
-  --image-sheen-blue-peak: 0.582;
-  --image-sheen-cyan-min: 0.153;
-  --image-sheen-cyan-peak: 0.383;
-  --image-sheen-purple-min: 0.103;
-  --image-sheen-purple-peak: 0.306;
-  --image-sheen-dusk-min: 0.052;
-  --image-sheen-dusk-peak: 0.149;
-  --image-sheen-magenta-min: 0.159;
-  --image-sheen-magenta-peak: 0.401;
-  --image-sheen-ember-min: 0.132;
-  --image-sheen-ember-peak: 0.343;
-  --image-sheen-warm-min: 0.188;
-  --image-sheen-warm-peak: 0.467;
+  --image-sheen-purple-rgb: 54 74 168;
+  --image-sheen-dusk-rgb: 62 86 132;
+  --image-sheen-magenta-rgb: 52 116 210;
+  --image-sheen-ember-rgb: 44 132 206;
+  --image-sheen-warm-rgb: 104 168 226;
+  --image-sheen-blue-min: 0.308;
+  --image-sheen-blue-peak: 0.68;
+  --image-sheen-cyan-min: 0.18;
+  --image-sheen-cyan-peak: 0.444;
+  --image-sheen-purple-min: 0.055;
+  --image-sheen-purple-peak: 0.17;
+  --image-sheen-dusk-min: 0.044;
+  --image-sheen-dusk-peak: 0.13;
+  --image-sheen-magenta-min: 0.045;
+  --image-sheen-magenta-peak: 0.14;
+  --image-sheen-ember-min: 0.052;
+  --image-sheen-ember-peak: 0.15;
+  --image-sheen-warm-min: 0.084;
+  --image-sheen-warm-peak: 0.224;
   --image-sheen-blue-alpha: var(--image-sheen-blue-min);
   --image-sheen-cyan-alpha: var(--image-sheen-cyan-min);
   --image-sheen-purple-alpha: var(--image-sheen-purple-min);
@@ -197,7 +197,7 @@
   background-position: 45% 48%, 45% 48%, 52% 48%, center, center, center, center;
   mix-blend-mode: normal;
   opacity: .31;
-  filter: saturate(1.24) hue-rotate(0deg);
+  filter: saturate(1.1) hue-rotate(0deg);
   animation:
     imageSheenHaze 9.4s linear infinite alternate-reverse,
     imageSheenRayHue 10.5s ease-in-out infinite,
@@ -213,21 +213,21 @@ html.dark .stylish-shadow-image {
   --image-sheen-ray-tint-low: 0.11;
   --image-sheen-ray-tint-mid: 0.21;
   --image-sheen-ray-tint-peak: 0.31;
-  --image-sheen-warm-rgb: 255 154 120;
-  --image-sheen-blue-min: 0.319;
-  --image-sheen-blue-peak: 0.637;
-  --image-sheen-cyan-min: 0.194;
-  --image-sheen-cyan-peak: 0.44;
-  --image-sheen-purple-min: 0.131;
-  --image-sheen-purple-peak: 0.323;
-  --image-sheen-dusk-min: 0.115;
-  --image-sheen-dusk-peak: 0.278;
-  --image-sheen-magenta-min: 0.177;
-  --image-sheen-magenta-peak: 0.416;
-  --image-sheen-ember-min: 0.14;
-  --image-sheen-ember-peak: 0.359;
-  --image-sheen-warm-min: 0.161;
-  --image-sheen-warm-peak: 0.406;
+  --image-sheen-warm-rgb: 92 154 216;
+  --image-sheen-blue-min: 0.36;
+  --image-sheen-blue-peak: 0.72;
+  --image-sheen-cyan-min: 0.22;
+  --image-sheen-cyan-peak: 0.49;
+  --image-sheen-purple-min: 0.066;
+  --image-sheen-purple-peak: 0.184;
+  --image-sheen-dusk-min: 0.074;
+  --image-sheen-dusk-peak: 0.18;
+  --image-sheen-magenta-min: 0.052;
+  --image-sheen-magenta-peak: 0.15;
+  --image-sheen-ember-min: 0.06;
+  --image-sheen-ember-peak: 0.16;
+  --image-sheen-warm-min: 0.092;
+  --image-sheen-warm-peak: 0.24;
 }
 
 @keyframes imageSheenRays {
@@ -282,43 +282,43 @@ html.dark .stylish-shadow-image {
     --image-sheen-ray-tint-alpha: 0;
   }
   12% {
-    --image-sheen-ray-hue: 235deg;
+    --image-sheen-ray-hue: 216deg;
     --image-sheen-ray-tint-alpha: var(--image-sheen-ray-tint-low);
   }
   28% {
-    --image-sheen-ray-hue: 285deg;
-    --image-sheen-ray-tint-alpha: var(--image-sheen-ray-tint-peak);
-  }
-  44% {
-    --image-sheen-ray-hue: 330deg;
+    --image-sheen-ray-hue: 230deg;
     --image-sheen-ray-tint-alpha: var(--image-sheen-ray-tint-mid);
   }
+  44% {
+    --image-sheen-ray-hue: 242deg;
+    --image-sheen-ray-tint-alpha: var(--image-sheen-ray-tint-low);
+  }
   60% {
-    --image-sheen-ray-hue: 390deg;
+    --image-sheen-ray-hue: 214deg;
     --image-sheen-ray-tint-alpha: var(--image-sheen-ray-tint-peak);
   }
   76% {
-    --image-sheen-ray-hue: 470deg;
+    --image-sheen-ray-hue: 198deg;
     --image-sheen-ray-tint-alpha: var(--image-sheen-ray-tint-mid);
   }
   90% {
-    --image-sheen-ray-hue: 525deg;
+    --image-sheen-ray-hue: 190deg;
     --image-sheen-ray-tint-alpha: var(--image-sheen-ray-tint-low);
   }
 }
 
 @keyframes imageSheenPrismShift {
   0% {
-    filter: saturate(1.24) hue-rotate(0deg);
+    filter: saturate(1.1) hue-rotate(0deg);
   }
   33% {
-    filter: saturate(1.34) hue-rotate(18deg);
+    filter: saturate(1.16) hue-rotate(8deg);
   }
   66% {
-    filter: saturate(1.31) hue-rotate(-18deg);
+    filter: saturate(1.14) hue-rotate(-8deg);
   }
   100% {
-    filter: saturate(1.24) hue-rotate(0deg);
+    filter: saturate(1.1) hue-rotate(0deg);
   }
 }
 

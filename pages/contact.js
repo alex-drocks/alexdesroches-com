@@ -4,7 +4,6 @@ import {EmailLogo, LinkedinLogo} from "../components/Logos";
 
 import {myContactLinks} from "../lib/myContactLinks";
 import ContactLink from "../components/ContactLink";
-import PixelAdventurer from "../components/PixelAdventurer";
 
 import styles from "../styles/contact.module.css";
 
@@ -37,8 +36,6 @@ export default function Contact() {
               svgIcon={<LinkedinLogo/>}
             />
           </ul>
-
-          <PixelAdventurer/>
 
         </section>
 

@@ -51,7 +51,7 @@ export default function Index() {
 
           <h3>Senior front-end web developer</h3>
           <p>
-            In fact, my strengths are mostly built on core web technologies: HTML, CSS, and <strong>JavaScript</strong>.
+            My strengths are mostly built on core web technologies: HTML, CSS, and <strong>JavaScript</strong>.
           </p>
           <p>
             In this vast ecosystem, I work with modern, in-demand technologies like:{" "}

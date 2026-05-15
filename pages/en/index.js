@@ -49,7 +49,7 @@ export default function Index() {
           </p>
           <Link href="/en/about" className="text-link">Learn more about me&nbsp;&rarr;</Link>
 
-          <h3>I'm proficient in front-end web development.</h3>
+          <h3>Senior front-end web developer</h3>
           <p>
             In fact, my strengths are mostly built on core web technologies: HTML, CSS, and <strong>JavaScript</strong>.
           </p>

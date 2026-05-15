@@ -54,7 +54,7 @@ export default function Index() {
           </p>
           <Link href="/a-propos" className="text-link">En savoir plus sur moi&nbsp;&rarr;</Link>
 
-          <h3>Mon expertise&nbsp;: le développement web front-end.</h3>
+          <h3>Développeur front-end senior</h3>
           <p>
             Mes forces en programmation reposent principalement sur les langages du web, c'est-à-dire HTML,
             CSS et <strong>JavaScript</strong>, dont dépendent les sites web et les applications web.

@@ -176,7 +176,7 @@ export default function PageTemplate({
 
       <Header/>
 
-      <main className="page-container">
+      <main className="page-container" id="main-content">
         {children}
       </main>
 

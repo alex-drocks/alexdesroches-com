@@ -8,6 +8,7 @@ import {getAlternateInternalPath} from "../lib/getInternalPageLink";
 
 export default function Header() {
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
+  const isEnglish = useIsEnglish();
 
   useEffect(() => {
     document.body.classList.toggle("mobile-menu-open", isMobileMenuOpened);
@@ -19,6 +20,9 @@ export default function Header() {
 
   return (
     <div className={`header-container${isMobileMenuOpened ? " is-mobile-menu-open" : ""}`}>
+      <a href="#main-content" className="skip-link">
+        {isEnglish ? "Skip to main content" : "Aller au contenu principal"}
+      </a>
       <header>
         <nav>
           <div className="left-branding">

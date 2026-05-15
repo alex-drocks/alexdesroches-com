@@ -187,14 +187,13 @@ const Programming = () => {
 
       <section className={styles.services}>
         <h2>Services I offer</h2>
-        <ul className="max-text-width">
+        <ul className={styles.servicesGrid}>
           <li>Websites</li>
           <li>Web apps</li>
           <li>E-commerce</li>
           <li>Desktop software</li>
           <li>Web scraping</li>
           <li>Automation scripts</li>
-          <li>...and more</li>
         </ul>
       </section>
 

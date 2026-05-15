@@ -49,18 +49,40 @@
   line-height: .96;
 }
 
-.services ul {
-  list-style: none;
-  padding: 0;
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 4rem;
   width: 100%;
-  margin: 3rem 0 1.5rem 0;
+  max-width: calc(var(--max-content-width) - var(--page-padding) * 2);
+  margin: 3rem auto 1.5rem auto;
+  padding: 0 var(--page-padding);
+  list-style: none;
+  counter-reset: service;
 }
 
-.services li {
+.servicesGrid li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.875rem;
+  padding: 0.875rem 0;
   color: inherit;
-  font-size: 1.25rem;
-  text-align: center;
-  line-height: 2.25;
+  font-size: clamp(1rem, 1.8vw, 1.375rem);
+  font-weight: 600;
+  text-align: left;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  counter-increment: service;
+}
+
+.servicesGrid li::before {
+  content: counter(service, decimal-leading-zero);
+  font-family: var(--ff-monospace);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
 }
 
 .projects {
@@ -136,6 +158,13 @@
 
   .services {
     padding: 3rem 1.5rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    padding: 0;
+    margin: 2.5rem auto 1rem auto;
   }
 
   .waveBottom {

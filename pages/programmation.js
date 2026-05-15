@@ -188,7 +188,7 @@ export default function Programmation() {
 
       <section className={styles.services}>
         <h2>Services offerts</h2>
-        <ul className="max-text-width">
+        <ul className={styles.servicesGrid}>
           <li>Sites web</li>
           <li>Applications web</li>
           <li>Boutiques en ligne</li>

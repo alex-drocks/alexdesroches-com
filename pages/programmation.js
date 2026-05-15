@@ -4,6 +4,33 @@ import ResponsiveImage from "../components/ResponsiveImage";
 import ExternalLink from "../components/ExternalLink";
 import Project from "../components/Project";
 
+const servicesOfferts = [
+  {
+    title: "Sites web",
+    description: "Sites rapides, accessibles et structurés pour présenter clairement votre offre.",
+  },
+  {
+    title: "Applications web",
+    description: "Outils internes, portails clients, tableaux de bord et flux de travail.",
+  },
+  {
+    title: "Boutiques en ligne",
+    description: "Catalogues, paniers, paiements et intégrations pour vendre en ligne.",
+  },
+  {
+    title: "Logiciels de bureau",
+    description: "Applications multiplateformes pour Windows et macOS.",
+  },
+  {
+    title: "Extraction de données",
+    description: "Collecte fiable de données web publiques, livrées en formats utiles.",
+  },
+  {
+    title: "Scripts d'automatisation",
+    description: "Petits systèmes qui éliminent les tâches répétitives.",
+  },
+];
+
 export default function Programmation() {
   return (
     <PageTemplate
@@ -188,13 +215,18 @@ export default function Programmation() {
 
       <section className={styles.services}>
         <h2>Services offerts</h2>
-        <ul className="max-text-width">
-          <li>Sites web</li>
-          <li>Applications web</li>
-          <li>Boutiques en ligne</li>
-          <li>Applications de bureau</li>
-          <li>Extraction de données web</li>
-          <li>Scripts d'automatisation</li>
+        <ul className={styles.servicesDeck}>
+          {servicesOfferts.map((service, index) => (
+            <li
+              className={styles.serviceCard}
+              key={service.title}
+              style={{"--service-index": index}}
+            >
+              <span className={styles.serviceNumber}>{String(index + 1).padStart(2, "0")}</span>
+              <h3 className={styles.serviceTitle}>{service.title}</h3>
+              <p className={styles.serviceDescription}>{service.description}</p>
+            </li>
+          ))}
         </ul>
       </section>
 

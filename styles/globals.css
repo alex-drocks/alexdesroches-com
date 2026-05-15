@@ -71,6 +71,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "kern" 1, "liga" 1;
+  overflow-wrap: break-word;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
 }
 
 html.dark {
@@ -103,7 +109,12 @@ main.page-container {
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
-  animation: fadein 1.2s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  main.page-container {
+    animation: fadein 1.2s;
+  }
 }
 
 .display-flex {
@@ -161,6 +172,7 @@ h3 {
   font-weight: 600;
   letter-spacing: -0.025em;
   margin: 3.25rem 0 1rem 0;
+  text-wrap: balance;
 }
 
 h4 {
@@ -211,6 +223,7 @@ p + p {
   filter: brightness(var(--text-link-brightness));
   font-size: 1rem;
   font-weight: 500;
+  line-height: 1.4;
 }
 
 .text-link:hover {
@@ -273,6 +286,33 @@ p + p {
 .address {
   font-style: normal;
   color: var(--secondary-text-color);
+}
+
+/* --- Accessibility: skip link for keyboard navigation --- */
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 1000;
+  background: var(--main-background-color);
+  color: var(--main-foreground-color);
+  font-family: var(--ff-sans-serif);
+  font-weight: 500;
+  padding: 0.625rem 1rem;
+  border: 2px solid var(--blue);
+  border-radius: var(--button-radius);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  width: auto;
+  height: auto;
 }
 
 /* --- Accessibility: visible focus rings for keyboard navigation --- */

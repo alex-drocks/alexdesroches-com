@@ -4,6 +4,33 @@ import ExternalLink from "../../components/ExternalLink";
 import ResponsiveImage from "../../components/ResponsiveImage";
 import Project from "../../components/Project";
 
+const coreServices = [
+  {
+    title: "Websites",
+    description: "Fast, accessible sites that make your offer clear and credible.",
+  },
+  {
+    title: "Web apps",
+    description: "Custom tools, portals, dashboards, and workflows built around real users.",
+  },
+  {
+    title: "E-commerce",
+    description: "Product catalogs, checkout flows, payments, and store integrations.",
+  },
+  {
+    title: "Desktop software",
+    description: "Focused cross-platform apps for Windows and macOS.",
+  },
+  {
+    title: "Web scraping",
+    description: "Reliable extraction from public web sources into usable datasets.",
+  },
+  {
+    title: "Automation scripts",
+    description: "Small systems that remove repetitive admin and operational work.",
+  },
+];
+
 const Programming = () => {
   return (
     <PageTemplate
@@ -187,14 +214,17 @@ const Programming = () => {
 
       <section className={styles.services}>
         <h2>Services I offer</h2>
-        <ul className="max-text-width">
-          <li>Websites</li>
-          <li>Web apps</li>
-          <li>E-commerce</li>
-          <li>Desktop software</li>
-          <li>Web scraping</li>
-          <li>Automation scripts</li>
-          <li>...and more</li>
+        <ul className={styles.servicesDeck}>
+          {coreServices.map((service, index) => (
+            <li
+              className={styles.serviceCard}
+              key={service.title}
+              style={{"--service-index": index}}
+            >
+              <h3 className={styles.serviceTitle}>{service.title}</h3>
+              <p className={styles.serviceDescription}>{service.description}</p>
+            </li>
+          ))}
         </ul>
       </section>
 

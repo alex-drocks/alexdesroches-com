@@ -34,8 +34,6 @@
   --service-card-border-hover: rgba(255,255,255,0.34);
   --service-card-edge: rgba(3,22,53,0.24);
   --service-card-edge-hover: rgba(3,22,53,0.3);
-  --service-card-number: #031635;
-  --service-card-number-hover: #031635;
   --service-card-description: rgba(255,255,255,0.82);
   --service-card-description-hover: rgba(255,255,255,0.86);
 
@@ -55,8 +53,6 @@
 :global(html.dark) .services {
   --service-card-edge: rgba(255,255,255,0.2);
   --service-card-edge-hover: rgba(255,255,255,0.28);
-  --service-card-number: rgba(255,255,255,0.62);
-  --service-card-number-hover: rgba(255,255,255,0.7);
 }
 
 .services > h2 {
@@ -84,7 +80,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 12.25rem;
+  min-height: 10rem;
   padding: clamp(1.1rem, 1.6vw, 1.4rem);
   overflow: hidden;
   color: #fff;
@@ -94,16 +90,6 @@
   box-shadow:
     inset 0 1px 0 var(--service-card-edge),
     0 16px 34px rgba(0,36,110,0.16);
-}
-
-.serviceNumber {
-  display: block;
-  margin-bottom: 2.25rem;
-  color: var(--service-card-number);
-  font-family: var(--ff-monospace);
-  font-size: 0.7rem;
-  font-weight: 650;
-  letter-spacing: 0.08em;
 }
 
 .serviceTitle {
@@ -123,10 +109,6 @@
   line-height: 1.55;
 }
 
-.serviceNumber:hover {
-  color: var(--service-card-number-hover);
-}
-
 .serviceDescription:hover {
   color: var(--service-card-description);
 }
@@ -138,10 +120,6 @@
   box-shadow:
     inset 0 1px 0 var(--service-card-edge-hover),
     0 18px 38px rgba(0,36,110,0.2);
-}
-
-.serviceCard:hover .serviceNumber {
-  color: var(--service-card-number-hover);
 }
 
 .serviceCard:hover .serviceDescription {
@@ -252,10 +230,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .serviceCard {
-    min-height: 11rem;
-  }
-
   .waveBottom {
     margin: 0 0 8rem 0;
   }
@@ -270,7 +244,4 @@
     min-height: auto;
   }
 
-  .serviceNumber {
-    margin-bottom: 1.75rem;
-  }
 }

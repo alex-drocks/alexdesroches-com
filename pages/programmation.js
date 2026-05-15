@@ -222,7 +222,6 @@ export default function Programmation() {
               key={service.title}
               style={{"--service-index": index}}
             >
-              <span className={styles.serviceNumber}>{String(index + 1).padStart(2, "0")}</span>
               <h3 className={styles.serviceTitle}>{service.title}</h3>
               <p className={styles.serviceDescription}>{service.description}</p>
             </li>

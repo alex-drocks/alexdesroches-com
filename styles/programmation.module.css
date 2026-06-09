@@ -28,14 +28,14 @@
 }
 
 .services {
-  --service-card-bg: rgba(255,255,255,0.105);
-  --service-card-bg-hover: rgba(255,255,255,0.14);
-  --service-card-border: rgba(255,255,255,0.24);
-  --service-card-border-hover: rgba(255,255,255,0.34);
-  --service-card-edge: rgba(3,22,53,0.24);
-  --service-card-edge-hover: rgba(3,22,53,0.3);
-  --service-card-description: rgba(255,255,255,0.82);
-  --service-card-description-hover: rgba(255,255,255,0.86);
+  --service-card-bg: rgba(255,255,255,0.08);
+  --service-card-bg-hover: rgba(255,255,255,0.12);
+  --service-card-border: rgba(255,255,255,0.18);
+  --service-card-border-hover: rgba(255,255,255,0.28);
+  --service-card-edge: rgba(15,23,42,0.25);
+  --service-card-edge-hover: rgba(15,23,42,0.32);
+  --service-card-description: rgba(255,255,255,0.8);
+  --service-card-description-hover: rgba(255,255,255,0.88);
 
   position: relative;
   isolation: isolate;
@@ -46,27 +46,43 @@
   margin: 0;
   padding: clamp(2.25rem, 4vw, 3.5rem) var(--page-padding, clamp(1.5rem, 4vw, 3rem)) clamp(3rem, 5vw, 4.5rem);
   overflow: hidden;
-  background-color: var(--blue);
+  background: linear-gradient(135deg, #3730a3 0%, #4f46e5 50%, #6366f1 100%);
   color: white;
 }
 
 :global(html.dark) .services {
-  --service-card-edge: rgba(255,255,255,0.2);
-  --service-card-edge-hover: rgba(255,255,255,0.28);
+  --service-card-edge: rgba(255,255,255,0.18);
+  --service-card-edge-hover: rgba(255,255,255,0.26);
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+}
+
+.services::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(129, 140, 248, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(13, 148, 136, 0.12) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .services > h2 {
+  position: relative;
+  z-index: 1;
   width: inherit;
   text-align: center;
   margin: 0;
   color: inherit;
   font-family: var(--ff-sans-serif);
   font-size: clamp(2rem, 4.6vw, 3rem);
-  letter-spacing: -0.055em;
+  letter-spacing: -0.045em;
   line-height: .96;
 }
 
 .servicesDeck {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
@@ -89,7 +105,8 @@
   background-color: var(--service-card-bg);
   box-shadow:
     inset 0 1px 0 var(--service-card-edge),
-    0 16px 34px rgba(0,36,110,0.16);
+    0 12px 32px rgba(15, 23, 42, 0.2);
+  backdrop-filter: blur(8px);
 }
 
 .serviceTitle {
@@ -97,7 +114,7 @@
   color: #fff;
   font-size: clamp(1.2rem, 2vw, 1.55rem);
   font-weight: 700;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.035em;
   line-height: 1.05;
 }
 
@@ -119,11 +136,28 @@
   background-color: var(--service-card-bg-hover);
   box-shadow:
     inset 0 1px 0 var(--service-card-edge-hover),
-    0 18px 38px rgba(0,36,110,0.2);
+    0 16px 40px rgba(15, 23, 42, 0.25);
 }
 
 .serviceCard:hover .serviceDescription {
   color: var(--service-card-description-hover);
+}
+
+/* Subtle gradient accent on cards */
+.serviceCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.serviceCard:hover::before {
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -161,7 +195,7 @@
   width: 100%;
   text-align: center;
   font-size: clamp(2rem, 4.6vw, 3rem);
-  letter-spacing: -0.055em;
+  letter-spacing: -0.045em;
   line-height: .96;
 }
 
@@ -187,11 +221,12 @@
 
 .project img {
   max-width: 100%;
-  box-shadow: 0 0 2px var(--secondary-text-color);
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.12);
+  border-radius: var(--card-radius);
 }
 
 .project img:hover {
-  box-shadow: 0 1px 6px var(--secondary-text-color);
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.15);
 }
 
 .project .leftColumn,
@@ -203,7 +238,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border-left: 1px solid var(--lighter-gray);
+  border-left: 1px solid var(--slate-200);
+}
+
+html.dark .project .rightColumn {
+  border-left-color: var(--slate-700);
 }
 
 .endingSection {

@@ -47,12 +47,13 @@ footer .flex-row {
 }
 
 .footer-links--social svg {
-    fill: var(--blue);
-    filter: brightness(90%);
+    fill: var(--accent);
+    transition: fill 0.2s ease, transform 0.2s ease;
 }
 
 .footer-links--social a:is(:hover,:focus) svg {
-    fill: var(--secondary-text-color);
+    fill: var(--accent-light);
+    transform: translateY(-2px);
 }
 
 footer :is(.copyright,.entreprise) {

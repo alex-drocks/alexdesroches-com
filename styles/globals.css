@@ -9,20 +9,32 @@
 
   /*Light Mode*/
   --theme-light-background: #fff;
-  --theme-light-main-text-color: #111827;
-  --theme-light-secondary-text-color: #5f6470;
-  --theme-light-text-link-color: var(--blue);
+  --theme-light-main-text-color: #0f172a;
+  --theme-light-secondary-text-color: #64748b;
+  --theme-light-text-link-color: var(--accent);
   --theme-light-border-color: var(--extremely-light-gray);
-  --theme-light-box-shadow-color: var(--light-gray);
+  --theme-light-box-shadow-color: #94a3b8;
 
   /*Dark Mode*/
-  --theme-dark-background: #1f2028;
-  --theme-dark-main-text-color: #f8fafc;
-  --theme-dark-secondary-text-color: #c0c0c0;
-  --theme-dark-text-link-color: #f8fafc;
-  --theme-dark-border-color: var(--dark-gray);
-  --theme-dark-box-shadow-color: #777;
+  --theme-dark-background: #0f172a;
+  --theme-dark-main-text-color: #f1f5f9;
+  --theme-dark-secondary-text-color: #94a3b8;
+  --theme-dark-text-link-color: var(--accent-light);
+  --theme-dark-border-color: #334155;
+  --theme-dark-box-shadow-color: #1e293b;
 
+
+  /* Premium Color Palette - Slate/Indigo base with warm accent */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
 
   --dark-gray: #404040;
   --light-gray: #686868;
@@ -30,25 +42,41 @@
   --very-light-gray: #e5e5e5;
   --extremely-light-gray: #f0f0f0;
   --almost-white: #fbfbfb;
-  --blue: #0d6efd;
+
+  /* Distinctive accent - Deep slate-indigo */
+  --blue: #4f46e5;
+  --accent: #4f46e5;
+  --accent-light: #818cf8;
+  --accent-lighter: #a5b4fc;
+  --accent-dark: #3730a3;
+  --accent-glow: rgba(79, 70, 229, 0.15);
+
+  /* Secondary accent - Teal for variety */
+  --teal: #0d9488;
+  --teal-light: #2dd4bf;
+  --teal-dark: #0f766e;
+
+  /* Legacy compatibility */
+  --legacy-blue: #0d6efd;
 
   --max-content-width: 1280px;
   --max-text-width: 630px;
 
-  --text-link-brightness: 0.77;
+  --text-link-brightness: 0.9;
   --text-link-hover-brightness: 1;
-  --text-link-dark-brightness: 0.77;
+  --text-link-dark-brightness: 1;
   --text-link-dark-hover-brightness: 1.15;
 
   --elements-padding: .5rem 1rem;
   --page-padding: 4rem;
 
-  --button-radius: .25rem;
+  --button-radius: .375rem;
+  --card-radius: .5rem;
   --user-font-scale: 1rem -16px;
   --ff-sans-serif: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --ff-monospace: 'Geist Mono', 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  --heading-letter-spacing: -0.045em;
-  --heading-line-height: 1.05;
+  --heading-letter-spacing: -0.035em;
+  --heading-line-height: 1.1;
   --body-line-height: 1.72;
   font-family: var(--ff-sans-serif);
   font-size: 1rem;
@@ -170,7 +198,7 @@ h2 {
 h3 {
   font-size: clamp(1.1875rem, 2vw, 1.5rem);
   font-weight: 700;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.025em;
   margin: 3.25rem 0 1rem 0;
   text-wrap: balance;
 }
@@ -219,15 +247,19 @@ p + p {
 
 .text-link {
   text-decoration: underline;
+  text-decoration-color: var(--accent-lighter);
+  text-underline-offset: 2px;
   color: var(--main-text-link-color);
   filter: brightness(var(--text-link-brightness));
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.4;
+  transition: text-decoration-color 0.2s ease;
 }
 
 .text-link:hover {
   filter: brightness(var(--text-link-hover-brightness));
+  text-decoration-color: var(--accent);
 }
 
 .stylish-shadow-image {
@@ -240,14 +272,15 @@ p + p {
 }
 
 .stylish-shadow-image img {
-  border-radius: .25rem;
-  box-shadow: 100px 100px 100px var(--main-box-shadow-color);
-  opacity: 0.89;
-  transition: opacity .5s;
+  border-radius: var(--card-radius);
+  box-shadow: 80px 80px 100px var(--main-box-shadow-color);
+  opacity: 0.91;
+  transition: opacity .5s, transform .5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .stylish-shadow-image:hover img {
   opacity: 1;
+  transform: scale(1.01);
 }
 
 .stylish-shadow-image--overlay-text {
@@ -257,8 +290,11 @@ p + p {
   top: unset;
   bottom: 5%;
   transform: none;
-  color: var(--light-gray);
+  color: var(--slate-500);
   opacity: 0.9;
+  font-family: var(--ff-monospace);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
 }
 
 .stylish-shadow-image--overlay-text--angled {
@@ -269,7 +305,7 @@ p + p {
 }
 
 .stylish-shadow-image:hover .stylish-shadow-image--overlay-text {
-  color: var(--light-gray);
+  color: var(--slate-600);
   opacity: 1;
 }
 
@@ -302,7 +338,7 @@ p + p {
   font-family: var(--ff-sans-serif);
   font-weight: 500;
   padding: 0.625rem 1rem;
-  border: 2px solid var(--blue);
+  border: 2px solid var(--accent);
   border-radius: var(--button-radius);
   text-decoration: none;
 }
@@ -318,7 +354,7 @@ p + p {
 /* --- Accessibility: visible focus rings for keyboard navigation --- */
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -326,31 +362,31 @@ button:focus-visible {
 /* Nav links: focus ring should match the existing bottom-border hover style */
 header nav a:focus-visible {
   outline: none;
-  border-bottom-color: var(--blue);
+  border-bottom-color: var(--accent);
 }
 
 /* Toggle buttons: visible focus state */
 .header-container button:focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
 /* Image links: subtle focus ring */
 .stylish-shadow-image:focus-visible img,
 .stylish-shadow-image:has(a:focus-visible) img {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
-  border-radius: .25rem;
+  border-radius: var(--card-radius);
 }
 
 /* Footer social icons: themed focus ring */
 footer :is(a, button):focus-visible svg {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
 footer :is(a, button):focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -369,7 +405,7 @@ footer :is(a, button):focus-visible {
   width: 100%;
   padding-top: clamp(3rem, 7vw, 6rem);
   padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
-  background: linear-gradient(135deg, #eef4ff 0%, var(--theme-light-background) 70%, var(--theme-light-background) 100%);
+  background: linear-gradient(135deg, #eef2ff 0%, var(--theme-light-background) 65%, var(--theme-light-background) 100%);
 }
 
 .hero > .max-content-width {
@@ -378,7 +414,7 @@ footer :is(a, button):focus-visible {
 }
 
 html.dark .hero {
-  background: linear-gradient(135deg, #181a24 0%, var(--theme-dark-background) 70%, var(--theme-dark-background) 100%);
+  background: linear-gradient(135deg, #1e1b4b 0%, var(--theme-dark-background) 65%, var(--theme-dark-background) 100%);
 }
 
 .hero-badge {
@@ -388,15 +424,15 @@ html.dark .hero {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .14em;
-  color: var(--blue);
-  background: rgba(13, 110, 253, 0.08);
+  color: var(--accent);
+  background: var(--accent-glow);
   padding: 0.375rem 0.75rem;
   border-radius: var(--button-radius);
   margin-bottom: 1.25rem;
 }
 
 html.dark .hero-badge {
-  background: rgba(13, 110, 253, 0.15);
+  background: rgba(129, 140, 248, 0.12);
 }
 
 .hero-title {
@@ -404,7 +440,7 @@ html.dark .hero-badge {
   font-size: clamp(2.75rem, 7vw, 4.625rem);
   font-weight: 700;
   line-height: .92;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   margin: 0 0 1rem 0;
 }
 
@@ -413,9 +449,9 @@ html.dark .hero-badge {
 }
 
 .shimmer-bar {
-  width: 48px;
+  width: 56px;
   height: 3px;
-  background: linear-gradient(90deg, var(--blue), #5c9aff);
+  background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--teal-light));
   border-radius: 2px;
   margin: 1.25rem 0;
 }
@@ -458,8 +494,8 @@ html.dark .hero-badge {
   inset: 3%;
   border-radius: 50%;
   background:
-    linear-gradient(90deg, rgba(13, 110, 253, 0.08) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(13, 110, 253, 0.08) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(79, 70, 229, 0.07) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(79, 70, 229, 0.07) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: radial-gradient(ellipse at center, #000 48%, transparent 76%);
   opacity: 0.8;
@@ -471,7 +507,7 @@ html.dark .hero-badge {
   content: "";
   position: absolute;
   inset: 9%;
-  border: 1px solid rgba(13, 110, 253, 0.16);
+  border: 1px solid rgba(79, 70, 229, 0.2);
   border-radius: 50%;
   transform: rotate(-10deg) scaleX(1.18);
   z-index: 1;
@@ -479,13 +515,13 @@ html.dark .hero-badge {
 
 .hero-skill-showcase::after {
   inset: 18%;
-  border-color: rgba(32, 201, 151, 0.22);
+  border-color: rgba(13, 148, 136, 0.25);
   transform: rotate(26deg) scaleX(1.35);
 }
 
 .hero-skill-orbit {
   position: absolute;
-  border: 1px solid rgba(13, 110, 253, 0.18);
+  border: 1px solid rgba(79, 70, 229, 0.18);
   border-radius: 50%;
   z-index: 1;
   animation: heroOrbit 44s linear infinite;
@@ -497,14 +533,14 @@ html.dark .hero-badge {
 
 .hero-skill-orbit-two {
   inset: 24% 16%;
-  border-color: rgba(255, 183, 3, 0.24);
+  border-color: rgba(251, 191, 36, 0.25);
   animation-duration: 56s;
   animation-direction: reverse;
 }
 
 .hero-skill-orbit-three {
   inset: 31% 25%;
-  border-color: rgba(32, 201, 151, 0.2);
+  border-color: rgba(13, 148, 136, 0.22);
   animation-duration: 38s;
 }
 
@@ -514,7 +550,7 @@ html.dark .hero-badge {
   top: 50%;
   width: 76%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(13, 110, 253, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.15), transparent);
   transform: translate(-50%, -50%);
   z-index: 1;
 }
@@ -532,10 +568,10 @@ html.dark .hero-badge {
   gap: 0.2rem;
   min-width: 9rem;
   padding: 0.85rem 1rem;
-  border: 1px solid rgba(13, 110, 253, 0.18);
+  border: 1px solid rgba(79, 70, 229, 0.2);
   border-radius: var(--button-radius);
-  background: color-mix(in srgb, var(--main-background-color) 84%, transparent);
-  box-shadow: 0 18px 50px rgba(13, 110, 253, 0.12);
+  background: color-mix(in srgb, var(--main-background-color) 88%, transparent);
+  box-shadow: 0 20px 50px rgba(79, 70, 229, 0.12);
   color: var(--secondary-text-color);
   font-family: var(--ff-monospace);
   text-align: center;
@@ -563,10 +599,10 @@ html.dark .hero-badge {
   min-height: 2rem;
   max-width: 8.75rem;
   padding: 0.34rem 0.56rem;
-  border: 1px solid rgba(13, 110, 253, 0.16);
+  border: 1px solid rgba(79, 70, 229, 0.18);
   border-radius: var(--button-radius);
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 12px 32px rgba(29, 42, 74, 0.09);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
   color: var(--main-foreground-color);
   font-family: var(--ff-monospace);
   font-size: 0.72rem;
@@ -580,13 +616,13 @@ html.dark .hero-badge {
 }
 
 .hero-skill-chip-primary {
-  border-color: rgba(13, 110, 253, 0.3);
-  color: var(--blue);
+  border-color: rgba(79, 70, 229, 0.35);
+  color: var(--accent);
 }
 
 .hero-skill-chip-accent {
-  border-color: rgba(32, 201, 151, 0.38);
-  color: #087f5b;
+  border-color: rgba(13, 148, 136, 0.4);
+  color: var(--teal-dark);
 }
 
 .hero-skill-chip-light {
@@ -595,18 +631,18 @@ html.dark .hero-badge {
 
 html.dark .hero-skill-grid {
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(129, 140, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(129, 140, 248, 0.08) 1px, transparent 1px);
 }
 
 html.dark .hero-skill-core,
 html.dark .hero-skill-chip {
-  background: rgba(31, 32, 40, 0.72);
-  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.28);
+  background: rgba(30, 27, 75, 0.78);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.32);
 }
 
 html.dark .hero-skill-chip-accent {
-  color: #63e6be;
+  color: var(--teal-light);
 }
 
 /* ── Buttons ── */
@@ -621,27 +657,29 @@ html.dark .hero-skill-chip-accent {
   line-height: 1.1;
   padding: 0.625rem 1.25rem;
   border-radius: var(--button-radius);
-  transition: transform 0.15s, filter 0.15s;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s, box-shadow 0.2s;
   cursor: pointer;
   border: none;
 }
 
 .btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .btn:focus-visible {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
 .btn-primary {
-  background: var(--blue);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
   color: #fff;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
 }
 
 .btn-primary:hover {
   filter: brightness(1.08);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
 }
 
 .btn-secondary {
@@ -652,10 +690,12 @@ html.dark .hero-skill-chip-accent {
 
 .btn-secondary:hover {
   background: var(--almost-white);
+  box-shadow: inset 0 0 0 1px var(--slate-300);
 }
 
 html.dark .btn-secondary:hover {
   background: rgba(255,255,255,0.06);
+  box-shadow: inset 0 0 0 1px var(--slate-600);
 }
 
 @keyframes fadein {

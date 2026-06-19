@@ -213,10 +213,6 @@ p + p {
   margin-top: 1.1rem;
 }
 
-:is(p, span):hover {
-  color: var(--main-foreground-color);
-}
-
 .text-link {
   text-decoration: underline;
   color: var(--main-text-link-color);

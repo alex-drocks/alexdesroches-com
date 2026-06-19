@@ -109,10 +109,6 @@
   line-height: 1.55;
 }
 
-.serviceDescription:hover {
-  color: var(--service-card-description);
-}
-
 .serviceCard:hover {
   color: #fff;
   border-color: var(--service-card-border-hover);

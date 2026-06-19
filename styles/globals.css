@@ -688,6 +688,16 @@ html.dark .btn-secondary:hover {
   .hero-skill-chip {
     animation: none;
   }
+
+  /* Button lift and image opacity crossfade are non-essential motion */
+  .btn,
+  .stylish-shadow-image img {
+    transition: none;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
 }
 
 @media screen and (max-width: 1250px) {

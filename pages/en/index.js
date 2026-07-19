@@ -25,6 +25,9 @@ export default function Index() {
               accessible, and durable websites, applications, and tools.
             </p>
             <div className="hero-ctas">
+              <Link href="/en/programming" className="btn btn-primary">
+                See my services&nbsp;&rarr;
+              </Link>
               <Link href="/en/contact" className="btn btn-secondary">
                 Discuss a project
               </Link>

@@ -21,15 +21,15 @@ export default function Index() {
             </h1>
             <div className="shimmer-bar" aria-hidden="true" />
             <p className="hero-subtitle">
-              <strong>Développeur web front-end.</strong> Je conçois des sites rapides,
-              accessibles et élégants, de l'idée au déploiement.
+              <strong>Développeur front-end senior.</strong> Je transforme des besoins complexes en sites,
+              applications et outils rapides, accessibles et durables.
             </p>
             <div className="hero-ctas">
               <Link href="/programmation" className="btn btn-primary">
                 Voir mes services&nbsp;&rarr;
               </Link>
               <Link href="/contact" className="btn btn-secondary">
-                Me contacter
+                Discuter d'un projet
               </Link>
             </div>
           </div>

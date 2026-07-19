@@ -190,6 +190,25 @@
   box-shadow: 0 1px 6px var(--secondary-text-color);
 }
 
+.projectTechnologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: .85rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.projectTechnologies li {
+  padding: .38rem .58rem;
+  border: 1px solid var(--main-border-color);
+  border-radius: 999px;
+  color: var(--main-foreground-color);
+  font-family: var(--ff-monospace);
+  font-size: .68rem;
+  line-height: 1.1;
+}
+
 .project .leftColumn,
 .project .rightColumn {
   padding-top: 0;

@@ -5,6 +5,11 @@ import {useIsEnglish} from "../hooks/useIsEnglish";
 
 export default function Project({title, description, imgSrc, features, technologies, timespan, url}) {
   const isEnglish = useIsEnglish()
+  const technologyList = technologies
+    .split(",")
+    .map((technology) => technology.trim().replace(/\.$/, ""))
+    .filter(Boolean);
+
 
   return (
     <div className={styles.project + " max-content-width display-flex"}>
@@ -31,7 +36,9 @@ export default function Project({title, description, imgSrc, features, technolog
               : <>Technologies utilisées&nbsp;:</>
             }
           </h4>
-          <p>{technologies}</p>
+          <ul className={styles.projectTechnologies} aria-label={isEnglish ? "Technologies used" : "Technologies utilisées"}>
+            {technologyList.map((technology) => <li key={technology}>{technology}</li>)}
+          </ul>
         </div>
         <div>
           <h4>

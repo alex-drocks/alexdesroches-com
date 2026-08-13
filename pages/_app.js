@@ -11,23 +11,24 @@ import '../styles/Footer.css';
 const geist = Geist({subsets: ['latin'], display: 'swap'});
 const geistMono = Geist_Mono({subsets: ['latin'], display: 'swap'});
 
-// next/font appends a size-adjusted local(Arial) face to each family, which
-// keeps layout stable while the real font loads. That is what we want for the
-// sans stack, but Geist Mono's subsets omit U+2192 -- the &rarr; ending every
-// link -- so for monospace that face would render the arrow as Arial at 134%
-// rather than letting it fall through to Consolas/SF Mono in globals.css.
-// Take just the real family and let globals.css own the monospace fallbacks.
-const geistMonoFamily = geistMono.style.fontFamily.split(",")[0];
+// next/font appends a size-adjusted local(Arial) face to each family to hold
+// layout steady while the real font loads. Being first in the chain, it also
+// catches glyphs the real font lacks -- and neither Geist nor Geist Mono
+// covers U+2192, the &rarr; in every link (monospace) and button (sans). That
+// drew the arrow as stretched Arial instead of letting it reach system-ui or
+// Consolas. Keep only the real family so globals.css owns the fallbacks; the
+// fonts are preloaded from our own origin, so the unstyled window is short.
+const primaryFamily = (font) => font.style.fontFamily.split(",")[0];
 
 function MyApp({Component, pageProps}) {
   return (
     <ThemeProvider defaultTheme="light" attribute="class" disableTransitionOnChange>
-      {/* next/font generates a hashed family name, so expose it to globals.css
+      {/* next/font owns the generated family name, so expose it to globals.css
           as a variable rather than naming 'Geist' literally there. */}
       <style jsx global>{`
         :root {
-          --font-geist: ${geist.style.fontFamily};
-          --font-geist-mono: ${geistMonoFamily};
+          --font-geist: ${primaryFamily(geist)};
+          --font-geist-mono: ${primaryFamily(geistMono)};
         }
       `}</style>
       <Component {...pageProps} />

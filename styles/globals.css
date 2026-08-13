@@ -45,8 +45,8 @@
 
   --button-radius: .25rem;
   --user-font-scale: 1rem -16px;
-  --ff-sans-serif: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  --ff-monospace: 'Geist Mono', 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  --ff-sans-serif: var(--font-geist), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ff-monospace: var(--font-geist-mono), 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   --heading-letter-spacing: -0.045em;
   --heading-line-height: 1.05;
   --body-line-height: 1.72;

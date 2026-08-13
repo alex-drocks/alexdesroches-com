@@ -44,3 +44,6 @@ node_modules
 
 # bun
 package-lock.json
+
+# affinity design sources (kept locally, not in the repo)
+_originalImages/affinity/

@@ -1,6 +1,7 @@
-/* @property initial-value cannot reference var(), so these fallbacks are the
-   full-strength (intensity 1) numbers. .stylish-shadow-image always assigns
-   the scaled *-min values below, so they only apply if that rule is missing. */
+/* Registering these is what lets the @keyframes below interpolate them rather
+   than snapping between values -- do not unregister them. initial-value cannot
+   reference var(), so the numbers here are the full-strength (intensity 1)
+   defaults; .stylish-shadow-image always assigns the scaled ones. */
 @property --image-sheen-blue-alpha {
   syntax: "<number>";
   inherits: true;
@@ -86,9 +87,13 @@
 }
 
 .stylish-shadow-image {
-  /* Master dimmer for the whole effect: 1 = full strength, 0 = off.
-     Every alpha and layer opacity below is expressed as its full-strength
-     value scaled by this, so fine-tuning means changing this one number. */
+  /* Master dimmer: 1 = full strength, 0 = off. Every alpha and layer opacity
+     below is its full-strength value scaled by this, so tuning the effect
+     means changing this one number. Note it lands on both the source alphas
+     and the layer opacity that composites them, so perceived strength falls
+     off roughly quadratically -- .65 here reads closer to 42% of full. That
+     is why the values below are the original full-strength numbers rather
+     than anything pre-scaled; adjust by eye, not by arithmetic. */
   --image-sheen-intensity: .65;
   --image-sheen-ray: rgb(255 255 255 / calc(0.314 * var(--image-sheen-intensity)));
   --image-sheen-soft: rgb(255 255 255 / calc(0.135 * var(--image-sheen-intensity)));

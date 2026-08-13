@@ -60,7 +60,7 @@ export default function Header() {
         <ToggleLanguageButton/>
         <ToggleThemeColorsButton className="do-not-display-on-mobile"/>
         <ToggleMobileMenuButton
-          buttonRef={mobileMenuButtonRef}
+          ref={mobileMenuButtonRef}
           isMobileMenuOpened={isMobileMenuOpened}
           setIsMobileMenuOpened={setIsMobileMenuOpened}
         />
@@ -243,7 +243,7 @@ function ToggleLanguageButton({className = ""}) {
 }
 
 
-function ToggleMobileMenuButton({buttonRef, isMobileMenuOpened, setIsMobileMenuOpened}) {
+function ToggleMobileMenuButton({ref, isMobileMenuOpened, setIsMobileMenuOpened}) {
   const isEnglish = useIsEnglish();
 
   const toggleIsOpen = () => {
@@ -252,7 +252,7 @@ function ToggleMobileMenuButton({buttonRef, isMobileMenuOpened, setIsMobileMenuO
 
   return (
     <button
-      ref={buttonRef}
+      ref={ref}
       className="toggle-mobile-menu-button"
       aria-label={isEnglish ? "Toggle mobile menu" : "Ouvrir ou fermer le menu mobile"}
       aria-controls="mobile-menu"

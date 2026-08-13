@@ -22,7 +22,6 @@ module.exports = [
     // ESLint 9 (its peer range says >=9.0.0, but it is not tested against 10)
     // and two of its defaults crash outright. Drop this block once Vercel
     // ships a release that supports ESLint 10 natively.
-    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx}"],
     languageOptions: {
       // Its parser is @babel/eslint-parser vendored into next/dist/compiled,
       // whose ScopeManager predates the addGlobals() API ESLint 10 requires.

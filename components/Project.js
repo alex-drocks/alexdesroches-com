@@ -24,6 +24,7 @@ export default function Project({title, description, imgSrc, features, technolog
             renderedHeight={752}
             desktopWidth={1000}
             mobileWidth={501}
+            loading="lazy"
           />
         </ExternalLink>
 

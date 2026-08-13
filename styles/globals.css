@@ -45,6 +45,9 @@
 
   --button-radius: .25rem;
   --user-font-scale: 1rem -16px;
+  /* Geist and Geist Mono are self-hosted by next/font in pages/_app.js, which
+     keeps their real family names. Neither covers U+2192 (the arrow ending our
+     links and buttons), so the fallbacks below are what render it. */
   --ff-sans-serif: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --ff-monospace: 'Geist Mono', 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   --heading-letter-spacing: -0.045em;

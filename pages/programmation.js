@@ -202,6 +202,7 @@ export default function Programmation() {
               desktopWidth={1000}
               mobileWidth={501}
               className={styles.stylishImage}
+              loading="lazy"
             />
           </div>
         </div>

@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {useTheme} from 'next-themes';
 import {useIsEnglish} from "../hooks/useIsEnglish";
 import InternalLink from "./InternalLink";
@@ -9,6 +9,7 @@ import {getAlternateInternalPath} from "../lib/getInternalPageLink";
 export default function Header() {
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
   const isEnglish = useIsEnglish();
+  const mobileMenuButtonRef = useRef(null);
 
   useEffect(() => {
     document.body.classList.toggle("mobile-menu-open", isMobileMenuOpened);
@@ -16,6 +17,24 @@ export default function Header() {
     return () => {
       document.body.classList.remove("mobile-menu-open");
     };
+  }, [isMobileMenuOpened]);
+
+  // Escape closes the menu and hands focus back to the button that opened it,
+  // so keyboard users are not left navigating the page behind an open menu.
+  useEffect(() => {
+    if (!isMobileMenuOpened)
+      return;
+
+    const closeOnEscape = (event) => {
+      if (event.key !== "Escape")
+        return;
+
+      setIsMobileMenuOpened(false);
+      mobileMenuButtonRef.current?.focus();
+    };
+
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
   }, [isMobileMenuOpened]);
 
   return (
@@ -40,7 +59,11 @@ export default function Header() {
         </nav>
         <ToggleLanguageButton/>
         <ToggleThemeColorsButton className="do-not-display-on-mobile"/>
-        <ToggleMobileMenuButton isMobileMenuOpened={isMobileMenuOpened} setIsMobileMenuOpened={setIsMobileMenuOpened}/>
+        <ToggleMobileMenuButton
+          ref={mobileMenuButtonRef}
+          isMobileMenuOpened={isMobileMenuOpened}
+          setIsMobileMenuOpened={setIsMobileMenuOpened}
+        />
       </header>
       <MobileMenu isMobileMenuOpened={isMobileMenuOpened}/>
     </div>
@@ -220,7 +243,7 @@ function ToggleLanguageButton({className = ""}) {
 }
 
 
-function ToggleMobileMenuButton({isMobileMenuOpened, setIsMobileMenuOpened}) {
+function ToggleMobileMenuButton({ref, isMobileMenuOpened, setIsMobileMenuOpened}) {
   const isEnglish = useIsEnglish();
 
   const toggleIsOpen = () => {
@@ -229,6 +252,7 @@ function ToggleMobileMenuButton({isMobileMenuOpened, setIsMobileMenuOpened}) {
 
   return (
     <button
+      ref={ref}
       className="toggle-mobile-menu-button"
       aria-label={isEnglish ? "Toggle mobile menu" : "Ouvrir ou fermer le menu mobile"}
       aria-controls="mobile-menu"

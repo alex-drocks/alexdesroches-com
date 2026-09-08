@@ -40,7 +40,9 @@ function normalizeSitemapPath(path) {
 
 module.exports = {
   siteUrl,
-  output: "export",
+  // Read Next.js build manifests. The sitemap tool's export-mode glob misses
+  // HTML files on Windows because it uses native path separators.
+  sourceDir: ".next",
   outDir: "out",
   exclude: ["/404", "/404/"],
   trailingSlash: true,

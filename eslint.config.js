@@ -18,7 +18,7 @@ module.exports = [
   },
   ...next,
   {
-    // ESLint 10 compatibility shim. eslint-config-next 16.3.0 still targets
+    // ESLint 10 compatibility shim. eslint-config-next 16.3.4 still targets
     // ESLint 9 (its peer range says >=9.0.0, but it is not tested against 10)
     // and two of its defaults crash outright. Drop this block once Vercel
     // ships a release that supports ESLint 10 natively.

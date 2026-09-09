@@ -1,11 +1,9 @@
-// Active Link wrapper for Next.js 15+ Pages Router
-import {useRouter} from 'next/router';
 import Link from 'next/link';
+import {usePagePath} from '../hooks/usePagePath';
 import {normalizePath} from '../lib/getInternalPageLink';
 
 const ActiveLink = ({children, activeClassName = "active-next-link", className = "", ...props}) => {
-  const {asPath} = useRouter();
-  const currentPath = normalizePath(asPath);
+  const currentPath = normalizePath(usePagePath());
   const hrefPath = normalizePath(props.href);
   const alternatePath = props.as ? normalizePath(props.as) : null;
 
@@ -16,7 +14,7 @@ const ActiveLink = ({children, activeClassName = "active-next-link", className =
     : className;
 
   return (
-    <Link {...props} className={finalClassName || undefined}>
+    <Link {...props} className={finalClassName || undefined} aria-current={isActive ? "page" : undefined}>
       {children}
     </Link>
   );

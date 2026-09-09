@@ -1,12 +1,6 @@
 import PageTemplate from "../components/PageTemplate";
 import ResponsiveImage from "../components/ResponsiveImage";
-import {EmailLogo, LinkedinLogo} from "../components/Logos";
-
-import {myContactLinks} from "../lib/myContactLinks";
-import ContactLink from "../components/ContactLink";
-
-import styles from "../styles/contact.module.css";
-
+import ContactOptions from "../components/ContactOptions";
 
 export default function Contact() {
   return (
@@ -24,22 +18,11 @@ export default function Contact() {
             Je suis joignable par l'un des moyens ci-dessous&nbsp;:
           </p>
 
-          <ul className={styles.contactLinks}>
-            <ContactLink
-              label="Courriel"
-              url={`mailto:${myContactLinks.email}`}
-              svgIcon={<EmailLogo/>}
-            />
-            <ContactLink
-              label="LinkedIn"
-              url={myContactLinks.linkedIn}
-              svgIcon={<LinkedinLogo/>}
-            />
-          </ul>
+          <ContactOptions/>
 
         </section>
 
-        <section className="max-text-width">
+        <div className="max-text-width">
           <div className="stylish-shadow-image">
             <span aria-hidden="true" className="stylish-shadow-image--overlay-text">L'art communique</span>
             <ResponsiveImage
@@ -51,7 +34,7 @@ export default function Contact() {
               mobileWidth={501}
             />
           </div>
-        </section>
+        </div>
       </div>
     </PageTemplate>
   );

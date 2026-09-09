@@ -1,0 +1,6 @@
+{
+  "index": {"fr": "/", "en": "/en/", "priority": 1},
+  "programming": {"fr": "/programmation/", "en": "/en/programming/", "priority": 0.9},
+  "about": {"fr": "/a-propos/", "en": "/en/about/", "priority": 0.7},
+  "contact": {"fr": "/contact/", "en": "/en/contact/", "priority": 0.6}
+}

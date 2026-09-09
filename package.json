@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "postbuild": "next-sitemap --config next-sitemap.config.js && node scripts/check-export.mjs",
     "preview": "node scripts/preview-static.mjs out",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "bun test"
   },
   "author": {
     "name": "Alex Desroches",
@@ -24,16 +25,17 @@
   "engines": {
     "node": ">=24.0.0"
   },
-  "packageManager": "bun@1.3.13",
+  "packageManager": "bun@1.4.2",
   "dependencies": {
-    "next": "16.3.0",
+    "next": "^16.3.4",
     "next-themes": "^0.4.6",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
   "devDependencies": {
-    "eslint": "^10.8.1",
-    "eslint-config-next": "16.3.0",
+    "eslint": "^10.10.0",
+    "eslint-config-next": "16.3.4",
+    "espree": "^11.2.0",
     "next-sitemap": "^4.2.3"
   }
 }

@@ -10,7 +10,7 @@ class MyDocument extends Document {
   render() {
     const lang = this.props.isEnglish ? 'en-CA' : 'fr-CA';
     return (
-      <Html lang={lang}>
+      <Html lang={lang} data-scroll-behavior="smooth">
         <Head/>
         <body>
           <Main/>

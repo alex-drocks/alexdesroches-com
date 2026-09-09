@@ -1,6 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import {useTheme} from 'next-themes';
 import {useIsEnglish} from "../hooks/useIsEnglish";
+import {usePagePath} from "../hooks/usePagePath";
 import InternalLink from "./InternalLink";
 import {useRouter} from "next/router";
 import {getAlternateInternalPath} from "../lib/getInternalPageLink";
@@ -9,6 +10,8 @@ import {getAlternateInternalPath} from "../lib/getInternalPageLink";
 export default function Header() {
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
   const isEnglish = useIsEnglish();
+  const {events} = useRouter();
+  const headerRef = useRef(null);
   const mobileMenuButtonRef = useRef(null);
 
   useEffect(() => {
@@ -19,31 +22,80 @@ export default function Header() {
     };
   }, [isMobileMenuOpened]);
 
-  // Escape closes the menu and hands focus back to the button that opened it,
-  // so keyboard users are not left navigating the page behind an open menu.
+  // Keep focus inside the existing mobile overlay without changing its layout.
   useEffect(() => {
     if (!isMobileMenuOpened)
       return;
 
-    const closeOnEscape = (event) => {
-      if (event.key !== "Escape")
-        return;
+    const header = headerRef.current;
+    const menuButton = mobileMenuButtonRef.current;
+    const background = [...document.querySelectorAll("main.page-container, footer")];
+    background.forEach(element => { element.inert = true; });
+    // Some browsers do not focus buttons on pointer activation.
+    if (!header.contains(document.activeElement)) menuButton.focus({preventScroll: true});
 
-      setIsMobileMenuOpened(false);
-      mobileMenuButtonRef.current?.focus();
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setIsMobileMenuOpened(false);
+      } else if (event.key === "Tab") {
+        // Queried per keypress: the menu's theme button mounts disabled and is enabled a render later.
+        const controls = [...header.querySelectorAll('a[href], button:not([disabled])')]
+          .filter(control => control.getClientRects().length > 0);
+        const first = controls[0];
+        const last = controls.at(-1);
+        const focusOutside = !header.contains(document.activeElement);
+        if (event.shiftKey && (document.activeElement === first || focusOutside)) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && (document.activeElement === last || focusOutside)) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
     };
 
-    document.addEventListener("keydown", closeOnEscape);
-    return () => document.removeEventListener("keydown", closeOnEscape);
+    const observer = new ResizeObserver(() => {
+      if (!menuButton.getClientRects().length) setIsMobileMenuOpened(false);
+    });
+    observer.observe(menuButton);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("keydown", handleKeyDown);
+      background.forEach(element => { element.inert = false; });
+      if (menuButton.isConnected) {
+        const focusTarget = menuButton.getClientRects().length
+          ? menuButton
+          : header.querySelector(".left-branding a");
+        focusTarget?.focus({preventScroll: true});
+      }
+    };
   }, [isMobileMenuOpened]);
 
+  useEffect(() => {
+    const closeMenu = () => setIsMobileMenuOpened(false);
+    events.on("routeChangeStart", closeMenu);
+    events.on("hashChangeStart", closeMenu);
+    return () => {
+      events.off("routeChangeStart", closeMenu);
+      events.off("hashChangeStart", closeMenu);
+    };
+  }, [events]);
+
   return (
-    <div className={`header-container${isMobileMenuOpened ? " is-mobile-menu-open" : ""}`}>
-      <a href="#main-content" className="skip-link">
+    <div
+      ref={headerRef}
+      className={`header-container${isMobileMenuOpened ? " is-mobile-menu-open" : ""}`}
+      role={isMobileMenuOpened ? "dialog" : undefined}
+      aria-modal={isMobileMenuOpened ? true : undefined}
+      aria-labelledby={isMobileMenuOpened ? "mobile-menu-title" : undefined}
+    >
+      {!isMobileMenuOpened && <a href="#main-content" className="skip-link">
         {isEnglish ? "Skip to main content" : "Aller au contenu principal"}
-      </a>
+      </a>}
       <header>
-        <nav>
+        <nav aria-label={isEnglish ? "Main navigation" : "Navigation principale"}>
           <div className="left-branding">
             <InternalLink
               isActiveLink={true}
@@ -72,12 +124,13 @@ export default function Header() {
 
 
 function MobileMenu({isMobileMenuOpened}) {
+  const isEnglish = useIsEnglish();
   if (!isMobileMenuOpened)
     return null;
 
   return (
-    <nav id="mobile-menu" className="mobile-menu do-not-display-on-desktop">
-      <strong>Menu</strong>
+    <nav id="mobile-menu" className="mobile-menu do-not-display-on-desktop" aria-label={isEnglish ? "Mobile navigation" : "Navigation mobile"}>
+      <strong id="mobile-menu-title">Menu</strong>
       <ul className="page-links">
         <HomeNavLink/>
         <MainNavLinks/>
@@ -172,7 +225,7 @@ function MainNavLinks() {
 
 function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
   const [mounted, setMounted] = useState(false);
-  const {theme, setTheme} = useTheme();
+  const {resolvedTheme: theme, setTheme} = useTheme();
   const isEnglish = useIsEnglish()
   const ariaLabel = isEnglish ? "Toggle color theme" : "Activer ou désactiver le thème foncé";
 
@@ -196,13 +249,14 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
     <button
       className={"toggle-button " + className}
       aria-label={ariaLabel}
+      aria-pressed={theme === "dark"}
       type="button"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {
         theme === "light" ? (
           <div>
-            <svg className="turn-on-dark-mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <svg aria-hidden="true" className="turn-on-dark-mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                     d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
             </svg>
@@ -210,7 +264,7 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
           </div>
         ) : (
           <div>
-            <svg className="turn-on-light-mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+            <svg aria-hidden="true" className="turn-on-light-mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
               <path
                 d="M565-395q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm-226.5 56.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/>
             </svg>
@@ -223,11 +277,12 @@ function ToggleThemeColorsButton({className = "", shouldDisplayText = false}) {
 }
 
 function ToggleLanguageButton({className = ""}) {
-  const { push, asPath } = useRouter();
+  const {push} = useRouter();
+  const path = usePagePath();
   const isEnglish = useIsEnglish();
 
   const toggleLang = () => {
-    push(getAlternateInternalPath(asPath));
+    push(getAlternateInternalPath(path));
   };
 
   return (
@@ -261,12 +316,12 @@ function ToggleMobileMenuButton({ref, isMobileMenuOpened, setIsMobileMenuOpened}
       onClick={toggleIsOpen}
     >
       {isMobileMenuOpened ? (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path
             d="m24 20.188-8.315-8.209 8.2-8.282L20.188 0l-8.212 8.318L3.666.115 0 3.781l8.321 8.24-8.206 8.313L3.781 24l8.237-8.318 8.285 8.203z"/>
         </svg>
       ) : (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d="M24 6H0V2h24v4zm0 4H0v4h24v-4zm0 8H0v4h24v-4z"/>
         </svg>
       )}

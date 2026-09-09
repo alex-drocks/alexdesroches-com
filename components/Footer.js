@@ -37,7 +37,7 @@ export default function Footer() {
           }
         </p>
 
-        <div className="max-text-width footer-links">
+        <nav className="max-text-width footer-links" aria-label={isEnglish ? "Footer navigation" : "Navigation de pied de page"}>
           <ul>
             <li>
               <InternalLink
@@ -76,7 +76,7 @@ export default function Footer() {
               </InternalLink>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
 
       <div className="footer-links--social">

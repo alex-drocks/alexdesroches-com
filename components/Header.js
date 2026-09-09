@@ -34,17 +34,16 @@ export default function Header() {
     // Some browsers do not focus buttons on pointer activation.
     if (!header.contains(document.activeElement)) menuButton.focus({preventScroll: true});
 
-    // Stable while the menu is open: the ResizeObserver below closes it when the layout flips to desktop.
-    const controls = [...header.querySelectorAll('a[href], button:not([disabled])')]
-      .filter(control => control.getClientRects().length > 0);
-    const first = controls[0];
-    const last = controls.at(-1);
-
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         event.preventDefault();
         setIsMobileMenuOpened(false);
       } else if (event.key === "Tab") {
+        // Queried per keypress: the menu's theme button mounts disabled and is enabled a render later.
+        const controls = [...header.querySelectorAll('a[href], button:not([disabled])')]
+          .filter(control => control.getClientRects().length > 0);
+        const first = controls[0];
+        const last = controls.at(-1);
         const focusOutside = !header.contains(document.activeElement);
         if (event.shiftKey && (document.activeElement === first || focusOutside)) {
           event.preventDefault();

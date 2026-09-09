@@ -1,9 +1,6 @@
 import PageTemplate from "../../components/PageTemplate";
-import styles from "../../styles/contact.module.css";
-import ContactLink from "../../components/ContactLink";
-import {myContactLinks} from "../../lib/myContactLinks";
-import {EmailLogo, LinkedinLogo} from "../../components/Logos";
 import ResponsiveImage from "../../components/ResponsiveImage";
+import ContactOptions from "../../components/ContactOptions";
 
 const Contact = () => {
   return (
@@ -21,22 +18,11 @@ const Contact = () => {
             You can reach me through one of the links below:
           </p>
 
-          <ul className={styles.contactLinks}>
-            <ContactLink
-              label="Email"
-              url={`mailto:${myContactLinks.email}`}
-              svgIcon={<EmailLogo/>}
-            />
-            <ContactLink
-              label="LinkedIn"
-              url={myContactLinks.linkedIn}
-              svgIcon={<LinkedinLogo/>}
-            />
-          </ul>
+          <ContactOptions/>
 
         </section>
 
-        <section className="max-text-width">
+        <div className="max-text-width">
           <div className="stylish-shadow-image">
             <span aria-hidden="true" className="stylish-shadow-image--overlay-text">Art is Communicating</span>
             <ResponsiveImage
@@ -48,7 +34,7 @@ const Contact = () => {
               mobileWidth={501}
             />
           </div>
-        </section>
+        </div>
       </div>
     </PageTemplate>
   );

@@ -1,7 +1,7 @@
 import PageTemplate from "../../components/PageTemplate";
 import styles from "../../styles/a-propos.module.css";
 import ResponsiveImage from "../../components/ResponsiveImage";
-import Link from "next/link";
+import InternalLink from "../../components/InternalLink";
 
 const About = () => {
   return (
@@ -45,13 +45,13 @@ const About = () => {
           <p>
             This is who I am in a nutshell!
           </p>
-          <Link href="/en/programming" className="text-link">Look at my portfolio&nbsp;&rarr;</Link>
+          <InternalLink page="programming" className="text-link" withArrow>Look at my portfolio</InternalLink>
           <br/>
           <br/>
-          <Link href="/en/contact" className="text-link">Contact me&nbsp;&rarr;</Link>
+          <InternalLink page="contact" className="text-link" withArrow>Contact me</InternalLink>
         </section>
 
-        <section className="max-text-width">
+        <div className="max-text-width">
           <div className="stylish-shadow-image">
             <span aria-hidden="true" className="stylish-shadow-image--overlay-text">Art is Revealing</span>
             <ResponsiveImage
@@ -65,7 +65,7 @@ const About = () => {
               className={styles.stylishImage}
             />
           </div>
-        </section>
+        </div>
       </div>
     </PageTemplate>
   );

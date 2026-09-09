@@ -43,7 +43,7 @@ export default function About() {
           </p>
         </section>
 
-        <section className="max-text-width">
+        <div className="max-text-width">
           <div className="stylish-shadow-image">
             <span aria-hidden="true" className="stylish-shadow-image--overlay-text">L'art révèle</span>
             <ResponsiveImage
@@ -57,7 +57,7 @@ export default function About() {
               className={styles.stylishImage}
             />
           </div>
-        </section>
+        </div>
       </div>
     </PageTemplate>
   );

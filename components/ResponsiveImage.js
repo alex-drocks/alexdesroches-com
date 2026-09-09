@@ -1,12 +1,5 @@
-// Without a `sizes` attribute the browser assumes 100vw and over-fetches the
-// desktop source on narrow viewports. Content images live in .max-text-width
-// (max-width 630px, border-box, padded by --page-padding), so they render at
-// 630-2*4rem = 502px above 1024px, 630-2*2rem = 566px down to 1024px, and
-// 100vw-2rem below 500px. The last branch declares 501px rather than 502px so
-// that a 1x display matches the 501w source exactly instead of rounding up to
-// the 1002w one; the 1px shortfall is imperceptible. Pass `sizes` for anything
-// laid out differently, such as the fixed-size signature.
-const CONTENT_IMAGE_SIZES = "(max-width: 500px) calc(100vw - 2rem), (max-width: 1024px) 566px, 501px";
+// Match .max-text-width. The 1px offset avoids rounding up to the larger image.
+const CONTENT_IMAGE_SIZES = "(max-width: 500px) calc(100vw - 2rem), (max-width: 630px) calc(100vw - 4rem), (max-width: 1024px) calc(630px - 4rem), calc(629px - 8rem)";
 
 export default function ResponsiveImage(
   {

@@ -85,7 +85,7 @@ function StructuredData({pageTitle, pageDescription, pageCanonicalURL, siteDescr
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData)}}
+      dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData).replace(/</g, '\\u003c')}}
     />
   );
 }
@@ -176,7 +176,7 @@ export default function PageTemplate({
 
       <Header/>
 
-      <main className="page-container" id="main-content">
+      <main className="page-container" id="main-content" tabIndex={-1}>
         {children}
       </main>
 

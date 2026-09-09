@@ -1,6 +1,6 @@
 import PageTemplate from "../../components/PageTemplate";
 import styles from "../../styles/programmation.module.css";
-import ExternalLink from "../../components/ExternalLink";
+import TechnologyList from "../../components/TechnologyList";
 import ResponsiveImage from "../../components/ResponsiveImage";
 import Project from "../../components/Project";
 
@@ -55,140 +55,10 @@ const Programming = () => {
           </p>
 
           <h2>Technologies I know well:</h2>
-          <div className={styles.techListsContainer}>
-            <ul>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/JavaScript">
-                  JavaScript
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/HTML">
-                  HTML
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/CSS">
-                  CSS
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Node.js">
-                  Node.js
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Bun_(software)">
-                  Bun
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/React_(JavaScript_library)">
-                  React.js
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Next.js">
-                  Next.js
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Bittensor">
-                  Bittensor
-                </ExternalLink>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Python_(programming_language)">
-                  Python
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Angular_(web_framework)">
-                  Angular
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Electron_(software_framework)">
-                  Electron.js
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Firebase">
-                  Firebase
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/AutoHotkey">
-                  AutoHotkey
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/GitHub">
-                  Git, GitHub
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Linux">
-                  Linux
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/AI_agent">
-                  AI Agents
-                </ExternalLink>
-              </li>
-            </ul>
-          </div>
+          <TechnologyList category="core"/>
 
           <h2>Other tools I've used:</h2>
-          <div className={styles.techListsContainer}>
-            <ul>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/PHP">
-                  PHP
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Java">
-                  Java
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)">
-                  C#
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/SQL">
-                  SQL
-                </ExternalLink>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/WordPress">
-                  WordPress
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/WooCommerce">
-                  WooCommerce
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://astro.build/">
-                  Astro.js
-                </ExternalLink>
-              </li>
-              <li>
-                <ExternalLink url="https://en.wikipedia.org/wiki/Kubernetes">
-                  Kubernetes
-                </ExternalLink>
-              </li>
-            </ul>
-          </div>
+          <TechnologyList category="additional"/>
         </div>
         <div className="max-text-width">
           <div className="stylish-shadow-image">
@@ -197,7 +67,7 @@ const Programming = () => {
               path="/images/programmation/stylish/programmation"
               alt="Programming is Art"
               renderedWidth={501}
-              renderedHeight={752}
+              renderedHeight={668}
               desktopWidth={1000}
               mobileWidth={501}
               className={styles.stylishImage}
@@ -207,13 +77,13 @@ const Programming = () => {
         </div>
       </section>
 
-      <svg className={styles.waveTop} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150">
+      <svg aria-hidden="true" focusable="false" className={styles.waveTop} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150">
         <path fill="var(--main-background-color)" d="M0 0h900v150H0z"/>
         <path fill="var(--blue)"
               d="m0 11 37.5 11C75 33 150 55 225 71.2c75 16.1 150 26.5 225 17.5s150-37.4 225-45.5C750 35 825 47 862.5 53l37.5 6v92H0Z"/>
       </svg>
 
-      <section className={styles.services}>
+      <section id="services" className={styles.services}>
         <h2>Services I offer</h2>
         <ul className={styles.servicesDeck}>
           {coreServices.map((service, index) => (
@@ -229,13 +99,13 @@ const Programming = () => {
         </ul>
       </section>
 
-      <svg className={styles.waveBottom} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150">
+      <svg aria-hidden="true" focusable="false" className={styles.waveBottom} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150">
         <path fill="var(--main-background-color)" d="M0 0h900v150H0z"/>
         <path fill="var(--blue)"
               d="m0 13 37.5 11C75 35 150 57 225 64.3c75 7.4 150 0 225-7.6C525 49 600 41 675 52.2c75 11.1 150 41.5 187.5 56.6L900 124V0H0Z"/>
       </svg>
 
-      <section className={styles.projects + " max-content-width display-flex"}>
+      <section id="projects" className={styles.projects + " max-content-width display-flex"}>
         <h2>Portfolio</h2>
         <Project
           title="Finance D: a website I built for multiple accounting tools"
@@ -244,7 +114,6 @@ const Programming = () => {
         Each app solves a practical problem by making accounting easier, even when the user has very little accounting knowledge."
 
           imgSrc="/images/programmation/finance-d/website/finance-d"
-
           technologies="React.js, JavaScript, Node.js, HTML, CSS, WordPress, WooCommerce, Stripe,
          Web Hosting Canada, GitHub."
 
@@ -265,7 +134,6 @@ const Programming = () => {
         and it is 100% free."
 
           imgSrc="/images/programmation/finance-d/software/finance-d_desktop_software"
-
           technologies="Electron.js, JavaScript, HTML, CSS, Node.js, VirtualBox VM, Google Firebase,
          Web Hosting Canada, GitHub."
 
@@ -288,7 +156,6 @@ const Programming = () => {
          and increased design flexibility."
 
           imgSrc="/images/programmation/gestion-desroches/site-gestion-desroches"
-
           technologies="React.js, JavaScript, HTML, CSS, Node.js, Next.js, Web Hosting Canada, GitHub, Microsoft Outlook,
          Calendly, PHP."
 
@@ -307,7 +174,6 @@ const Programming = () => {
          with Google Firebase."
 
           imgSrc="/images/programmation/finance-d/payes/app-payes"
-
           technologies="React.js, Firebase, JavaScript, HTML, CSS, Node.js, Web Hosting Canada, GitHub, PHP,
         WordPress, WooCommerce, WooCommerce License Manager."
 
@@ -326,7 +192,6 @@ const Programming = () => {
           because they are great to work with. They are probably my current top choice for this type of project."
 
           imgSrc="/images/programmation/alexdesrochescom/alexdesroches"
-
           technologies="React.js, Next.js, JavaScript, HTML, CSS, Node.js, Firebase Hosting, GitHub."
 
           features="Design, programming, content, translation, hosting, and performance optimization.
@@ -337,16 +202,12 @@ const Programming = () => {
           url="https://github.com/alex-drocks/alexdesroches-com"
         />
       </section>
-      <section className={styles.endingSection}>
+      <section className={styles.endingSection + " max-text-width"}>
         <p>
-          That's it!
+          I've done many more coding projects since then, but I haven't added them here yet.
         </p>
         <p>
-          I have done many more coding projects, but these are the best examples of{" "}
-          <strong>what I do best</strong>.
-        </p>
-        <p>
-          If you would like to know more about me, please feel free to reach out to me.
+          If you would like to know more about me, please feel free to reach out.
         </p>
       </section>
     </PageTemplate>

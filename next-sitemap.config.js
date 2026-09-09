@@ -1,4 +1,5 @@
 const siteUrl = "https://alexdesroches.com";
+const pagePaths = require("./lib/page-paths.json");
 
 function alternateRefs(frPath, enPath) {
   return [
@@ -8,27 +9,12 @@ function alternateRefs(frPath, enPath) {
   ];
 }
 
-const alternateRefsByPath = {
-  "/": alternateRefs("/", "/en/"),
-  "/en/": alternateRefs("/", "/en/"),
-  "/programmation/": alternateRefs("/programmation/", "/en/programming/"),
-  "/en/programming/": alternateRefs("/programmation/", "/en/programming/"),
-  "/a-propos/": alternateRefs("/a-propos/", "/en/about/"),
-  "/en/about/": alternateRefs("/a-propos/", "/en/about/"),
-  "/contact/": alternateRefs("/contact/", "/en/contact/"),
-  "/en/contact/": alternateRefs("/contact/", "/en/contact/"),
-};
-
-const prioritiesByPath = {
-  "/": 1.0,
-  "/en/": 1.0,
-  "/programmation/": 0.9,
-  "/en/programming/": 0.9,
-  "/a-propos/": 0.7,
-  "/en/about/": 0.7,
-  "/contact/": 0.6,
-  "/en/contact/": 0.6,
-};
+const metadataByPath = Object.fromEntries(
+  Object.values(pagePaths).flatMap(({fr, en, priority}) => {
+    const metadata = {priority, alternateRefs: alternateRefs(fr, en)};
+    return [[fr, metadata], [en, metadata]];
+  })
+);
 
 function normalizeSitemapPath(path) {
   if (!path || path === "/") {
@@ -40,21 +26,23 @@ function normalizeSitemapPath(path) {
 
 module.exports = {
   siteUrl,
-  // Read Next.js build manifests. The sitemap tool's export-mode glob misses
-  // HTML files on Windows because it uses native path separators.
+  // Not a next-sitemap option; shared with scripts/check-export.mjs so both agree on paths.
+  normalizeSitemapPath,
+  // Use manifests because next-sitemap's export glob misses files on Windows.
   sourceDir: ".next",
   outDir: "out",
   exclude: ["/404", "/404/"],
   trailingSlash: true,
   transform: async (config, path) => {
     const normalizedPath = normalizeSitemapPath(path);
+    const metadata = metadataByPath[normalizedPath];
 
     return {
       loc: path,
       changefreq: "monthly",
-      priority: prioritiesByPath[normalizedPath] || 0.6,
+      priority: metadata?.priority ?? 0.6,
       lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
-      alternateRefs: alternateRefsByPath[normalizedPath] || [],
+      alternateRefs: metadata?.alternateRefs || [],
     };
   },
 }

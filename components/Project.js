@@ -3,6 +3,16 @@ import ResponsiveImage from "./ResponsiveImage";
 import ExternalLink from "./ExternalLink";
 import {useIsEnglish} from "../hooks/useIsEnglish";
 
+// Rendered heights at the 501px content width, per image aspect ratio.
+// Keyed by image path so both language pages share one value.
+const renderedHeights = {
+  "/images/programmation/finance-d/website/finance-d": 247,
+  "/images/programmation/finance-d/software/finance-d_desktop_software": 271,
+  "/images/programmation/gestion-desroches/site-gestion-desroches": 244,
+  "/images/programmation/finance-d/payes/app-payes": 244,
+  "/images/programmation/alexdesrochescom/alexdesroches": 244,
+};
+
 export default function Project({title, description, imgSrc, features, technologies, timespan, url}) {
   const isEnglish = useIsEnglish()
   const technologyList = technologies
@@ -21,7 +31,7 @@ export default function Project({title, description, imgSrc, features, technolog
             path={imgSrc}
             alt={title}
             renderedWidth={501}
-            renderedHeight={752}
+            renderedHeight={renderedHeights[imgSrc]}
             desktopWidth={1000}
             mobileWidth={501}
             loading="lazy"

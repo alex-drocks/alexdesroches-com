@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 const skillWords = [
   "JavaScript",
@@ -69,25 +69,42 @@ function getRandomSkills(words, count) {
 
 export default function HeroSkillShowcase({coreLabels = defaultCoreLabels}) {
   const [visibleSkills, setVisibleSkills] = useState(initialSkills);
+  const showcaseRef = useRef(null);
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const showcase = showcaseRef.current;
+    let isVisible = false;
+    let intervalId;
 
-    if (prefersReducedMotion) {
-      return undefined;
-    }
-
-    const intervalId = window.setInterval(() => {
-      setVisibleSkills(getRandomSkills(skillWords, skillSlots.length));
-    }, 5600);
+    const updateTimer = () => {
+      window.clearInterval(intervalId);
+      const shouldAnimate = isVisible && !document.hidden && !reducedMotion.matches;
+      showcase.style.setProperty("--hero-animation-state", shouldAnimate ? "running" : "paused");
+      if (shouldAnimate) {
+        intervalId = window.setInterval(() => {
+          setVisibleSkills(getRandomSkills(skillWords, skillSlots.length));
+        }, 5600);
+      }
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting;
+      updateTimer();
+    });
+    observer.observe(showcase);
+    document.addEventListener("visibilitychange", updateTimer);
+    reducedMotion.addEventListener("change", updateTimer);
 
     return () => {
       window.clearInterval(intervalId);
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", updateTimer);
+      reducedMotion.removeEventListener("change", updateTimer);
     };
   }, []);
 
   return (
-    <div className="hero-skill-showcase" aria-hidden="true">
+    <div ref={showcaseRef} className="hero-skill-showcase" aria-hidden="true">
       <div className="hero-skill-grid" />
       <div className="hero-skill-orbit hero-skill-orbit-one" />
       <div className="hero-skill-orbit hero-skill-orbit-two" />

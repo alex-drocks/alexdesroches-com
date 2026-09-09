@@ -103,6 +103,7 @@ html.dark .handwritten-signature {
   align-items: center;
   justify-content: space-between;
   min-height: 100vh;
+  /* Intentionally limits the header's sticky range to the first viewport. */
   height: 100vh;
 }
 
@@ -488,6 +489,7 @@ html.dark .hero-badge {
   border-radius: 50%;
   z-index: 1;
   animation: heroOrbit 44s linear infinite;
+  animation-play-state: var(--hero-animation-state, paused);
 }
 
 .hero-skill-orbit-one {
@@ -575,6 +577,7 @@ html.dark .hero-badge {
   transform: translate(-50%, -50%);
   animation: heroSkillFloat var(--skill-duration) ease-in-out infinite;
   animation-delay: var(--skill-delay);
+  animation-play-state: var(--hero-animation-state, paused);
   will-change: transform;
 }
 
@@ -683,6 +686,10 @@ html.dark .btn-secondary:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .hero-skill-orbit,
   .hero-skill-chip {
     animation: none;
